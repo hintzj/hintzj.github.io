@@ -36,7 +36,7 @@
     
     /* Add a red background color to navbar links on hover */
     .navbar a:hover, .dropdown-abt:hover .dropbtn-abt {
-        background-color: red;
+        background-color: #85a8e0;
     }
     
     /* Dropdown content (hidden by default) */
@@ -70,7 +70,7 @@
     }
 
 
-/*Dropdown füt Unser Verein*/
+/*Dropdown für Unser Verein*/
     
     /* The dropdown container */
     .dropdown-uVn {
@@ -90,9 +90,9 @@
         margin: 0; /* Important for vertical align on mobile phones */
     }
     
-    /* Add a red background color to navbar links on hover */
+    /* Add a #85a8e0 background color to navbar links on hover */
     .navbar a:hover, .dropdown-uVn:hover .dropbtn-uVn {
-        background-color: red;
+        background-color: #85a8e0;
     }
     
     /* Dropdown content (hidden by default) */
@@ -124,10 +124,7 @@
     .dropbtn-uVn .dropdown-content-uVn {
         display: block;
     }
-body header nav a {
-    font-size: 30px;
-    margin: 10px 10px 50px 30px;
-}
+
 body header img{
     width: 80px;
     border-color: crimson;
