@@ -57,7 +57,7 @@
   }
   
   /* Links inside the dropdown */
-  .dropdown-content a {
+  .dropdown-content-abt a {
     float: none;
     color: black;
     padding: 12px 16px;
@@ -65,16 +65,34 @@
     display: block;
     text-align: left;
   }
+    /* Links inside the dropdown */
+    .dropdown-content-uVn a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+      }
   
   /* Add a grey background color to dropdown links on hover */
-  .dropdown-content a:hover {
+  .dropdown-content-abt a:hover {
     background-color: #ddd;
   }
   
   /* Show the dropdown menu on hover */
-  .dropdown:hover .dropdown-content {
+  .dropdown:hover .dropdown-content-abt {
     display: block;
   }
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content-uVn a:hover {
+        background-color: #ddd;
+        }
+        
+        /* Show the dropdown menu on hover */
+        .dropdown:hover .dropdown-content-uVn {
+        display: block;
+        }
 body header nav a {
     font-size: 30px;
     margin: 10px 10px 50px 30px;
