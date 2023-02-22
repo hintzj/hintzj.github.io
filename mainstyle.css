@@ -201,3 +201,6 @@ body main img{
 body header{
     background-color: #85a8e0;
 }
+body head nav .navbar a img{
+    height: 8px;        
+}
