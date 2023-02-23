@@ -205,5 +205,6 @@ body header nav .navbar a img{
     height: 32x;
     width: 32px;   
     float: left;   
-    margin: 0,0,0,0;  
-}
+    margin: 0,0,0,0;
+    padding: 0,0,0,0; 
+} 
