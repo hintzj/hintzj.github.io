@@ -25,4 +25,9 @@ body header{
 }
 .endOfPage{
     margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 80px;
+}
+.endOfPageBackground{
+    background-image: url(logo1.png);
 }
