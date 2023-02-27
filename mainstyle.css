@@ -21,7 +21,9 @@ body header{
     background-color: #85a8e0;
 }
 .text-field{
-    margin-left: 33%;
+    
+    position: relative;
+    left: 33%;
 }
 .endOfPage{
     margin-left: 33%;
