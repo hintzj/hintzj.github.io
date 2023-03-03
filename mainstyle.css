@@ -1,3 +1,11 @@
+@font-face {
+    font-family: CreteRoundItalic;
+    src: url(CreteRound-Italic.ttf);
+}
+@font-face {
+    font-family: SyncopateBold;
+    src: url(Syncopate-Bold.ttf);
+}
 body header img{
     float: left;
     width: 80px;
@@ -10,4 +18,11 @@ body header h1{
 h2 {
     font-family: RampartOne;
     color: #739c96;
+}
+h3 {
+    font-family: CreteRoundItalic;
+    font-weight: bold;
+}
+h4{
+    font-family: SyncopateBold;
 }
