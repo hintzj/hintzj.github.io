@@ -21,13 +21,16 @@ body header{
     background-color: #85a8e0;
 }
 .text-field{
-    
-    position: relative;
-    left: 33%;
+    max-width: 50%;
+    margin: auto;
 }
 .endOfPage{
     margin-left: 33%;
     margin-right: 33%;
     margin-top: 80px;
+}
+.endOfPageBackground{
     background-image: url(waves_footer.png);
+    background-position: absolute;
+    background-position-x: -10px;
 }
