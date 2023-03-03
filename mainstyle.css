@@ -1,21 +1,28 @@
-
-body header img{
-    width: 80px;
-    float: left;
-    margin: 1px 10px 30px 5px;
+@font-face {
+    font-family: RampartOne;
+    src: url(RampartOne-Regular.ttf);
 }
-
+body header img{
+    float: left;
+    width: 80px;
+}
 body header h1{
-    margin: 0 10px 30px 0;
+    margin: auto;
     font-size: 45px;
     background-color: #85a8e0;
 }
+.greeting {
+    /*background-image: url(Bg-Canadier.png);*/
+    min-height: 350px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-family: RampartOne ;
+    color: #739c96;
+    text-align: center;
+}   
 body header h2{
     font-size: 30px;
-}
-body main img{
-    width: 512px;
-    
 }
 body header{
     background-color: #85a8e0;
