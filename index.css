@@ -1,0 +1,35 @@
+@font-face {
+    font-family: RampartOne;
+    src: url(RampartOne-Regular.ttf);
+}
+.greeting {
+    /*background-image: url(Bg-Canadier.png);*/
+    min-height: 350px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-family: RampartOne ;
+    color: #739c96;
+    text-align: center;
+}   
+
+body header h2{
+    font-size: 30px;
+}
+body header{
+    background-color: #85a8e0;
+}
+.text-field{
+    max-width: 50%;
+    margin: auto;
+}
+.endOfPage{
+    margin-left: 33%;
+    margin-right: 33%;
+    margin-top: 80px;
+}
+.endOfPageBackground{
+    background-image: url(waves_footer.png);
+    background-position: absolute;
+    background-position-x: -10px;
+}
