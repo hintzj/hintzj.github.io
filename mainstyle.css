@@ -27,3 +27,8 @@ h3 {
 h4{
     font-family: SyncopateBold;
 }
+.text-field{
+    background-color: #76aeb0;
+    border-radius: 15px;
+    padding: 1%;
+}
