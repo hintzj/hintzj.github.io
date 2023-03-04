@@ -1,17 +1,17 @@
 @font-face {
     font-family: RampartOne;
-    src: url(RampartOne-Regular.ttf);
+    src: url(fonts/RampartOne-Regular.ttf);
 }
 @font-face {
     font-family: RobotCondBold;
-    src: url(RobotoCondensed-Bold.ttf);
+    src: url(fonts/RobotoCondensed-Bold.ttf);
 }
 @font-face {
     font-family: RobotCondReg;
-    src: url(RobotoCondensed-Regular.ttf);
+    src: url(fonts/RobotoCondensed-Regular.ttf);
 }
 .greeting {
-    background-image: url(Bg-Canadier.png);
+    background-image: url(pics/Bg-Canadier.png);
     min-height: 150px;
     margin: auto;
     background-repeat: no-repeat;
@@ -42,8 +42,8 @@ body header{
     max-width: 50%;
     margin: auto;
 }
-.endOfPage{
-    margin: auto;
+.text-field .endOfPage{
+    margin-top: 30px;
 }
 .newsblock{
     font-family: CreteRoundItalic;
@@ -51,6 +51,9 @@ body header{
     border-radius: 15px;
     padding: 1%;
 }
-h3 {
+ h3 {
     font-weight: bolder;
+}
+.newsblock p {
+    font-weight: lighter;
 }

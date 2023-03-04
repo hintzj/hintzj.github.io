@@ -1,10 +1,10 @@
 @font-face {
     font-family: CreteRoundItalic;
-    src: url(CreteRound-Italic.ttf);
+    src: url(fonts/CreteRound-Italic.ttf);
 }
 @font-face {
     font-family: SyncopateBold;
-    src: url(Syncopate-Bold.ttf);
+    src: url(fonts/Syncopate-Bold.ttf);
 }
 body header img{
     float: left;
@@ -31,4 +31,5 @@ h4{
     background-color: #76aeb0;
     border-radius: 15px;
     padding: 1%;
+    margin-top: 2%;
 }
