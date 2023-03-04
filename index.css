@@ -32,11 +32,9 @@
     font-family: RobotCondBold;
 }
 
-body header h2{
-    font-size: 30px;
-}
 body header{
     background-color: #85a8e0;
+    border-radius: 15px;
 }
 .content{
     max-width: 50%;
@@ -51,7 +49,7 @@ body header{
     border-radius: 15px;
     padding: 1%;
 }
- h3 {
+h3 {
     font-weight: bolder;
 }
 .newsblock p {

@@ -33,3 +33,12 @@ h4{
     padding: 1%;
     margin-top: 2%;
 }
+.endOfPage{
+    background-color: #517872;
+    border-radius: 15px;
+    padding: 1%;
+    padding-left: 3%;
+    margin-top: 2%;
+    font-family: CreteRoundItalic;
+
+}
