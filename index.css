@@ -43,14 +43,7 @@ body header{
     margin: auto;
 }
 .endOfPage{
-    margin-left: 33%;
-    margin-right: 33%;
-    margin-top: 80px;
-}
-.endOfPageBackground{
-    background-image: url(waves_footer.png);
-    background-position: absolute;
-    background-position-x: -10px;
+    margin: auto;
 }
 .newsblock{
     font-family: CreteRoundItalic;
