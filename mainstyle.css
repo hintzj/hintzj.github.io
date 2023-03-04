@@ -6,15 +6,20 @@
     font-family: SyncopateBold;
     src: url(fonts/Syncopate-Bold.ttf);
 }
+@font-face {
+    font-family: RobotCondBold;
+    src: url(fonts/RobotoCondensed-Bold.ttf);
+}
 body header img{
     float: left;
     width: 80px;
+    margin-left: 2%;
 }
 body header h1{
     margin: auto;
     font-size: 45px;
-    background-color: #85a8e0;
     font-weight: bold;
+    font-family: RobotCondBold;
 }
 h2 {
     font-family: RampartOne;
@@ -43,6 +48,10 @@ h4{
 
 }
 .content{
-    max-width: 50%;
+    max-width: 800px;
     margin: auto;
+}
+body header{
+    background-color: #89B7B7;
+    border-radius: 15px;
 }

@@ -21,19 +21,14 @@
     text-align: align;
     padding: 1%;
     border-radius: 15px;
-    margin-top: 1% ;
+    margin-top: 2% ;
     margin-bottom: 2%;
 }   
 .greeting img{
-    max-width: 40%;
+    max-width: 20%;
 }
 .greeting h2{
     font-family: RobotCondBold;
-}
-
-body header{
-    background-color: #85a8e0;
-    border-radius: 15px;
 }
 .text-field .endOfPage{
     margin-top: 30px;

@@ -4,6 +4,8 @@
         overflow: hidden;
         background-color: #333;
         font-family: Arial;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
     }
     
     /* Links inside the navbar */
