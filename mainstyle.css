@@ -42,3 +42,7 @@ h4{
     font-family: CreteRoundItalic;
 
 }
+.content{
+    max-width: 50%;
+    margin: auto;
+}

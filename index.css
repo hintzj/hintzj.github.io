@@ -25,8 +25,7 @@
     margin-bottom: 2%;
 }   
 .greeting img{
-    max-width: 100%;
-    margin: auto;
+    max-width: 40%;
 }
 .greeting h2{
     font-family: RobotCondBold;
@@ -35,10 +34,6 @@
 body header{
     background-color: #85a8e0;
     border-radius: 15px;
-}
-.content{
-    max-width: 50%;
-    margin: auto;
 }
 .text-field .endOfPage{
     margin-top: 30px;
