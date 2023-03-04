@@ -2,16 +2,36 @@
     font-family: RampartOne;
     src: url(RampartOne-Regular.ttf);
 }
+@font-face {
+    font-family: RobotCondBold;
+    src: url(RobotoCondensed-Bold.ttf);
+}
+@font-face {
+    font-family: RobotCondReg;
+    src: url(RobotoCondensed-Regular.ttf);
+}
 .greeting {
-    /*background-image: url(Bg-Canadier.png);*/
-    min-height: 350px;
+    background-image: url(Bg-Canadier.png);
+    min-height: 150px;
     margin: auto;
     background-repeat: no-repeat;
     background-position-x: center;
-    font-family: RampartOne ;
-    color: #739c96;
-    text-align: center;
+    font-family: RobotCondReg;
+    color: #517872;
+    text-align: align;
+    padding: 1%;
+    border-radius: 15px;
+    margin-top: 1% ;
+    margin-bottom: 2%;
 }   
+.greeting img{
+    max-width: 100%;
+    margin: auto;
+    align-content: center;
+}
+.greeting h2{
+    font-family: RobotCondBold;
+}
 
 body header h2{
     font-size: 30px;
@@ -35,7 +55,10 @@ body header{
 }
 .newsblock{
     font-family: CreteRoundItalic;
+    background-color: #76aeb0;
+    border-radius: 15px;
+    padding: 1%;
 }
 h3 {
-    font-weight: bold;
+    font-weight: bolder;
 }

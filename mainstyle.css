@@ -14,10 +14,11 @@ body header h1{
     margin: auto;
     font-size: 45px;
     background-color: #85a8e0;
+    font-weight: bold;
 }
 h2 {
     font-family: RampartOne;
-    color: #739c96;
+    color: #517872;
 }
 h3 {
     font-family: CreteRoundItalic;
