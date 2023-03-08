@@ -10,7 +10,7 @@
     background-image: url(pics/JugV-title.png);
     min-height: 150px;
     margin: auto;
-    background-repeat: no-repeat;
+    background-repeat: round;
     background-position-x: center;
     font-family: RobotCondReg;
     color: #000000b7;
