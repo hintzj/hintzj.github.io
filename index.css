@@ -27,6 +27,9 @@
 .greeting img{
     max-width: 20%;
 }
+.greeting p {
+    font-size: 80%;
+}
 .greeting h2{
     font-family: RobotCondBold;
 }
