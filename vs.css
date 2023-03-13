@@ -6,7 +6,7 @@
     font-family: RobotCondReg;
     src: url(fonts/RobotoCondensed-Regular.ttf);
 }
-.greeting-vs{
+.greeting-vorstand {
     background-image: url(pics/Bg-Canadier.png);
     min-height: 150px;
     margin: auto;
@@ -20,12 +20,12 @@
     margin-top: 2% ;
     margin-bottom: 2%;
 }   
-.greeting-vs img{
+.greeting-vorstand img {
     max-width: 20%;
 }
-.greeting-vs p{
+.greeting-vorstand p {
     font-size: 80%;
 }
-.greeting-vs h2{
+.greeting-vorstand h2 {
     font-family: RobotCondBold;
 }
