@@ -6,8 +6,8 @@
     font-family: RobotCondReg;
     src: url(fonts/RobotoCondensed-Regular.ttf);
 }
-.greeting-vs {
-    background-image: url(pics/JugV-title.png);
+.greeting-vs{
+    background-image: url(pics/Bg-Canadier.png);
     min-height: 150px;
     margin: auto;
     background-repeat: round;
@@ -23,7 +23,7 @@
 .greeting-vs img{
     max-width: 20%;
 }
-.greeting-vs p {
+.greeting-vs p{
     font-size: 80%;
 }
 .greeting-vs h2{
