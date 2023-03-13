@@ -56,3 +56,33 @@ body header{
     background-color: #89B7B7;
     border-radius: 15px;
 }
+@font-face {
+    font-family: RobotCondBold;
+    src: url(fonts/RobotoCondensed-Bold.ttf);
+}
+@font-face {
+    font-family: RobotCondReg;
+    src: url(fonts/RobotoCondensed-Regular.ttf);
+}
+.greeting-alg {
+    min-height: 150px;
+    margin: auto;
+    background-repeat: round;
+    background-position-x: center;
+    font-family: RobotCondReg;
+    color: #000000b7;
+    text-align: align;
+    padding: 1%;
+    border-radius: 15px;
+    margin-top: 2% ;
+    margin-bottom: 2%;
+}   
+.greeting-alg img {
+    max-width: 20%;
+}
+.greeting-alg p {
+    font-size: 80%;
+}
+.greeting-alg h2 {
+    font-family: RobotCondBold;
+}
