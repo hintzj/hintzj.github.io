@@ -7,11 +7,13 @@
     src: url(fonts/RobotoCondensed-Regular.ttf);
 }
 .greeting-jgv {
-    background-image: url(pics/JugV-title.png);
+    background-image: url(pics/hessia_flag_bg.png);
     min-height: 150px;
     margin: auto;
-    background-repeat: round;
+    background-repeat: no-repeat;
+    background-size: 100%;
     background-position-x: center;
+    background-position-y: center;
     font-family: RobotCondReg;
     color: #000000b7;
     text-align: align;
