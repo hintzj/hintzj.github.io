@@ -7,11 +7,13 @@
     src: url(fonts/RobotoCondensed-Regular.ttf);
 }
 .greeting-jgn {
-    background-image: url(pics/platzerhalter01.jpeg);
+    background-image: url(pics/bg_Jgn.png);
     min-height: 150px;
     margin: auto;
-    background-repeat: round;
+    background-repeat: no-repeat;
     background-position-x: center;
+    background-position-y: center;
+    background-size: 100%;
     font-family: RobotCondReg;
     color: #000000b7;
     text-align: align;
