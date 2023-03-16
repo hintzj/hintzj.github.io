@@ -18,53 +18,7 @@
                   </style>
          </head>
   <body>
-        <header>
-            <div class="header">
-                  <img src="pics/logo1.png"> 
-                  <h1>Wassersportverein Lampertheim 1929 e.V.</h1>
-                  <nav>
-                  <div class="navbar">                   
-                        <a href="index.html">Startseite</a>
-      <!--dropdown für die Abteilungen-->
-                              <div class="dropdown-abt">
-                                    <button class="dropbtn-abt">Abteilungen
-                                          <i class="fa fa-caret-down"></i>
-                                    </button>
-                                    <div class="dropdown-content-abt">
-                                          <a href="kanurennsport.html">Wettkampfsport</a>
-                                          <a href="Fitnesssport.html">Fitnesssport</a>
-                                          <a href="Kinderturnen.html">Kinderturnen</a>
-                                          <a href="Kindeswohl.html">Kindeswohl</a>
-                                    </div>
-                              </div>
-      <!-- dropdown für Unser verein-->
-                              <div class="dropdown-uVn">
-                                    <button class="dropbtn-uVn">Unser Verein
-                                          <i class="fa fa-caret-down"></i>
-                                    </button>
-                                    <div class="dropdown-content-uVn">
-                                          <a href="archiv.html">Archiv</a>
-                                          <a href="termine.html">Termine</a>
-                                          <a href="vorstand.html">Vorstand</a>
-                                          <a href="sponosrs.html">Sponsoren und Förderung</a>
-                                          <a href="links.html">Nützliche Links</a>
-                                    </div>
-                              </div>
-      <!-- dropdown für Vereinsjugend-->
-                              <div class="dropdown-jgn">
-                                    <button class="dropbtn-jgn">Vereinsjugend
-                                          <i class="fa fa-caret-down"></i>
-                                    </button>
-                                    <div class="dropdown-content-jgn">
-                                          <a href="jugendvorstand.html">Jugendvorstand</a>
-                                          <a href="jugendnews.html">Jugendnews</a>
-                                    </div>
-                              </div>
-                        <a href="https://www.instagram.com/wsv_lampertheim_1929/"><div class="logo-image"><img src="pics/insta_icon_btn.png"></div></a>
-                  </div>
-                  </nav>
-            </div>
-        </header>
+        <?php include 'header.php'; ?>
         <div class="content">
             <main>
                   <div class="greeting">
@@ -79,6 +33,22 @@
                   </div>
                   <div class="newsblock">
                         <h4>Vereinsnews</h4>
+
+                        <?php
+                              $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io\articles\main\\";
+                              $files = scandir($dir, SCANDIR_SORT_NONE);
+
+                              //echo the content of the files in the directory and set the file name as the title
+                              foreach ($files as $file) {
+                                    if ($file == "." || $file == "..") {
+                                          continue;
+                                    }
+                                    $filename = pathinfo($file, PATHINFO_FILENAME);
+                                    echo "<article>
+                                          <h3>$filename</h3>
+                                          <p>" . file_get_contents($dir . $file) . "</p>";
+                              }
+                        ?>
                         <article1>
                               <h3>Sieg bei den Schülermeisterschaften in Sandhofen</h3>
                               <p>
@@ -110,14 +80,7 @@
                         </p>
                   </div>
             </main>
-            <div class="endOfPage">
-                  <adress>
-                        <p>
-                        Wassersportverein Lampertheim 1929 e.V. / Albrecht-D&uuml;rer-Stra&szlig;e / 68623 Lampertheim / Hessen, Deutschland
-                        </p>
-                  </adress>
-                  <footer>Copyright 2023</footer>
-            </div>
+            <?php include "footer.php"; ?>
         </div>
 
   </body>
