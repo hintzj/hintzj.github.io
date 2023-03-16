@@ -33,6 +33,24 @@
                   </div>
                   <div class="newsblock">
                         <h4>Vereinsnews</h4>
+
+                        <?php
+                              $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io\articles\main\\";
+                              $files = scandir($dir, SCANDIR_SORT_NONE);
+
+                              //echo the content of the files in the directory and set the file name as the title
+                              foreach ($files as $file) {
+                                    if ($file == "." || $file == "..") {
+                                          continue;
+                                    }
+                                    $filename = pathinfo($file, PATHINFO_FILENAME);
+                                    echo "<article>
+                                          <h3>$filename</h3>
+                                          <p>" . file_get_contents($dir . $file) . "</p>";
+                              }
+
+
+                        ?>
                         <article1>
                               <h3>Sieg bei den Schülermeisterschaften in Sandhofen</h3>
                               <p>
