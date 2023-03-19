@@ -24,9 +24,10 @@
                   <div class="greeting">
                         <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
                         <p>
-                              Kanurennsport und Kanupolo sind es Wert gelieb zu werden. Doch der WSV ist noch
-                              viel mehr als nur das. 
-                          <br>Hier möchten wir ihnen einen Einlick in unser Leben im Einklang mit dem Wassr geben.
+                             Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und Kanupolo. 
+                          <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit ist uns wichtig.
+                          <br>Die Kanuakademie ist teil unserer Philosophie der Vereinbarung von Sport und Schule 
+                          <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
                           <br><img src="pics/logo1.png">
                         </p>
 
