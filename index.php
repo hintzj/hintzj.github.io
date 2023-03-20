@@ -48,8 +48,6 @@
                                           <h3>$filename</h3>
                                           <p>" . file_get_contents($dir . $file) . "</p>";
                               }
-
-
                         ?>
                         <article1>
                               <h3>Sieg bei den Schülermeisterschaften in Sandhofen</h3>
