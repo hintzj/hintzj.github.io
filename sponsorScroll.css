@@ -1,0 +1,50 @@
+logo-slider {
+    --image-size: 100px;
+    /*border: 1px solid #575757;*/
+    padding: 20px;
+    overflow: hidden;
+    max-width: 85%;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    display: flex;
+  }
+  logo-slider:hover div {
+    animation-play-state: paused;
+  }
+  logo-slider div {
+    display: flex;
+    position: relative;
+    animation: marquee 60s linear infinite;
+    justify-content: space-around;
+  }
+  logo-slider img {
+    display: block;
+    min-width: var(--image-size);
+    height: var(--image-size);
+    margin: 0 1vw;
+  }
+  logo-slider:after {
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0;
+    top: 0;
+    /*background: linear-gradient(to right, white, rgba(255, 255, 255, 0) 80px, rgba(255, 255, 255, 0) calc(100% - 80px), white);*/
+  }
+  @media (max-width: 900px) {
+    logo-slider {
+      --image-size: 50px;
+      --image-size: min(max(50px, 10vw), 100px);
+    }
+  }
+  
+  @keyframes marquee {
+    0% {
+      transform: translateX(0%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
