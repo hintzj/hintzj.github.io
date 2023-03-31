@@ -25,7 +25,7 @@
                 <h4>Vereinsnews</h4>
 
                 <?php
-                              $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io-1\articles\main\\";
+                              $dir = "/workspaces/hintzj.github.io/articles/main/";
                               $files = scandir($dir, SCANDIR_SORT_NONE);
 
                               //echo the content of the files in the directory and set the file name as the title
