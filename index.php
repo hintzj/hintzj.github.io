@@ -25,48 +25,28 @@
                 <h4>Vereinsnews</h4>
 
                 <?php
-                    $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io-2\articles\main\\";
-                    $files = scandir($dir, SCANDIR_SORT_NONE);
-
-                    //echo the content of the files in the directory and set the file name as the title
-                    foreach ($files as $file) {
-                        if ($file == "." || $file == "..") {
-                                continue;
+                    try {
+                        $conn = mysqli_connect("localhost", "root", "password", "wsv");
+                        if (!$conn) {
+                            die("Connection failed: " . mysqli_connect_error());
                         }
-                        $filename = pathinfo($file, PATHINFO_FILENAME);
-                        echo "<article>
-                                <h3>$filename</h3>
-                                <p>" . file_get_contents($dir . $file) . "</p>";
+                        $sql = "SELECT * FROM artikel ORDER BY date DESC LIMIT 3";
+                        $result = mysqli_query($conn, $sql);
+                        $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                        mysqli_free_result($result);
+                        mysqli_close($conn);
+                        //make a div for every article that has a read more button that links to the article
+                        foreach ($articles as $article) {
+                            echo "<div class='article'>";
+                            echo "<h2>" . $article['title'] . "</h2>";
+                            echo "<p>" . $article['summary'] . "</p>";
+                            echo "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Read more</a>";
+                            echo "</div>";
+                        }
+                    } catch (Exception $e) {
+                        echo "Error: " . $e->getMessage();
                     }
-
-
                 ?>
-                <article1>
-                    <h3>Sieg bei den Schülermeisterschaften in Sandhofen</h3>
-                    <p>
-                        Am 17 September 2022 fanden die Schülermeisterschaften im Kanurennsport in Mannheim Sandhofen
-                        statt.
-                        <br>Der WSV konnte sich mit vielen Medallien schm&uumlcken
-                    </p>
-                </article1>
-                <article2>
-                    <h3>Vatertag</h3>
-                    <p>
-                        Nach 2 Jahren Ausfall wegen Corona konnte endlich wieder eine Veranstaltung am Vatertag auf
-                        unserem Vereinsgel&auml;nde durchgef&uuml;hrt werden.
-                        <br>Vom fr&uuml;hen Morgen bis zum sp&auml;ten Nachmittag str&ouml;mten die Besucher und wurden
-                        mit Gegrilltem, Getr&auml;nken, Kaffe und Kuchen versorgt.
-                        <br>Au&szlig;erdem bestand die M&ouml;glichkeit, auf dem Altrhein zu paddeln.
-                        <br>Der Vorstand bedankt sich bei den vielen Helfern, die zum Gelingen beigetragen haben.
-                    </p>
-                </article2>
-                <article3>
-                    <h3>Dritter Beispielartikel</h3>
-                    <p>
-                        Hier wird später auch ein Artikel stehen, ich denke es werden hier immer drei Artikel stehen,
-                        der rest landet im Archiv
-                    </p>
-                </article3>
             </div>
             <div class="text-field" style="background-color: #5F9B81;">
                 <h4>Schnupperzeiten</h4>
