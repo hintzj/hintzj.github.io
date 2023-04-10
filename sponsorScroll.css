@@ -19,6 +19,7 @@ logo-slider {
     justify-content: space-around;
   }
   logo-slider img {
+    border-radius: 10px;
     display: block;
     min-width: var(--image-size);
     height: var(--image-size);

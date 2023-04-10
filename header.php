@@ -16,9 +16,9 @@
                                 </button>
                                 <div class='dropdown-content-abt'>
                                     <a href='kanurennsport.php'>Wettkampfsport</a>
-                                    <a href='Fitnesssport.php'>Fitnesssport</a>
-                                    <a href='Kinderturnen.php'>Kinderturnen</a>
-                                    <a href='Kindeswohl.php'>Kindeswohl</a>
+                                    <a href='fitnesssport.php'>Fitnesssport</a>
+                                    <a href='kinderturnen.php'>Kinderturnen</a>
+                                    <a href='kindeswohl.php'>Kindeswohl</a>
                                 </div>
                         </div>
     <!-- dropdown für Unser verein-->
@@ -30,7 +30,7 @@
                                     <a href='archiv.php'>Archiv</a>
                                     <a href='termine.php'>Termine</a>
                                     <a href='vorstand.php'>Vorstand</a>
-                                    <a href='sponosrs.php'>Sponsoren und Förderung</a>
+                                    <a href='sponsors.php'>Sponsoren und Förderung</a>
                                     <a href='links.php'>Nützliche Links</a>
                                 </div>
                         </div>
