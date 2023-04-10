@@ -23,7 +23,7 @@
             </div>
             <div class="newsblock">
                 <h4>Vereinsnews</h4>
-
+                <ul>
                 <?php
                     try {
                         $conn = mysqli_connect("localhost", "root", "password", "wsv");
@@ -42,11 +42,13 @@
                             echo "<p>" . $article['summary'] . "</p>";
                             echo "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Read more</a>";
                             echo "</div>";
+                            echo "<br>";
                         }
                     } catch (Exception $e) {
                         echo "Error: " . $e->getMessage();
                     }
                 ?>
+                </ul>
             </div>
             <div class="text-field" style="background-color: #5F9B81;">
                 <h4>Schnupperzeiten</h4>

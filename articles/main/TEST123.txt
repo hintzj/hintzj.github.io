@@ -1,7 +1,0 @@
-Das ist ein Test
-Ich bin mir noch nicht ganz sicher, das ist nur eine Übergangslösung!
-Datenbank wird noch hinzugefügt, wenn der Backendfutzi Zeit hat (und Lust)
-
-Wir müssen nochmal da drüber reden...
-
-Und Ja, mir ist bewusst, dass die anderen Beispeilartikel da noch drin stehen
