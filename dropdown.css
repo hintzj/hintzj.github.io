@@ -1,4 +1,4 @@
-/*Dropdown für Abteilungen*/
+/*Allegein*/
     /* Navbar container */
     .navbar {
         overflow: hidden;
@@ -17,7 +17,9 @@
         padding: 14px 16px;
         text-decoration: none;
     }
-    
+
+/*Dropdown für Abteilungen*/
+
     /* The dropdown container */
     .dropdown-abt {
         float: left;
@@ -74,109 +76,114 @@
 
 /*Dropdown für Unser Verein*/
     
-        /* The dropdown container */
-        .dropdown-uVn {
-            float: left;
-            overflow: hidden;
-        }
-        
-        /* Dropdown button */
-        .dropdown-uVn .dropbtn-uVn {
-            font-size: 16px; 
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit; /* Important for vertical align on mobile phones */
-            margin: 0; /* Important for vertical align on mobile phones */
-        }
-        
-        /* Add a red background color to navbar links on hover */
-        .navbar a:hover, .dropdown-uVn:hover .dropbtn-uVn {
-            background-color: #85a8e0;
-        }
-        
-        /* Dropdown content (hidden by default) */
-        .dropdown-content-uVn {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        
-        /* Links inside the dropdown */
-        .dropdown-content-uVn a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        
-        /* Add a grey background color to dropdown links on hover */
-        .dropdown-content-abt a:hover {
-            background-color: #ddd;
-        }
-        
-        /* Show the dropdown menu on hover */
-        .dropdown-uVn:hover .dropdown-content-uVn {
-            display: block;
-        }
+    /* The dropdown container */
+    .dropdown-uVn {
+        float: left;
+        overflow: hidden;
+    }
+    
+    /* Dropdown button */
+    .dropdown-uVn .dropbtn-uVn {
+        font-size: 16px; 
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+    
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover, .dropdown-uVn:hover .dropbtn-uVn {
+        background-color: #85a8e0;
+    }
+    
+    /* Dropdown content (hidden by default) */
+    .dropdown-content-uVn {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content-uVn a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content-abt a:hover {
+        background-color: #ddd;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown-uVn:hover .dropdown-content-uVn {
+        display: block;
+    }
 /*Dropdown für Vereinsjugend*/
     
-        /* The dropdown container */
-        .dropdown-jgn {
-            float: left;
-            overflow: hidden;
-        }
-        
-        /* Dropdown button */
-        .dropdown-jgn .dropbtn-jgn {
-            font-size: 16px; 
-            border: none;
-            outline: none;
-            color: white;
-            padding: 14px 16px;
-            background-color: inherit;
-            font-family: inherit; /* Important for vertical align on mobile phones */
-            margin: 0; /* Important for vertical align on mobile phones */
-        }
-        
-        /* Add a red background color to navbar links on hover */
-        .navbar a:hover, .dropdown-jgn:hover .dropbtn-jgn {
-            background-color: #85a8e0;
-        }
-        
-        /* Dropdown content (hidden by default) */
-        .dropdown-content-jgn {
-            display: none;
-            position: absolute;
-            background-color: #f9f9f9;
-            min-width: 160px;
-            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-            z-index: 1;
-        }
-        
-        /* Links inside the dropdown */
-        .dropdown-content-jgn a {
-            float: none;
-            color: black;
-            padding: 12px 16px;
-            text-decoration: none;
-            display: block;
-            text-align: left;
-        }
-        
-        /* Add a grey background color to dropdown links on hover */
-        .dropdown-content-jgn a:hover {
-            background-color: #85a8e0;
-        }
-        
-        /* Show the dropdown menu on hover */
-        .dropdown-jgn:hover .dropdown-content-jgn {
-            display: block;
-        }
+    /* The dropdown container */
+    .dropdown-jgn {
+        float: left;
+        overflow: hidden;
+    }
+    
+    /* Dropdown button */
+    .dropdown-jgn .dropbtn-jgn {
+        font-size: 16px; 
+        border: none;
+        outline: none;
+        color: white;
+        padding: 14px 16px;
+        background-color: inherit;
+        font-family: inherit; /* Important for vertical align on mobile phones */
+        margin: 0; /* Important for vertical align on mobile phones */
+    }
+    
+    /* Add a red background color to navbar links on hover */
+    .navbar a:hover, .dropdown-jgn:hover .dropbtn-jgn {
+        background-color: #85a8e0;
+    }
+    
+    /* Dropdown content (hidden by default) */
+    .dropdown-content-jgn {
+        display: none;
+        position: absolute;
+        background-color: #f9f9f9;
+        min-width: 160px;
+        box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+        z-index: 1;
+    }
+    
+    /* Links inside the dropdown */
+    .dropdown-content-jgn a {
+        float: none;
+        color: black;
+        padding: 12px 16px;
+        text-decoration: none;
+        display: block;
+        text-align: left;
+    }
+    
+    /* Add a grey background color to dropdown links on hover */
+    .dropdown-content-jgn a:hover {
+        background-color: #85a8e0;
+    }
+    
+    /* Show the dropdown menu on hover */
+    .dropdown-jgn:hover .dropdown-content-jgn {
+        display: block;
+    }
+
+/*Style for Social buttons*/
+    .navbar a.socialbtn {
+        float: right;
+    }

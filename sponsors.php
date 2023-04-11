@@ -27,6 +27,9 @@
                 mysqli_free_result($result);
                 mysqli_close($conn);
 
+                //make a grid of all the sponsorLogos
+                
+
                 foreach ($sponsors as $sponsor) {
                     echo "<div class='sponsor'>";
                     echo "<img src='" . $sponsor['sponsorLogoUrl'] . "' alt='sponsor'>";

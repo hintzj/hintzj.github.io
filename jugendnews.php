@@ -22,8 +22,21 @@
         </div>
         <div class="text-field" style="background-color: #5F9B81;">
             <h4>Past Events</h4>
-            <p style="font-family: CreteRoundItalic;">Hier steht auch noch nichts </p>
-
+            <p style="font-family: CreteRoundItalic;">
+                Hier steht auch noch nichts
+                <br>
+                <?php
+                    $response = file_get_contents('https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.json?start=P1D');
+                    $response = json_decode($response);
+                    $response = (end($response));
+                    $tiefe = $response->value;
+                    $zeit = $response->timestamp;
+                    $zeit = date('H:i', strtotime($zeit));
+                    $datum = $response->timestamp;
+                    $datum = date('d.m.Y', strtotime($datum));
+                    echo 'Aktueller Wasserstand in Worms: ' . $tiefe . 'cm um ' . $zeit . ' Uhr' . ' am ' . $datum;
+                ?>
+            </p>
         </div>
         <?php include "footer.php"; ?>
     </div>
