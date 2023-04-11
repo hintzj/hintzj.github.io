@@ -32,10 +32,10 @@
                     </p>
                     <p>Registereintrag:</p>
                     <p>Eintragung im Vereinsregister.</p>
-                    <p>Registergericht: Amtsgericht Mannheim</p>
-                    <p>Registernummer: VR 123456</p>
-                    <p>Umsatzsteuer:</p>
-                    <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: DE123456789</p>
+                    <p>Registergericht: Amtsgericht Lampertheim</p>
+                    <p>Registernummer: [*Platzhalter*]</p>
+                    <p>Umsatzsteuer: [*Platzhalter*]</p>
+                    <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: [*Platzhalter*]</p>
                     <p>Streitschlichtung</p>
                     <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
                     <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teilzunehmen.</p>
