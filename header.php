@@ -4,7 +4,7 @@
 <?php
     echo "<header>
         <div class='header'>
-            <img src='pics/logo1.png'> 
+            <img src='pics/logo1.png'>
             <h1>Wassersportverein Lampertheim 1929 e.V.</h1>
             <nav>
             <div class='navbar'>                   
@@ -44,7 +44,9 @@
                                     <a href='jugendnews.php'>Jugendnews</a>
                                 </div>
                         </div>
-                    <a href='https://www.instagram.com/wsv_lampertheim_1929/'><div class='logo-image'><img src='pics/insta_icon_btn.png'></div></a>
+                        <a href='https://www.facebook.com/wsvla' class='socialbtn'><i class='fa fa-facebook'></i></a>
+                        <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn'><i class='fa fa-instagram'></i></a>
+                        
             </div>
             </nav>
         </div>
