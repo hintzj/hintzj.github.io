@@ -11,17 +11,36 @@
     <?php include 'header.php'; ?>
     <div class="content">
         <div class="greeting-alg" style="background-image: url(pics/Bg-Canadier.png);">
-            <h2>Vorstand</h2>
+            <h2>Archiv</h2>
             <p>
-                Als Interessenvertretung unsere Mitglieder leitet
-                <br> der Vorstand die Angelegenheiten des Vereins
+                Hier kann man sich über die vergangenheit des WSV informieren
             </p>
         </div>
         <div class="text-field">
-            <h4>Archiv</h4>
-            <p>
-                Hier wird mal das Archvi an ehemaligen Texten sein, mal gucken wie das wird
-            </p>
+            <?php
+                try {
+                    $conn = mysqli_connect("localhost", "root", "password", "wsv");
+                    if (!$conn) {
+                        die("Connection failed: " . mysqli_connect_error());
+                    }
+                    $sql = "SELECT * FROM artikel WHERE date < NOW() ORDER BY date DESC";
+                    $result = mysqli_query($conn, $sql);
+                    $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                    mysqli_free_result($result);
+                    mysqli_close($conn);
+                    //make a div for every article that has a read more button that links to the article
+                    foreach ($articles as $article) {
+                        echo "<div class='article'>";
+                        echo "<h2>" . $article['title'] . "</h2>";
+                        echo "<p>" . $article['summary'] . "</p>";
+                        echo "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Read more</a>";
+                        echo "</div>";
+                        echo "<br>";
+                    }
+                } catch (Exception $e) {
+                    echo "Error: " . $e->getMessage();
+                }
+            ?>
         </div>
         <?php include "footer.php"; ?>
     </div>

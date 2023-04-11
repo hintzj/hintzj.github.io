@@ -4,7 +4,7 @@
         <link rel='stylesheet' type='text/css' href='dropdown.css'>\n
         <link rel='stylesheet' type='text/css' href='index.css'>\n
 
-        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>
+        <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>\n
 
         <link rel='apple-touch-icon' sizes='180x180' href='favicons/apple-touch-icon.png'>\n
         <link rel='icon' type='image/png' sizes='48x48' href='favicons/favicon-48.png' />\n

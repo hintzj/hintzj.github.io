@@ -9,45 +9,53 @@
             <nav>
             <div class='navbar'>                   
                     <a href='index.php'>Startseite</a>
-    <!--dropdown für die Abteilungen-->
-                        <div class='dropdown-abt'>
-                                <button class='dropbtn-abt'>Abteilungen
-                                    <i class='fa fa-caret-down'></i>
-                                </button>
-                                <div class='dropdown-content-abt'>
-                                    <a href='kanurennsport.php'>Wettkampfsport</a>
-                                    <a href='fitnesssport.php'>Fitnesssport</a>
-                                    <a href='kinderturnen.php'>Kinderturnen</a>
-                                    <a href='kindeswohl.php'>Kindeswohl</a>
-                                </div>
+        	        <!--dropdown für die Abteilungen-->
+                    <div class='dropdown-abt'>
+                        <button class='dropbtn-abt'>Abteilungen
+                            <i class='fa fa-caret-down'></i>
+                        </button>
+                        <div class='dropdown-content-abt'>
+                            <a href='kanurennsport.php'><i class='fa fa-trophy' aria-hidden='true'></i> Wettkampfsport</a>
+                            <a href='fitnesssport.php'><i class='fa fa-heartbeat' aria-hidden='true'></i> Fitnesssport</a>
+                            <a href='motorboot.php'><i class='fa fa-ship' aria-hidden='true'></i> Motorboot</a>
+                            <a href='kinderturnen.php'><i class='fa fa-grav' aria-hidden='true'></i> Kinderturnen</a>
+                            <a href='kindeswohl.php'><i class='fa fa-child' aria-hidden='true'></i> Kindeswohl</a>
+                            <a href='kultur.php'><i class='fa fa-users' aria-hidden='true'></i> Kultur</a>
                         </div>
-    <!-- dropdown für Unser verein-->
-                        <div class='dropdown-uVn'>
-                                <button class='dropbtn-uVn'>Unser Verein
-                                    <i class='fa fa-caret-down'></i>
-                                </button>
-                                <div class='dropdown-content-uVn'>
-                                    <a href='archiv.php'>Archiv</a>
-                                    <a href='termine.php'>Termine</a>
-                                    <a href='vorstand.php'>Vorstand</a>
-                                    <a href='sponsors.php'>Sponsoren und Förderung</a>
-                                    <a href='links.php'>Nützliche Links</a>
-                                </div>
+                    </div>
+                    <!-- dropdown für Unser verein-->
+                    <div class='dropdown-uVn'>
+                        <button class='dropbtn-uVn'>Unser Verein
+                            <i class='fa fa-caret-down'></i>
+                        </button>
+                        <div class='dropdown-content-uVn'>
+                            <a href='news.php'><i class='fa fa-newspaper-o' aria-hidden='true'></i> News</a>
+                            <a href='archiv.php'><i class='fa fa-archive' aria-hidden='true'></i> Archiv</a>
+                            <a href='termine.php'><i class='fa fa-calendar-o' aria-hidden='true'></i> Termine</a>
+                            <a href='vorstand.php'><i class='fa fa-sitemap' aria-hidden='true'></i> Vorstand</a>
+                            <a href='sponsors.php'><i class='fa fa-money' aria-hidden='true'></i> Sponsoren und Förderung</a>
+                            <a href='links.php'><i class='fa fa-link' aria-hidden='true'></i> Nützliche Links</a>
                         </div>
-    <!-- dropdown für Vereinsjugend-->
-                        <div class='dropdown-jgn'>
-                                <button class='dropbtn-jgn'>Vereinsjugend
-                                    <i class='fa fa-caret-down'></i>
-                                </button>
-                                <div class='dropdown-content-jgn'>
-                                    <a href='jugendvorstand.php'>Jugendvorstand</a>
-                                    <a href='jugendnews.php'>Jugendnews</a>
-                                </div>
+                    </div>
+                    <!-- dropdown für Vereinsjugend-->
+                    <div class='dropdown-jgn'>
+                        <button class='dropbtn-jgn'>Vereinsjugend
+                            <i class='fa fa-caret-down'></i>
+                        </button>
+                        <div class='dropdown-content-jgn'>
+                            <a href='jugendvorstand.php'><i class='fa fa-sitemap' aria-hidden='true'></i> Jugendvorstand</a>
+                            <a href='jugendnews.php'><i class='fa fa-newspaper-o' aria-hidden='true'></i> Jugendnews</a>
                         </div>
-                        <a href='https://www.facebook.com/wsvla' class='socialbtn'><i class='fa fa-facebook'></i></a>
-                        <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn'><i class='fa fa-instagram'></i></a>
-                        
+                    </div>
+                    <a href='kontakt.php'>Kontakt</a>
+                    <a href='https://www.facebook.com/wsvla' class='socialbtn'><i class='fa fa-facebook'></i></a>
+                    <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn'><i class='fa fa-instagram'></i></a>
+                    <a href='https://sportinn.eu/WSV-Lampertheim' class='socialbtn'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>
+                    <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn'><i class='fa fa-link' aria-hidden='true'></i></a>
+                    <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
+                    <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
             </div>
             </nav>
         </div>
     </header>";
+?>

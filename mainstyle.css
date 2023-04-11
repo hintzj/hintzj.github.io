@@ -10,8 +10,10 @@
     font-family: RobotCondBold;
     src: url(fonts/RobotoCondensed-Bold.ttf);
 }
+
+
 body {
-    background-color: #cacaca;
+    background-color: #cacaca;  
 }
 body header img{
     float: left;

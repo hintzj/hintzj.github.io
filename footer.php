@@ -6,10 +6,13 @@
     include 'sponsorScroll.php';
     echo "<adress>\n
         <p>\n
-        Wassersportverein Lampertheim 1929 e.V. / Albrecht-D&uuml;rer-Stra&szlig;e / 68623 Lampertheim / Hessen, Deutschland\n
+        Wassersportverein Lampertheim 1929 e.V. / Albrecht-D&uuml;rer-Stra&szlig;e 46 / 68623 Lampertheim / Hessen, Deutschland\n
         </p>\n
         </adress>\n
-        <footer>Copyright 1929-" . date("Y") . "</footer>\n
+        <footer>\n
+        Copyright 1929-" . date("Y") . " /\n
+        <a href='impressum.php' style='color: black;'>Impressum</a>\n
+        </footer>\n
         <br>\n";
     echo "</div>";
 

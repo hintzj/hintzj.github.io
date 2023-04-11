@@ -19,7 +19,7 @@
                     <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
                     <br>
                     <br>
-                    <img src="pics/logo1.png">
+                    <img src="pics/logo1.png" alt="Logo des Wassersportvereins">
                 </p>
 
             </div>
@@ -55,8 +55,19 @@
             <div class="text-field" style="background-color: #5F9B81;">
                 <h4>Schnupperzeiten</h4>
                 <p>
-                    Bei uns sind neue Gesichter immer Willkommen
+                    <ul>
+                    Bei uns sind neue Gesichter immer Willkommen. Wenn du Interesse hast, kannst du gerne zu unseren Schnupperzeiten kommen.
                     <br>
+                    <br>
+                    <b>Montag:</b> 17:00 - 18:30 Uhr
+                    <br>
+                    <b>Mittwoch:</b> 17:00 - 18:30 Uhr
+                    <br>
+                    <b>Freitag:</b> 17:00 - 18:30 Uhr
+                    <br>
+                    <br>
+                    <b>Ansprechpartner:</b> <a href="mailto: hintz.jonathan@gmail.com">Jonathan Hintz</a>
+                    </ul>
                 </p>
             </div>
         </main>
