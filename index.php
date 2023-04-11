@@ -17,7 +17,9 @@
                     <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit ist uns wichtig.
                     <br>Die Kanuakademie ist teil unserer Philosophie der Vereinbarung von Sport und Schule
                     <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
-                    <br><img src="pics/logo1.png">
+                    <br>
+                    <br>
+                    <img src="pics/logo1.png">
                 </p>
 
             </div>
@@ -54,7 +56,7 @@
                 <h4>Schnupperzeiten</h4>
                 <p>
                     Bei uns sind neue Gesichter immer Willkommen
-                <ul> Zeitenliste (Muss noch eingefügt werden)</ul>
+                    <br>
                 </p>
             </div>
         </main>

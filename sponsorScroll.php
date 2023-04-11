@@ -1,22 +1,28 @@
 <?php
-    echo "<logo-slider>\n
-        <div>\n";
+    //do the same thing as in sponsorScroll.php but with the sponsors table in the database
+    try {
+        $conn = mysqli_connect("localhost", "root", "password", "wsv");
+        if (!$conn) {
+            die("Connection failed: " . mysqli_connect_error());
+        }
+        $sql = "SELECT * FROM sponsors";
+        $result = mysqli_query($conn, $sql);
+        $sponsors = mysqli_fetch_all($result, MYSQLI_ASSOC);
+        mysqli_free_result($result);
+        mysqli_close($conn);
 
-        //loop through a txt file and put the urls and put them into the html like in sponsorScroll.php
-        $file = fopen("C:\Users\hintz\Downloads\WSV Website\hintzj.github.io-2\sponsorScroll.txt", "r");
-        while(!feof($file)) {
-            $line = fgets($file);
-            echo "<img src='$line'>\n";
+        echo "<logo-slider>\n
+            <div>\n";
+        foreach ($sponsors as $sponsor) {
+            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "'>\n";
         }
-        fclose($file);
         echo "</div>\n
-        <div>\n";
-        $file = fopen("C:\Users\hintz\Downloads\WSV Website\hintzj.github.io-2\sponsorScroll.txt", "r");
-        while(!feof($file)) {
-            $line = fgets($file);
-            echo "<img src='$line'>\n";
+            <div>\n";
+        foreach ($sponsors as $sponsor) {
+            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "'>\n";
         }
-        fclose($file);
         echo "</div>\n
-    </logo-slider>";
-?>
+        </logo-slider>";
+    } catch (Exception $e) {
+        echo "Error: " . $e->getMessage();
+    }

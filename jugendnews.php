@@ -35,7 +35,13 @@
                     $datum = $response->timestamp;
                     $datum = date('d.m.Y', strtotime($datum));
                     echo 'Aktueller Wasserstand in Worms: ' . $tiefe . 'cm um ' . $zeit . ' Uhr' . ' am ' . $datum;
+                    $tiefeLA = ($response->value) - 75;
+                    echo '<br>';
+                    echo 'Daraus folgt ein ungefährer Wasserstand in Lampertheim von circa ' . $tiefeLA . 'cm';
                 ?>
+                <br>
+                <br>
+                <img src="https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.png?start=P14D&width=900&height=400&enableSecondaryYAxis=true" alt="Wasserstand" style="width: 50%;">
             </p>
         </div>
         <?php include "footer.php"; ?>
