@@ -1,3 +1,6 @@
+<a href="/sponsors.php">
+
+<div>
 <?php
     //do the same thing as in sponsorScroll.php but with the sponsors table in the database
     try {
@@ -14,15 +17,18 @@
         echo "<logo-slider>\n
             <div>\n";
         foreach ($sponsors as $sponsor) {
-            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "'>\n";
+            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
         }
         echo "</div>\n
             <div>\n";
         foreach ($sponsors as $sponsor) {
-            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "'>\n";
+            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
         }
         echo "</div>\n
         </logo-slider>";
     } catch (Exception $e) {
         echo "Error: " . $e->getMessage();
     }
+?>
+</div>
+</a>
