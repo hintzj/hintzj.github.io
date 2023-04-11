@@ -1,0 +1,33 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <?php include 'defaultHead.php'; ?>
+    <title>Kultur - WSVL</title>
+</head>
+
+<body>
+    <?php include 'header.php'; ?>
+    <div class="content">
+        <div class="greeting-jgn">
+            <h2>Kultur</h2>
+            <p>
+                Der Kulturerhalt wird am WSV Lampertheim hoch geschätzt. Deshalb gibt es auch eine eigene Abteilung, die sich um die Kultur kümmert.
+            </p>
+        </div>
+        <div class="text-field">
+            <h4>Kultur</h4>
+            <p>
+                <ul>
+                    <li>Die Kulturabteilung kümmert sich um die Kultur des Vereins</li>
+                    <li>Die Kulturabteilung kümmert sich um die Kultur des Vereins</li>
+                    <li>Die Kulturabteilung kümmert sich um die Kultur des Vereins</li>
+                </ul>
+            </p>
+        </div>
+        <?php include "footer.php"; ?>
+    </div>
+
+</body>
+
+</html>
