@@ -14,6 +14,8 @@
         <meta name='msapplication-TileColor' content='#da532c'>\n
         <meta name='theme-color' content='#ffffff'>\n
 
+        <meta http-equiv='content-type' content='text/html; charset=utf-8'>\n
+
         <style>\n
             .logo-image{\n
                 width: 46px;\n

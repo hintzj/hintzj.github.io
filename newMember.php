@@ -12,14 +12,43 @@
     <script>
         function calcCost() {
             var cost = 0;
+
             var geburtstag = document.getElementById("geburtstag").value;
-            var alter = new Date().getDay - new Date(geburtstag).getDay;
+            var dob = new Date(geburtstag);
+            
+            //calculate month difference from current date in time
+            var month_diff = Date.now() - dob.getTime();
+            
+            //convert the calculated difference in date format
+            var age_dt = new Date(month_diff); 
+            
+            //extract year from date    
+            var year = age_dt.getUTCFullYear();
+            
+            //now calculate the age of the user
+            var alter = Math.abs(year - 1970);
+            
+            var hauptBeitrag = 0;
+            var aufnahmeBeitrag = 0;
+
+            if (alter <= 14) {
+                hauptBeitrag = 5.50;
+                aufnahmeBeitrag = 2.50;
+            } else if (alter < 18) {
+                hauptBeitrag = 6.50;
+                aufnahmeBeitrag = 5.50;
+            } else {
+                hauptBeitrag = 7.50;
+                aufnahmeBeitrag = 15.50;
+            }
             var liegeplatz = document.getElementById("liegeplatz").value;
             var sonderbootPlatz = document.getElementById("sonderbootPlatz").value;
             var anlegeplatz = document.getElementById("anlegeplatz").value;
-            cost = (liegeplatz * 100) + (sonderbootPlatz * 100) + (anlegeplatz * 100);
+
+            cost = (liegeplatz * 3) + (sonderbootPlatz * 6) + (anlegeplatz * 8.50) + hauptBeitrag;
+
             document.getElementById("beitragBerechnet").innerHTML = cost;
-            console.log(alter);
+            document.getElementById("aufnahmeBerechnet").innerHTML = aufnahmeBeitrag;
         }
     </script>
     <?php include 'header.php'; ?>
@@ -104,8 +133,11 @@
 
                     Mitgliedsbeitrag:
                     <br>
-                    <label for="beitrag">Beitrag:</label>
-                    <span id="beitragBerechnet"></span>
+                    <label for="beitrag">Monatlicher Beitrag:</label>
+                    <span id="beitragBerechnet">0</span> €
+                    <br>
+                    <label for="aufnahmeBeitrag">Aufnahmebeitrag:</label>
+                    <span id="aufnahmeBerechnet">0</span> €
                     <br>
 
                     <input type="radio" id="interval" name="interval" value="interval">
