@@ -73,26 +73,26 @@
                     <br>
 
                     <label for="name">Name:</label>
-                    <input type="text" name="name" placeholder="Name">
+                    <input type="text" name="name" placeholder="Name" required>
 
                     <label for="vorname">Vorname:</label>
-                    <input type="text" name="vorname" placeholder="Vorname">
+                    <input type="text" name="vorname" placeholder="Vorname" required>
 
                     <br>
 
                     <label for="strasse">Straße:</label>
-                    <input type="text" name="strasse" placeholder="Straße">
+                    <input type="text" name="strasse" placeholder="Straße" required>
 
                     <label for="plz">PLZ:</label>
-                    <input type="text" name="plz" placeholder="PLZ">
+                    <input type="text" name="plz" placeholder="PLZ" required>
 
                     <label for="ort">Ort:</label>
-                    <input type="text" name="ort" placeholder="Ort">
+                    <input type="text" name="ort" placeholder="Ort" required>
 
                     <br>
 
                     <label for="email">E-Mail:</label>
-                    <input type="email" name="email" placeholder="E-Mail">
+                    <input type="email" name="email" placeholder="E-Mail" required>
 
                     <label for="telefon">Telefon:</label>
                     <input type="text" name="telefon" placeholder="Telefon">
@@ -100,7 +100,7 @@
                     <br>
 
                     <label for="geburtstag">Geburtstag:</label>
-                    <input type="date" name="geburtstag" placeholder="Geburtstag" id="geburtstag" onchange="calcCost()">
+                    <input type="date" name="geburtstag" placeholder="Geburtstag" id="geburtstag" onchange="calcCost()" required>
 
                     <label for="beruf">Beruf:</label>
                     <input type="text" name="beruf" placeholder="Beruf">
@@ -156,37 +156,37 @@
                     <br>
                     
                     <label for="start">Startdatum</label>
-                    <input type="date" id="start" name="start" value="<?php echo date('Y-m-d'); ?>" />
+                    <input type="date" id="start" name="start" value="<?php echo date('Y-m-d'); ?>" required>
                     
                     <br>
                     
                     <label for="nameAccount">Name des Kontoinhabers:</label>
-                    <input type="text" name="nameBIC" placeholder="Name des Kontoinhabers">
+                    <input type="text" name="nameBIC" placeholder="Name des Kontoinhabers" required>
                     
                     <label for="iban">IBAN:</label>
-                    <input type="text" name="iban" placeholder="IBAN">
+                    <input type="text" name="iban" placeholder="IBAN" required>
                     
                     <label for="bic">BIC:</label>
-                    <input type="text" name="bic" placeholder="BIC">
+                    <input type="text" name="bic" placeholder="BIC" required>
                     
                     <br>
                     
                     <label for="bank">Bank:</label>
-                    <input type="text" name="bank" placeholder="Bank">
+                    <input type="text" name="bank" placeholder="Bank" required>
                     
                     <br>
                     
-                    <input type="checkbox" id="agb" name="agb" value="agb">
+                    <input type="checkbox" id="agb" name="agb" value="agb" required>
                     <label for="agb">Ich habe die <a href="agb.php">AGB</a> gelesen und akzeptiere diese.</label>
                     
                     <br>
                     
-                    <input type="checkbox" id="datenschutz" name="datenschutz" value="datenschutz">
+                    <input type="checkbox" id="datenschutz" name="datenschutz" value="datenschutz" required>
                     <label for="datenschutz">Ich habe die <a href="datenschutz.php">Datenschutzerklärung</a> gelesen und akzeptiere diese.</label>
                     
                     <br>
                     
-                    <input type="checkbox" id="mitgliedsbeitrag" name="mitgliedsbeitrag" value="mitgliedsbeitrag">
+                    <input type="checkbox" id="mitgliedsbeitrag" name="mitgliedsbeitrag" value="mitgliedsbeitrag" required>
                     <label for="mitgliedsbeitrag">Ich bin damit einverstanden, dass der Mitgliedsbeitrag von meinem Konto abgebucht wird.</label>
                     
                     <br>

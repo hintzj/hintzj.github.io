@@ -35,6 +35,7 @@
                             <a href='vorstand.php'><i class='fa fa-sitemap' aria-hidden='true'></i> Vorstand</a>
                             <a href='sponsors.php'><i class='fa fa-money' aria-hidden='true'></i> Sponsoren und Förderung</a>
                             <a href='links.php'><i class='fa fa-link' aria-hidden='true'></i> Nützliche Links</a>
+                            <a href='login.php'><i class='fa fa-sign-in' aria-hidden='true'></i> Login</a>
                         </div>
                     </div>
                     <!-- dropdown für Vereinsjugend-->
