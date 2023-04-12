@@ -23,7 +23,7 @@
             <ul>
                 <li>1. Vorsitzender: Rainer Vetter</li>
                 <li>2. Vorsitzende: Erika Gabler</li>
-                <li>Kassenwärtin: Briska Horstfeld1</li>
+                <li>Kassenwärtin: Briska Horstfeld</li>
                 <li>Schriftführerin: Erika Fuchs</li>
                 <li>Mitgliederverwaltung: Justine Sand-Soballa</li>
                 <li>Sportwart: Dieter Brechenser</li>
