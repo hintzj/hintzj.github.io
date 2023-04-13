@@ -63,7 +63,7 @@ body header{
     border: none;
     outline: none;
     color: black;
-    padding: 14px 16px;
+    padding: 0px 0px;
     background-color: inherit;
     font-family: inherit;
     /* Important for vertical align on mobile phones */

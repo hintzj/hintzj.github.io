@@ -51,7 +51,7 @@
                    <!-- dropdown for etc -->
                    <div class='dropdown-etc'>
                         <button class='dropbtn-etc'>
-                            <i class='fa fa-bars-'></i>
+                        <i class='fa fa-bars' aria-hidden='true'></i>
                         </button>
                         <div class='dropdown-content-etc'>
                             <a href='kontakt.php'><i class='fa fa-address-card' aria-hidden='true'></i></a>
@@ -65,17 +65,19 @@
                         </div>
                     </div>
                     <script> 
-                    var modeSwitch = document.getElementById('mode-switch'); 
+                    var modeSwitch = document.getElementById('mode-switch');
                     var toggeled = false;                
                     modeSwitch.addEventListener('click', function() {
                         if(toggeled){
                         document.getElementById('colors').href = 'WhMoColors.css';
-                        document.getElementyById('themeIcon').class = 'fa fa-moon-o';
+                        document.getElementById('themeIcon').className = 'fa fa-moon-o';
                         toggeled = false;
+                        console.log('white mode');
                         }else{
                             document.getElementById('colors').href = 'DaMoColors.css';
-                            document.getElementyById('themeIcon').class = 'fa fa-sun-o';
+                            document.getElementById('themeIcon').className = 'fa fa-sun-o';
                             toggeled = true;
+                            console.log('dark mode');
                         }
                     });
                     </script>
