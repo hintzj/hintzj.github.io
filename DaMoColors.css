@@ -34,21 +34,28 @@
 }
 /*WHite Mode Mainstyle*/
 body {
-    background-color: black;  
+    background-color: #2F323A;  
 }
 h2 {
     color: #517872;
 }
 .text-field{
-    background-color: #76aeb0;
+    background-color: #3C8296;
 }
 .endOfPage{
-    background-color: #517872;
+    background-color: #357382;
+    color:#F3F3F4;
 }
 body header{
-    background-color: #89B7B7;
+    background-color: #1985A1;
 }
 .greeting-alg{
     color: #000000b7;
     
+}
+.text-field{
+    color: #F3F3F4;
+}
+.newsblock{
+    color:#F3F3F4;
 }
