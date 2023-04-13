@@ -48,23 +48,33 @@
                             <a href='jugendnews.php'><i class='fa fa-newspaper-o' aria-hidden='true'></i> Jugendnews</a>
                         </div>
                     </div>
-                    <a href='kontakt.php'>Kontakt</a>
-                    <a href='https://www.facebook.com/wsvla' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
-                    <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-instagram'></i></a>
-                    <a href='https://sportinn.eu/WSV-Lampertheim' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>
-                    <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-link' aria-hidden='true'></i></a>
-                    <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
-                    <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
-                    <button id='mode-switch'>Switch mode</button>
+                   <!-- dropdown for etc -->
+                   <div class='dropdown-etc'>
+                        <button class='dropbtn-etc'>
+                            <i class='fa fa-bars-'></i>
+                        </button>
+                        <div class='dropdown-content-etc'>
+                        <a href='kontakt.php'>Kontakt</a>
+                        <a href='https://www.facebook.com/wsvla' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
+                        <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-instagram'></i></a>
+                        <a href='https://sportinn.eu/WSV-Lampertheim' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>
+                        <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-link' aria-hidden='true'></i></a>
+                        <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
+                        <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
+                        <a> <button id='mode-switch'><i id='themeIcon' class='fa fa-moon-o' aria-hidden='true'></i></button></a>
+                        </div>
+                    </div>
                     <script> 
                     var modeSwitch = document.getElementById('mode-switch'); 
                     var toggeled = false;                
                     modeSwitch.addEventListener('click', function() {
                         if(toggeled){
                         document.getElementById('colors').href = 'WhMoColors.css';
+                        document.getElementyById('themeIcon').class = 'fa fa-moon-o';
                         toggeled = false;
                         }else{
                             document.getElementById('colors').href = 'DaMoColors.css';
+                            document.getElementyById('themeIcon').class = 'fa fa-sun-o';
                             toggeled = true;
                         }
                     });
