@@ -55,6 +55,7 @@
                     <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-link' aria-hidden='true'></i></a>
                     <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
                     <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
+                    <button id='mode-switch'>Switch mode</button>
             </div>
             </nav>
         </div>

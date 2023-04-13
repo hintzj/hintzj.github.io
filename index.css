@@ -17,7 +17,6 @@
     background-repeat: no-repeat;
     background-position-x: center;
     font-family: RobotCondReg;
-    color: #000000b7;
     text-align: align;
     padding: 1%;
     border-radius: 15px;
@@ -38,7 +37,6 @@
 }
 .newsblock{
     font-family: CreteRoundItalic;
-    background-color: #76aeb0;
     border-radius: 15px;
     padding: 1%;
 }

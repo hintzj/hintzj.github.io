@@ -12,9 +12,7 @@
 }
 
 
-body {
-    background-color: #cacaca;  
-}
+
 body header img{
     float: left;
     width: 80px;
@@ -28,7 +26,6 @@ body header h1{
 }
 h2 {
     font-family: RobotCondBold;
-    color: #517872;
 }
 h3 {
     font-family: CreteRoundItalic;
@@ -38,14 +35,12 @@ h4{
     font-family: SyncopateBold;
 }
 .text-field{
-    background-color: #76aeb0;
     border-radius: 15px;
     padding: 1%;
     margin-top: 2%;
     font-family: CreteRoundItalic;
 }
 .endOfPage{
-    background-color: #517872;
     border-radius: 15px;
     margin-top: 2%;
     font-family: CreteRoundItalic;
@@ -57,7 +52,6 @@ h4{
     margin: auto;
 }
 body header{
-    background-color: #89B7B7;
     border-radius: 15px;
 }
 @font-face {
@@ -74,7 +68,6 @@ body header{
     background-repeat: round;
     background-position-x: center;
     font-family: RobotCondReg;
-    color: #000000b7;
     text-align: align;
     padding: 1%;
     border-radius: 15px;

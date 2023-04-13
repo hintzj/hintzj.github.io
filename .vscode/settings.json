@@ -1,3 +1,5 @@
 {
-    "php.version": "7.4.3-4ubuntu2.18"
+    "php.version": "8.0.27",
+    "fiveServer.php.ini": "/home/codespace/.php/current/bin/php",
+    "fiveServer.php.executable": "/home/codespace/.php/current/bin/php"
 }
