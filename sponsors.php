@@ -21,18 +21,45 @@
                 if ($conn-> connect_error) {
                     die("Connection failed:". $conn-> connect_error);
                 }
-                $sql = "SELECT * FROM sponsors";
-                $result = mysqli_query($conn, $sql);
-                $sponsors = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                mysqli_free_result($result);
+                $sqlLogos = "SELECT * FROM sponsors WHERE sponsorLogoFile IS NOT NULL";
+                $resultLogos = mysqli_query($conn, $sqlLogos);
+                $sponsorsLogos = mysqli_fetch_all($resultLogos, MYSQLI_ASSOC);
+                mysqli_free_result($resultLogos);
+
+                $sqlNoLogos = "SELECT * FROM sponsors WHERE sponsorLogoFile IS NULL";
+                $resultNoLogos = mysqli_query($conn, $sqlNoLogos);
+                $sponsorsNoLogos = mysqli_fetch_all($resultNoLogos, MYSQLI_ASSOC);
+                mysqli_free_result($resultNoLogos);
+
                 mysqli_close($conn);
 
                 //list all the sponsorLogos with a link to the sponsor page. display the sponsor names when hovering over the logo
-                foreach ($sponsors as $sponsor) {
+                foreach ($sponsorsLogos as $sponsor) {
                     //echo "<div class='sponsor'>";
-                    echo "<a href='" . $sponsor['sponsorUrl'] . "'><img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
+                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
                     //echo "</div>";
                 }
+
+                echo "<br><br>";
+
+                echo "Außerdem bedanken wir uns bei unseren kleineren Sponsoren:";
+                echo "<br>";
+                echo "<ul>";
+                //list all the sponsors without a logo
+                foreach ($sponsorsNoLogos as $sponsor) {
+                    //echo "<div class='sponsor'>";
+                    if ($sponsor['sponsorUrl'] == "") {
+                        echo $sponsor['sponsorName'];
+                    } else {
+                        echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'>" . $sponsor['sponsorName'] . "</a>";
+                    }
+
+                    echo "<br>";
+                    //echo "</div>";
+                }
+                echo "</ul>";
+
+
                 
             ?>
         </div>
