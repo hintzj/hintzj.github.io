@@ -17,6 +17,12 @@
 .dropdown-content-jgn a {
     color: black;
 }
+.dropdown-content-etc{
+    background-color: #f9f9f9;
+}
+.dropdown-content-etc a{
+    color: black;
+}
 /* White Mode Index */
 .greeting{
     color: #000000b7;

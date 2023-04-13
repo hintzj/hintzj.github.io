@@ -61,7 +61,7 @@
                             <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-link' aria-hidden='true'></i></a>
                             <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
                             <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
-                            <a> <button id='mode-switch'><i id='themeIcon' class='fa fa-moon-o' aria-hidden='true'></i></button></a>
+                            <a> <button class='themebtn' id='mode-switch'><i id='themeIcon' class='fa fa-moon-o' aria-hidden='true'></i></button></a>
                         </div>
                     </div>
                     <script> 
