@@ -56,6 +56,20 @@
                     <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
                     <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
                     <button id='mode-switch'>Switch mode</button>
+                    <script> 
+                    var modeSwitch = document.getElementById('mode-switch'); 
+                    var toggeled = false;                
+                    modeSwitch.addEventListener('click', function() {
+                        if(toggeled){
+                        document.getElementById('colors').href = 'WhMoColors.css';
+                        toggeled = false;
+                        }else{
+                            document.getElementById('colors').href = 'DaMoColors.css';
+                            toggeled = true;
+                        }
+                    });
+                    </script>
+                    
             </div>
             </nav>
         </div>

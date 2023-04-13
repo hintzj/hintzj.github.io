@@ -1,0 +1,54 @@
+/* WHite Mode Dropdowns*/
+.dropdown-content-abt{
+    background-color: #f9f9f9;
+}
+.dropdown-content-abt a{
+    color: black;
+}
+.dropdown-content-uVn{
+    background-color: #f9f9f9;
+}
+.dropdown-content-uVn a{
+    color: black;
+}
+.dropdown-content-jgn{
+    background-color: #f9f9f9;
+}
+.dropdown-content-jgn a {
+    color: black;
+}
+/* White Mode Index */
+.greeting{
+    color: #000000b7;
+}
+.newsblock{
+    background-color: #76aeb0;
+}
+/* White Mode jgn*/
+.greeting-jgn{
+    color: #000000b7;
+}
+/*WHite Mode jgv*/
+.greeting-jgv{
+    color: #000000b7;
+}
+/*WHite Mode Mainstyle*/
+body {
+    background-color: black;  
+}
+h2 {
+    color: #517872;
+}
+.text-field{
+    background-color: #76aeb0;
+}
+.endOfPage{
+    background-color: #517872;
+}
+body header{
+    background-color: #89B7B7;
+}
+.greeting-alg{
+    color: #000000b7;
+    
+}
