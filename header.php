@@ -54,7 +54,7 @@
                             <i class='fa fa-bars-'></i>
                         </button>
                         <div class='dropdown-content-etc'>
-                            <a href='kontakt.php'>Kontakt</a>
+                            <a href='kontakt.php'><i class='fa fa-address-card' aria-hidden='true'></i></a>
                             <a href='https://www.facebook.com/wsvla' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
                             <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-instagram'></i></a>
                             <a href='https://sportinn.eu/WSV-Lampertheim' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>
