@@ -52,7 +52,7 @@ var signaturePad = new SignaturePad(canvas, {
 
 document.getElementById('save-svg').addEventListener('click', function () {
 if (signaturePad.isEmpty()) {
-    alert("Please provide a signature first.");
+    alert("Bitte unterschreiben Sie zuerst.");
 } else {
     var dataURL = signaturePad.toDataURL('image/svg+xml');
     download(dataURL, "signature.svg");

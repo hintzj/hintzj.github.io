@@ -82,12 +82,6 @@ body header{
     font-family: RobotCondBold;
 }
 
-
-
-
-
-
-
 .signWrapper {
     position: relative;
     width: 400px;
@@ -107,3 +101,40 @@ body header{
     background-color: white;
     border: 1px solid #000;
 }
+
+.cookie-consent{
+    position: fixed;
+    bottom: 8px;
+    left: 20px;
+    width: 20%;
+    min-width: 250px;
+    padding-top: 7px;
+    height: 90px;
+    color: #fff;
+    text-align: center;
+
+    line-height: 20px;
+    padding-left: 10px;
+    padding-right: 10px;
+    font-size: 14px;
+    background: #292929;
+    z-index: 120;
+    cursor: pointer;
+    border-radius: 10px;
+    }
+
+.cookie-consent .allow-button{
+    height: 20px;
+    width: 104px;
+    color: #000000;
+    font-size: 12px;
+    line-height: 10px;
+    border-radius: 5px;
+    background-color: #00ca00;
+}
+
+.cookie-consent .allow-button:hover{
+    background-color: #00ca00;
+    color: #ffffff;
+}
+    

@@ -4,7 +4,9 @@
 <?php
     echo "<header>
         <div class='header'>
-            <img src='pics/logo1.png'>
+            <a href='index.php'>
+                <img src='pics/logo1.png'>
+            </a>
             <h1>Wassersportverein Lampertheim 1929 e.V.</h1>
             <nav>
             <div class='navbar'>                   
@@ -34,6 +36,7 @@
                             <a href='termine.php'><i class='fa fa-calendar-o' aria-hidden='true'></i> Termine</a>
                             <a href='vorstand.php'><i class='fa fa-sitemap' aria-hidden='true'></i> Vorstand</a>
                             <a href='sponsors.php'><i class='fa fa-money' aria-hidden='true'></i> Sponsoren und Förderung</a>
+                            <a href='newMember.php'><i class='fa fa-user-plus' aria-hidden='true'></i> Mitglied werden</a>
                             <a href='links.php'><i class='fa fa-link' aria-hidden='true'></i> Nützliche Links</a>
                             <a href='login.php'><i class='fa fa-sign-in' aria-hidden='true'></i> Login</a>
                         </div>
@@ -98,4 +101,6 @@
             </nav>
         </div>
     </header>";
+
+    include 'cookieConsent.php';
 ?>
