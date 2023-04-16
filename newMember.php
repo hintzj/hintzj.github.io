@@ -192,7 +192,21 @@
                         
                         <br>
                         <br>
+
+                        <div class="signWrapper">
+            <canvas id="signature-pad" class="signature-pad" width=400 height=200></canvas>
+        </div>
+
+        <button id="save-svg">Save as SVG</button>
+        <button id="undo">Undo</button>
+        <button id="clear">Clear</button>
+        
+        <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
+        <script src="/signBox.js"></script>
                         
+                        <br>
+                        <br>
+
                         <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
                         <label for="newsletter">Ich möchte den Newsletter erhalten.</label>
                         

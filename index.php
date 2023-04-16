@@ -1,3 +1,4 @@
+<?php header("SameSite=None; Secure"); ?>
 <!DOCTYPE HTML>
 <html>
 
@@ -73,7 +74,6 @@
         </main>
         <?php include "footer.php"; ?>
     </div>
-
 </body>
 
 </html>

@@ -11,8 +11,8 @@
                     <a href='index.php'>Startseite</a>
         	        <!--dropdown für die Abteilungen-->
                     <div class='dropdown-abt'>
-                        <button class='dropbtn-abt'>Abteilungen
-                            <i class='fa fa-caret-down'></i>
+                        <button class='dropbtn-abt'>
+                            Abteilungen<i class='fa fa-caret-down'></i>
                         </button>
                         <div class='dropdown-content-abt'>
                             <a href='kanurennsport.php'><i class='fa fa-trophy' aria-hidden='true'></i> Wettkampfsport</a>
@@ -65,33 +65,33 @@
                         </div>
                     </div>
                     <script> 
-                    var modeSwitch = document.getElementById('mode-switch');
-                    if (localStorage.getItem('theme') == '') {
-                        localStorage.setItem('theme', 'light');
-                    }
-                    if (localStorage.getItem('theme') == 'light') {
-                        document.getElementById('colors').href = 'WhMoColors.css';
-                        document.getElementById('themeIcon').className = 'fa fa-moon-o';
-                    }
-                    
-                    if (localStorage.getItem('theme') == 'dark') {
-                        document.getElementById('colors').href = 'DaMoColors.css';
-                        document.getElementById('themeIcon').className = 'fa fa-sun-o';
-                    }
-                    
-                    modeSwitch.addEventListener('click', function() {
-                        if (localStorage.getItem('theme') == 'dark') {
+                        var modeSwitch = document.getElementById('mode-switch');
+                        if (localStorage.getItem('theme') == '') {
                             localStorage.setItem('theme', 'light');
-
+                        }
+                        if (localStorage.getItem('theme') == 'light') {
                             document.getElementById('colors').href = 'WhMoColors.css';
                             document.getElementById('themeIcon').className = 'fa fa-moon-o';
-                        } else {
-                            localStorage.setItem('theme', 'dark');
-                            
+                        }
+                        
+                        if (localStorage.getItem('theme') == 'dark') {
                             document.getElementById('colors').href = 'DaMoColors.css';
                             document.getElementById('themeIcon').className = 'fa fa-sun-o';
                         }
-                    });
+                        
+                        modeSwitch.addEventListener('click', function() {
+                            if (localStorage.getItem('theme') == 'dark') {
+                                localStorage.setItem('theme', 'light');
+
+                                document.getElementById('colors').href = 'WhMoColors.css';
+                                document.getElementById('themeIcon').className = 'fa fa-moon-o';
+                            } else {
+                                localStorage.setItem('theme', 'dark');
+                                
+                                document.getElementById('colors').href = 'DaMoColors.css';
+                                document.getElementById('themeIcon').className = 'fa fa-sun-o';
+                            }
+                        });
                     </script>
                     
             </div>

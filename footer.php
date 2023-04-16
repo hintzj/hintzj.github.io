@@ -11,7 +11,7 @@
         </adress>\n
         <footer>\n
         Copyright 1929-" . date("Y") . " /\n
-        <a href='impressum.php' style='color: black;'>Impressum</a>\n
+        <a href='impressum.php'>Impressum</a>\n
         </footer>\n
         <br>\n";
     echo "</div>";

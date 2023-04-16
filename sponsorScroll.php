@@ -17,13 +17,17 @@
         echo "<logo-slider>\n
             <div>\n";
         foreach ($sponsors as $sponsor) {
-            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+            if ($sponsor['sponsorLogoFile'] != NULL) {
+                echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+            }
         }
         echo "</div>\n
             <div>\n";
         foreach ($sponsors as $sponsor) {
-            echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
-        }
+            if ($sponsor['sponsorLogoFile'] != NULL) {
+                echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+            }       
+         }
         echo "</div>\n
         </logo-slider>";
     } catch (Exception $e) {
