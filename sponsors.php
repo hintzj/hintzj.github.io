@@ -36,7 +36,7 @@
                 //list all the sponsorLogos with a link to the sponsor page. display the sponsor names when hovering over the logo
                 foreach ($sponsorsLogos as $sponsor) {
                     //echo "<div class='sponsor'>";
-                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
+                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
                     //echo "</div>";
                 }
 
