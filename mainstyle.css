@@ -48,9 +48,12 @@ h4{
 .content{
     max-width: 900px;
     margin: auto;
+
+    flex: 1;
 }
 body header{
     border-radius: 15px;
+    margin: 1%;
 }
 @font-face {
     font-family: RobotCondBold;
@@ -138,3 +141,22 @@ body header{
     color: #ffffff;
 }
     
+.wavesFooter {
+    /*
+    position: relative;
+    bottom: 0;
+    left: 0;
+    */
+
+    width: 100%;
+    height: 50px; /* adjust height as needed */
+    background-image: url("pics/waves_footer.png");
+    background-size: contain;
+}
+
+body {
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}

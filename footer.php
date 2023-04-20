@@ -13,8 +13,6 @@
         Copyright 1929-" . date("Y") . " /\n
         <a href='impressum.php'>Impressum</a>\n
         </footer>\n
-        <br>\n";
-    echo "</div>";
-
-        
+        <br>\n
+        </div>";        
 ?>

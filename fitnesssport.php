@@ -40,7 +40,7 @@
         </div>
         <?php include "footer.php"; ?>
     </div>
-
+    <?php include "wavesFooter.php"; ?>
 </body>
 
 </html>

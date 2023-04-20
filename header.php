@@ -14,7 +14,7 @@
         	        <!--dropdown für die Abteilungen-->
                     <div class='dropdown-abt'>
                         <button class='dropbtn-abt'>
-                            Abteilungen<i class='fa fa-caret-down'></i>
+                            Abteilungen <i class='fa fa-caret-down'></i>
                         </button>
                         <div class='dropdown-content-abt'>
                             <a href='kanurennsport.php'><i class='fa fa-trophy' aria-hidden='true'></i> Wettkampfsport</a>
