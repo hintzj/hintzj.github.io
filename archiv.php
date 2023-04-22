@@ -17,6 +17,7 @@
             </p>
         </div>
         <div class="text-field">
+            <h2>Berichte</h2>
             <?php
                 try {
                     $conn = mysqli_connect("localhost", "root", "password", "wsv");
@@ -30,17 +31,82 @@
                     mysqli_close($conn);
                     //make a div for every article that has a read more button that links to the article
                     foreach ($articles as $article) {
+                        echo "<ul>";
                         echo "<div class='article'>";
                         echo "<h2>" . $article['title'] . "</h2>";
                         echo "<p>" . $article['summary'] . "</p>";
                         echo "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Read more</a>";
                         echo "</div>";
+                        echo "</ul>";
                         echo "<br>";
                     }
                 } catch (Exception $e) {
                     echo "Error: " . $e->getMessage();
                 }
             ?>
+        </div>
+        <div class="text-field">
+            <h2>Mitgliederinfo</h2>
+
+            <object data="documents/mitgliedsinfos/Mitgliederinfo_2022.pdf" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
+                <p>Unable to display PDF file. <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">Download</a> instead.</p>
+            </object>
+
+            <script>
+                var pdfViewer = document.getElementById('pdfViewer');
+                var pdfViewerSrc = pdfViewer.getAttribute('data');
+
+                <?php
+                    $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io\documents\mitgliedsinfos";
+                    $files = scandir($dir);
+                    echo "var pdfFiles = [";
+                    foreach ($files as $file) {
+                        if (strpos($file, ".pdf") !== false) {
+                            echo "'documents/mitgliedsinfos/". $file . "',";
+                        }
+                    }
+                    echo "];";
+                ?>
+
+                function nextPdf() {
+                    console.log(pdfFiles);
+                    var currentPdf = pdfViewer.getAttribute('data');
+                    var currentPdfIndex = pdfFiles.indexOf(currentPdf);
+                    if (currentPdfIndex < pdfFiles.length - 1) {
+                        var newPdf = pdfFiles[currentPdfIndex + 1];
+                        pdfViewer.setAttribute('data', newPdf);
+                        console.log(newPdf);
+                    } else {
+                        currentPdfIndex = 0;
+                        var newPdf = pdfFiles[currentPdfIndex];
+                        pdfViewer.setAttribute('data', newPdf);
+                        console.log(newPdf);
+                    }
+                }
+
+                function lastPdf() {
+                    var currentPdf = pdfViewer.getAttribute('data');
+                    var currentPdfIndex = pdfFiles.indexOf(currentPdf);
+                    if (currentPdfIndex > 0) {
+                        var newPdf = pdfFiles[currentPdfIndex - 1];
+                        pdfViewer.setAttribute('data', newPdf);
+                        console.log(newPdf);
+                    } else {
+                        currentPdfIndex = pdfFiles.length - 1;
+                        var newPdf = pdfFiles[currentPdfIndex];
+                        pdfViewer.setAttribute('data', newPdf);
+                        console.log(newPdf);
+                    }
+                }
+
+                
+            </script>
+            <br>
+            <div style="text-align: center;">
+                <button onclick="lastPdf()">Vorheriges</button>
+                <button onclick="nextPdf()">Nächstes</button>
+            </div>
+
         </div>
         <?php include "footer.php"; ?>
     </div>

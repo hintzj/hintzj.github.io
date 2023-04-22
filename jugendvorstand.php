@@ -33,6 +33,10 @@
                 </li>
             </ul>
             </p>
+
+            <p style="font-family: CreteRoundItalic;">
+                <a href="documents/Jugendordnung.pdf" target="_blank" rel="noopener noreferrer">Hier</a> findest du die aktuelle Satzung des Jugendvorstandes
+            </p>
         </div>
         <?php include "footer.php"; ?>
     </div>
