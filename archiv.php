@@ -45,11 +45,23 @@
                 }
             ?>
         </div>
-        <div class="text-field">
+        <div class="text-field" style="background-color: #5F9B81;">
             <h2>Mitgliederinfo</h2>
 
             <object data="documents/mitgliedsinfos/Mitgliederinfo_2022.pdf" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
-                <p>Unable to display PDF file. <a href="/uploads/media/default/0001/01/540cb75550adf33f281f29132dddd14fded85bfc.pdf">Download</a> instead.</p>
+                <script>
+                    hideButtons();
+                </script>
+                <p>Es sieht so aus, als ob dein Browser keine PDFs anzeigen kann. Kein Problem! Du kannst die Mitgliederinfos hier herunterladen.</p>
+                <?php
+                    $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io\documents\mitgliedsinfos";
+                    $files = scandir($dir);
+                    foreach ($files as $file) {
+                        if (strpos($file, ".pdf") !== false) {
+                            echo "<div style='text-align: center;'><a href='documents/mitgliedsinfos/" . $file . "'>" . $file . "</a></div>";
+                        }
+                    }
+                ?>
             </object>
 
             <script>
@@ -97,14 +109,18 @@
                         pdfViewer.setAttribute('data', newPdf);
                         console.log(newPdf);
                     }
+
+                function hideButtons() {
+                    var pdfButtons = document.getElementById('pdfButton').style.display = "none";
+                }
                 }
 
                 
             </script>
             <br>
             <div style="text-align: center;">
-                <button onclick="lastPdf()">Vorheriges</button>
-                <button onclick="nextPdf()">Nächstes</button>
+                <button onclick="lastPdf()" id="pdfButton" style="display: inline">Vorheriges</button>
+                <button onclick="nextPdf()" id="pdfButton" style="display: inline">Nächstes</button>
             </div>
 
         </div>
