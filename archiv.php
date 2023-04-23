@@ -119,8 +119,8 @@
             </script>
             <br>
             <div style="text-align: center;">
-                <button onclick="lastPdf()" id="pdfButton" style="display: inline">Vorheriges</button>
-                <button onclick="nextPdf()" id="pdfButton" style="display: inline">Nächstes</button>
+                <button onclick="lastPdf()" id="pdfButton" style="display: inline"><i class="fa fa-arrow-left" aria-hidden="true"></i> Vorheriges</button>
+                <button onclick="nextPdf()" id="pdfButton" style="display: inline">Nächstes <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
 
         </div>
