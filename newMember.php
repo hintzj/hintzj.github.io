@@ -66,18 +66,18 @@
                     <form method="POST">
                         <label for="anrede">Anrede:</label>
                         <select name="anrede">
+                            <option value="none">keine Angabe</option>
                             <option value="Herr">Herr</option>
                             <option value="Frau">Frau</option>
-                            <option value="none">keine Angabe</option>
                         </select>
 
                         <br>
 
-                        <label for="name">Name:</label>
-                        <input type="text" name="name" placeholder="Name" required>
-
                         <label for="vorname">Vorname:</label>
                         <input type="text" name="vorname" placeholder="Vorname" required>
+
+                        <label for="name">Nachname:</label>
+                        <input type="text" name="name" placeholder="Name" required>
 
                         <br>
 

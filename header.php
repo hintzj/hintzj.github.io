@@ -51,8 +51,11 @@
                             <a href='jugendnews.php'><i class='fa fa-newspaper-o' aria-hidden='true'></i> Jugendnews</a>
                         </div>
                     </div>
-                   <!-- dropdown for etc -->
-                   <div class='dropdown-etc'>
+
+                    <a href='https://cloud.wsv-lampertheim.de'><i class='fa fa-cloud' aria-hidden='true'></i> Vereinscloud</a>
+
+                    <!-- dropdown for etc -->
+                    <div class='dropdown-etc'>
                         <button class='dropbtn-etc'>
                         <i class='fa fa-bars' aria-hidden='true'></i>
                         </button>
@@ -62,10 +65,15 @@
                             <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-instagram'></i></a>
                             <a href='https://sportinn.eu/WSV-Lampertheim' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>
                             <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-link' aria-hidden='true'></i></a>
-                            <a href='' class='socialbtn'><i class='fa fa-search' aria-hidden='true'></i></a>
                             <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->
                             <a> <button class='themebtn' id='mode-switch'><i id='themeIcon' class='fa fa-moon-o' aria-hidden='true'></i></button></a>
                         </div>
+                    </div>
+                    <div class='search'>
+                        <form action='search.php' method='post'>
+                            <input type='text' name='search' placeholder='Suche' class='searchBtn'>
+                            <button type='submit' name='submit-search' class='searchBtn'><i class='fa fa-search'></i></button>
+                        </form>
                     </div>
                     <script> 
                         var modeSwitch = document.getElementById('mode-switch');

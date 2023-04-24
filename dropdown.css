@@ -242,3 +242,30 @@
     display: block;
 }
 
+
+/*Suchoption*/
+.search {
+    float: right;
+    overflow: hidden;
+
+    font-size: 16px;
+    border: none;
+    outline: none;
+    color: white;
+    padding: 14px 16px;
+    background-color: inherit;
+    font-family: inherit;
+    /* Important for vertical align on mobile phones */
+    margin: 0;
+    /* Important for vertical align on mobile phones */
+}
+
+.searchBtn {
+    color: #000000;
+    border-radius: 5px;
+    background-color: #ffffff;
+    border: none;
+    transition: all 0.5s;
+    cursor: pointer;
+}
+
