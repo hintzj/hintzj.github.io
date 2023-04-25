@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
+    <link rel='stylesheet' type='text/css' href='jgv.css'>
     <title>Jugendvorstand - WSVL</title>
 </head>
 

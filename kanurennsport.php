@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
+    <link rel='stylesheet' type='text/css' href='jgn.css'>
     <title>Kanurennsport - WSVL</title>
 </head>
 

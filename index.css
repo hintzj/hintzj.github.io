@@ -22,12 +22,12 @@
     border-radius: 15px;
     margin-top: 2% ;
     margin-bottom: 2%;
-}   
+}
 .greeting img{
     max-width: 20%;
 }
 .greeting p {
-    font-size: 80%;
+    font-size: 95%;
 }
 .greeting h2{
     font-family: RobotCondBold;
