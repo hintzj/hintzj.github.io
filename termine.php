@@ -20,7 +20,8 @@
                 <ul>
                 <?php
                     //make a request to the termine table of the database and filter for all upcoming events
-                    $conn = mysqli_connect("localhost", "root", "password", "wsv");
+                    //$conn = mysqli_connect("localhost", "root", "password", "wsv");
+                    $conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
                     if (!$conn) {
                         die("Connection failed: " . mysqli_connect_error());
                     }

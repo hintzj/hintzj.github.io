@@ -17,7 +17,8 @@
         <div class="text-field">
             <h4>Sponsoren</h4>
             <?php
-                $conn = mysqli_connect("localhost", "root", "password", "wsv");
+                //$conn = mysqli_connect("localhost", "root", "password", "wsv");
+                $conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
                 if ($conn-> connect_error) {
                     die("Connection failed:". $conn-> connect_error);
                 }
