@@ -73,6 +73,12 @@
 
                         <br>
 
+<<<<<<< HEAD
+=======
+                        <label for="name">Name:</label>
+                        <input type="text" name="surname" placeholder="Name" required>
+
+>>>>>>> 6de2752 (Cleaning Up Behind my Backendguy, edit font-size)
                         <label for="vorname">Vorname:</label>
                         <input type="text" name="vorname" placeholder="Vorname" required>
 
