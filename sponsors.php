@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
+    <link rel='stylesheet' type='text/css' href='sponsors.css'>
     <title>Sponsoren - WSVL</title>
 </head>
 
@@ -35,20 +36,27 @@
                 mysqli_close($conn);
 
                 //list all the sponsorLogos with a link to the sponsor page. display the sponsor names when hovering over the logo
+                echo "<div class='sponsor'>";
+                echo "<ul>";
                 foreach ($sponsorsLogos as $sponsor) {
-                    //echo "<div class='sponsor'>";
+                    
+                    echo "<li>";
                     echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
-                    //echo "</div>";
+                    echo "</li>";
+                 
                 }
-
+                echo "</ul>";
+                echo "</div>";
                 echo "<br><br>";
 
+                echo "<div class='without'>";
                 echo "Außerdem bedanken wir uns bei unseren kleineren Sponsoren:";
                 echo "<br>";
                 echo "<ul>";
                 //list all the sponsors without a logo
                 foreach ($sponsorsNoLogos as $sponsor) {
                     //echo "<div class='sponsor'>";
+                    echo "<li>";
                     if ($sponsor['sponsorUrl'] == "") {
                         echo $sponsor['sponsorName'];
                     } else {
@@ -56,9 +64,11 @@
                     }
 
                     echo "<br>";
+                    echo "</li>";
                     //echo "</div>";
                 }
                 echo "</ul>";
+                echo "</div>";
 
 
                 
