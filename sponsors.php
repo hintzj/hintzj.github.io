@@ -10,12 +10,12 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Sponsoren des WSV</h2>
             <p>Hier findest du alle wichtigen Informationen zu Sponsoren des WSV Lampertheim! Wir bedanken uns vielmals bei unseren Sponsoren für die Unterstützung!</p>
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Sponsoren</h4>
             <?php
                 //$conn = mysqli_connect("localhost", "root", "password", "wsv");

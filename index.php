@@ -12,7 +12,7 @@
     <?php include 'header.php'; ?>
     <div class="content">
         <main>
-            <div class="greeting">
+            <div class="greeting" style="background-image: url(pics/Bg-Canadier.png);">
                 <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
                 <p>
                     Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und Kanupolo.
@@ -25,7 +25,7 @@
                 </p>
 
             </div>
-            <div class="newsblock">
+            <div class="text-field1">
                 <h4>Vereinsnews</h4>
                 <ul>
                 <?php
@@ -55,7 +55,7 @@
                 ?>
                 </ul>
             </div>
-            <div class="text-field" style="background-color: #5F9B81;">
+            <div class="text-field2">
                 <h4>Schnupperzeiten</h4>
                 <p>
                     <ul>

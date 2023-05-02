@@ -10,18 +10,18 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Willkommen auf der Newsseite der WSV-Jugend</h2>
             <p>Hier infomieren wir über kommende und Vergangene Events
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Upcoming Events</h4>
             <p style="font-family: CreteRoundItalic;">
                 Hier steht noch nichts, Jonathan viel SPaß mit dem Backend
             </p>
         </div>
-        <div class="text-field" style="background-color: #5F9B81;">
+        <div class="text-field2" >
             <h4>Past Events</h4>
             <p style="font-family: CreteRoundItalic;">
                 Hier steht auch noch nichts

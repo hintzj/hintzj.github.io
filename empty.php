@@ -9,12 +9,12 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>[*Insert Text Here*]</h2>
             <p>[*Insert Text Here*]
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>[*Insert Text Here*]</h4>
             <p>
                 <ul>

@@ -9,7 +9,7 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="text-field">
+        <div class="text-field1">
             <h4>######Title######</h4>
             <p>
                 <ul>

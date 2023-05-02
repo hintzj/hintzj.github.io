@@ -9,13 +9,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>News des WSV</h2>
             <p>
                 Hier findest du alle wichtigen Neuingen des WSV Lampertheim!
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
         <?php
             try {
                 $conn = mysqli_connect("localhost", "root", "password", "wsv");

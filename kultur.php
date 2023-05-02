@@ -9,13 +9,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Kultur</h2>
             <p>
                 Der Kulturerhalt wird am WSV Lampertheim hoch geschätzt. Deshalb gibt es auch eine eigene Abteilung, die sich um die Kultur kümmert.
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Kultur</h4>
             <p>
                 <ul>

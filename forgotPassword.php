@@ -9,13 +9,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Passwort vergessen</h2>
             <p>
                 Bitte geben Sie Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen.
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Passwort zurückzusetzen</h4>
             <p>
                 <ul>

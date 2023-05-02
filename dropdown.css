@@ -41,10 +41,6 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown-abt:hover .dropbtn-abt {
-    background-color: #85a8e0;
-}
 
 /* Dropdown content (hidden by default) */
 .dropdown-content-abt {
@@ -98,10 +94,7 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown-uVn:hover .dropbtn-uVn {
-    background-color: #85a8e0;
-}
+
 
 /* Dropdown content (hidden by default) */
 .dropdown-content-uVn {
@@ -154,10 +147,7 @@
 }
 
 /* Add a red background color to navbar links on hover */
-.navbar a:hover,
-.dropdown-jgn:hover .dropbtn-jgn {
-    background-color: #85a8e0;
-}
+
 
 /* Dropdown content (hidden by default) */
 .dropdown-content-jgn {

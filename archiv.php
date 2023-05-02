@@ -10,13 +10,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-alg" style="background-image: url(pics/Bg-Canadier.png);">
+        <div class="greeting" style="background-image: url(pics/Bg-Canadier.png);">
             <h2>Archiv</h2>
             <p>
                 Hier kann man sich über die vergangenheit des WSV informieren
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h2>Berichte</h2>
             <?php
                 try {
@@ -46,7 +46,7 @@
                 }
             ?>
         </div>
-        <div class="text-field" style="background-color: #5F9B81;">
+        <div class="text-field2" >
             <h2>Mitgliederinfo</h2>
 
             <object data="documents/mitgliedsinfos/Mitgliederinfo_2022.pdf" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">

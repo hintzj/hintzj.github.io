@@ -9,13 +9,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Neues Benutzerkonto</h2>
             <p>
                 Hier können Sie ein neues Benutzerkonto erstellen. Bitte füllen Sie alle Felder aus.
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Neues Benutzerkonto</h4>
             <p>
                 <ul>

@@ -1,4 +1,4 @@
-/* WHite Mode Dropdowns*/
+/* WDark Mode Dropdowns*/
 .dropdown-content-abt{
     background-color: #f9f9f9;
 }
@@ -23,49 +23,38 @@
 .dropdown-content-etc a{
     color: black;
 }
-/* White Mode Index */
+/* Dark Mode Index */
 .greeting{
     color: #000000b7;
 }
-.newsblock{
-    background-color: #76aeb0;
+.text-field1{
+    background-color: #235695;
 }
-/* White Mode jgn*/
-.greeting-jgn{
-    color: #000000b7;
+.text-field2{
+    background-color: #306FAD;
 }
-/*WHite Mode jgv*/
-.greeting-jgv{
-    color: #000000b7;
+.text-field3{
+    background-color: #3D87C5;
 }
-/*WHite Mode Mainstyle*/
+.text-field4 {
+    background-color: #49A0DD;
+}
+.endOfPage{
+    background-color: #56B8F5;
+}
+/*DArk Mode Mainstyle*/
 body {
     background-color: #2F323A;  
 }
 h2 {
-    color: #517872;
-}
-.text-field{
-    background-color: #3C8296;
-}
-.endOfPage{
-    background-color: #357382;
-    color:#F3F3F4;
+    color: #306FAD;
 }
 body header{
-    background-color: #1985A1;
+    background-color: #306FAD;
 }
 .greeting-alg{
     color: #000000b7;
-    
 }
-.text-field{
-    color: #F3F3F4;
-}
-.newsblock{
-    color:#F3F3F4;
-}
-
 .themebtn {
     font-size: 16px;
     border: none;
@@ -74,7 +63,25 @@ body header{
     padding: 0px 0px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
+}
+/*Dropdown COlors*/
+.navbar a:hover,
+.dropdown-abt:hover .dropbtn-abt {
+    background-color: #306FAD;
+}
+
+.navbar a:hover,
+.dropdown-uVn:hover .dropbtn-uVn {
+    background-color: #306FAD;
+}
+
+.navbar a:hover,
+.dropdown-jgn:hover .dropbtn-jgn {
+    background-color: #306FAD;
+}
+
+.navbar a:hover,
+.dropdown-etc:hover .dropbtn-etc {
+    background-color: #306FAD;
 }

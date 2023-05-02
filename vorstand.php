@@ -11,14 +11,14 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-vorstand">
+        <div class="greeting">
             <h2>Vorstand</h2>
             <p>
                 Als Interessenvertretung unsere Mitglieder leitet
                 <br> der Vorstand die Angelegenheiten des Vereins
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Amtsinhaber</h4>
             <p>
             <ul>

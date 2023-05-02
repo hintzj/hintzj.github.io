@@ -1,0 +1,43 @@
+.greeting {
+    min-height: 150px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    font-family: RobotCondReg;
+    text-align: align;
+    padding: 1%;
+    border-radius: 15px;
+    margin-top: 2% ;
+    margin-bottom: 2%;
+}
+.text-field1 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: CreteRoundItalic;
+}
+.text-field2 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: CreteRoundItalic;
+}
+.text-field3 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: CreteRoundItalic;
+}
+.text-field4 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: CreteRoundItalic;
+}
+.endOfPage {
+    border-radius: 15px;
+    margin-top: 2%;
+    font-family: CreteRoundItalic;
+    text-align: center;
+
+}

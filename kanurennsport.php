@@ -10,12 +10,12 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Kanurennsport am WSV</h2>
             <p>Hier findest du alle wichtigen Informationen zu Kanurennsport am WSV Lampertheim!
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Trainingszeiten</h4>
             <p>
                 <ul>

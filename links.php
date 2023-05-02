@@ -9,13 +9,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Nützliche Links</h2>
             <p>
                 Hier findest du alle wichtigen Links zu Sportvereinen, Sportverbänden und anderen Organisationen!
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Links</h4>
             <p>
                 <ul>

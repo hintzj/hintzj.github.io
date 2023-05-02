@@ -9,14 +9,14 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Mitgliederbereich</h2>
             <p>
                 Bitte loggen Sie sich ein, um den Mitgliederbereich zu betreten.
                 Im Mitgliederbereich finden Sie unter anderem nicht die Mitgliederliste, die Satzung und die Beitragsordnung.
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Log In</h4>
             <p>
                 <ul>

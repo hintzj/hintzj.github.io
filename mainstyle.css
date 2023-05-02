@@ -32,19 +32,6 @@ h3 {
 h4{
     font-family: SyncopateBold;
 }
-.text-field{
-    border-radius: 15px;
-    padding: 1%;
-    margin-top: 2%;
-    font-family: CreteRoundItalic;
-}
-.endOfPage{
-    border-radius: 15px;
-    margin-top: 2%;
-    font-family: CreteRoundItalic;
-    text-align: center;
-
-}
 .content{
     max-width: 900px;
     margin: auto;
@@ -63,28 +50,15 @@ body header{
     font-family: RobotCondReg;
     src: url(fonts/RobotoCondensed-Regular.ttf);
 }
-.greeting-alg {
-    min-height: 150px;
-    margin: auto;
-    background-repeat: round;
-    background-position-x: center;
-    font-family: RobotCondReg;
-    text-align: align;
-    padding: 1%;
-    border-radius: 15px;
-    margin-top: 2% ;
-    margin-bottom: 2%;
-}   
-.greeting-alg img {
+.greeting img {
     max-width: 20%;
 }
-.greeting-alg p {
+.greeting p {
     font-size: 80%;
 }
-.greeting-alg h2 {
+.greeting h2 {
     font-family: RobotCondBold;
 }
-
 .signWrapper {
     position: relative;
     width: 400px;

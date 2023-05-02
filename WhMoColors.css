@@ -27,36 +27,33 @@
 .greeting{
     color: #000000b7;
 }
-.newsblock{
-    background-color: #76aeb0;
+.text-field1{
+    background-color: #96AFC3;
 }
-/* White Mode jgn*/
-.greeting-jgn{
-    color: #000000b7;
+.text-field2{
+    background-color: #7696B0;
 }
-/*WHite Mode jgv*/
-.greeting-jgv{
-    color: #000000b7;
+.text-field3{
+    background-color: #4A6982;
+}
+.text-field4 {
+    background-color: #34495B;
+}
+.endOfPage{
+    background-color: hsl(207, 27%, 24%);
 }
 /*WHite Mode Mainstyle*/
 body {
     background-color: #ffffff;  
 }
 h2 {
-    color: #517872;
-}
-.text-field{
-    background-color: #76aeb0;
-}
-.endOfPage{
-    background-color: #517872;
+    color: #4A6982;
 }
 body header{
-    background-color: #89B7B7;
+    background-color: #7696B0;
 }
 .greeting-alg{
     color: #000000b7;
-    
 }
 .themebtn {
     font-size: 16px;
@@ -66,7 +63,25 @@ body header{
     padding: 0px 0px;
     background-color: inherit;
     font-family: inherit;
-    /* Important for vertical align on mobile phones */
     margin: 0;
-    /* Important for vertical align on mobile phones */
+}
+/*Dropdown COlors*/
+.navbar a:hover,
+.dropdown-abt:hover .dropbtn-abt {
+    background-color: #7696B0;
+}
+
+.navbar a:hover,
+.dropdown-uVn:hover .dropbtn-uVn {
+    background-color: #7696B0;
+}
+
+.navbar a:hover,
+.dropdown-jgn:hover .dropbtn-jgn {
+    background-color: #7696B0;
+}
+
+.navbar a:hover,
+.dropdown-etc:hover .dropbtn-etc {
+    background-color: #7696B0;
 }

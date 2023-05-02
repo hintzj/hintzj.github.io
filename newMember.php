@@ -53,13 +53,13 @@
     </script>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Mitgliederantrag</h2>
             <p>
                 Hier kann jeder Interessierte einen Mitgliedsantrag stellen. Bitte füllen Sie das Formular aus und senden Sie es ab.
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Antrag</h4>
             <p>
                 <ul>

@@ -1,6 +1,7 @@
 <?php
     echo "<link rel='stylesheet' type='text/css' href='sponsorScroll.css'>\n
         <link rel='stylesheet' type='text/css' href='mainstyle.css'>\n
+        <link rel='stylesheet' type='text/css' href='temp.css'>\n
         <link rel='stylesheet' type='text/css' href='dropdown.css'>\n
                <link id='colors' rel='stylesheet' type='text/css' href='WhMoColors.css'>\n
 

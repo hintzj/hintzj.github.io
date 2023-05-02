@@ -9,12 +9,12 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting-jgn">
+        <div class="greeting">
             <h2>Willkommen auf der Terminseite des WSV</h2>
             <p>Hier findest du alle wichtigen Termine des Vereins
             </p>
         </div>
-        <div class="text-field">
+        <div class="text-field1">
             <h4>Upcoming Events</h4>
             <p style="font-family: CreteRoundItalic;">
                 <ul>
