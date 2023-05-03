@@ -10,7 +10,7 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting">
+        <div class="greeting" style="background-image: url(pics/bg_Jgn.png);">
             <h2>Willkommen auf der Newsseite der WSV-Jugend</h2>
             <p>Hier infomieren wir über kommende und Vergangene Events
             </p>

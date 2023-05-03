@@ -11,11 +11,12 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting">
+        <div class="greeting" style="background-image: url(pics/Bg-Canadier.png);">
             <h2>Vorstand</h2>
             <p>
                 Als Interessenvertretung unsere Mitglieder leitet
                 <br> der Vorstand die Angelegenheiten des Vereins
+                <br> Er wird jedes Jahr auf unsere Mitgliederhauptversammlung gewählt
             </p>
         </div>
         <div class="text-field1">

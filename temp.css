@@ -3,12 +3,14 @@
     margin: auto;
     background-repeat: no-repeat;
     background-position-x: center;
+    background-position-y: center;
     font-family: RobotCondReg;
     text-align: align;
     padding: 1%;
     border-radius: 15px;
     margin-top: 2% ;
     margin-bottom: 2%;
+    background-size: 100%
 }
 .text-field1 {
     border-radius: 15px;

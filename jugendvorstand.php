@@ -10,7 +10,7 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting">
+        <div class="greeting" style="background-image: url(pics/hessia_flag_bg.png);">
             <h2>Willkommen auf der Seite des Jugendvorstandes</h2>
             <p>Als Interessenvertretung der Jugend sind wir die Verbindung zum Hauptvorstand
                 <br> Zudem organisieren wir Events für die Jugend
