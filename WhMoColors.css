@@ -28,29 +28,29 @@
     color: #000000b7;
 }
 .text-field1{
-    background-color: #96AFC3;
+    background-color: hsl(207, 27%, 80%);
 }
 .text-field2{
-    background-color: #7696B0;
+    background-color: hsl(207, 27%, 70%);
 }
 .text-field3{
-    background-color: #4A6982;
+    background-color: hsl(207, 27%, 60%);
 }
 .text-field4 {
-    background-color: #34495B;
+    background-color: hsl(207, 27%, 50%);
 }
 .endOfPage{
-    background-color: hsl(207, 27%, 24%);
+    background-color: hsl(207, 27%, 40%);
 }
 /*WHite Mode Mainstyle*/
 body {
     background-color: #ffffff;  
 }
 h2 {
-    color: #4A6982;
+    color: hsl(207, 27%, 40%);
 }
 body header{
-    background-color: #7696B0;
+    background-color: hsl(207, 27%, 40%);
 }
 .greeting-alg{
     color: #000000b7;
@@ -68,20 +68,20 @@ body header{
 /*Dropdown COlors*/
 .navbar a:hover,
 .dropdown-abt:hover .dropbtn-abt {
-    background-color: #7696B0;
+    background-color: hsl(207, 27%, 40%);
 }
 
 .navbar a:hover,
 .dropdown-uVn:hover .dropbtn-uVn {
-    background-color: #7696B0;
+    background-color: hsl(207, 27%, 40%);
 }
 
 .navbar a:hover,
 .dropdown-jgn:hover .dropbtn-jgn {
-    background-color: #7696B0;
+    background-color: hsl(207, 27%, 40%);
 }
 
 .navbar a:hover,
 .dropdown-etc:hover .dropbtn-etc {
-    background-color: #7696B0;
+    background-color: hsl(207, 27%, 40%);
 }

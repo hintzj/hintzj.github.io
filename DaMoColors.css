@@ -28,29 +28,29 @@
     color: #000000b7;
 }
 .text-field1{
-    background-color: #235695;
+    background-color: hsl(213, 62%, 30%);
 }
 .text-field2{
-    background-color: #306FAD;
+    background-color: hsl(213, 62%, 40%);
 }
 .text-field3{
-    background-color: #3D87C5;
+    background-color: hsl(213, 62%, 50%);
 }
 .text-field4 {
-    background-color: #49A0DD;
+    background-color: hsl(213, 62%, 60%)
 }
 .endOfPage{
-    background-color: #56B8F5;
+    background-color: hsl(213, 62%, 70%);
 }
 /*DArk Mode Mainstyle*/
 body {
     background-color: #2F323A;  
 }
 h2 {
-    color: #306FAD;
+    color: hsl(213, 62%, 40%);
 }
 body header{
-    background-color: #306FAD;
+    background-color: hsl(213, 62%, 40%);
 }
 .greeting-alg{
     color: #000000b7;
@@ -68,20 +68,20 @@ body header{
 /*Dropdown COlors*/
 .navbar a:hover,
 .dropdown-abt:hover .dropbtn-abt {
-    background-color: #306FAD;
+    background-color: hsl(213, 62%, 40%);
 }
 
 .navbar a:hover,
 .dropdown-uVn:hover .dropbtn-uVn {
-    background-color: #306FAD;
+    background-color: hsl(213, 62%, 40%);
 }
 
 .navbar a:hover,
 .dropdown-jgn:hover .dropbtn-jgn {
-    background-color: #306FAD;
+    background-color: hsl(213, 62%, 40%);
 }
 
 .navbar a:hover,
 .dropdown-etc:hover .dropbtn-etc {
-    background-color: #306FAD;
+    background-color: hsl(213, 62%, 40%);
 }
