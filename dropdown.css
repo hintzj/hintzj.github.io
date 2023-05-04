@@ -199,7 +199,7 @@
     /* Important for vertical align on mobile phones */
 }
 
-/* Add a red background color to navbar links on hover */
+/* Add a blue background color to navbar links on hover */
 .navbar a:hover,
 .dropdown-etc:hover .dropbtn-etc {
     background-color: #85a8e0;
@@ -211,6 +211,7 @@
     position: absolute;
     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
     z-index: 1;
+    border-radius: 10px;
 }
 
 /* Links inside the dropdown */
@@ -220,6 +221,7 @@
     text-decoration: none;
     display: block;
     text-align: left;
+    border-radius: 5px;
 }
 
 /* Add a grey background color to dropdown links on hover */

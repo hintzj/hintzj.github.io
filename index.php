@@ -4,7 +4,6 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
-    <link rel='stylesheet' type='text/css' href='index.css'>
     <title>WSV-Lampertheim</title>
 </head>
 
