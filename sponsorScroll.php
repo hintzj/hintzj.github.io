@@ -4,7 +4,7 @@
 <?php
     //do the same thing as in sponsorScroll.php but with the sponsors table in the database
     try {
-        $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsv");
+        $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
         //$conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
         if (!$conn) {
             die("Connection failed: " . mysqli_connect_error());

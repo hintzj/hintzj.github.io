@@ -18,7 +18,7 @@
         <div class="text-field1">
         <?php
             try {
-                $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsv");
+                $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
                 if (!$conn) {
                     die("Connection failed: " . mysqli_connect_error());
                 }
