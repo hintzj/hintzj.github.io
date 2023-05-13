@@ -19,14 +19,14 @@
             <div>\n";
         foreach ($sponsors as $sponsor) {
             if ($sponsor['sponsorLogoFile'] != NULL) {
-                echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+                echo "<img src='pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
             }
         }
         echo "</div>\n
             <div>\n";
         foreach ($sponsors as $sponsor) {
             if ($sponsor['sponsorLogoFile'] != NULL) {
-                echo "<img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+                echo "<img src='pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
             }       
          }
         echo "</div>\n

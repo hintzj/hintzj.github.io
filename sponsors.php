@@ -41,7 +41,7 @@
                 foreach ($sponsorsLogos as $sponsor) {
                     
                     echo "<li>";
-                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
+                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
                     echo "</li>";
                  
                 }
