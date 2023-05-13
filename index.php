@@ -44,7 +44,7 @@
                             echo "<div class='article'>";
                             echo "<h2>" . $article['title'] . "</h2>";
                             echo "<p>" . $article['summary'] . "</p>";
-                            echo "<a href='https://www.youtube.com/watch?v=dQw4w9WgXcQ'>Read more</a>";
+                            echo "<input type='button' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $article['artikelID'] . "\"'>";
                             echo "</div>";
                             echo "<br>";
                         }

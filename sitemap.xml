@@ -3,7 +3,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de</loc>
 		<priority>1.00</priority>
-		<lastmod>2023-05-11</lastmod>
+		<lastmod>2023-05-12</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/vorstand.php</loc>
@@ -28,7 +28,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/news.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-05-11</lastmod>
+		<lastmod>2023-05-12</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/newMember.php</loc>
@@ -138,12 +138,12 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/artikel.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-04-20</lastmod>
+		<lastmod>2023-05-12</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/archiv.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-05-11</lastmod>
+		<lastmod>2023-05-12</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/wavesFooter.php</loc>
