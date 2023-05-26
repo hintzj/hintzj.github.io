@@ -1,3 +1,7 @@
+<?php
+    require 'functions.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -18,10 +22,7 @@
         <div class="text-field1">
         <?php
             try {
-                $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-                if (!$conn) {
-                    die("Connection failed: " . mysqli_connect_error());
-                }
+                $conn = connect("public");
                 $sql = "SELECT * FROM artikel WHERE date > NOW() ORDER BY date DESC";
                 $result = mysqli_query($conn, $sql);
                 $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);

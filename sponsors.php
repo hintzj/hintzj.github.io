@@ -1,9 +1,13 @@
+<?php
+    require 'functions.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 
 <head>
     <?php include 'defaultHead.php'; ?>
-    <link rel='stylesheet' type='text/css' href='sponsors.css'>
+    <link rel='stylesheet' type='text/css' href='design/css/sponsors.css'>
     <title>Sponsoren - WSVL</title>
 </head>
 
@@ -18,11 +22,7 @@
         <div class="text-field1">
             <h4>Sponsoren</h4>
             <?php
-                $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-                //$conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
-                if ($conn-> connect_error) {
-                    die("Connection failed:". $conn-> connect_error);
-                }
+                $conn = connect("public");
                 $sqlLogos = "SELECT * FROM sponsors WHERE sponsorLogoFile IS NOT NULL";
                 $resultLogos = mysqli_query($conn, $sqlLogos);
                 $sponsorsLogos = mysqli_fetch_all($resultLogos, MYSQLI_ASSOC);
@@ -41,7 +41,7 @@
                 foreach ($sponsorsLogos as $sponsor) {
                     
                     echo "<li>";
-                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
+                    echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='documents/pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
                     echo "</li>";
                  
                 }

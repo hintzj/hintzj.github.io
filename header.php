@@ -5,7 +5,7 @@
     echo "<header>
         <div class='header'>
             <a href='index.php'>
-                <img src='pics/logo1.png'>
+                <img src='documents/pics/logo1.png'>
             </a>
             <h1>Wassersportverein Lampertheim 1929 e.V.</h1>
             <nav>
@@ -81,12 +81,12 @@
                             localStorage.setItem('theme', 'light');
                         }
                         if (localStorage.getItem('theme') == 'light') {
-                            document.getElementById('colors').href = 'WhMoColors.css';
+                            document.getElementById('colors').href = 'design/css/WhMoColors.css';
                             document.getElementById('themeIcon').className = 'fa fa-moon-o';
                         }
                         
                         if (localStorage.getItem('theme') == 'dark') {
-                            document.getElementById('colors').href = 'DaMoColors.css';
+                            document.getElementById('colors').href = 'desgin/css/DaMoColors.css';
                             document.getElementById('themeIcon').className = 'fa fa-sun-o';
                         }
                         
@@ -94,7 +94,7 @@
                             if (localStorage.getItem('theme') == 'dark') {
                                 localStorage.setItem('theme', 'light');
 
-                                document.getElementById('colors').href = 'WhMoColors.css';
+                                document.getElementById('colors').href = 'design/css/WhMoColors.css';
                                 document.getElementById('themeIcon').className = 'fa fa-moon-o';
                             } else {
                                 localStorage.setItem('theme', 'dark');

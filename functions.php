@@ -1,0 +1,265 @@
+<?php
+    require 'config.php';
+
+    function error_logfile($error){
+        echo "<script>console.log('{$error}');</script>";
+        $error_date = date('Y-m-d H:i:s');
+        $message = "{$error_date} | {$error}\n";
+        file_put_contents(errorLog, $message, FILE_APPEND);
+    };
+
+    function connect($type = "public", $access = "read"){
+        try{
+            if($type == "public" and $access == "read"){
+                $conn = new mysqli(server, publicReadUsername, publicReadPassword, publicDatabase);
+            } else if($type == "public" and $access == "write"){
+                $conn = new mysqli(server, publicWriteUsername, publicWritePassword, publicDatabase);
+            } else if($type == "private" and $access == "read"){
+                $conn = new mysqli(server, privateReadUsername, privateReadPassword, privateDatabase);
+            } else if($type == "private" and $access == "write"){
+                $conn = new mysqli(server, privateWriteUsername, privateWritePassword, privateDatabase);
+            } else {
+                throw new Exception("Invalid database type");
+            }
+        } catch(Exception $e){
+            $error = $e->getMessage();
+            error_logfile($error);
+            return false;
+        }        
+        return $conn;
+    };
+
+    function newMember($anrede, $vorname, $name, $strasse, $plz, $ort, $email, $geburtstag, $beruf, $devision, $liegeplatz, $sonderbootPlatz, $anlegeplatz, $startDate, $accountName, $bic, $bank, $checkboxes, $recaptcha) {
+        $conn = connect("private");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $args = func_get_args();
+
+        $args = array_map(function($value){
+            return trim($value);
+        }, $args);
+
+        return $args;
+    }
+
+    function registerUser($email, $username, $password, $confirm_password){
+        $conn = connect("private");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $args = func_get_args();
+
+        $args = array_map(function($value){
+            return trim($value);
+        }, $args);
+
+        foreach($args as $arg){
+            if(empty($arg)){
+                return "All fields are required";
+            }
+        }
+
+        foreach($args as $arg){
+            if(preg_match("/([<|>])/i", $arg)){
+                return "Invalid characters used";
+            }
+        }
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            return "Invalid email address";
+        }
+
+        $stmt = $conn->prepare("SELECT email FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+        if($result != NULL) {
+            return "Email address already in use";
+        }
+
+        if(strlen($username) > 50){
+            return "Username must be less than 50 characters";
+        }
+
+        $stmt = $conn->prepare("SELECT username FROM users WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+        if($result != NULL) {
+            return "Username already in use";
+        }
+
+        if(strlen($password) > 255 and strlen($password) < 8){
+            return "Password must be between 8 and 255 characters";
+        }
+
+        if($password != $confirm_password){
+            return "Passwords do not match";
+        }
+
+        $password = password_hash($password, PASSWORD_DEFAULT);
+
+        $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $email, $username, $password);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error creating account, please try again";
+        } else {
+            return "success";
+        }
+    };
+
+    function loginUser($username, $password){
+        $conn = connect("private");
+        $username = trim($username);
+        $password = trim($password);
+
+        if($username == "" or $password == ""){
+            return "All fields are required";
+        }
+
+        $username = filter_var($username, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $password = filter_var($password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+        if($result == NULL){
+            return "Username or password is incorrect";
+        }
+
+        if(password_verify($password,$result['password']) == FALSE){
+            return "Username or password is incorrect";
+        } else {
+            $_SESSION["user"] = $username;
+            header("Location: account.php");
+            exit();
+        }
+
+    };
+
+    function logoutUser(){
+        session_destroy();
+        header("Location: login.php");
+        exit();
+    };
+
+    function passwordReset($email){
+        $conn = connect("private");
+        $email = trim($email);
+
+        if(!filter_var($email, FILTER_VALIDATE_EMAIL)){
+            return "Invalid email address";
+        }
+
+        $stmt = $conn->prepare("SELECT * FROM users WHERE email = ?");
+        $stmt->bind_param("s", $email);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+
+        if($result == NULL){
+            return "Email address not found";
+        }
+
+        $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+        $password_len = 8;
+        $newPass = substr(str_shuffle($characters), 0, $password_len);
+
+        $subject = "Password Reset WSV Lampertheim";
+        $message = "Your new password is: {$newPass}";
+        $headers = "MIME-Version: 1.0" . "\r\n";
+        $headers .= "Content-type:text/html;charset=UTF-8" .  "\r\n";
+        $headers .= "From: Admin \r\n";
+
+        $send = mail($email, $subject, $message, $headers);
+        if($send == FALSE){
+            return "Error sending email";
+        } else {
+            $newPass = password_hash($newPass, PASSWORD_DEFAULT);
+            $stmt = $conn->prepare("UPDATE users SET password = ? WHERE email = ?");
+            $stmt->bind_param("ss", $newPass, $email);
+            $stmt->execute();
+            if($stmt->affected_rows != 1){
+                return "Error updating password";
+            } else {
+                return "success";
+            }
+        }
+
+    };
+
+    function deleteAccount(){
+        $conn = connect("private");
+        $stmt = $conn->prepare("DELETE FROM users WHERE username = ?");
+        $stmt->bind_param("s", $_SESSION['user']);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error deleting account";
+        } else {
+            session_destroy();
+            header("location: delete-message.php");
+            exit();
+
+        }
+    };
+
+    function changePassword($username, $old_password, $new_password, $confirm_new_password){
+        $conn = connect("private");
+        $username = trim($username);
+        $old_password = trim($old_password);
+        $new_password = trim($new_password);
+        $confirm_new_password = trim($confirm_new_password);
+
+        if($old_password == "" or $new_password == "" or $confirm_new_password == ""){
+            return "All fields are required";
+        }
+
+        $old_password = filter_var($old_password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $new_password = filter_var($new_password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+        $confirm_new_password = filter_var($confirm_new_password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
+
+        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+
+        if($result == NULL){
+            return "Error changing password";
+        }
+
+        if(password_verify($old_password,$result['password']) == FALSE){
+            return "Old password is incorrect";
+        }
+
+        if(strlen($new_password) > 255 and strlen($new_password) < 8){
+            return "Password must be between 8 and 255 characters";
+        }
+
+        if($new_password != $confirm_new_password){
+            return "Passwords do not match";
+        }
+
+        $new_password = password_hash($new_password, PASSWORD_DEFAULT);
+
+        $stmt = $conn->prepare("UPDATE users SET password = ? WHERE username = ?");
+        $stmt->bind_param("ss", $new_password, $username);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error changing password";
+        } else {
+            return "success";
+        }
+    };
+?>

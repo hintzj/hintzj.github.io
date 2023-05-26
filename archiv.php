@@ -1,3 +1,7 @@
+<?php
+    require 'functions.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -20,11 +24,7 @@
             <h2>Berichte</h2>
             <?php
                 try {
-                    $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-                    //$conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
+                    $conn = connect("public");
                     $sql = "SELECT * FROM artikel WHERE date < NOW() ORDER BY date DESC";
                     $result = mysqli_query($conn, $sql);
                     $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);

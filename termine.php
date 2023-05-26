@@ -1,3 +1,7 @@
+<?php
+    require 'functions.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -20,11 +24,7 @@
                 <ul>
                 <?php
                     //make a request to the termine table of the database and filter for all upcoming events
-                    $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-                    //$conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
-                    if (!$conn) {
-                        die("Connection failed: " . mysqli_connect_error());
-                    }
+                    $conn = connect("public");
                     $sql = "SELECT * FROM termine WHERE terminDate > NOW() ORDER BY terminDate ASC";
                     $result = mysqli_query($conn, $sql);
                     $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);

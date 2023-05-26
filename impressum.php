@@ -1,3 +1,7 @@
+<?php
+    require 'functions.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 

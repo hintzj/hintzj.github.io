@@ -1,4 +1,7 @@
-<?php header("SameSite=None; Secure"); ?>
+<?php
+    include 'functions.php';
+    header("SameSite=None; Secure");
+?>
 <!DOCTYPE HTML>
 <html>
 
@@ -11,7 +14,7 @@
     <?php include 'header.php'; ?>
     <div class="content">
         <main>
-            <div class="greeting" style="background-image: url(pics/Bg-Canadier.png);">
+            <div class="greeting" style="background-image: url(documents/pics/Bg-Canadier.png);">
                 <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
                 <p>
                     Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und Kanupolo.
@@ -20,7 +23,7 @@
                     <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
                     <br>
                     <br>
-                    <img src="pics/logo1.png" alt="Logo des Wassersportvereins">
+                    <img src="documents/pics/logo1.png" alt="Logo des Wassersportvereins">
                 </p>
 
             </div>
@@ -29,11 +32,7 @@
                 <ul>
                 <?php
                     try {
-                        $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-                        //$conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
-                        if (!$conn) {
-                            die("Connection failed: " . mysqli_connect_error());
-                        }
+                        $conn = connect("public");
                         $sql = "SELECT * FROM artikel ORDER BY date DESC LIMIT 3";
                         $result = mysqli_query($conn, $sql);
                         $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);

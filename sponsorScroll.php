@@ -1,14 +1,14 @@
+<?php
+    require_once 'functions.php';
+?>
+
 <a href="sponsors.php">
 
 <div>
 <?php
     //do the same thing as in sponsorScroll.php but with the sponsors table in the database
     try {
-        $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-        //$conn = mysqli_connect("sql7.freemysqlhosting.net", "sql7614355", "1C62akdn38", "sql7614355");
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }
+        $conn = connect("public");
         $sql = "SELECT * FROM sponsors";
         $result = mysqli_query($conn, $sql);
         $sponsors = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -19,14 +19,14 @@
             <div>\n";
         foreach ($sponsors as $sponsor) {
             if ($sponsor['sponsorLogoFile'] != NULL) {
-                echo "<img src='pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+                echo "<img src='documents/pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
             }
         }
         echo "</div>\n
             <div>\n";
         foreach ($sponsors as $sponsor) {
             if ($sponsor['sponsorLogoFile'] != NULL) {
-                echo "<img src='pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
+                echo "<img src='documents/pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' alt='" . $sponsor['sponsorName'] . "'>\n";
             }       
          }
         echo "</div>\n

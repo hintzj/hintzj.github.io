@@ -1,3 +1,33 @@
+<?php
+    require 'functions.php';
+
+    if(isset($_POST['submit'])) {
+        $response = newMember($_POST['anrede'],
+            $_POST['vorname'],
+            $_POST['name'],
+            $_POST['strasse'],
+            $_POST['plz'],
+            $_POST['ort'],
+            $_POST['email'],
+            $_POST['telefon'],
+            $_POST['geburtstag'],
+            $_POST['beruf'],
+            $_POST['beruf'], 
+            $_POST['liegeplatz'],
+            $_POST['sonderbootPlatz'],
+            $_POST['anlegeplatz'],
+            $_POST['start'],
+            $_POST['nameBIC'],
+            $_POST['iban'],
+            $_POST['bic'],
+            $_POST['bank'],
+            $_POST['checkboxes'],
+            $_POST['g-recaptcha-response']);
+
+        echo "<script>console.log('{$response}');</script>";
+    }
+?>
+
 <!DOCTYPE HTML>
 <html>
 
@@ -63,7 +93,7 @@
             <h4>Antrag</h4>
             <p>
                 <ul>
-                    <form method="POST">
+                    <form action="" method="POST">
                         <label for="anrede">Anrede:</label>
                         <select name="anrede">
                             <option value="none">keine Angabe</option>
@@ -74,26 +104,26 @@
                         <br>
 
                         <label for="vorname">Vorname:</label>
-                        <input type="text" name="vorname" placeholder="Vorname" required>
+                        <input type="text" name="vorname" placeholder="Vorname" >
 
                         <label for="name">Nachname:</label>
-                        <input type="text" name="name" placeholder="Name" required>
+                        <input type="text" name="name" placeholder="Name" >
 
                         <br>
 
                         <label for="strasse">Straße:</label>
-                        <input type="text" name="strasse" placeholder="Straße" required>
+                        <input type="text" name="strasse" placeholder="Straße" >
 
                         <label for="plz">PLZ:</label>
-                        <input type="text" name="plz" placeholder="PLZ" required>
+                        <input type="text" name="plz" placeholder="PLZ" >
 
                         <label for="ort">Ort:</label>
-                        <input type="text" name="ort" placeholder="Ort" required>
+                        <input type="text" name="ort" placeholder="Ort" >
 
                         <br>
 
                         <label for="email">E-Mail:</label>
-                        <input type="email" name="email" placeholder="E-Mail" required>
+                        <input type="email" name="email" placeholder="E-Mail" >
 
                         <label for="telefon">Telefon:</label>
                         <input type="text" name="telefon" placeholder="Telefon">
@@ -101,7 +131,7 @@
                         <br>
 
                         <label for="geburtstag">Geburtstag:</label>
-                        <input type="date" name="geburtstag" placeholder="Geburtstag" id="geburtstag" onchange="calcCost()" required>
+                        <input type="date" name="geburtstag" placeholder="Geburtstag" id="geburtstag" onchange="calcCost()" >
 
                         <label for="beruf">Beruf:</label>
                         <input type="text" name="beruf" placeholder="Beruf">
@@ -113,10 +143,10 @@
                         <input type="checkbox"  name="devision" value="kanurennsport" />
                         <label for="contactChoice1">Kanurennsport</label>
 
-                        <input type="checkbox" id="contactChoice2" name="devision" value="kanupolo" />
+                        <input type="checkbox" id="contactChoice2" name="devision2" value="kanupolo" />
                         <label for="contactChoice2">Kanupolo</label>
 
-                        <input type="checkbox" id="contactChoice3" name="devision" value="sauna" />
+                        <input type="checkbox" id="contactChoice3" name="devision3" value="sauna" />
                         <label for="contactChoice3">Sauna</label>
 
                         <br>
@@ -157,37 +187,37 @@
                         <br>
                         
                         <label for="start">Startdatum</label>
-                        <input type="date" id="start" name="start" value="<?php echo date('Y-m-d'); ?>" required>
+                        <input type="date" id="start" name="start" value="<?php echo date('Y-m-d'); ?>" >
                         
                         <br>
                         
                         <label for="nameAccount">Name des Kontoinhabers:</label>
-                        <input type="text" name="nameBIC" placeholder="Name des Kontoinhabers" required>
+                        <input type="text" name="nameBIC" placeholder="Name des Kontoinhabers" >
                         
                         <label for="iban">IBAN:</label>
-                        <input type="text" name="iban" placeholder="IBAN" required>
+                        <input type="text" name="iban" placeholder="IBAN" >
                         
                         <label for="bic">BIC:</label>
-                        <input type="text" name="bic" placeholder="BIC" required>
+                        <input type="text" name="bic" placeholder="BIC" >
                         
                         <br>
                         
                         <label for="bank">Bank:</label>
-                        <input type="text" name="bank" placeholder="Bank" required>
+                        <input type="text" name="bank" placeholder="Bank" >
                         
                         <br>
                         
-                        <input type="checkbox" id="agb" name="agb" value="agb" required>
+                        <input type="checkbox" id="agb" name="checkboxes[]" value="" >
                         <label for="agb">Ich habe die <a href="agb.php">AGB</a> gelesen und akzeptiere diese.</label>
                         
                         <br>
                         
-                        <input type="checkbox" id="datenschutz" name="datenschutz" value="datenschutz" required>
+                        <input type="checkbox" id="datenschutz" name="checkboxes[]" value="" >
                         <label for="datenschutz">Ich habe die <a href="datenschutz.php">Datenschutzerklärung</a> gelesen und akzeptiere diese.</label>
                         
                         <br>
                         
-                        <input type="checkbox" id="mitgliedsbeitrag" name="mitgliedsbeitrag" value="mitgliedsbeitrag" required>
+                        <input type="checkbox" id="mitgliedsbeitrag" name="checkboxes[]" value="" >
                         <label for="mitgliedsbeitrag">Ich bin damit einverstanden, dass der Mitgliedsbeitrag von meinem Konto abgebucht wird.</label>
                         
                         <br>
@@ -207,7 +237,7 @@
                         <br>
                         <br>
 
-                        <input type="checkbox" id="newsletter" name="newsletter" value="newsletter">
+                        <input type="checkbox" id="newsletter" name="checkboxes[]" value="newsletter">
                         <label for="newsletter">Ich möchte den Newsletter erhalten.</label>
                         
                         <br>
@@ -225,7 +255,7 @@
                         <br>
                         <br>
                         
-                        <input type="submit" value="Verbindlich Absenden">
+                        <input type="submit" value="Verbindlich Absenden" name="submit">
                     </form>
                 </ul>
             </p>

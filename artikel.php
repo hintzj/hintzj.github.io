@@ -1,13 +1,14 @@
+<?php
+    require 'functions.php';
+?>
+
 <!DOCTYPE HTML>
 <html>
 <?php
     try{
         //get the title of the article from the get request and the article database
         $id = $_GET['id'];
-        $conn = mysqli_connect("localhost", "websiteReadAccess", "password", "wsvPublic");
-        if (!$conn) {
-            die("Connection failed: " . mysqli_connect_error());
-        }  
+        $conn = connect("public");
         $sql = "SELECT * FROM artikel WHERE artikelID = '$id'";
         $result = mysqli_query($conn, $sql);
         $article = mysqli_fetch_assoc($result);
