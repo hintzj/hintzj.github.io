@@ -86,7 +86,7 @@
                         }
                         
                         if (localStorage.getItem('theme') == 'dark') {
-                            document.getElementById('colors').href = 'desgin/css/DaMoColors.css';
+                            document.getElementById('colors').href = 'design/css/DaMoColors.css';
                             document.getElementById('themeIcon').className = 'fa fa-sun-o';
                         }
                         
@@ -99,7 +99,7 @@
                             } else {
                                 localStorage.setItem('theme', 'dark');
                                 
-                                document.getElementById('colors').href = 'DaMoColors.css';
+                                document.getElementById('colors').href = 'design/css/DaMoColors.css';
                                 document.getElementById('themeIcon').className = 'fa fa-sun-o';
                             }
                         });
