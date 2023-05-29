@@ -19,4 +19,3 @@
 
     define('errorLog', 'logs/db-log.txt');
 ?>
-    

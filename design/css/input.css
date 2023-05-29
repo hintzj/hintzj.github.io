@@ -1,0 +1,23 @@
+input[type=text]{
+    border-radius: 5px;
+    float: right;
+    margin-right: 37%;
+}
+input[type=email]{
+    border-radius: 5px;
+    float: right;
+    margin-right: 37%;
+}
+input[type=date]{
+    border-radius: 5px;
+    float: right;
+    height: 15px;
+    margin-right: 37%;
+}
+input[type=number]{
+    border-radius: 5px;
+}
+select{
+float: right;
+margin-right: 37%;
+}
