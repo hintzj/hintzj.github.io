@@ -104,7 +104,9 @@
                         <br>
 
                         <label for="vorname">Vorname:</label>
-                        <input type="text" name="vorname" placeholder="Vorname" >
+                        <input type="text" name="vorname" placeholder="Vorname" required>
+                        
+                        <br>
 
                         <label for="name">Nachname:</label>
                         <input type="text" name="name" placeholder="Name" >
@@ -112,10 +114,14 @@
                         <br>
 
                         <label for="strasse">Straße:</label>
-                        <input type="text" name="strasse" placeholder="Straße" >
+                        <input type="text" name="strasse" placeholder="Straße" required>
+                       
+                        <br>
 
                         <label for="plz">PLZ:</label>
-                        <input type="text" name="plz" placeholder="PLZ" >
+                        <input type="text" name="plz" placeholder="PLZ" required>
+                      
+                        <br>
 
                         <label for="ort">Ort:</label>
                         <input type="text" name="ort" placeholder="Ort" >
@@ -123,7 +129,9 @@
                         <br>
 
                         <label for="email">E-Mail:</label>
-                        <input type="email" name="email" placeholder="E-Mail" >
+                        <input type="email" name="email" placeholder="E-Mail" required>
+
+                        <br>
 
                         <label for="telefon">Telefon:</label>
                         <input type="text" name="telefon" placeholder="Telefon">
@@ -131,7 +139,11 @@
                         <br>
 
                         <label for="geburtstag">Geburtstag:</label>
-                        <input type="date" name="geburtstag" placeholder="Geburtstag" id="geburtstag" onchange="calcCost()" >
+                        <input type="date" name="geburtstag" placeholder="Geburtstag" id="geburtstag" onchange="calcCost()" required>
+
+                        <br>
+
+                        <br>
 
                         <label for="beruf">Beruf:</label>
                         <input type="text" name="beruf" placeholder="Beruf">
@@ -191,11 +203,15 @@
                         
                         <br>
                         
-                        <label for="nameAccount">Name des Kontoinhabers:</label>
-                        <input type="text" name="nameBIC" placeholder="Name des Kontoinhabers" >
+                        <label for="nameAccount">Kontoinhaber:</label>
+                        <input type="text" name="nameBIC" placeholder="Kontoinhaber" required>
+
+                        <br>
                         
                         <label for="iban">IBAN:</label>
-                        <input type="text" name="iban" placeholder="IBAN" >
+                        <input type="text" name="iban" placeholder="IBAN" required>
+
+                        <br>
                         
                         <label for="bic">BIC:</label>
                         <input type="text" name="bic" placeholder="BIC" >
