@@ -115,7 +115,7 @@ body header{
 .wavesFooter {
     width: 100%;
     height: 50px; /* adjust height as needed */
-    background-image: url("../designPics/waves_footer.png");
+    background-image: url("../designPics/waves_footer_wh.png");
     background-size: contain;
 }
 
