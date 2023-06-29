@@ -33,6 +33,9 @@
                 <?php
                     try {
                         $conn = connect("public");
+                        if ($conn == false) {
+                            throw new Exception("DB Connection failed");
+                        }
                         $sql = "SELECT * FROM artikel ORDER BY date DESC LIMIT 3";
                         $result = mysqli_query($conn, $sql);
                         $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -49,6 +52,7 @@
                         }
                     } catch (Exception $e) {
                         echo "Error: " . $e->getMessage();
+                        //error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
                     }
                 ?>
                 </ul>

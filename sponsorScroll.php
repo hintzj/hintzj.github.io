@@ -8,7 +8,10 @@
 <?php
     //do the same thing as in sponsorScroll.php but with the sponsors table in the database
     try {
-        $conn = connect("public");
+        $conn = connect();
+        if ($conn == false) {
+            throw new Exception("DB Connection failed");
+        }
         $sql = "SELECT * FROM sponsors";
         $result = mysqli_query($conn, $sql);
         $sponsors = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -32,7 +35,9 @@
         echo "</div>\n
         </logo-slider>";
     } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
+        $error = $e->getMessage();
+        echo "Error: " . $error;
+        error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
     }
 ?>
 </div>

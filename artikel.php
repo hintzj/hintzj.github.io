@@ -9,13 +9,18 @@
         //get the title of the article from the get request and the article database
         $id = $_GET['id'];
         $conn = connect("public");
+        if ($conn == false) {
+            throw new Exception("DB Connection failed");
+        }
         $sql = "SELECT * FROM artikel WHERE artikelID = '$id'";
         $result = mysqli_query($conn, $sql);
         $article = mysqli_fetch_assoc($result);
         mysqli_free_result($result);
         mysqli_close($conn);
     } catch (Exception $e) {
-        echo "Error: " . $e->getMessage();
+        $error = $e->getMessage();
+        echo "Error: " . $error;
+        error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
     }
 ?>
 <head>

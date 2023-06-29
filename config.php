@@ -6,13 +6,13 @@
     define('privateReadPassword', 'OD8q_J4z4e[wjy9N');
     define('privateWriteUsername', 'privateWUser');
     define('privateWritePassword', 'rHUQY-pm[CdpG9(D');
-    define('privateDatabase', 'wsvPrivate');
+    define('privateDatabase', 'wsvprivate');
 
     define('publicReadUsername', 'publicRUser');
-    define('publicReadPassword', 'O_6nI4ldqZBL/4g3');
+    define('publicReadPassword', 'WnK21FLQH_NY[U9u');
     define('publicWriteUsername', 'publicWUser');
     define('publicWritePassword', '_)bBIWl2a0PwQD5O');
-    define('publicDatabase', 'wsvPublic');
+    define('publicDatabase', 'wsvpublic');
 
     define('adminUsername', 'wsvAdmin');
     define('adminPassword', 'Uc@e[q9txB)CeABz');

@@ -1,29 +1,45 @@
 <?php
     require 'config.php';
-
-    function error_logfile($error){
-        echo "<script>console.log('{$error}');</script>";
-        $error_date = date('Y-m-d H:i:s');
-        $message = "{$error_date} | {$error}\n";
-        file_put_contents(errorLog, $message, FILE_APPEND);
-    };
+    require 'utils.php';
 
     function connect($type = "public", $access = "read"){
         try{
-            if($type == "public" and $access == "read"){
-                $conn = new mysqli(server, publicReadUsername, publicReadPassword, publicDatabase);
-            } else if($type == "public" and $access == "write"){
-                $conn = new mysqli(server, publicWriteUsername, publicWritePassword, publicDatabase);
-            } else if($type == "private" and $access == "read"){
-                $conn = new mysqli(server, privateReadUsername, privateReadPassword, privateDatabase);
-            } else if($type == "private" and $access == "write"){
-                $conn = new mysqli(server, privateWriteUsername, privateWritePassword, privateDatabase);
+            if ($type == "public" and $access == "read") {
+                //echo "public read";
+                $username = publicReadUsername;
+                $password = publicReadPassword;
+                $database = publicDatabase;
+            } else if ($type == "public" and $access == "write") {
+                //echo "public write";
+                $username = publicWriteUsername;
+                $password = publicWritePassword;
+                $database = publicDatabase;
+            } else if ($type == "private" and $access == "read") {
+                //echo "private read";
+                $username = privateReadUsername;
+                $password = privateReadPassword;
+                $database = privateDatabase;
+            } else if ($type == "private" and $access == "write") {
+                //echo "private write";
+                $username = privateWriteUsername;
+                $password = privateWritePassword;
+                $database = privateDatabase;
             } else {
                 throw new Exception("Invalid database type");
             }
+
+            try{
+                $conn = new mysqli(server, $username, $password, $database);
+            } catch(Exception $e){
+                $error = $e->getMessage();
+                //echo "Error: " . $error;
+                error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
+                return false;
+            }
+            
         } catch(Exception $e){
             $error = $e->getMessage();
-            error_logfile($error);
+            error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
             return false;
         }        
         return $conn;

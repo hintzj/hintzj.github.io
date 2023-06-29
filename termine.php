@@ -24,16 +24,25 @@
                 <ul>
                 <?php
                     //make a request to the termine table of the database and filter for all upcoming events
-                    $conn = connect("public");
-                    $sql = "SELECT * FROM termine WHERE terminDate > NOW() ORDER BY terminDate ASC";
-                    $result = mysqli_query($conn, $sql);
-                    $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                    mysqli_free_result($result);
-                    mysqli_close($conn);
-                    
-                    //print every event in a list along with the date
-                    foreach ($termine as $termin) {
-                        echo "<li>" . $termin['terminDate'] . " - " . $termin['terminTitle'] . "</li>";
+                    try{
+                        $conn = connect("public");
+                        if ($conn == false) {
+                            throw new Exception("DB Connection failed");
+                        }
+                        $sql = "SELECT * FROM termine WHERE terminDate > NOW() ORDER BY terminDate ASC";
+                        $result = mysqli_query($conn, $sql);
+                        $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                        mysqli_free_result($result);
+                        mysqli_close($conn);
+                        
+                        //print every event in a list along with the date
+                        foreach ($termine as $termin) {
+                            echo "<li>" . $termin['terminDate'] . " - " . $termin['terminTitle'] . "</li>";
+                        }
+                    } catch (Exception $e) {
+                        $error = $e->getMessage();
+                        echo "Error: " . $error;
+                        //error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
                     }
                 ?>
                 </ul>

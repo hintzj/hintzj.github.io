@@ -25,6 +25,9 @@
             <?php
                 try {
                     $conn = connect("public");
+                    if ($conn == false) {
+                        throw new Exception("DB Connection failed");
+                    }
                     $sql = "SELECT * FROM artikel WHERE date < NOW() ORDER BY date DESC";
                     $result = mysqli_query($conn, $sql);
                     $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
@@ -42,7 +45,9 @@
                         echo "<br>";
                     }
                 } catch (Exception $e) {
-                    echo "Error: " . $e->getMessage();
+                    $error = $e->getMessage();
+                    echo "Error: " . $error;
+                    error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
                 }
             ?>
         </div>
