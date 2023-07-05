@@ -17,6 +17,10 @@
         $article = mysqli_fetch_assoc($result);
         mysqli_free_result($result);
         mysqli_close($conn);
+
+        if ($article == NULL) {
+            header("Location: 404.php");
+        }
     } catch (Exception $e) {
         $error = $e->getMessage();
         echo "Error: " . $error;

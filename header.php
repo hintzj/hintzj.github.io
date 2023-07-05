@@ -16,14 +16,16 @@
                         <button class='dropbtn-abt'>
                             Abteilungen <i class='fa fa-caret-down'></i>
                         </button>
-                        <div class='dropdown-content-abt'>
-                            <a href='kanurennsport.php'><i class='fa fa-trophy' aria-hidden='true'></i> Wettkampfsport</a>
-                            <a href='fitnesssport.php'><i class='fa fa-heartbeat' aria-hidden='true'></i> Fitnesssport</a>
-                            <a href='motorboot.php'><i class='fa fa-ship' aria-hidden='true'></i> Motorboot</a>
-                            <a href='kinderturnen.php'><i class='fa fa-grav' aria-hidden='true'></i> Kinderturnen</a>
-                            <a href='kindeswohl.php'><i class='fa fa-child' aria-hidden='true'></i> Kindeswohl</a>
-                            <a href='kultur.php'><i class='fa fa-users' aria-hidden='true'></i> Kultur</a>
-                        </div>
+                        <div class='dropdown-content-abt'>";
+
+                        $conn = connect();
+                        $sql = "SELECT * FROM abteilungen";
+                        $result = $conn->query($sql);
+                        while($row = $result->fetch_assoc()) {
+                            echo "<a href='" . strtolower($row['abteilungName']) . ".php'><i class='" . $row['iconName'] . "' aria-hidden='true'></i> ".$row['abteilungName']."</a>";
+                        }
+                
+    echo                    "</div>
                     </div>
                     <!-- dropdown für Unser verein-->
                     <div class='dropdown-uVn'>

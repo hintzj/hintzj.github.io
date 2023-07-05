@@ -28,7 +28,7 @@
                 <li>Die Kinder werden von den Übungsleitern beaufsichtigt und betreut.</li>
             </ul>
 
-            <img src="pics/kindeswohl.png" alt="Kindeswohl" style="border-radius: 15px; width: 70%">
+            <img src="documents/pics/kindeswohl.png" alt="Kindeswohl" style="border-radius: 15px; width: 70%">
             <br>
             <a href="documents/Kindeswohl-Verhaltenskodex.pdf" target="_blank" rel="noopener noreferrer">Hier</a>
             findest du den aktuellen Verhaltenskodex im Bezug auf Kindeswohl des Landessprtundes Hessen e.V.

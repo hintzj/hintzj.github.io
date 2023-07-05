@@ -152,14 +152,21 @@
 
                         <label for="sportart">Sparte:</label>
 
-                        <input type="checkbox"  name="devision" value="kanurennsport" />
-                        <label for="contactChoice1">Kanurennsport</label>
-
-                        <input type="checkbox" id="contactChoice2" name="devision2" value="kanupolo" />
-                        <label for="contactChoice2">Kanupolo</label>
-
-                        <input type="checkbox" id="contactChoice3" name="devision3" value="sauna" />
-                        <label for="contactChoice3">Sauna</label>
+                        <?php   
+                            $conn = connect();
+                            if ($conn == false){
+                                throw new Exception("DB Connection failed");
+                            }
+                            $sql = "SELECT * FROM abteilungen";
+                            $result = mysqli_query($conn, $sql);
+                            $abteilungen = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                            mysqli_free_result($result);
+                            mysqli_close($conn);
+                            foreach ($abteilungen as $abteilung) {
+                                echo "<input type='checkbox' id='contactChoice1' name='devision' value='" . $abteilung['abteilungName'] . "' />";
+                                echo "<label for='contactChoice1'>" . $abteilung['abteilungName'] . "</label>";
+                            }
+                        ?>
 
                         <br>
 

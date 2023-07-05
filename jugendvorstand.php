@@ -23,7 +23,7 @@
         <div class="text-field1">
             <h4>Jugendvorstand</h4>
             <p >
-                Seit dem 01.02.23 sind Folgende im Amt:
+                Seit dem 01.02.23 sind folgende im Amt:
             <ul>
                 <li>Vorsitzender: Matteo Lunkenbein</li>
                 <li>2. Vorsitzender: Alessandro Paterna</li>

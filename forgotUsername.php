@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
+    <?php include 'functions.php'; ?>
     <title>Benutzername vergessen - WSVL</title>
 </head>
 

@@ -3,6 +3,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
+    <?php include 'functions.php'; ?>
     <title>Passwort vergessen - WSVL</title>
 </head>
 
