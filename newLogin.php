@@ -2,8 +2,6 @@
     require 'functions.php';
     include 'defaultHead.php';
 
-    $response = "TESTTESTTEST";
-
     if(isset($_POST['submit'])){
         $fName = $_POST['firstname'];
         $lName = $_POST['lastname'];

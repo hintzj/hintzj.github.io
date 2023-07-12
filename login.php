@@ -1,5 +1,18 @@
 <?php
     require 'functions.php';
+
+    if(isset($_POST['submit'])){
+        $username = $_POST['username'];
+        $password = $_POST['password'];
+
+        $result = loginUser($username, $password);
+
+        if($result == "success"){
+            header("location: account.php");
+        }else{
+            $response = $result;
+        }
+    }
 ?>
 
 <!DOCTYPE HTML>
@@ -24,15 +37,18 @@
             <h4>Log In</h4>
             <p>
                 <ul>
-                <form action="login.php" method="post">
+                <form action="" method="post">
                     <label for="username">Benutzername:</label>
-                    <input type="text" name="username" id="username" required>
+                    <input type="text" name="username" id="username" required value="<?php echo @$_POST['username']; ?>">
                     <br>
                     <label for="password">Passwort:</label>
-                    <input type="password" name="password" id="password" required>
+                    <input type="password" name="password" id="password" required value="<?php echo @$_POST['password']; ?>">
                     <br>
-                    <input type="submit" value="Log In">
+                    <input type="submit" value="Log In" name="submit">
                 </form>
+                <p class="error">
+                    <?php echo @$response; ?>
+                </p>
                 <br>
                 <a href='forgotPassword.php'>Passwort vergessen?</a>
                 <br>
