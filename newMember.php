@@ -143,15 +143,20 @@
 
                         <br>
 
-                        <br>
-
                         <label for="beruf">Beruf:</label>
                         <input type="text" name="beruf" placeholder="Beruf">
 
                         <br>
 
-                        <label for="sportart">Sparte:</label>
+                        <label for="art">Art der Mitgliedschaft:</label>
+                        <input type="radio" id="art" name="art" value="aktiv" checked>
+                        <label for="art">Aktiv</label>
+                        <input type="radio" id="art" name="art" value="passiv">
+                        <label for="art">Passiv</label>
 
+                        <br>
+
+                        <label for="sportart">Sparte:</label>
                         <?php   
                             $conn = connect();
                             if ($conn == false){
@@ -163,8 +168,10 @@
                             mysqli_free_result($result);
                             mysqli_close($conn);
                             foreach ($abteilungen as $abteilung) {
+                                echo "<br>";
                                 echo "<input type='checkbox' id='contactChoice1' name='devision' value='" . $abteilung['abteilungName'] . "' />";
                                 echo "<label for='contactChoice1'>" . $abteilung['abteilungName'] . "</label>";
+                                
                             }
                         ?>
 
@@ -255,7 +262,7 @@
                         <button id="clear">Clear</button>
                         
                         <script src="https://cdn.jsdelivr.net/npm/signature_pad@4.0.0/dist/signature_pad.umd.min.js"></script>
-                        <script src="signBox.js"></script>
+                        <script src="libs/signBox.js"></script>
                         
                         <br>
                         <br>

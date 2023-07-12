@@ -40,9 +40,12 @@
                 <p>Registernummer: [*Platzhalter*]</p>
                 <p>Umsatzsteuer: [*Platzhalter*]</p>
                 <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: [*Platzhalter*]</p>
-</div>
-                <div class="text-field2">
-                    <h4>Recht</h4>
+            </ul>
+            </p>
+        </div>
+        <div class="text-field2">
+            <h4>Recht</h4>
+            <ul>
                 <h3>Streitschlichtung</h3>
                 <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
                 <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
@@ -78,7 +81,6 @@
                     Hinweis. Bei Bekanntwerden von Rechtsverletzungen werden wir derartige Inhalte umgehend entfernen.
                 </p>
             </ul>
-            </p>
         </div>
         <div class="text-field3">
             <h4>Datenschutz</h4>

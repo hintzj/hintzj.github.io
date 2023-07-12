@@ -45,6 +45,10 @@
         return $conn;
     };
 
+    function destroyConnection($conn){
+        $conn->close();
+    };
+
     function newMember($anrede, $vorname, $name, $strasse, $plz, $ort, $email, $geburtstag, $beruf, $devision, $liegeplatz, $sonderbootPlatz, $anlegeplatz, $startDate, $accountName, $bic, $bank, $checkboxes, $recaptcha) {
         $conn = connect("private");
         if($conn == false){
@@ -59,7 +63,7 @@
         return $args;
     }
 
-    function registerUser($email, $username, $password, $confirm_password){
+    function registerUser($email, $fName, $lName, $birthday, $username, $password, $confirm_password){
         $conn = connect("private");
         if($conn == false){
             return "Error connecting to database";
@@ -86,7 +90,7 @@
             return "Invalid email address";
         }
 
-        $stmt = $conn->prepare("SELECT email FROM users WHERE email = ?");
+        $stmt = $conn->prepare("SELECT * FROM users WHERE EXISTS (SELECT * FROM mitglieder WHERE email = ?)");
         $stmt->bind_param("s", $email);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -120,11 +124,33 @@
 
         $password = password_hash($password, PASSWORD_DEFAULT);
 
-        $stmt = $conn->prepare("INSERT INTO users (email, username, password) VALUES (?, ?, ?)");
-        $stmt->bind_param("sss", $email, $username, $password);
+        //get the mitgliedID from the mitglieder table by searching for the email, first name, last name, and birthday
+        $stmt = $conn->prepare("SELECT mitgliedID FROM mitglieder WHERE email = ? AND vorname = ? AND nachname = ? AND geburtsdatum = ?");
+        $stmt->bind_param("ssss", $email, $fName, $lName, $birthday);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+        if($result == NULL){
+            return "Error creating account, please try again";
+        }
+
+        //echo $result;
+
+        $userID = $result['mitgliedID'];
+
+        destroyConnection($conn);
+
+        $conn = connect("private", "write");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+
+        $stmt = $conn->prepare("INSERT INTO users (mitgliedID, username, password) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $userID, $username, $password);
         $stmt->execute();
         if($stmt->affected_rows != 1){
-            return "Error creating account, please try again";
+            return "Error creating account, please try again or contact an administrator";
         } else {
             return "success";
         }
