@@ -17,15 +17,22 @@
                             Abteilungen <i class='fa fa-caret-down'></i>
                         </button>
                         <div class='dropdown-content-abt'>";
-
-                        $conn = connect();
-                        $sql = "SELECT * FROM abteilungen";
-                        $result = $conn->query($sql);
-                        while($row = $result->fetch_assoc()) {
-                            echo "<a href='" . strtolower($row['abteilungName']) . ".php'><i class='" . $row['iconName'] . "' aria-hidden='true'></i> ".$row['abteilungName']."</a>";
+                        try{
+                            $conn = connect();
+                            if ($conn == false) {
+                                throw new Exception("DB Connection failed");
+                            }
+                            $sql = "SELECT * FROM abteilungen";
+                            $result = $conn->query($sql);
+                            while($row = $result->fetch_assoc()) {
+                                echo "<a href='" . strtolower($row['abteilungName']) . ".php'><i class='" . $row['iconName'] . "' aria-hidden='true'></i> ".$row['abteilungName']."</a>";
+                            }
+                            $conn->close();
+                        } catch (Exception $e) {
+                            echo "Error: " . $e->getMessage();
                         }
                 
-    echo                    "</div>
+    echo                "</div>
                     </div>
                     <!-- dropdown für Unser verein-->
                     <div class='dropdown-uVn'>
