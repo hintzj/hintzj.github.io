@@ -17,6 +17,20 @@ input[type=date]{
 input[type=number]{
     border-radius: 5px;
 }
+
+input[type=submit]{
+    border-radius: 5px;
+    float: right;
+    margin-right: 37%;
+}
+
+input[type=button]{
+    border-radius: 5px;
+    float: right;
+    margin-right: 37%;
+    background-color: darkgoldenrod;
+}
+
 select{
 float: right;
 margin-right: 37%;

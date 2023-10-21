@@ -52,6 +52,7 @@ body header{
 }
 .greeting p {
     font-size: 20px;
+    font-weight: bold;
 }
 .greeting h2 {
     font-family: RobotCondBold;
