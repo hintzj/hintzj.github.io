@@ -1,0 +1,10 @@
+2023-09-26 13:34:40 | Invalid database type | C:\xampp\htdocs\WSV_Webpage\hintzj.github.io\functions.php:330
+
+2023-10-12 13:11:02 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\hintzj.github.io\header.php:21
+
+2023-10-12 13:11:06 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\hintzj.github.io\index.php:35
+
+2023-10-12 13:11:10 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\hintzj.github.io\sponsorScroll.php:11
+
+2023-10-12 13:11:10 | DB Connection failed | C:\xampp\htdocs\WSV_Webpage\hintzj.github.io\footer.php:6
+

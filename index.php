@@ -64,14 +64,19 @@
                     Bei uns sind neue Gesichter immer Willkommen. Wenn du Interesse hast, kannst du gerne zu unseren Schnupperzeiten kommen.
                     <br>
                     <br>
-                    <b>Montag:</b> 17:00 - 18:30 Uhr
+                    <b>Kanurennsport:</b> Montags 16.30 - 18.00 Uhr
                     <br>
-                    <b>Mittwoch:</b> 17:00 - 18:30 Uhr
+                    <b>Kanupolo:</b> Dienstags 18.00 - 20.00 Uhr
                     <br>
-                    <b>Freitag:</b> 17:00 - 18:30 Uhr
+                    <b>Wanderpaddeln:</b> Mittwochs 18.00 - 20.00 Uhr
                     <br>
+                    <b>Rückengymnastik:</b> Mittwochs 09.00 - 10.30 Uhr
                     <br>
-                    <b>Ansprechpartner:</b> <a href="mailto: hintz.jonathan@gmail.com">Jonathan Hintz</a>
+                    <b>Yoga:</b> Freitags 18.30 - 20.00 Uhr
+                    <br>
+                    <b>Boule:</b> Freitags 15.00 - 17.00 Uhr
+                    <br>
+                    <b>Bodyforming:</b> Freitags 20.00 - 21.00 Uhr
                     </ul>
                 </p>
             </div>

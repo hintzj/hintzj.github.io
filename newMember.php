@@ -2,27 +2,30 @@
     require 'functions.php';
 
     if(isset($_POST['submit'])) {
-        $response = newMember($_POST['anrede'],
-            $_POST['vorname'],
-            $_POST['name'],
-            $_POST['strasse'],
-            $_POST['plz'],
-            $_POST['ort'],
-            $_POST['email'],
-            $_POST['telefon'],
-            $_POST['geburtstag'],
-            $_POST['beruf'],
-            $_POST['beruf'], 
-            $_POST['liegeplatz'],
-            $_POST['sonderbootPlatz'],
-            $_POST['anlegeplatz'],
-            $_POST['start'],
-            $_POST['nameBIC'],
-            $_POST['iban'],
-            $_POST['bic'],
-            $_POST['bank'],
-            $_POST['checkboxes'],
-            $_POST['g-recaptcha-response']);
+        $answers = array(
+            "anrede" => $_POST['anrede'],
+            "vorname" => $_POST['vorname'],
+            "name" => $_POST['name'],
+            "strasse" => $_POST['strasse'],
+            "plz" => $_POST['plz'],
+            "ort" => $_POST['ort'],
+            "email" => $_POST['email'],
+            "telefon" => $_POST['telefon'],
+            "geburtstag" => $_POST['geburtstag'],
+            "beruf" => $_POST['beruf'],
+            "liegeplatz" => $_POST['liegeplatz'],
+            "sonderbootPlatz" => $_POST['sonderbootPlatz'],
+            "anlegeplatz" => $_POST['anlegeplatz'],
+            "start" => $_POST['start'],
+            "nameBIC" => $_POST['nameBIC'],
+            "iban" => $_POST['iban'],
+            "bic" => $_POST['bic'],
+            "bank" => $_POST['bank'],
+            "checkboxes" => $_POST['checkboxes'],
+            "g-recaptcha-response" => $_POST['g-recaptcha-response']
+        );
+
+        $response = newMember($answers);
 
         echo "<script>console.log('{$response}');</script>";
     }
@@ -40,6 +43,21 @@
 
 <body>
     <script>
+        function updateForm() {
+            //get the value of the radio buttons "art" and print it to the console
+            var art = document.querySelector('input[name="art"]:checked').value;
+            console.log(art);
+
+            //if art is "aktiv" then show the "sparte" field else hide it
+            if (art == "aktiv") {
+                document.getElementById("sparte").style.display = "block";
+                document.getElementById("platze").style.display = "block";
+            } else {
+                document.getElementById("sparte").style.display = "none";
+                document.getElementById("platze").style.display = "none";
+            }
+        }
+
         function calcCost() {
             var cost = 0;
 
@@ -149,52 +167,55 @@
                         <br>
 
                         <label for="art">Art der Mitgliedschaft:</label>
-                        <input type="radio" id="art" name="art" value="aktiv" checked>
+                        <input type="radio" id="art" name="art" value="aktiv" checked onchange="updateForm()">
                         <label for="art">Aktiv</label>
-                        <input type="radio" id="art" name="art" value="passiv">
+                        <input type="radio" id="art" name="art" value="passiv" onchange="updateForm()">
                         <label for="art">Passiv</label>
 
                         <br>
 
-                        <label for="sportart">Sparte:</label>
-                        <?php   
-                            $conn = connect();
-                            if ($conn == false){
-                                throw new Exception("DB Connection failed");
-                            }
-                            $sql = "SELECT * FROM abteilungen";
-                            $result = mysqli_query($conn, $sql);
-                            $abteilungen = mysqli_fetch_all($result, MYSQLI_ASSOC);
-                            mysqli_free_result($result);
-                            mysqli_close($conn);
-                            foreach ($abteilungen as $abteilung) {
-                                echo "<br>";
-                                echo "<input type='checkbox' id='contactChoice1' name='devision' value='" . $abteilung['abteilungName'] . "' />";
-                                echo "<label for='contactChoice1'>" . $abteilung['abteilungName'] . "</label>";
-                                
-                            }
-                        ?>
+                        <div id="sparte">
+                            <label for="sportart">Sparte:</label>
+                            <ul>
+                            <?php   
+                                $conn = connect();
+                                if ($conn == false){
+                                    throw new Exception("DB Connection failed");
+                                }
+                                $sql = "SELECT * FROM abteilungen";
+                                $result = mysqli_query($conn, $sql);
+                                $abteilungen = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                                mysqli_free_result($result);
+                                mysqli_close($conn);
+                                foreach ($abteilungen as $abteilung) {
+                                    echo "<input type='checkbox' id='contactChoice1' name='devision' value='" . $abteilung['abteilungName'] . "' />";
+                                    echo "<label for='contactChoice1'>" . $abteilung['abteilungName'] . "</label>";  
+                                    echo "<br>";                                  
+                                }
+                            ?>
+                            </ul>
+                        </div>
 
-                        <br>
+                        <div id="platze">
+                            <label for="liegeplatz">Liegeplatz:</label>
+                            <input type="number" id="liegeplatz" name="liegeplatz" min="0" max="5" value="0" onchange="calcCost()">
 
-                        <label for="liegeplatz">Liegeplatz:</label>
-                        <input type="number" id="liegeplatz" name="liegeplatz" min="0" max="5" value="0" onchange="calcCost()">
+                            <label for="sonderbootPlatz">Sonderbootplatz:</label>
+                            <input type="number" id="sonderbootPlatz" name="sonderbootPlatz" min="0" max="5" value="0" onchange="calcCost()">
 
-                        <label for="sonderbootPlatz">Sonderbootplatz:</label>
-                        <input type="number" id="sonderbootPlatz" name="sonderbootPlatz" min="0" max="5" value="0" onchange="calcCost()">
-
-                        <label for="anlegeplatz">Anlegeplatz Motorboot:</label>
-                        <input type="number" id="anlegeplatz" name="anlegeplatz" min="0" max="2" value="0" onchange="calcCost()">
-
-                        <br>
+                            <label for="anlegeplatz">Anlegeplatz Motorboot:</label>
+                            <input type="number" id="anlegeplatz" name="anlegeplatz" min="0" max="2" value="0" onchange="calcCost()">
+                        </div>
 
                         Mitgliedsbeitrag:
                         <br>
+                        <ul>
                         <label for="beitrag">Monatlicher Beitrag:</label>
                         <span id="beitragBerechnet">0</span> €
                         <br>
                         <label for="aufnahmeBeitrag">Aufnahmebeitrag:</label>
                         <span id="aufnahmeBerechnet">0</span> €
+                        </ul>
                         <br>
 
                         <input type="radio" id="interval" name="interval" value="interval">
@@ -286,6 +307,10 @@
                         <br>
                         
                         <input type="submit" value="Verbindlich Absenden" name="submit">
+
+                        <script>
+
+                        </script>
                     </form>
                 </ul>
             </p>

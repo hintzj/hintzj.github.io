@@ -49,6 +49,26 @@
         $conn->close();
     };
 
+    function newMember($answers){
+        print_r($answers);
+        $conn = connect("private");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+
+        $anrede = $answers['anrede'];
+        $vorname = $answers['vorname'];
+        $name = $answers['name'];
+        $strasse = $answers['strasse'];
+        $plz = $answers['plz'];
+        $ort = $answers['ort'];
+        $email = $answers['email'];
+        $geburtstag = $answers['geburtstag'];
+        $beruf = $answers['beruf'];
+        
+    }
+
+    /*
     function newMember($anrede, $vorname, $name, $strasse, $plz, $ort, $email, $geburtstag, $beruf, $devision, $liegeplatz, $sonderbootPlatz, $anlegeplatz, $startDate, $accountName, $bic, $bank, $checkboxes, $recaptcha) {
         $conn = connect("private");
         if($conn == false){
@@ -62,6 +82,7 @@
 
         return $args;
     }
+    */
 
     function registerUser($email, $fName, $lName, $birthday, $username, $password, $confirm_password){
         $conn = connect("private");
@@ -304,4 +325,30 @@
             return "success";
         }
     };
+
+    function newDate($name, $date){
+        $conn = connect("public", "write");
+        
+        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate) VALUES (?, ?)");
+        $stmt->bind_param("ss", $name, $date);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error creating account, please try again or contact an administrator";
+        } else {
+            return "success";
+        } 
+    }
+
+    function newArticle($date, $title, $summary, $text){
+        $conn = connect("public", "write");
+
+        $stmt = $conn->prepare("INSERT INTO termine(date, title, summary, text) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $date, $title, $summary, $text);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error creating account, please try again or contact an administrator";
+        } else {
+            return "success";
+        } 
+    }
 ?>

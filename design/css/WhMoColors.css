@@ -24,14 +24,14 @@
     color: black;
 }
 /* White Mode Index */
-.greeting{
+.greeting p{
     color: #000000b7;
 }
 .text-field1{
     background-color: hsl(207, 27%, 80%);
 }
 .text-field2{
-    background-color: hsl(207, 27%, 70%);
+    background-color: hsl(207, 27%, 70%)
 }
 .text-field3{
     background-color: hsl(207, 27%, 60%);

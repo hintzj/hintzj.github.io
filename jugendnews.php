@@ -21,7 +21,7 @@
         <div class="text-field1">
             <h4>Upcoming Events</h4>
             <p style="font-family: CreteRoundItalic;">
-                Hier steht noch nichts, Jonathan viel SPaß mit dem Backend
+                Hier steht noch nichts, Jonathan viel Spaß mit dem Backend
             </p>
         </div>
         <div class="text-field2" >
@@ -30,7 +30,12 @@
                 Hier steht auch noch nichts
                 <br>
                 <?php
-                    $response = file_get_contents('https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.json?start=P1D');
+                    try{
+                        $response = file_get_contents('https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.json?start=P1D');
+                    } catch (Exception $e) {
+                        echo $e;
+                    }
+
                     $response = json_decode($response);
                     $response = (end($response));
                     $tiefe = $response->value;
