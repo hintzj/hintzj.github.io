@@ -13,7 +13,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting">
+        <?php 
+                $filename = getcwd() . $_SERVER['PHP_SELF'];
+                $filename = basename($filename, ".php");
+                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+                //echo $filename;
+            ?>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
             <h2>Nützliche Links</h2>
             <p>
                 Hier findest du alle wichtigen Links zu Sportvereinen, Sportverbänden und anderen Organisationen!

@@ -14,7 +14,13 @@
     <?php include 'header.php'; ?>
     <div class="content">
         <main>
-            <div class="greeting" style="background-image: url(documents/pics/Bg-Canadier.png);">
+            <?php 
+                $filename = getcwd() . $_SERVER['PHP_SELF'];
+                $filename = basename($filename, ".php");
+                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+                //echo $filename;
+            ?>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
                 <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
                 <p><b>
                     Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und Kanupolo.
@@ -31,6 +37,12 @@
             <div class="text-field1">
                 <h4>Vereinsnews</h4>
                 <ul>
+                <!--
+                 * FILEPATH: /c:/webserver/htdocs/WSV_Webpage/hintzj.github.io/index.php
+                 * This code connects to the "public" database, selects the latest 3 articles from the "artikel" table, and displays them on the webpage.
+                 * Each article is displayed in a div with its title, summary, and a "Weiterlesen" button that links to the full article.
+                 * If there is an error connecting to the database or executing the query, an error message is displayed.
+                -->
                 <?php
                     try {
                         $conn = connect("public");

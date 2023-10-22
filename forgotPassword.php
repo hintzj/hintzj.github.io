@@ -10,7 +10,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting">
+        <?php 
+                $filename = getcwd() . $_SERVER['PHP_SELF'];
+                $filename = basename($filename, ".php");
+                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+                //echo $filename;
+            ?>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
             <h2>Passwort vergessen</h2>
             <p>
                 Bitte geben Sie Ihre E-Mail-Adresse ein, um Ihr Passwort zurückzusetzen.

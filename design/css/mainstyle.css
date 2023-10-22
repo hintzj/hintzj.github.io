@@ -130,7 +130,7 @@ body {
 /* write the css to style the input buttons */
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #04AA6D;
+    background-color: #1db8ff;
     border: none;
     color: white;
     padding: 16px 32px;

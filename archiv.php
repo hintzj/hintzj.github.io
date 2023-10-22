@@ -14,7 +14,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting" style="background-image: url(pics/Bg-Canadier.png);">
+        <?php 
+                $filename = getcwd() . $_SERVER['PHP_SELF'];
+                $filename = basename($filename, ".php");
+                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+                //echo $filename;
+            ?>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
             <h2>Archiv</h2>
             <p>
                 Hier kann man sich über die vergangenheit des WSV informieren

@@ -14,7 +14,13 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        <div class="greeting" style="background-image: url(pics/hessia_flag_bg.png);">
+        <?php 
+                $filename = getcwd() . $_SERVER['PHP_SELF'];
+                $filename = basename($filename, ".php");
+                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+                //echo $filename;
+            ?>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
             <h2>Willkommen auf der Seite des Jugendvorstandes</h2>
             <p>Als Interessenvertretung der Jugend sind wir die Verbindung zum Hauptvorstand
                 <br> Zudem organisieren wir Events für die Jugend

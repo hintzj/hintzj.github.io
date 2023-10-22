@@ -44,7 +44,7 @@
                     $datum = $response->timestamp;
                     $datum = date('d.m.Y', strtotime($datum));
                     echo 'Aktueller Wasserstand in Worms: ' . $tiefe . 'cm um ' . $zeit . ' Uhr' . ' am ' . $datum;
-                    $tiefeLA = ($response->value) - 75;
+                    $tiefeLA = ($response->value) - 20;
                     echo '<br>';
                     echo 'Daraus folgt ein ungefährer Wasserstand in Lampertheim von circa ' . $tiefeLA . 'cm';
                 ?>
