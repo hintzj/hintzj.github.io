@@ -55,15 +55,6 @@
                 </li>
             </ul>
             </p>
-            <p>
-                <?php
-                    $conn = connect("private");
-                    $sql = "SELECT vorname, nachname FROM mitglieder WHERE mitgliedID = (SELECT mitgliedID FROM specialusers WHERE specialPositionID = 1)";
-                    $result = $conn->query($sql);
-                    $row = $result->fetch_assoc();
-                    echo "Webmaster: " . $row['vorname'] . " " . $row['nachname'];
-                ?>
-            </p>
         </div>
         <?php include "footer.php"; ?>
     </div>

@@ -23,6 +23,8 @@
             <p>Probier vielleicht mal eine andere Seite aus.
             </p>
         </div>
+        </div>
+        </div>
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>

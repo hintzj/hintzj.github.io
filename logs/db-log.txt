@@ -6,3 +6,23 @@
 
 2023-10-23 18:16:40 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:60
 
+2023-10-23 19:04:42 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:60
+
+2023-10-23 19:04:56 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:60
+
+2023-10-23 19:07:28 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:29 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:42 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:43 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:43 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:44 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:44 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
+2023-10-23 19:07:44 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\vorstand.php:61
+
