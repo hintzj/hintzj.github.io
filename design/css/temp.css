@@ -10,7 +10,9 @@
     border-radius: 15px;
     margin-top: 2% ;
     margin-bottom: 2%;
-    background-size: 100%
+    background-size: 100%;
+    margin-left: 2%;
+    margin-right: 2%;
 }
 .text-field1 {
     border-radius: 15px;

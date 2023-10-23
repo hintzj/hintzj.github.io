@@ -19,11 +19,15 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
             <h2>Nützliche Links</h2>
             <p>
                 Hier findest du alle wichtigen Links zu Sportvereinen, Sportverbänden und anderen Organisationen!
             </p>
+        </div>
+        </div>
         </div>
         <div class="text-field1">
             <h4>Links</h4>

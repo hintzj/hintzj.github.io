@@ -19,33 +19,39 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
             <h2>Impressum</h2>
             <p>
             <p>Angaben gemäß § 5 TMG</p>
             </p>
+        </div>
+        </div>
         </div>
         <div class="text-field1">
             <h4>Impressum</h4>
             <p>
             <ul>
                 <p>WSV Lampertheim e.V.</p>
-                <p>Waldstraße 1</p>
+                <p>Albrecht-Dürer-Straße 46</p>
                 <p>68623 Lampertheim</p>
                 <p>Vertreten durch:</p>
-                <p>1. Vorsitzender: Alexander Schäfer</p>
-                <p>2. Vorsitzender: Alexander Schäfer</p>
+                <ul>
+                    <p>1. Vorsitzender: Rainer Vetter</p>
+                    <p>2. Vorsitzende: Erika Gabler</p>
+                </ul>
                 <p>Kontakt:</p>
-                <p>Telefon: 06206 1234567</p>
-                <p>E-Mail:
-                    <a href="mailto:">[*Person*]</a>
-                </p>
+                <ul>
+                <p>Telefon: 06206 12483</p>
+                <p>E-Mail: <a href="mailto:vorstand@wsv-lamperheim.de">vorstand@wsv-lamperheim.de</a></p>
+                </ul>
                 <p>Registereintrag:</p>
-                <p>Eintragung im Vereinsregister.</p>
+                <ul>
                 <p>Registergericht: Amtsgericht Lampertheim</p>
-                <p>Registernummer: [*Platzhalter*]</p>
-                <p>Umsatzsteuer: [*Platzhalter*]</p>
-                <p>Umsatzsteuer-Identifikationsnummer gemäß §27 a Umsatzsteuergesetz: [*Platzhalter*]</p>
+                <p>Registernummer: 60265</p>
+                <p>Umsatzsteuer-ID: 05 250 01909</p>
+                </ul>
             </ul>
             </p>
         </div>

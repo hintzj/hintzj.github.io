@@ -16,11 +16,15 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
             <h2>Benutzername vergessen</h2>
             <p>
                 Bitte geben Sie Ihre E-Mail-Adresse ein, um Ihren Benutzernamen zurückzusetzen.
             </p>
+        </div>
+        </div>
         </div>
         <div class="text-field1">
             <h4>Benutzername zurücksetzen</h4>

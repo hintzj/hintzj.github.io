@@ -32,10 +32,14 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
             <h2>Neuer Termin</h2>
             <p>Hier kann man einfach neue Termine hinzufügen. Füllen sie dafür das folgende Formular aus.
             </p>
+        </div>
+        </div>
         </div>
         <div class="text-field1">
             <h4>Termin</h4>

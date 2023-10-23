@@ -15,16 +15,20 @@
     <?php include 'header.php'; ?>
     <div class="content">
         <?php 
-                $filename = getcwd() . $_SERVER['PHP_SELF'];
-                $filename = basename($filename, ".php");
-                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
-                //echo $filename;
-            ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
-            <h2>Willkommen auf der Seite des Jugendvorstandes</h2>
-            <p>Als Interessenvertretung der Jugend sind wir die Verbindung zum Hauptvorstand
-                <br> Zudem organisieren wir Events für die Jugend
-            </p>
+            $filename = getcwd() . $_SERVER['PHP_SELF'];
+            $filename = basename($filename, ".php");
+            $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+            //echo $filename;
+        ?>
+        <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
+                    <h2>Willkommen auf der Seite des Jugendvorstandes</h2>
+                    <p>Als Interessenvertretung der Jugend sind wir die Verbindung zum Hauptvorstand
+                        <br> Zudem organisieren wir Events für die Jugend
+                    </p>
+        </div>
+        </div>
         </div>
         <div class="text-field1">
             <h4>Jugendvorstand</h4>

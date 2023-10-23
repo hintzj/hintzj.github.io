@@ -32,12 +32,16 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
             <h2>Mitgliederbereich</h2>
             <p>
                 Bitte loggen Sie sich ein, um den Mitgliederbereich zu betreten.
                 Im Mitgliederbereich finden Sie unter anderem nicht die Mitgliederliste, die Satzung und die Beitragsordnung.
             </p>
+        </div>
+        </div>
         </div>
         <div class="text-field1">
             <h4>Log In</h4>

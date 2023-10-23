@@ -78,12 +78,14 @@
                             <a> <button class='themebtn' id='mode-switch'><i id='themeIcon' class='fa fa-moon-o' aria-hidden='true'></i></button></a>
                         </div>
                     </div>
+                    <!--
                     <div class='search'>
                         <form action='search.php' method='post'>
                             <input type='text' name='search' placeholder='Suche' class='searchBtn'>
                             <button type='submit' name='submit-search' class='searchBtn'><i class='fa fa-search'></i></button>
                         </form>
                     </div>
+                    -->
                     <script> 
                         var modeSwitch = document.getElementById('mode-switch');
                         if (localStorage.getItem('theme') == '') {

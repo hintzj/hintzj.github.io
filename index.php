@@ -20,7 +20,9 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>)";>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+                <div>
                 <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
                 <p><b>
                     Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und Kanupolo.
@@ -34,7 +36,9 @@
                 </p>
 
             </div>
-            <div class="text-field1">
+            </div>
+        </div>
+        <div class="text-field1">
                 <h4>Vereinsnews</h4>
                 <ul>
                 <!--
