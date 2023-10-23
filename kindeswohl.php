@@ -20,7 +20,7 @@
                 //echo $filename;
             ?>
             <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
-            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
             <h2>Kindeswohl am WSV</h2>
             <p>Kindeswohl ist für alle Beteiligten am WSV Lampertheim sehr wichtig. Daher haben wir hier einige wichtige

@@ -85,3 +85,7 @@ body header{
 .dropdown-etc:hover .dropbtn-etc {
     background-color: hsl(213, 62%, 40%);
 }
+
+.navbar {
+    background-color: #696969;
+}

@@ -20,7 +20,7 @@
                 //echo $filename;
             ?>
             <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
-            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
             <h2>Fitnesssport am WSV</h2>
             <p>Hier findest du alle wichtigen Informationen zu Fitnesssport am WSV Lampertheim!

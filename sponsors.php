@@ -21,7 +21,7 @@
                 //echo $filename;
             ?>
             <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
-            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.5); color: #fff; height: 100%;">
+            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
             <h2>Sponsoren des WSV</h2>
             <p>Hier findest du alle wichtigen Informationen zu Sponsoren des WSV Lampertheim! Wir bedanken uns vielmals bei unseren Sponsoren für die Unterstützung!</p>
