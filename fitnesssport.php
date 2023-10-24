@@ -19,38 +19,82 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+        <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);" ;>
             <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
-            <h2>Fitnesssport am WSV</h2>
-            <p>Hier findest du alle wichtigen Informationen zu Fitnesssport am WSV Lampertheim!
-            </p>
-        </div>
-        </div>
+                    <h2>Fitnesssport am WSV</h2>
+                    <p>Hier findest du alle wichtigen Informationen zu Fitnesssport am WSV Lampertheim!
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="text-field1">
-            <h4>Trainingszeiten Yoga</h4>
-            <p>
-                <ul>
-                    <li>Mittwoch: 18:00 - 20:00 Uhr</li>
-                </ul>
-            </p>
+            <h4>Abseits vom Leistungssport</h4>
+            <ul>
+                <p>
+                    Auch für nicht Leistungssportler gibt es zahlreiche Angebote.
 
-            <h4>Trainingszeiten Pilates</h4>
-            <p>
-                <ul>
-                    <li>Dienstag: 18:00 - 20:00 Uhr</li>
-                </ul>
-            </p>
+                    Dienstags kann man z.B. zum Kraftausdauer-Training kommen, am Mittwoch zum Rücken-Fitness-Kurs,
+                    Donnerstags zum Bodyforming und Freitags zur AH-Gymnastik. Am Wochenende darf man sich ausruhen oder
+                    mit
+                    dem Boot eine Runde auf dem Altrhein drehen.
 
-            <h4>Trainingszeiten Gymnastik</h4>
-            <p>
+                    Einfach das passende Angebot aussuchen und mitmachen.
+                </p>
+            </ul>
+        </div>
+        <div class="text-field2">
+            <h4>Unsere Angebote</h4>
+            <ul>
+                <li><h3>Bodyforming</h3></li>
                 <ul>
-                    <li>Montag: 18:00 - 20:00 Uhr</li>
-                    <li>Mittwoch: 18:00 - 20:00 Uhr</li>
-                    <li>Freitag: 18:00 - 20:00 Uhr</li>
+                    Seit über 15 Jahren besteht im Bereich Fitness das Kursangebot Aerobic/Bodyforming. Der Kurs richtet
+                    sich an alle Frauen, die etwas für bzw. gegen ihre Problemzonen machen wollen, oder einfach nur Spaß
+                    an der Bewegung mit Musik haben. Der Stundenschwerpunkt liegt auf einem ausgewogenen Powertraining
+                    mit Muskelkräftigung und Fatburning.
                 </ul>
-            </p>
+                <li><h3>Mittwochsfrauen</h3></li>
+                <ul>
+                    Mittwochs treffen sich die Frauen beim WSV zum gemütlichen Beisammensein.
+
+                    Treffpunkt: ab 19.00 Uhr im Bootshaus
+                </ul>
+                <li><h3>AH-Guppe</h3></li>
+                <ul>
+                    Die größte Breitensportabteilung ist die AH. Im Winterhalbjahr wird jeden Freitag ausgiebig
+                    Gymnastik gemacht. Das Angebot ist sehr beliebt, da es für alle Altersgruppen geeignet ist. Nach der
+                    Gymnastik wird noch Hallenhockey oder Fußball gespielt. Den Abschluß dieses Freitags bildet der
+                    gesellige Abend in der Vereinsgaststätte.Montags und Mittwochs finden noch Saunaabende statt.Im
+                    Sommerhalbjahr kann man sich, je nach Geschmack, den Paddlern anschließen, die den heimischen
+                    Altrhein befahren oder den Radfahrern, die Touren rund um Lampertheim machen. Wanderungen und
+                    Kameradschaftsabende runden das Jahresprogramm ab. Die sangesfreudige Gruppe ist auch bei der WSV-
+                    Faßnacht aktiv. Sie sind als "Fidele Paddler" ein fester Bestandteil der Prunksitzungen.
+                </ul>
+                <li><h3>Rücken-Fitness</h3></li>
+                <ul>
+                    Bei uns sind die Kurse geprüft.
+
+                    Wer sich überzeugen will, kommt mittwochs in die WSV Sporthalle:
+
+                    09:00 bis 10:15 Uhr unter der Leitung von Hans Schlatter, Tel. 06206/57613
+
+                    Man barucht Sportkleidung und ein großes Handtuch; Matten, Redondo-Bälle, Pezzibälle, Kleinhanteln
+                    und Therabänder sind vorhanden. Egal welches Alter, die Übungen können so variiert werden, dass vom
+                    Beginner bis zum Fortgeschrittenen etwas dabei ist.
+
+                    Auch für Nichtmitglieder.
+                </ul>
+                <li><h3>Kanuwandersport</h3></li>
+                <ul>
+                    Donnerstags um 18:00 Uhr treffen sich alle, die auf dem Altrhein eine gemütliche Runde drehen
+                    wollen. Ab dem 26. April geht es los. Am besten schon paddelfertig anrücken, wenn wir dann mit
+                    unserer Tour fertig sind, haben wir freie Umkleiden und Duschen zur Verfügung.
+
+                    Gepaddelt wird in sieben Einerkajaks und in sieben Zweierkajaks, die uns zur Verfügung stehen.
+                    Natürlich mit Paddel, Schwimmweste und Spritzdecke. Die Boote sind für Anfänger und Profis
+                    gleichermaßen tauglich. Mit besseren Paddelkenntnissen werden wir auch größere Touren angehen.
+                </ul>
+            </ul>
         </div>
         <?php include "footer.php"; ?>
     </div>

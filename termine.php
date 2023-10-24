@@ -29,7 +29,7 @@
         </div>
         </div>
         <div class="text-field1">
-            <h4>Upcoming Events</h4>
+            <h4>Kommende Termine</h4>
             <p style="font-family: CreteRoundItalic;">
                 <ul>
                 <?php
