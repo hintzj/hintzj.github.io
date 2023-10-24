@@ -7,7 +7,9 @@
             <a href='index.php'>
                 <img src='documents/pics/logo1.png'>
             </a>
-            <h1>Wassersportverein Lampertheim 1929 e.V.</h1>
+            <div>
+            <h1>&nbsp;&nbsp;Wassersportverein Lampertheim 1929 e.V.</h1>
+            </div>
             <nav>
             <div class='navbar'>                   
                     <a href='index.php'>Startseite</a>

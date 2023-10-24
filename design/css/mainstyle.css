@@ -19,6 +19,7 @@ body header img{
     float: left;
     width: 80px;
     margin-left: 2%;
+    margin-top: 2px;
 }
 body header h1{
     margin: auto;
@@ -130,7 +131,7 @@ body {
 /* write the css to style the input buttons */
 
 input[type=button], input[type=submit], input[type=reset] {
-    background-color: #1db8ff;
+    background-color: #749d97;
     border: none;
     color: white;
     padding: 16px 32px;

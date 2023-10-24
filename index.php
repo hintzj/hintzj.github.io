@@ -20,34 +20,34 @@
                 $imageFilename = "documents/pics/introImage/" . $filename . ".png";
                 //echo $filename;
             ?>
-            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
-            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
-                <div>
-                <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
-                <p><b>
-                    Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und Kanupolo.
-                    <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit ist uns wichtig.
-                    <br>Die Kanuakademie ist teil unserer Philosophie der Vereinbarung von Sport und Schule
-                    <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
-                    </b>
-                    <br>
-                    <br>
-                    <img src="documents/pics/logo1.png" alt="Logo des Wassersportvereins">
-                </p>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);" ;>
+                <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
+                    <div>
+                        <h2>Willkommen auf der Website des WSV-Lampertheim</h2>
+                        <p>
+                                Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und
+                                Kanupolo.
+                                <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit ist uns wichtig.
+                                <br>Die Kanuakademie ist teil unserer Philosophie der Vereinbarung von Sport und Schule
+                                <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
+                            <br>
+                            <br>
+                            <img src="documents/pics/logo1.png" alt="Logo des Wassersportvereins">
+                        </p>
 
+                    </div>
+                </div>
             </div>
-            </div>
-        </div>
-        <div class="text-field1">
+            <div class="text-field1">
                 <h4>Vereinsnews</h4>
                 <ul>
-                <!--
+                    <!--
                  * FILEPATH: /c:/webserver/htdocs/WSV_Webpage/hintzj.github.io/index.php
                  * This code connects to the "public" database, selects the latest 3 articles from the "artikel" table, and displays them on the webpage.
                  * Each article is displayed in a div with its title, summary, and a "Weiterlesen" button that links to the full article.
                  * If there is an error connecting to the database or executing the query, an error message is displayed.
                 -->
-                <?php
+                    <?php
                     try {
                         $conn = connect("public");
                         if ($conn == false) {
@@ -77,8 +77,9 @@
             <div class="text-field2">
                 <h4>Schnupperzeiten</h4>
                 <p>
-                    <ul>
-                    Bei uns sind neue Gesichter immer Willkommen. Wenn du Interesse hast, kannst du gerne zu unseren Schnupperzeiten kommen.
+                <ul>
+                    Bei uns sind neue Gesichter immer Willkommen. Wenn du Interesse hast, kannst du gerne zu unseren
+                    Schnupperzeiten kommen.
                     <br>
                     <br>
                     <b>Kanurennsport:</b> Montags 16.30 - 18.00 Uhr
@@ -94,7 +95,7 @@
                     <b>Boule:</b> Freitags 15.00 - 17.00 Uhr
                     <br>
                     <b>Bodyforming:</b> Freitags 20.00 - 21.00 Uhr
-                    </ul>
+                </ul>
                 </p>
             </div>
         </main>

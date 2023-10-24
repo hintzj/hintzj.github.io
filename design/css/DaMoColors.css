@@ -89,3 +89,8 @@ body header{
 .navbar {
     background-color: #696969;
 }
+
+input[type=button] {
+    background-color: #3a5b71;
+    color: black;
+}

@@ -35,8 +35,6 @@
 <body>
     <?php include 'header.php'; ?>
     <div class="content">
-        </div>
-        </div>
         <div class="text-field1">
             <h4><?php echo $article['title']; ?></h4>
             <p>
