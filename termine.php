@@ -47,7 +47,7 @@
                         
                         //print every event in a list along with the date
                         foreach ($termine as $termin) {
-                            echo "<li>" . $termin['terminDate'] . " - " . $termin['terminTitle'] . "</li>";
+                            echo "<li>" . $termin['terminDate'] . " - " . $termin['terminTitle'] . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . "</li>";
                         }
                     } catch (Exception $e) {
                         $error = $e->getMessage();
