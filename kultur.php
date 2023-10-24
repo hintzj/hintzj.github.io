@@ -33,9 +33,8 @@
             <h4>Kultur</h4>
             <p>
                 <ul>
-                    <li>Die Kulturabteilung kümmert sich um die Kultur des Vereins</li>
-                    <li>Die Kulturabteilung kümmert sich um die Kultur des Vereins</li>
-                    <li>Die Kulturabteilung kümmert sich um die Kultur des Vereins</li>
+                Der Kulturausschuß plant und organisiert alles im Bereich Kultur. Derzeit gehören dem Kulturausschuß an:<br>
+                Peter Weber, Peter Horstfeld, Susanne Asel, Carmen Geppert, Volker Altenbach, Sven Stollhofer, Klaus Heiler, Jan Heilmann(Jugendgruppe), Tina Heiler
                 </ul>
             </p>
         </div>

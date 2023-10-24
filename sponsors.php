@@ -38,7 +38,7 @@
                     if ($conn == false) {
                         throw new Exception("DB Connection failed");
                     }
-                    $sqlLogos = "SELECT * FROM sponsors WHERE sponsorLogoFile IS NOT NULL";
+                    $sqlLogos = "SELECT * FROM sponsors WHERE sponsorLogoFile IS NOT NULL ORDER BY sponsorName ASC";
                     $resultLogos = mysqli_query($conn, $sqlLogos);
                     $sponsorsLogos = mysqli_fetch_all($resultLogos, MYSQLI_ASSOC);
                     mysqli_free_result($resultLogos);
@@ -56,7 +56,7 @@
                     foreach ($sponsorsLogos as $sponsor) {
                         
                         //echo "<li>";
-                        echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='documents/pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 100%' alt='" . $sponsor['sponsorName'] . "'></a>";
+                        echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='documents/pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 50%;' alt='" . $sponsor['sponsorName'] . "'></a>";
                         //echo "</li>";
                     
                     }

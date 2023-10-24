@@ -73,7 +73,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/jugendnews.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-10-23</lastmod>
+		<lastmod>2023-10-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/jugendvorstand.php</loc>
@@ -83,7 +83,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/kanurennsport.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-10-23</lastmod>
+		<lastmod>2023-10-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/kinderturnen.php</loc>
@@ -93,7 +93,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/kindeswohl.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-10-23</lastmod>
+		<lastmod>2023-10-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/kontakt.php</loc>
@@ -103,7 +103,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/kultur.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-10-23</lastmod>
+		<lastmod>2023-10-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/links.php</loc>
@@ -118,7 +118,7 @@
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/motorboot.php</loc>
 		<priority>0.50</priority>
-		<lastmod>2023-10-23</lastmod>
+		<lastmod>2023-10-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/newLogin.php</loc>
@@ -164,6 +164,11 @@
 		<loc>http://www.wsv-lampertheimV2.de/functions.php</loc>
 		<priority>0.50</priority>
 		<lastmod>2023-05-30</lastmod>
+	</url>
+	<url>
+		<loc>http://www.wsv-lampertheimV2.de/kanupolo.php</loc>
+		<priority>0.50</priority>
+		<lastmod>2023-10-24</lastmod>
 	</url>
 	<url>
 		<loc>http://www.wsv-lampertheimV2.de/utils.php</loc>
