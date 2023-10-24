@@ -13,3 +13,4 @@ Nützliche Links:
 - [ ] Newsblog verlinken
 - [ ] login streichen
 - [ ] darkmode farben
+- [ ] Handy Modus
