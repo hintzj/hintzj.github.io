@@ -8,7 +8,7 @@ Nützliche Links:
 - [x] Motorboot mieten weg
 - [ ] Bilder für Vorstand
 - [ ] Bild über Vorstand
-- [ ] Förderverein auftrennen
+- [x] Förderverein auftrennen
 - [ ] Schriftarten angleichen
 - [ ] Newsblog verlinken
 - [ ] login streichen
