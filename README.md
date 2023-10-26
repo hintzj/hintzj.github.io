@@ -7,7 +7,7 @@ Nützliche Links:
 - [ ] Datumschreibweise
 - [x] Motorboot mieten weg
 - [ ] Bilder für Vorstand
-- [ ] Bild über Vorstand
+- [x] Bild über Vorstand
 - [x] Förderverein auftrennen
 - [ ] Schriftarten angleichen
 - [x] Newsblog verlinken
