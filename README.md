@@ -14,3 +14,4 @@ Nützliche Links:
 - [ ] login streichen
 - [ ] darkmode farben
 - [ ] Handy Modus
+- [ ] Sponsoren atraktiv anordnen
