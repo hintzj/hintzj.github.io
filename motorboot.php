@@ -75,6 +75,7 @@
             Der nächste Bäcker, Metzger und Supermarkt sind ca. 10-15 min zu Fuß entfernt. Mehr Infos bei unserem
             Hafenmeister.
             </ul>
+            <button onclick="window.location.href='kontakt.php#abteilungsleiter';">Interesse? Hier geht's zum Kontakt!</button>
         </div>
         <?php include "footer.php"; ?>
     </div>

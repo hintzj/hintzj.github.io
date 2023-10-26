@@ -80,6 +80,7 @@
                 Übungsleiter zufinden, als eine Kanurennsporttrainer.
             </p>
             </ul>
+            <button onclick="window.location.href='kontakt.php#abteilungsleiter';">Interesse? Hier geht's zum Kontakt!</button>
         </div>
         <div class="text-field3">
             <h4>Wasserstand</h4>

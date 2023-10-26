@@ -46,7 +46,8 @@
                             <a href='archiv.php'><i class='fa fa-archive' aria-hidden='true'></i> Archiv</a>
                             <a href='termine.php'><i class='fa fa-calendar-o' aria-hidden='true'></i> Termine</a>
                             <a href='vorstand.php'><i class='fa fa-sitemap' aria-hidden='true'></i> Vorstand</a>
-                            <a href='sponsors.php'><i class='fa fa-money' aria-hidden='true'></i> Sponsoren und Förderung</a>
+                            <a href='sponsors.php'><i class='fa fa-money' aria-hidden='true'></i> Sponsoren</a>
+                            <a href='foerderverein.php'><i class='fa fa-heart' aria-hidden='true'></i> Förderverein</a>
                             <a href='newMember.php'><i class='fa fa-user-plus' aria-hidden='true'></i> Mitglied werden</a>
                             <a href='links.php'><i class='fa fa-link' aria-hidden='true'></i> Nützliche Links</a>
                             <a href='login.php'><i class='fa fa-sign-in' aria-hidden='true'></i> Login</a>
@@ -62,6 +63,8 @@
                             <a href='jugendnews.php'><i class='fa fa-newspaper-o' aria-hidden='true'></i> Jugendnews</a>
                         </div>
                     </div>
+                    
+                    <a href='kontakt.php'>Kontakt</a>
 
                     <a href='https://cloud.wsv-lampertheim.de'><i class='fa fa-cloud' aria-hidden='true'></i> Vereinscloud</a>
 
@@ -74,6 +77,7 @@
                             <a href='kontakt.php'><i class='fa fa-address-card' aria-hidden='true'></i></a>
                             <a href='https://www.facebook.com/wsvla' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-facebook'></i></a>
                             <a href='https://www.instagram.com/wsv_lampertheim_1929/' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-instagram'></i></a>
+                            <a href='https://chat.whatsapp.com/IeHYUxnAh47HMNSKh4twUG' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-whatsapp'></i></a>
                             <a href='https://sportinn.eu/WSV-Lampertheim' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-shopping-cart' aria-hidden='true'></i></a>
                             <a href='https://www.kanu.de/Vereine-53574.html' class='socialbtn' target='_blank' rel='noopener noreferrer'><i class='fa fa-link' aria-hidden='true'></i></a>
                             <!-- ^^^^ Search button -> Matteos AUfgabe den irgendwie zu machen -->

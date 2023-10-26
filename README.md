@@ -8,9 +8,9 @@ Nützliche Links:
 - [x] Motorboot mieten weg
 - [ ] Bilder für Vorstand
 - [ ] Bild über Vorstand
-- [ ] Förderverein auftrennen
+- [x] Förderverein auftrennen
 - [ ] Schriftarten angleichen
-- [ ] Newsblog verlinken
+- [x] Newsblog verlinken
 - [ ] login streichen
 - [ ] darkmode farben
 - [ ] Handy Modus

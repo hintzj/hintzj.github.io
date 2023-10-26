@@ -95,6 +95,7 @@
                     gleichermaßen tauglich. Mit besseren Paddelkenntnissen werden wir auch größere Touren angehen.
                 </ul>
             </ul>
+            <button onclick="window.location.href='kontakt.php#abteilungsleiter';">Interesse? Hier geht's zum Kontakt!</button>
         </div>
         <?php include "footer.php"; ?>
     </div>

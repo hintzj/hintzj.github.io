@@ -44,8 +44,12 @@
                 <ul>Telefon: <a href="tel:+490620612483">06206/12483</a></ul>
                 <ul>E-Mail: <a href="mailto:kanupolo@wsv-lampertheim.de">kanupolo@wsv-lampertheim.de</a></ul>
                 <br>
-
-                <table>
+            </ul>
+            </p>
+        </div>
+        <div class="text-field2" id="abteilungsleiter">
+        <table>
+            <h4>Abteilungsleiter</h4>
                     <tr>
                         <th>Abteilung</th>
                         <th>Name</th>
@@ -113,10 +117,8 @@
                         <td><a href="mailto:matteo.lunkenbein@icloud.com">matteo.lunkenbein@icloud.com</a></td>
                     </tr>
                 </table>
-            </ul>
-            </p>
         </div>
-        <div class="text-field2">
+        <div class="text-field3">
             <h4>Bankverbindung</h4>
             <p>
             <ul>Bank: Volksbank Darmstadt - Südhessen eG</ul>
@@ -124,7 +126,7 @@
             <ul>BIC: GENODEF1VBD</ul>
             </p>
         </div>
-        <div class="text-field3">
+        <div class="text-field4">
             <h4>Kontaktformular</h4>
             <p>
                 <form action="kontakt.php" method="post">
