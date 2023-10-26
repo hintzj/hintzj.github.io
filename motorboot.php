@@ -76,14 +76,6 @@
             Hafenmeister.
             </ul>
         </div>
-        <div class="text-field3">
-            <h4>Stegplatz mieten/kaufen:</h4>
-            <p>
-                <ul>
-                Zur Zeit sind alle Plätze vergeben!!!
-                </ul>
-            </p>
-        </div>
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
