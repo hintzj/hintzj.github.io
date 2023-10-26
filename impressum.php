@@ -52,6 +52,12 @@
                 <p>Registernummer: 60265</p>
                 <p>Umsatzsteuer-ID: 05 250 01909</p>
                 </ul>
+                <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</p>
+                <ul>
+                <p>WSV Lampertheim e.V.</p>
+                <p>Vertreten durch:</p>
+                <p>Webmaster: <a href="mailto:hintz.jonathan@gmail.com">Jonathan Hintz</a></p>
+                </ul>
             </ul>
             </p>
         </div>

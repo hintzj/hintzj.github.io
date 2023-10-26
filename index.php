@@ -76,8 +76,10 @@
                 <div style="text-align: center;">
                     Falls du immer auf dem neusten Stand bleiben willst, kannst du dich auch für unseren WhatsApp
                     verteiler anmelden.<br><br>
+                    <a href="https://chat.whatsapp.com/IeHYUxnAh47HMNSKh4twUG">
                     <img src="documents/pics/whatsAppInvite.png" alt="QR-Code für den WhatsApp Verteiler"
                         style="width: 20%; margin: inherit;">
+                    </a>
                 </div>
             </div>
             <div class="text-field2">
