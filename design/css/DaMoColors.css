@@ -21,36 +21,37 @@
     background-color: #f9f9f9;
 }
 .dropdown-content-etc a{
-    color: black;
+    color: hsl(201, 24%, 14%);
 }
 /* Dark Mode Index */
 .greeting{
     color: #000000b7;
 }
 .text-field1{
-    background-color: hsl(213, 62%, 30%);
+    background-color: hsl(227, 55%, 10%);
 }
 .text-field2{
-    background-color: hsl(213, 62%, 40%);
+    background-color: hsl(227, 55%, 20%);
 }
 .text-field3{
-    background-color: hsl(213, 62%, 50%);
+    background-color: hsl(227, 55%, 30%);
 }
 .text-field4 {
-    background-color: hsl(213, 62%, 60%)
+    background-color: hsl(227, 55%, 40%)
 }
 .endOfPage{
-    background-color: hsl(213, 62%, 70%);
+    background-color: hsl(227, 55%, 50%);
 }
 /*DArk Mode Mainstyle*/
 body {
-    background-color: #2F323A;  
+    background-color: black;
+    color: white;  
 }
 h2 {
-    color: hsl(213, 62%, 40%);
+    color: hsl(227, 55%, 20%);
 }
 body header{
-    background-color: hsl(213, 62%, 40%);
+    background-color: hsl(227, 55%, 20%);
 }
 .greeting-alg{
     color: #000000b7;
@@ -68,29 +69,34 @@ body header{
 /*Dropdown COlors*/
 .navbar a:hover,
 .dropdown-abt:hover .dropbtn-abt {
-    background-color: hsl(213, 62%, 40%);
+    background-color: hsl(227, 55%, 20%);
 }
 
 .navbar a:hover,
 .dropdown-uVn:hover .dropbtn-uVn {
-    background-color: hsl(213, 62%, 40%);
+    background-color: hsl(227, 55%, 20%);
 }
 
 .navbar a:hover,
 .dropdown-jgn:hover .dropbtn-jgn {
-    background-color: hsl(213, 62%, 40%);
+    background-color: hsl(227, 55%, 20%);
 }
 
 .navbar a:hover,
 .dropdown-etc:hover .dropbtn-etc {
-    background-color: hsl(213, 62%, 40%);
+    background-color: hsl(227, 55%, 20%);
 }
 
 .navbar {
-    background-color: #696969;
+    background-color: hsl(227, 55%, 10%);
 }
 
 input[type=button] {
     background-color: #3a5b71;
     color: black;
+}
+
+/* Removing Text decoration on links*/
+.content a:link{
+    color: white;
 }
