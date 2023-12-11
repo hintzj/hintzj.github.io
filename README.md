@@ -11,7 +11,7 @@ Nützliche Links:
 - [ ] Bilder für Vorstand
 - [x] Bild über Vorstand
 - [x] Förderverein auftrennen
-- [ ] Schriftarten angleichen
+- [x] Schriftarten angleichen
 - [x] Newsblog verlinken
 - [ ] login streichen
 - [ ] darkmode farben
