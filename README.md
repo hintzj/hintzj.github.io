@@ -14,6 +14,6 @@ Nützliche Links:
 - [x] Schriftarten angleichen
 - [x] Newsblog verlinken
 - [ ] login streichen
-- [ ] darkmode farben
+- [x] darkmode farben
 - [ ] Handy Modus
 - [ ] Sponsoren atraktiv anordnen
