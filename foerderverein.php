@@ -45,6 +45,8 @@
                 Durch die Erlöse aus diesen Aktivitäten, zusammen mit Spenden von Unternehmen und nicht zuletzt durch
                 unsere Mitgliedsbeiträge konnte der Nachwuchs mit teilweise dringend benötigtem Material effektiv
                 unterstützt werden durch:
+                <br>
+                <br>
                 <ul>
                     Den Kauf von unzähligen Boote vom K 1 bis zum K 4
                     <br>
