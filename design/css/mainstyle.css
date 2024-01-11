@@ -1,4 +1,4 @@
-@font-face {
+ @font-face {
     font-family: CreteRoundItalic;
     src: url("../fonts/CreteRound-Italic.ttf");
 }
@@ -25,17 +25,19 @@ body header h1{
     margin: auto;
     font-size: 45px;
     font-weight: bold;
-    font-family: RobotCondBold;
+    font-family: Arial-BoldMT;
 }
 h2 {
-    font-family: RobotCondBold;
+    font-family: Arial-BoldMT;
 }
 h3 {
-    font-family: CreteRoundItalic;
+    font-family: Arial;
     font-weight: bold;
 }
 h4{
-    font-family: SyncopateBold;
+    font-family: Arial-BoldItalicMT;
+    font-size: x-large;
+    margin-top: auto;
 }
 .content{
     max-width: 900px;
@@ -47,7 +49,7 @@ body header{
     border-radius: 15px;
     margin: 1%;
 }
-
+/* Greeting */
 .greeting img {
     max-width: 20%;
 }
@@ -55,8 +57,55 @@ body header{
     font-size: 20px;
     font-weight: bold;
 }
-.greeting h2 {
-    font-family: RobotCondBold;
+
+.greeting {
+    min-height: 150px;
+    margin: auto;
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: center;
+    font-family: Arial-BoldMt;
+    text-align: center;
+    padding: 1%;
+    border-radius: 15px;
+    margin-top: 2% ;
+    margin-bottom: 2%;
+    background-size: 100%;
+    /*margin-left: 2%;
+    margin-right: 2%;*/
+}
+
+/* Textfield Templates*/
+.text-field1 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: Arial;
+}
+.text-field2 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: Arial;
+}
+.text-field3 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: Arial;
+}
+.text-field4 {
+    border-radius: 15px;
+    padding: 1%;
+    margin-top: 2%;
+    font-family: Arial
+}
+.endOfPage {
+    border-radius: 15px;
+    margin-top: 2%;
+    font-family: Arial;
+    text-align: center;
+
 }
 .signWrapper {
     position: relative;
