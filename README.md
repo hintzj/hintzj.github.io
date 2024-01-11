@@ -17,3 +17,4 @@ Nützliche Links:
 - [x] darkmode farben
 - [ ] Handy Modus
 - [ ] Sponsoren atraktiv anordnen
+- [ ] Aufnahmeantrag
