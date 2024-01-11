@@ -6,7 +6,7 @@ Nützliche Links:
     - https://fontawesome.com/v4/icons/ --> Icons
     - https://unsplash.com/ --> kostenlose Bilder
 
-- [ ] Datumschreibweise
+- [x] Datumschreibweise
 - [x] Motorboot mieten weg
 - [ ] Bilder für Vorstand
 - [x] Bild über Vorstand

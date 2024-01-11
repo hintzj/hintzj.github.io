@@ -28,3 +28,27 @@
 
 2023-10-24 11:57:03 | Access denied for user 'publicWUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\hintzj.github.io\functions.php:343
 
+2023-11-18 19:23:44 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2023-11-18 19:23:48 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\index.php:52
+
+2023-11-18 19:23:52 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2023-11-18 19:23:52 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2023-11-18 19:32:34 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2023-11-18 19:32:38 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\index.php:52
+
+2023-11-18 19:32:42 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2023-11-18 19:32:42 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2023-11-18 19:42:46 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2023-11-18 19:42:50 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\index.php:52
+
+2023-11-18 19:42:54 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2023-11-18 19:42:54 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
