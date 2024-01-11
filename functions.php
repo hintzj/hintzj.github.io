@@ -84,7 +84,8 @@
     }
     */
 
-    function registerUser($email, $fName, $lName, $birthday, $username, $password, $confirm_password){
+   /* 
+   function registerUser($email, $fName, $lName, $birthday, $username, $password, $confirm_password){
         $conn = connect("private");
         if($conn == false){
             return "Error connecting to database";
@@ -325,7 +326,7 @@
             return "success";
         }
     };
-
+*/
     function newDate($name, $date){
         $conn = connect("public", "write");
         

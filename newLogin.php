@@ -1,4 +1,6 @@
+<!--
 <?php
+/*
     require 'functions.php';
     include 'defaultHead.php';
 
@@ -88,6 +90,8 @@
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
+    +/
 </body>
 
 </html>
+-->

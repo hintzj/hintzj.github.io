@@ -39,7 +39,7 @@
                 <li>2. Vorsitzender: Alessandro Paterna</li>
                 <li>Kassenwart: Jonathan Hintz</li>
                 <li>Beisitzer: <ul>
-                        <li>Anna Hofmann</li>
+                        <li>Femke Rupf</li>
                         <li>Tim Walther</li>
                         <li>Paul Gutschalk</li>
                         <li>Franka Wernz</li>

@@ -13,7 +13,7 @@ Nützliche Links:
 - [x] Förderverein auftrennen
 - [x] Schriftarten angleichen
 - [x] Newsblog verlinken
-- [ ] login streichen
+- [x] login streichen
 - [x] darkmode farben
 - [ ] Handy Modus
 - [ ] Sponsoren atraktiv anordnen
