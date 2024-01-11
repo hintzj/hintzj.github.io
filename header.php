@@ -50,7 +50,6 @@
                             <a href='foerderverein.php'><i class='fa fa-heart' aria-hidden='true'></i> Förderverein</a>
                             <a href='newMember.php'><i class='fa fa-user-plus' aria-hidden='true'></i> Mitglied werden</a>
                             <a href='links.php'><i class='fa fa-link' aria-hidden='true'></i> Nützliche Links</a>
-                            <a href='login.php'><i class='fa fa-sign-in' aria-hidden='true'></i> Login</a>
                         </div>
                     </div>
                     <!-- dropdown für Vereinsjugend-->
