@@ -98,13 +98,17 @@ body header{
     padding: 1%;
     margin-top: 2%;
     font-family: Arial;
+    line-height:1.3; 
+    padding-right:25px;
 }
 
 .text-field4 {
     border-radius: 15px;
     padding: 1%;
     margin-top: 2%;
-    font-family: Arial
+    font-family: Arial;
+    line-height:1.3; 
+    padding-right:25px;
 }
 .endOfPage {
     border-radius: 15px;
