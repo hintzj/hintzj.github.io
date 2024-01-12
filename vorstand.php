@@ -16,23 +16,18 @@
     <?php include 'header.php'; ?>
     <div class="content">
         <?php 
-            $filename = getcwd() . $_SERVER['PHP_SELF'];
-            $filename = basename($filename, ".php");
-            $imageFilename = "documents/pics/introImage/" . $filename . ".png";
-            //echo $filename;
-        ?>
-        <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);" ;>
-            <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
-                <div>
-                    <h2>Vorstand</h2>
-                    <p>
-                        Als Interessenvertretung unsere Mitglieder leitet
-                        <br> der Vorstand die Angelegenheiten des Vereins
-                        <br> Er wird jedes Jahr auf unsere Mitgliederhauptversammlung gewählt
-                    </p>
-                </div>
+                $filename = getcwd() . $_SERVER['PHP_SELF'];
+                $filename = basename($filename, ".php");
+                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+                //echo $filename;
+            ?>
+            <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);background-color: rgba(255, 255, 255, 0.75); height: 100%;";>
+                <h2>Vorstand</h2>
+                <p>
+                    Als Interessenvertretung unsere Mitglieder leitet
+                    <br> der Vorstand die Angelegenheiten des Vereins
+                    <br> Er wird jedes Jahr auf unsere Mitgliederhauptversammlung gewählt
             </div>
-        </div>
         <div class="text-field1">
             <h4>Amtsinhaber</h4>
             <p>
