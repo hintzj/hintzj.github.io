@@ -21,39 +21,57 @@
             $imageFilename = "documents/pics/introImage/" . $filename . ".png";
             //echo $filename;
         ?>
-        <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
+        <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);" ;>
             <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
-            <div>
-            <h2>Vorstand</h2>
-            <p>
-                Als Interessenvertretung unsere Mitglieder leitet
-                <br> der Vorstand die Angelegenheiten des Vereins
-                <br> Er wird jedes Jahr auf unsere Mitgliederhauptversammlung gewählt
-            </p>
-            </div>
+                <div>
+                    <h2>Vorstand</h2>
+                    <p>
+                        Als Interessenvertretung unsere Mitglieder leitet
+                        <br> der Vorstand die Angelegenheiten des Vereins
+                        <br> Er wird jedes Jahr auf unsere Mitgliederhauptversammlung gewählt
+                    </p>
+                </div>
             </div>
         </div>
         <div class="text-field1">
             <h4>Amtsinhaber</h4>
             <p>
-            <ul>
-                <li>1. Vorsitzender: Rainer Vetter</li>
-                <li>2. Vorsitzende: Erika Gabler</li>
-                <li>Kassenwärtin: Briska Horstfeld</li>
-                <li>Schriftführerin: Erika Fuchs</li>
-                <li>Mitgliederverwaltung: Justine Sand-Soballa</li>
-                <li>Sportwart: Dieter Brechenser</li>
-                <li>Beisitzer:inneen:
-                    <ul>
-                        <li>Andras Leppich</li>
-                        <li>Stefan Sand</li>
-                        <li>Jonathan Hintz</li>
-                        <li>Michael Vetter</li>
-                        <li>Erik Messirek</li>
-                        <li>Lukas Heilmann</li>
-                    </ul>
-                </li>
-            </ul>
+                <?php
+                    $conn = connect();
+                    if ($conn == false) {
+                        throw new Exception("DB Connection failed");
+                    }
+
+                    function writeTable($conn) {
+                        $sql = "SELECT vorstand.personID, vorstand.vorname, vorstand.nachname, vorstand.position, vorstand.bildURL, vorstandspositionen.positionName FROM vorstand INNER JOIN vorstandspositionen ON vorstand.position = vorstandspositionen.positionsID ORDER BY vorstandspositionen.positionsID";
+                        $result = $conn->query($sql);
+                        $tableScript = "<table style='width: 100%'>";
+                        $counter = 0;
+                        while($row = $result->fetch_assoc()) {
+                            if ($counter == 0) {
+                                $tableScript .= "<tr>";
+                            }
+                            $tableScript .= "<td>";
+                            $tableScript .= "<img src='documents/pics/vorstandsImages/" . $row['bildURL'] . "' alt='" . $row['vorname'] . " " . $row['nachname'] . "' style='width: 10em; height: 10em;'>";
+                            $tableScript .= "<br>";
+                            $tableScript .= $row['vorname'] . " " . $row['nachname'];
+                            $tableScript .= "<br>";
+                            $tableScript .= $row['positionName'];
+                            $tableScript .= "</td>";
+                            $counter++;
+                            if ($counter == 3) {
+                                $tableScript .= "</tr>";
+                                $counter = 0;
+                            }
+                        }
+                        $tableScript .= "</table>";
+                        return $tableScript;
+                    }
+                    
+                    echo writeTable($conn);
+                    $conn->close();
+                ?>
+
             </p>
         </div>
         <?php include "footer.php"; ?>
