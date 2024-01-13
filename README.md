@@ -8,7 +8,7 @@ Nützliche Links:
 
 - [x] Datumschreibweise
 - [x] Motorboot mieten weg
-- [ ] Bilder für Vorstand
+- [x] Bilder für Vorstand
 - [x] Bild über Vorstand
 - [x] Förderverein auftrennen
 - [x] Schriftarten angleichen
@@ -16,5 +16,5 @@ Nützliche Links:
 - [x] login streichen
 - [x] darkmode farben
 - [ ] Handy Modus
-- [ ] Sponsoren atraktiv anordnen
+- [x] Sponsoren atraktiv anordnen
 - [ ] Aufnahmeantrag
