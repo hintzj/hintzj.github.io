@@ -38,7 +38,7 @@
                     }
 
                     function writeTable($conn) {
-                        $sql = "SELECT vorstand.personID, vorstand.vorname, vorstand.nachname, vorstand.position, vorstand.bildURL, vorstandspositionen.positionName FROM vorstand INNER JOIN vorstandspositionen ON vorstand.position = vorstandspositionen.positionsID ORDER BY vorstandspositionen.positionsID";
+                        $sql = "SELECT vorstand.personID, vorstand.vorname, vorstand.nachname, vorstand.email, vorstand.position, vorstand.bildURL, vorstandspositionen.positionName FROM vorstand INNER JOIN vorstandspositionen ON vorstand.position = vorstandspositionen.positionsID ORDER BY vorstandspositionen.positionsID";
                         $result = $conn->query($sql);
                         $tableScript = "<table style='width: 100%'>";
                         $counter = 0;
@@ -49,9 +49,13 @@
                             $tableScript .= "<td>";
                             $tableScript .= "<img src='documents/pics/vorstandsImages/" . $row['bildURL'] . "' alt='" . $row['vorname'] . " " . $row['nachname'] . "' style='width: 10em; height: 10em;'>";
                             $tableScript .= "<br>";
+                            $tableScript .= "<a href='mailto:" . $row['email'] . "'>";
                             $tableScript .= $row['vorname'] . " " . $row['nachname'];
+                            $tableScript .= "</a>";
                             $tableScript .= "<br>";
                             $tableScript .= $row['positionName'];
+                            $tableScript .= "<br>";
+                            $tableScript .= "<br>";
                             $tableScript .= "</td>";
                             $counter++;
                             if ($counter == 3) {
