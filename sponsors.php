@@ -50,19 +50,32 @@
 
                     mysqli_close($conn);
 
-                    //list all the sponsorLogos with a link to the sponsor page. display the sponsor names when hovering over the logo
-                    echo "<div class='sponsor'>";
-                    echo "<ul>";
-                    foreach ($sponsorsLogos as $sponsor) {
-                        
-                        //echo "<li>";
-                        echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'><img src='documents/pics/sponsorLogos/" . $sponsor['sponsorLogoFile'] . "' loading='lazy' style='width: 50%;' alt='" . $sponsor['sponsorName'] . "'></a>";
-                        //echo "</li>";
-                    
+                    function sponsorTable($sponsorsLogos) {
+                        $tableScript = "<table style='width: 100%'>";
+                        $counter = 0;
+                        foreach ($sponsorsLogos as $row) {
+                            if ($counter == 0) {
+                                $tableScript .= "<tr>";
+                            }
+                            $tableScript .= "<td>";
+                            $tableScript .= "<a href='" . $row['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'>";
+                            $tableScript .= "<img src='documents/pics/sponsorLogos/" . $row['sponsorLogoFile'] . "' alt='" . $row['sponsorName'] . "' style='max-width: 100%; height: auto;'>";
+                            $tableScript .= "</a>";
+                            $tableScript .= "<td>";
+                            $counter++;
+                            if ($counter == 3) {
+                                $tableScript .= "</tr>";
+                                $counter = 0;
+                            }
+                        }
+                        $tableScript .= "</table>";
+                        return $tableScript;
                     }
-                    echo "</ul>";
-                    echo "</div>";
-                    echo "<br><br>";
+
+                    echo sponsorTable($sponsorsLogos);
+
+                    echo "<br>";
+                    echo "<br>";
 
                     echo "<div class='without'>";
                     echo "Außerdem bedanken wir uns bei unseren kleineren Sponsoren:";
