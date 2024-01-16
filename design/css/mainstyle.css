@@ -19,7 +19,7 @@ body header img{
     float: left;
     width: 80px;
     margin-left: 2%;
-    margin-top: 2px;
+    margin-top: 1px;
 }
 body header h1{
     margin: auto;
@@ -201,4 +201,8 @@ input[type=button], input[type=submit], input[type=reset] {
 
 td {
     text-align: center;
+}
+
+a {
+    color: #000000;
 }
