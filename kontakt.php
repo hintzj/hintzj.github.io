@@ -32,19 +32,20 @@
         <div class="text-field1">
             <h4>Kontakt</h4>
             <p>
-            <ul>Wassersportverein Lampertheim 1929 e.V.
-                Adresse:<br>
                 <ul>Wassersportverein Lampertheim 1929 e.V.
-                    <br>Albrecht-Dürer-Str. 46
-                    <br>68623 Lampertheim
-                    <br>Tel.: 06206/12483
+                    <br>
+                    Adresse:<br>
+                    <ul>Wassersportverein Lampertheim 1929 e.V.
+                        <br>Albrecht-Dürer-Str. 46
+                        <br>68623 Lampertheim
+                        <br>Tel.: 06206/12483
+                    </ul>
+                    <br>
+                    Vorsitzender: Rainer Vetter
+                    <ul>Telefon: <a href="tel:+490620612483">06206/12483</a></ul>
+                    <ul>E-Mail: <a href="mailto:kanupolo@wsv-lampertheim.de">kanupolo@wsv-lampertheim.de</a></ul>
+                    <br>
                 </ul>
-                <br>
-                Vorsitzender: Rainer Vetter
-                <ul>Telefon: <a href="tel:+490620612483">06206/12483</a></ul>
-                <ul>E-Mail: <a href="mailto:kanupolo@wsv-lampertheim.de">kanupolo@wsv-lampertheim.de</a></ul>
-                <br>
-            </ul>
             </p>
         </div>
         <div class="text-field2" id="abteilungsleiter">
