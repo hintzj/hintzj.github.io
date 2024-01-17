@@ -42,7 +42,7 @@
                     }
 
                     function writeTable($conn) {
-                        $sql = "SELECT vorstand.personID, vorstand.vorname, vorstand.nachname, vorstand.email, vorstand.position, vorstand.bildURL, vorstandspositionen.positionName FROM vorstand INNER JOIN vorstandspositionen ON vorstand.position = vorstandspositionen.positionsID ORDER BY vorstandspositionen.positionsID";
+                        $sql = "SELECT vorstand.personID, vorstand.vorname, vorstand.nachname, vorstand.email, vorstand.position, vorstand.bildURL, vorstand.gender, vorstandspositionen.positionName, vorstandspositionen.positionName FROM vorstand INNER JOIN vorstandspositionen ON vorstand.position = vorstandspositionen.positionsID AND vorstand.gender = vorstandspositionen.gender ORDER BY vorstandspositionen.positionsID";
                         $result = $conn->query($sql);
                         $tableScript = "<table style='width: 100%'>";
                         $counter = 0;

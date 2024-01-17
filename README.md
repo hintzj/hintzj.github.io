@@ -9,10 +9,10 @@ Nützliche Links:
 - [ ] Handy Modus
 - [ ] Aufnahmeantrag
 - [ ] Gendern aufheben
-- [ ] Förderverein Bild verschieben
+- [x] Förderverein Bild verschieben
 - [ ] Trainingszeiten
 - [ ] Ansprechpartner besser präsentieren auf den Seiten
 - [ ] Kinderturnen Inhalt --> Dieter
-- [ ] Telefonnummern streichen
+- [x] Telefonnummern streichen
 - [ ] Quick-Links für Abteilungen auf Homepage
-- [ ] Mittwochsfrauen streichen
+- [x] Mittwochsfrauen streichen

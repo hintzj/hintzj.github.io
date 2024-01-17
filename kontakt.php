@@ -49,72 +49,61 @@
             </p>
         </div>
         <div class="text-field2" id="abteilungsleiter">
-        <table>
+        <table style="margin-left:auto; margin-right:auto;">
             <h4>Abteilungsleiter</h4>
                     <tr>
                         <th>Abteilung</th>
                         <th>Name</th>
-                        <th>Telefon</th>
                         <th>E-Mail</th>
                     </tr>
                     <tr>
                         <td>Kanurennsport</td>
                         <td>Dieter Brechenser</td>
-                        <td><a href="tel:+490620655986">06206/55986</a></td>
                         <td><a href="mailto:kanurennsport@wsv-lampertheim.de">kanurennsport@wsv-lampertheim.de</a></td>
                     </tr>
                     <tr>
                         <td>Kanurennsport-Anfänger</td>
                         <td>Patricia Herrmann</td>
-                        <td><a href="tel:+49017673059461">0176/73059461</a></td>
                         <td><a href="mailto:"></a></td>
                     </tr>
                     <tr>
                         <td>Kanupolo</td>
                         <td>Rainer Vetter</td>
-                        <td><a href="tel:+490620612483">06206/12483</a></td>
                         <td><a href="mailto:kanupolo@wsv-lampertheim.de">kanupolo@wsv-lampertheim.de</a></td>
                     </tr>
                     <tr>
                         <td>Frauen-Gymnastik</td>
                         <td>Christa Müller</td>
-                        <td><a href="tel:+490620656252">06206/56252</a></td>
                         <td><a href="mailto:"></a></td>
                     </tr>
                     <tr>
                         <td>Kinderturnen</td>
                         <td>Patricia Herrmann</td>
-                        <td><a href="tel:+49017673059461">0176/73059461</a></td>
                         <td><a href="mailto:"></a></td>
                     </tr>
                     <tr>
                         <td>Bodyforming</td>
                         <td>Angela Samson</td>
-                        <td><a href="tel:+49062065804406">06206/5804406</a></td>
                         <td><a href="mailto:"></a></td>
                     </tr>
                     <tr>
                         <td>Männergymnastik</td>
                         <td>Gunter Saeger</td>
-                        <td><a href="tel:+490620651464">06206/51464</a></td>
                         <td><a href="mailto:"></a></td>
                     </tr>
                     <tr>
                         <td>Carnevals-Gremium Blau-Weiss</td>
                         <td>Christa Müller</td>
-                        <td><a href="tel:+490620656252">06206/56252</a></td>
                         <td><a href="mailto:carnevals-gremium-blau-weiss@wsv-lampertheim.de">carnevals-gremium-blau-weiss@wsv-lampertheim.de</a></td>
                     </tr>
                     <tr>
                         <td>Nutzung Campingplatz</td>
                         <td>Bernd Volk</td>
-                        <td><a href="tel:+49017696543186">0176/96543186</a></td>
                         <td><a href="mailto:"></a></td>
                     </tr>
                     <tr>
                         <td>Vereinsjugend</td>
                         <td>Matteo Lunkenbein</td>
-                        <td><a href="tel:+491791362771">0179/1362771</a></td>
                         <td><a href="mailto:matteo.lunkenbein@icloud.com">matteo.lunkenbein@icloud.com</a></td>
                     </tr>
                 </table>

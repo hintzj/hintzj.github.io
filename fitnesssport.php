@@ -53,12 +53,6 @@
                     an der Bewegung mit Musik haben. Der Stundenschwerpunkt liegt auf einem ausgewogenen Powertraining
                     mit Muskelkräftigung und Fatburning.
                 </ul>
-                <li><h3>Mittwochsfrauen</h3></li>
-                <ul>
-                    Mittwochs treffen sich die Frauen beim WSV zum gemütlichen Beisammensein.
-
-                    Treffpunkt: ab 19.00 Uhr im Bootshaus
-                </ul>
                 <li><h3>AH-Guppe</h3></li>
                 <ul>
                     Die größte Breitensportabteilung ist die AH. Im Winterhalbjahr wird jeden Freitag ausgiebig
