@@ -6,15 +6,13 @@ Nützliche Links:
     - https://fontawesome.com/v4/icons/ --> Icons
     - https://unsplash.com/ --> kostenlose Bilder
 
-- [x] Datumschreibweise
-- [x] Motorboot mieten weg
-- [x] Bilder für Vorstand
-- [x] Bild über Vorstand
-- [x] Förderverein auftrennen
-- [x] Schriftarten angleichen
-- [x] Newsblog verlinken
-- [x] login streichen
-- [x] darkmode farben
 - [ ] Handy Modus
-- [x] Sponsoren atraktiv anordnen
 - [ ] Aufnahmeantrag
+- [ ] Genern aufheben
+- [ ] Förderverein Bild verschieben
+- [ ] Trainingszeiten
+- [ ] Ansprechpartner besser präsentieren auf den Seiten
+- [ ] Kinderturnen Inhalt --> Dieter
+- [ ] Telefonnummern streichen
+- [ ] Quick-Links für Abteilungen auf Homepage
+- [ ] Mittwochsfrauen streichen
