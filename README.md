@@ -8,7 +8,7 @@ Nützliche Links:
 
 - [ ] Handy Modus
 - [ ] Aufnahmeantrag
-- [ ] Genern aufheben
+- [ ] Gendern aufheben
 - [ ] Förderverein Bild verschieben
 - [ ] Trainingszeiten
 - [ ] Ansprechpartner besser präsentieren auf den Seiten
