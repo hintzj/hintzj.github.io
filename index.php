@@ -39,6 +39,40 @@
                 </div>
             </div>
             <div class="text-field1">
+                <h4>Unsere Abteilungen</h4>
+                <p>
+                    <?php
+                        $conn = connect();
+                        if ($conn == false) {
+                            throw new Exception("DB Connection failed");
+                        }
+                        $sql = "SELECT * FROM abteilungen";
+                        $result = $conn->query($sql);
+                        $tableScript = "<table style='width: 100%'>";
+                        $counter = 0;
+                        while($row = $result->fetch_assoc()) {
+                            if ($counter == 0) {
+                                $tableScript .= "<tr>";
+                            }
+                            $tableScript .= "<td>";
+                            $tableScript .= "<img src='documents/pics/introImage/" . strtolower($row['abteilungName']) . ".png' alt='" . $row['abteilungName'] . " style='width='200em'; height='auto'>";
+                            $tableScript .= "<br>";
+                            $tableScript .= "<a href='/" . strtolower($row['abteilungName']) . "'>";
+                            $tableScript .= $row['abteilungName'];
+                            $tableScript .= "</a>";
+                            $tableScript .= "</td>";
+                            $counter++;
+                            if ($counter == 3) {
+                                $tableScript .= "</tr>";
+                                $counter = 0;
+                            }
+                        }
+                        $tableScript .= "</table>";
+                        echo $tableScript;
+                    ?>
+                </p>
+            </div>
+            <div class="text-field2">
                 <h4>Vereinsnews</h4>
                 <ul>
                     <!--
@@ -82,7 +116,7 @@
                     </a>
                 </div>
             </div>
-            <div class="text-field2">
+            <div class="text-field3">
                 <h4>Schnupperzeiten</h4>
                 <p>
                 <ul>
