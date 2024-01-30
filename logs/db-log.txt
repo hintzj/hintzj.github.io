@@ -52,3 +52,199 @@
 
 2023-11-18 19:42:54 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
 
+2024-01-19 12:08:30 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:08:31 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:08:42 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:08:42 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:08:43 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:08:43 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:08:56 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:08:56 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:08:57 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:08:57 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:09:10 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:09:10 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:09:11 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:09:11 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:09:12 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:09:12 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:09:12 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:09:12 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:10:06 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:10:06 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:10:07 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:10:07 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:12:23 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:12:23 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:14:29 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:14:29 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:45
+
+2024-01-19 12:14:47 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:14:47 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:14:47 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:14:52 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:14:52 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsors.php:37
+
+2024-01-19 12:14:52 | DB Connection failed | :
+
+2024-01-19 12:14:52 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:14:52 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:15:31 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:15:31 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsors.php:37
+
+2024-01-19 12:15:31 | DB Connection failed | :
+
+2024-01-19 12:15:31 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:15:31 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:15:32 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:15:33 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:15:33 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:15:33 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:17:44 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:17:44 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:17:44 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:17:44 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:25:13 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:25:13 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:25:13 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:25:13 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:26:54 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:26:54 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:26:54 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:26:54 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:26:55 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:26:55 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:26:55 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:26:55 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 12:41:45 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 12:41:45 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 12:41:45 | Access denied for user 'publicRUser'@'%' to database 'wsvpublic' | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 12:41:45 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-19 13:34:47 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-19 13:34:47 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-19 13:34:47 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-19 13:34:47 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-26 23:06:49 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-26 23:06:49 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-26 23:06:49 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-26 23:06:49 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-26 23:08:34 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-26 23:08:34 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\archiv.php:37
+
+2024-01-26 23:08:34 | DB Connection failed | :
+
+2024-01-26 23:08:34 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-26 23:08:34 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-26 23:09:20 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-26 23:09:20 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\archiv.php:37
+
+2024-01-26 23:09:20 | DB Connection failed | :
+
+2024-01-26 23:09:20 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-26 23:09:20 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-26 23:10:54 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-26 23:10:58 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-26 23:11:02 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-26 23:11:02 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-26 23:11:14 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-26 23:11:18 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\jugendnews.php:38
+
+2024-01-26 23:11:22 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\jugendnews.php:68
+
+2024-01-26 23:11:26 | No connection could be made because the target machine actively refused it | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-26 23:11:26 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+

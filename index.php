@@ -42,6 +42,7 @@
                 <h4>Unsere Abteilungen</h4>
                 <p>
                     <?php
+                        /*
                         $conn = connect();
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
@@ -69,6 +70,7 @@
                         }
                         $tableScript .= "</table>";
                         echo $tableScript;
+                        */
                     ?>
                 </p>
             </div>
