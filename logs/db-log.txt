@@ -248,3 +248,43 @@
 
 2024-01-26 23:11:26 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
 
+2024-01-28 12:43:57 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-28 12:43:57 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-28 12:43:57 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-28 12:43:57 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-28 12:48:46 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-28 12:48:46 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-28 12:48:46 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-28 12:48:46 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-28 12:49:07 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-28 12:49:07 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-28 12:49:07 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-28 12:49:07 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-28 12:49:07 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-28 12:49:07 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-28 12:49:07 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-28 12:49:07 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+
+2024-01-28 12:49:08 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\header.php:23
+
+2024-01-28 12:49:08 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\index.php:88
+
+2024-01-28 12:49:08 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\webserver\htdocs\WSV_Webpage\sponsorScroll.php:11
+
+2024-01-28 12:49:08 | DB Connection failed | C:\webserver\htdocs\WSV_Webpage\footer.php:6
+

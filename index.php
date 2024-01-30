@@ -42,7 +42,6 @@
                 <h4>Unsere Abteilungen</h4>
                 <p>
                     <?php
-                        /*
                         $conn = connect();
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
@@ -56,9 +55,11 @@
                                 $tableScript .= "<tr>";
                             }
                             $tableScript .= "<td>";
+                            $tableScript .= "<a href='" . strtolower($row['abteilungName']) . ".php'>";
                             $tableScript .= "<img src='documents/pics/introImage/" . strtolower($row['abteilungName']) . ".png' alt='" . $row['abteilungName'] . " style='width='200em'; height='auto'>";
+                            $tableScript .= "</a>";
                             $tableScript .= "<br>";
-                            $tableScript .= "<a href='/" . strtolower($row['abteilungName']) . "'>";
+                            $tableScript .= "<a href='" . strtolower($row['abteilungName']) . ".php'>";
                             $tableScript .= $row['abteilungName'];
                             $tableScript .= "</a>";
                             $tableScript .= "</td>";
@@ -70,7 +71,6 @@
                         }
                         $tableScript .= "</table>";
                         echo $tableScript;
-                        */
                     ?>
                 </p>
             </div>
