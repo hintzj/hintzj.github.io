@@ -42,7 +42,13 @@
                     }
 
                     function writeTable($conn) {
-                        $sql = "SELECT vorstand.personID, vorstand.vorname, vorstand.nachname, vorstand.email, vorstand.position, vorstand.bildURL, vorstand.gender, vorstandspositionen.positionName, vorstandspositionen.positionName FROM vorstand INNER JOIN vorstandspositionen ON vorstand.position = vorstandspositionen.positionsID AND vorstand.gender = vorstandspositionen.gender ORDER BY vorstandspositionen.positionsID";
+                        //$sql = "SELECT personen.personID, personen.vorname, personen.nachname, personen.email, vorstandsmitglieder.position, personen.bildURL, personen.gender, vorstandspositionen.positionName, vorstandspositionen.positionName FROM personen INNER JOIN vorstandsmitglieder ON personen.personID = vorstandsmitglieder.personID INNER JOIN vorstandspositionen ON vorstandsmitglieder.position = vorstandspositionen.positionID ORDER BY vorstandspositionen.positionID ASC";
+                        //$sql = "SELECT * FROM personen LEFT JOIN vorstandsmitglieder ON personen.personID = vorstandsmitglieder.mitgliedID INNER JOIN vorstandspositionen ON vorstandsmitglieder.mitgliedID = vorstandspositionen.positionsID";
+                        $sql = "SELECT * FROM vorstandsmitglieder
+                        INNER JOIN personen ON mitgliedID = personID
+                        INNER JOIN vorstandspositionen ON personen.gender = vorstandspositionen.gender
+                            AND vorstandsmitglieder.positionsID = vorstandspositionen.positionsID 
+                        ORDER BY vorstandsmitglieder.positionsID ASC";
                         $result = $conn->query($sql);
                         $tableScript = "<table style='width: 100%'>";
                         $counter = 0;
@@ -51,10 +57,10 @@
                                 $tableScript .= "<tr>";
                             }
                             $tableScript .= "<td>";
-                            $tableScript .= "<img src='documents/pics/vorstandsImages/" . $row['bildURL'] . "' alt='" . $row['vorname'] . " " . $row['nachname'] . "' style='width: 10em; height: 10em;'>";
+                            $tableScript .= "<img src='documents/pics/vorstandsImages/" . $row['bildURL'] . "' alt='" . $row['Vorname'] . " " . $row['Nachname'] . "' style='width: 10em; height: 10em;'>";
                             $tableScript .= "<br>";
                             $tableScript .= "<a href='mailto:" . $row['email'] . "'>";
-                            $tableScript .= $row['vorname'] . " " . $row['nachname'];
+                            $tableScript .= $row['Vorname'] . " " . $row['Nachname'];
                             $tableScript .= "</a>";
                             $tableScript .= "<br>";
                             $tableScript .= $row['positionName'];

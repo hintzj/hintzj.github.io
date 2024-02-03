@@ -1,6 +1,7 @@
 <!--This file is included in all pages of the website. It contains the footer of the website.-->
 <!--The footer is the same on all pages, so it is easier to maintain it in one file.-->
 <?php
+    include 'siteContact.php';
     
     echo "<div class='endOfPage'>\n";
     include 'sponsorScroll.php';
