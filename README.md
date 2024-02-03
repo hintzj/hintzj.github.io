@@ -14,5 +14,4 @@ Nützliche Links:
 - [ ] Ansprechpartner besser präsentieren auf den Seiten
 - [ ] Kinderturnen Inhalt --> Dieter
 - [x] Telefonnummern streichen
-- [x] Quick-Links für Abteilungen auf Homepage
 - [x] Mittwochsfrauen streichen
