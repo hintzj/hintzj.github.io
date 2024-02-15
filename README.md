@@ -14,3 +14,5 @@ Nützliche Links:
 - [ ] Ansprechpartner besser präsentieren auf den Seiten
 - [ ] Kinderturnen Inhalt --> Dieter
 - [x] Telefonnummern streichen
+
+Rückmeldung zur Webseite: https://forms.office.com/e/Dg0RKR74h8
