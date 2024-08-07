@@ -7,7 +7,7 @@ Nützliche Links:
     - https://unsplash.com/ --> kostenlose Bilder
 
 - [ ] Handy Modus
-- [ ] Aufnahmeantrag
+- [ ] (Aufnahmeantrag)
 - [x] Gendern aufheben
 - [x] Förderverein Bild verschieben
 - [ ] Trainingszeiten
