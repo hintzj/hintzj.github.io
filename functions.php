@@ -367,7 +367,7 @@
         $stmt->close();
         $result = $result->fetch_assoc();
         if($result == NULL){
-            return "Error getting image";
+            return $site;
         } else {
             return $result['imagePath'];
         }
