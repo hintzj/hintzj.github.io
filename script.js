@@ -1,9 +1,20 @@
 // Schließen des Dropdown-Menüs bei Klick auf den Body
 document.body.addEventListener('click', function(event) {
     if (event.target.closest('.dropdown') === null) {
+        //check if a dropdown is open
+        let open = false;
         document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
-            menu.style.display = 'none';
+            if (menu.style.display === 'block') {
+                open = true;
+            }
         });
+        if (open) {
+            //close all dropdowns
+            document.querySelectorAll('.dropdown-menu').forEach(function(menu) {
+                menu.style.display = 'none';
+                console.log('closed');
+            });
+        }
     }
 });
 
