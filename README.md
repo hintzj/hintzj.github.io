@@ -7,12 +7,12 @@ Nützliche Links:
     - https://unsplash.com/ --> kostenlose Bilder
 
 - [ ] Handy Modus
-- [ ] Aufnahmeantrag
+- [ ] (Aufnahmeantrag)
 - [x] Gendern aufheben
 - [x] Förderverein Bild verschieben
 - [ ] Trainingszeiten
 - [ ] Ansprechpartner besser präsentieren auf den Seiten
 - [ ] Kinderturnen Inhalt --> Dieter
 - [x] Telefonnummern streichen
-- [x] Quick-Links für Abteilungen auf Homepage
-- [x] Mittwochsfrauen streichen
+
+Rückmeldung zur Webseite: https://forms.office.com/e/Dg0RKR74h8
