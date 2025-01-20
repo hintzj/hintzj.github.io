@@ -2,7 +2,9 @@
     echo "<link rel='stylesheet' type='text/css' href='design/css/sponsorScroll.css'>\n
         <link rel='stylesheet' type='text/css' href='design/css/mainstyle.css'>\n
         <link rel='stylesheet' type='text/css' href='design/css/dropdown.css'>\n
-               <link id='colors' rel='stylesheet' type='text/css' href='design/css/WhMoColors.css'>\n
+        <link id='colors' rel='stylesheet' type='text/css' href='design/css/WhMoColors.css'>\n
+        <link rel='stylesheet' href='design/css/styles.css'>\n
+
 
         <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css'>\n
 

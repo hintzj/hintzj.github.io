@@ -17,7 +17,7 @@
 
 body header img{
     float: left;
-    width: 80px;
+    width: max(80px,7vw);
     margin-left: 2%;
     margin-top: 1px;
 }
@@ -125,6 +125,7 @@ body header{
     margin-top: 2%;
     font-family: Arial;
     text-align: center;
+    margin-bottom: 1vw;
 
 }
 .signWrapper {

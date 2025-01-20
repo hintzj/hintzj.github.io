@@ -1,7 +1,7 @@
 /*Allegein*/
 /* Navbar container */
 .navbar {
-    overflow: hidden;
+    /*overflow: hidden;*/
     background-color: #333;
     font-family: Arial;
     border-bottom-right-radius: 15px;

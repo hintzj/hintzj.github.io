@@ -11,7 +11,7 @@
 </head>
 
 <body>
-    <?php include 'header.php'; ?>
+    <?php include 'header1.php'; ?>
     <div class="content">
         <?php 
                 $filename = getcwd() . $_SERVER['PHP_SELF'];
@@ -114,22 +114,6 @@
             <ul>Bank: Volksbank Darmstadt - Südhessen eG</ul>
             <ul>IBAN: DE54508900000002050102</ul>
             <ul>BIC: GENODEF1VBD</ul>
-            </p>
-        </div>
-        <div class="text-field4">
-            <h4>Kontaktformular</h4>
-            <p>
-                <form action="kontakt.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name" placeholder="Dein Name"><br>
-                    <label for="email">E-Mail:</label>
-                    <input type="text" id="email" name="email" placeholder="Deine E-Mail"><br>
-                    <label for="subject">Betreff:</label>
-                    <input type="text" id="subject" name="subject" placeholder="Betreff"><br>
-                    <label for="message">Nachricht:</label>
-                    <textarea id="message" name="message" placeholder="Deine Nachricht" style="height:200px"></textarea><br>
-                    <input type="submit" value="Absenden">
-                </form>
             </p>
         </div>
         <?php include "footer.php"; ?>

@@ -352,4 +352,24 @@
             return "success";
         } 
     }
+
+    function getContactImage($site){
+        $site = basename($site, ".php");
+
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT imagePath FROM contactimages WHERE site = ?");
+        $stmt->bind_param("s", $site);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+        if($result == NULL){
+            return "Error getting image";
+        } else {
+            return $result['imagePath'];
+        }
+    }
 ?>
