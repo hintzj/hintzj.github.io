@@ -7,7 +7,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
-    <title>Mototrboot - WSVL</title>
+    <title>Motorboot - WSVL</title>
 </head>
 
 <body>
@@ -67,7 +67,7 @@
             <ul>
             Wir sind Mitglied bei "Freundschaft auf dem Wasser", für Gäste die ebenfalls Mitglied bei "Freundschaft auf
             dem Wasser" sind, sind 3 Nächte frei, es fällt lediglich eine Pauschale von 3€ pro Nacht an.
-            Alle anderen Gäste zahlen pro Nacht 1,50 € je angefangenen Meter Bootslänge inkl. Strom/Wasser/Müll.
+            Alle anderen Gäste zahlen pro Nacht 2€ je angefangenen Meter Bootslänge inkl. Strom/Wasser/Müll.
             </ul>
 
             <h4>Verpflegung:</h4>
@@ -75,7 +75,6 @@
             Der nächste Bäcker, Metzger und Supermarkt sind ca. 10-15 min zu Fuß entfernt. Mehr Infos bei unserem
             Hafenmeister.
             </ul>
-            <button onclick="window.location.href='kontakt.php#abteilungsleiter';">Interesse? Hier geht's zum Kontakt!</button>
         </div>
         <?php include "footer.php"; ?>
     </div>

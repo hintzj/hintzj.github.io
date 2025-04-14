@@ -89,8 +89,8 @@ CREATE TABLE `contactimages` (
 --
 
 INSERT INTO `contactimages` (`site`, `imagePath`) VALUES
-('index', 'documents/pics/vorstandsImages/Rainer.jpg'),
-('kontakt', 'documents/pics/vorstandsImages/Rainer.jpg');
+('index', 'documents/pics/personPortraits/Rainer.jpg'),
+('kontakt', 'documents/pics/personPortraits/Rainer.jpg');
 
 -- --------------------------------------------------------
 

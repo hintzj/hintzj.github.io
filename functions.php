@@ -353,23 +353,23 @@
         } 
     }
 
-    function getContactImage($site){
+    function getContactImage($site = "kontakt.php"){
         $site = basename($site, ".php");
 
         $conn = connect("public", "read");
         if($conn == false){
             return "Error connecting to database";
         }
-        $stmt = $conn->prepare("SELECT imagePath FROM contactimages WHERE site = ?");
+        $stmt = $conn->prepare("SELECT bildURL, Vorname, Nachname, email FROM personen AS p INNER JOIN contactperson AS c ON p.personID = c.personID WHERE site = ?");
         $stmt->bind_param("s", $site);
         $stmt->execute();
         $result = $stmt->get_result();
         $stmt->close();
         $result = $result->fetch_assoc();
         if($result == NULL){
-            return $site;
+            return null;
         } else {
-            return $result['imagePath'];
+            return [$result['bildURL'],  $result['Vorname'], $result['Nachname'], $result['email']];
         }
     }
 ?>
