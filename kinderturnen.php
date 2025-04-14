@@ -43,7 +43,7 @@
                     <li>Donnerstag: 18:00 - 20:00 Uhr</li>
                 </ul>
             </p>
-            <button onclick="window.location.href='kontakt.php#abteilungsleiter';">Interesse? Hier geht's zum Kontakt!</button>
+            
         </div>
         <?php include "footer.php"; ?>
     </div>

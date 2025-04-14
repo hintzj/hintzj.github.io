@@ -18,11 +18,11 @@
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
                         }
-                        $sql = "SELECT * FROM abteilungen";
+                        $sql = "SELECT * FROM abteilungen WHERE abteilungsPage != ''";
                         $result = $conn->query($sql);
 
                         while($row = $result->fetch_assoc()) {
-                            echo "<li><a href='" . strtolower($row['abteilungName']) . ".php'>" . $row['abteilungName'] . "</a></li>";
+                            echo "<li><a href='" . strtolower($row['abteilungsPage']) . "'>" . $row['abteilungName'] . "</a></li>";
                         }
 
     echo            "</ul>

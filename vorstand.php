@@ -44,11 +44,11 @@
                     function writeTable($conn) {
                         //$sql = "SELECT personen.personID, personen.vorname, personen.nachname, personen.email, vorstandsmitglieder.position, personen.bildURL, personen.gender, vorstandspositionen.positionName, vorstandspositionen.positionName FROM personen INNER JOIN vorstandsmitglieder ON personen.personID = vorstandsmitglieder.personID INNER JOIN vorstandspositionen ON vorstandsmitglieder.position = vorstandspositionen.positionID ORDER BY vorstandspositionen.positionID ASC";
                         //$sql = "SELECT * FROM personen LEFT JOIN vorstandsmitglieder ON personen.personID = vorstandsmitglieder.mitgliedID INNER JOIN vorstandspositionen ON vorstandsmitglieder.mitgliedID = vorstandspositionen.positionsID";
-                        $sql = "SELECT * FROM vorstandsmitglieder
-                        INNER JOIN personen ON personID = personID
-                        INNER JOIN vorstandspositionen ON personen.gender = vorstandspositionen.gender
-                            AND vorstandsmitglieder.positionsID = vorstandspositionen.positionsID 
-                        ORDER BY vorstandsmitglieder.positionsID ASC";
+                        $sql = "SELECT * FROM vorstandsmitglieder AS vm
+                        INNER JOIN personen AS p ON vm.personID = p.personID
+                        INNER JOIN vorstandspositionen AS vp ON p.gender = vp.gender
+                            AND vm.positionsID = vp.positionsID 
+                        ORDER BY vm.positionsID ASC";
                         $result = $conn->query($sql);
                         $tableScript = "<table style='width: 100%'>";
                         $counter = 0;
@@ -57,7 +57,7 @@
                                 $tableScript .= "<tr>";
                             }
                             $tableScript .= "<td>";
-                            $tableScript .= "<img src='documents/pics/personPortraits/" . $row['bildURL'] . "' alt='" . $row['Vorname'] . " " . $row['Nachname'] . "' style='width: 10em; height: 10em;'>";
+                            $tableScript .= "<img src='documents/pics/personPortraits/" . $row['bildURL'] . "' alt='" . $row['Vorname'] . " " . $row['Nachname'] . "' style='width: 10em; border-radius: 5%;' />";
                             $tableScript .= "<br>";
                             $tableScript .= "<a href='mailto:" . $row['email'] . "'>";
                             $tableScript .= $row['Vorname'] . " " . $row['Nachname'];

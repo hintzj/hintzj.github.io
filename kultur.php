@@ -37,7 +37,7 @@
                 Peter Weber, Peter Horstfeld, Susanne Asel, Carmen Geppert, Volker Altenbach, Sven Stollhofer, Klaus Heiler, Jan Heilmann(Jugendgruppe), Tina Heiler
                 </ul>
             </p>
-            <button onclick="window.location.href='kontakt.php#abteilungsleiter';">Interesse? Hier geht's zum Kontakt!</button>
+            
         </div>
         <?php include "footer.php"; ?>
     </div>
