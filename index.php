@@ -140,6 +140,13 @@
                 </ul>
                 </p>
             </div>
+            <div class="text-field4">
+                <h4>Übungsleiter gesucht!</h4>
+                    <ul>
+                        Der WSV sucht eine Übungsleiterin oder einen Übungsleiter für Bodyforming, Kurszeit Donnerstags ab 20.00 Uhr.
+                        Interessenten melden sich bitte <a href="mailto:info@wsv-lampertheim.de">hier</a>.
+                    </ul>
+            </div>
         </main>
         <?php include "footer.php"; ?>
     </div>
