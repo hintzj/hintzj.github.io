@@ -130,15 +130,13 @@
                     <br>
                     <b>Kanupolo:</b> Dienstags 18.00 - 20.00 Uhr
                     <br>
-                    <b>Wanderpaddeln:</b> Mittwochs 18.00 - 20.00 Uhr
+                    <b>Wanderpaddeln:</b> Dienstags 18.00 - 20.00 Uhr
                     <br>
                     <b>Rückengymnastik:</b> Mittwochs 09.00 - 10.30 Uhr
                     <br>
-                    <b>Yoga:</b> Freitags 18.30 - 20.00 Uhr
+                    <b>Yoga:</b> Mittwochs 18.30 - 20.00 Uhr
                     <br>
                     <b>Boule:</b> Freitags 15.00 - 17.00 Uhr
-                    <br>
-                    <b>Bodyforming:</b> Freitags 20.00 - 21.00 Uhr
                 </ul>
                 </p>
             </div>
