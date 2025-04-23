@@ -64,14 +64,15 @@
         <div class="text-field2" >
             <h2>Mitgliederinfo</h2>
 
-            <object data="documents/mitgliedsinfos/Mitgliederinfo_2022.pdf" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
+            <object data="documents/mitgliedsinfos/Mitgliederinfo_2024.pdf" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
                 <script>
                     hideButtons();
                 </script>
                 <p>Es sieht so aus, als ob dein Browser keine PDFs anzeigen kann. Kein Problem! Du kannst die Mitgliederinfos hier herunterladen.</p>
                 <?php
-                    $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io\documents\mitgliedsinfos";
+                    $dir = "documents\mitgliedsinfos";
                     $files = scandir($dir);
+                    print_r($files);
                     foreach ($files as $file) {
                         if (strpos($file, ".pdf") !== false) {
                             echo "<div style='text-align: center;'><a href='documents/mitgliedsinfos/" . $file . "'>" . $file . "</a></div>";
@@ -85,7 +86,7 @@
                 var pdfViewerSrc = pdfViewer.getAttribute('data');
 
                 <?php
-                    $dir = "C:\Users\hintz\Downloads\WSV Website\hintzj.github.io\documents\mitgliedsinfos";
+                    $dir = "documents\mitgliedsinfos";
                     $files = scandir($dir);
                     echo "var pdfFiles = [";
                     foreach ($files as $file) {

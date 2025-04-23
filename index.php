@@ -46,7 +46,7 @@
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
                         }
-                        $sql = "SELECT * FROM abteilungen";
+                        $sql = "SELECT * FROM abteilungen WHERE abteilungsPage != ''";
                         $result = $conn->query($sql);
                         $tableScript = "<table style='width: 100%'>";
                         $counter = 0;
