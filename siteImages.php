@@ -13,6 +13,7 @@
     <h4>Impressionen</h4>
     <?php
         try {
+            shuffle($imagePaths);
             echo "<logo-slider class='img'>\n
                 <div>\n";
                     foreach ($imagePaths as $path) {

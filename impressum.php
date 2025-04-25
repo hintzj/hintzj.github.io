@@ -68,6 +68,9 @@
                 <p>Unsere E-Mail-Adresse finden Sie oben im Impressum.</p>
                 <p>Wir sind nicht bereit oder verpflichtet, an Streitbeilegungsverfahren vor einer
                     Verbraucherschlichtungsstelle teilzunehmen.</p>
+                <h3>Hinweis zu Rechtsverstößen</h3>
+                <p>Wir möchten ausdrücklich betonen, dass wir stets bemüht sind, alle geltenden rechtlichen Bestimmungen einzuhalten. Sollten Sie dennoch der Meinung sein, dass Inhalte auf dieser Webseite gegen geltendes Recht verstoßen, bitten wir Sie, uns darauf hinzuweisen. Wir werden den Sachverhalt umgehend prüfen und, falls erforderlich, die entsprechenden Inhalte entfernen oder anpassen.</p>
+                <p>Bitte kontaktieren Sie uns in einem solchen Fall unter der oben angegebenen E-Mail-Adresse. Vielen Dank für Ihre Unterstützung.</p>
                 <h3>Haftung für Inhalte</h3>
                 <p>Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den
                     allgemeinen Gesetzen verantwortlich. Nach §§ 8 bis 10 TMG sind wir als Diensteanbieter jedoch nicht
