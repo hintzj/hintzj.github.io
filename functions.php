@@ -372,4 +372,47 @@
             return [$result['bildURL'],  $result['Vorname'], $result['Nachname'], $result['email']];
         }
     }
+
+    function getSiteImages($site = "index.php"){
+        $site = clean($site);
+        //echo $site;
+        //echo "<br>";
+        $dir = "documents/pics/siteImageScroll/" . $site . "/";
+        //echo $dir;
+        $images = array();
+        if (is_dir($dir)) {
+            $files = scandir($dir);
+            foreach ($files as $file) {
+                if ($file != "." && $file != "..") {
+                    $images[] = $file;
+                }
+            }
+        } else {
+            return null;
+        }
+        return $images;
+    }
+
+    function clean($site) {
+        if ($site == "/WSV_Webpage/") {
+            $site = "index.php";
+        }
+            
+        //look if there is a folder with the name of the site in documents/pics/siteImageScroll
+        $site = strtolower($site);
+        //echo $site;
+        $position = strpos($site, '.');
+        // Extract the part of the string before the comma
+        $site = substr($site, 0, $position);
+
+        //echo $site;
+
+        $parts = explode("/", $site);
+
+        //print_r($parts);
+
+        $site = end($parts);
+
+        return $site;
+     }
 ?>

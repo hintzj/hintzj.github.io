@@ -3,21 +3,39 @@ logo-slider {
     /*border: 1px solid #575757;*/
     padding: 20px;
     overflow: hidden;
-    max-width: 85%;
+    max-width: 95%;
     width: 100%;
     margin: 0 auto;
     position: relative;
     display: flex;
   }
+
+  logo-slider.img {
+    --image-size: 200px;
+  }
+
   logo-slider:hover div {
     animation-play-state: paused;
   }
+  
+  logo-slider.img:hover div {
+    animation-play-state: paused;
+  }
+  
   logo-slider div {
     display: flex;
     position: relative;
     animation: marquee 110s linear infinite;
     justify-content: space-around;
   }
+
+  logo-slider.img div {
+    display: flex;
+    position: relative;
+    animation: marquee 50s linear infinite;
+    justify-content: space-around;
+  }
+
   logo-slider img {
     border-radius: 10px;
     display: block;
