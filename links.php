@@ -30,20 +30,45 @@
         </div>
         </div>
         <div class="text-field1">
-            <h4>Links</h4>
+            <h4>Verbände</h4>
             <p>
                 <ul>
-                    <li>ALLE LINKS NUR ALS BEISPIEL</li>
-                    <li><a href="https://www.wsv-lampertheim.de/">WSV Lampertheim</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/turnen/">Turnen</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/kanurennsport/">Kanurennsport</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/fitnesssport/">Fitnesssport</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/kinderturnen/">Kinderturnen</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/links/">Links</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/impressum/">Impressum</a></li>
-                    <li><a href="https://www.wsv-lampertheim.de/datenschutz/">Datenschutz</a></li>
+                    <li><a href="https://www.kanu.de/">Deutscher Kanu-Verband</a></li>
+                    <li><a href="https://www.landessportbund-hessen.de/">Landessportbund Hessen</a></li>
+                    <li><a href="https://www.kanu-hessen.de/">Hessischer Kanu-Verband</a></li>
                 </ul>
             </p>
+
+            <br>
+
+            <h4>Soziale Medien</h4>
+            <p>
+                <ul>
+                    <li><a href="https://www.instagram.com/wsv_lampertheim_1929/">Instagram</a></li>
+                    <li><a href="https://www.facebook.com/wsvla/?locale=de_DE">Facebook</a></li>
+
+                </ul>
+            </p>
+
+            <br>
+
+            <h4>Online-Shops</h4>
+            <p>
+                <ul>
+                    <li><a href="https://sportinn.eu/WSV-Lampertheim">Sportinn</a></li>
+                </ul>
+            </p>
+
+            <br>
+
+            <h4>Rhein Pegel</h4>
+            <p>
+                <ul>
+                    <li><a href="https://www.elwis.de/DE/dynamisch/Wasserstaende/Pegeleinzeln:WORMS">Pegel Lampertheim</a> 	(Kritischer Wert für den WSV: ca. 6,40 m)</li>
+                </ul>
+            </p>
+
+            <br>
         </div>
         <?php include "footer.php"; ?>
     </div>
