@@ -366,9 +366,13 @@
         $result = $stmt->get_result();
         $stmt->close();
         $result = $result->fetch_assoc();
+
         if($result == NULL){
             return null;
         } else {
+            if ($result['bildURL'] == "") {
+                $result['bildURL'] = "default.png";
+            }
             return [$result['bildURL'],  $result['Vorname'], $result['Nachname'], $result['email']];
         }
     }
