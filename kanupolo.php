@@ -29,13 +29,24 @@
         </div>
         </div>
         <div class="text-field1">
-            <h4>Trainingszeiten Kanupolo</h4>
+            <h4>Kanupolo am WSV</h4>
             <p>
-                <ul>
-                    <li>Dienstag: 18:00 - 20:00 Uhr</li>
-                </ul>
-
-                
+            <ul>
+                <li>Kanupolo ist eine spannende Mischung aus Kajakfahren und Ballsport.</li>
+                <li>Unser Training (Dienstags 18.00 - 20.00 Uhr) ist perfekt für Anfänger und Fortgeschrittene.</li>
+                <li>Wir nehmen regelmäßig an regionalen und nationalen Turnieren teil.</li>
+            </ul>
+            </p>
+        </div>
+        <div class="text-field2">
+            <h4>Warum Kanupolo?</h4>
+            <p>
+            <ul>
+                Kanupolo am WSV Lampertheim bietet dir die Möglichkeit, Teil einer engagierten und freundlichen Gemeinschaft zu werden. 
+                Egal, ob du den Sport neu entdecken möchtest oder bereits Erfahrung hast – bei uns bist du willkommen!
+                <br>
+                Komm vorbei und erlebe die Faszination Kanupolo hautnah!
+            </ul>
             </p>
         </div>
         <?php include "footer.php"; ?>
