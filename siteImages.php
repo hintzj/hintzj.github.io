@@ -3,10 +3,13 @@
     $var = $_SERVER['REQUEST_URI'];
 
     $imagePaths = getSiteImages($var);
+    //echo $var;
     if ($imagePaths == null) {
         $imagePaths = getSiteImages();
         $var = "index.php";
     }
+
+    //print_r($imagePaths);
 ?>
 
 <div class="text-field4">
@@ -17,17 +20,17 @@
             echo "<logo-slider class='img'>\n
                 <div>\n";
                     foreach ($imagePaths as $path) {
-                        echo "<img src='documents/pics/siteImageScroll/" . clean($var) . "/" . $path . "'>\n";
+                        echo "<img src='" . $path . "'>\n";
                     }
                 echo "</div>\n
                 <div>\n";
                     foreach ($imagePaths as $path) {
-                        echo "<img src='documents/pics/siteImageScroll/" . clean($var) . "/" . $path . "'>\n";
+                        echo "<img src='" . $path . "'>\n";
                     }
                 echo "</div>\n
                 <div>\n";
                     foreach ($imagePaths as $path) {
-                        echo "<img src='documents/pics/siteImageScroll/" . clean($var) . "/" . $path . "'>\n";
+                        echo "<img src='" . $path . "'>\n";
                     }
                 echo "</div>\n
             </logo-slider>";

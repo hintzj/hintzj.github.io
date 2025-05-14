@@ -378,9 +378,24 @@
     }
 
     function getSiteImages($site = "index.php"){
+        $postID = null;
+        if (str_contains($site, "?")) {
+            $postID = explode("?", $site)[1];
+            $postID = explode("=", $postID)[1];
+            $site = explode("?", $site)[0];
+        }
+        //echo $site;
+        //echo "<br>";
         $site = clean($site);
         //echo $site;
         //echo "<br>";
+        if ($site == "artikel") {
+            //echo "..................................";
+            $site = $site . "/" . $site;
+        }
+        if ($postID != null) {
+            $site = $site . "_" . $postID;
+        }
         $dir = "documents/pics/siteImageScroll/" . $site . "/";
         //echo $dir;
         $images = array();
@@ -388,7 +403,7 @@
             $files = scandir($dir);
             foreach ($files as $file) {
                 if ($file != "." && $file != "..") {
-                    $images[] = $file;
+                    $images[] = $dir . $file;
                 }
             }
         } else {
