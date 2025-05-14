@@ -141,6 +141,14 @@
             </div>
 
         </div>
+        <div class="text-field3">
+            <h2>Alte Webseite</h2>
+            <ul>
+            <p>
+                Wie Sie schon gesehen haben ist die neue Webseite des WSVL online. Diese Webseite ist noch in der Testphase und wird immer wieder aktualisiert. Wenn Sie die alte Webseite einsehen wollen, können Sie das <a href="https://archiv.hin.tz">hier</a> tun.
+            </p>
+            </ul>
+        </div>
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
