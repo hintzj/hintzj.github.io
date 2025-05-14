@@ -32,6 +32,7 @@
         </div>
         <div class="text-field1">
             <h4>Jugendvorstand</h4>
+            <ul>
             <p >
                 Seit dem 01.02.23 sind folgende im Amt:
             <ul>
@@ -52,6 +53,7 @@
             <p>
                 <a href="documents/Jugendordnung.pdf" target="_blank" rel="noopener noreferrer">Hier</a> findest du die aktuelle Satzung des Jugendvorstandes
             </p>
+            </ul>
         </div>
         <?php include "footer.php"; ?>
     </div>

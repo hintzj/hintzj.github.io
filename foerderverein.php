@@ -30,6 +30,7 @@
         </div>
         <div class="text-field1">
         <h4>Förderverein</h4>
+        <ul>
             <p>
                 - Was 1 € so alles bewirken kann –
                 <br>
@@ -85,6 +86,7 @@
             <a href="documents/Foerderverein_2023.pdf" target="_blank" rel="noopener noreferrer">Den Aufnahmeantrag gibt
                 es hier zum Download</a>
             </p>
+        </ul>
         </div>
         <?php include "footer.php"; ?>
     </div>

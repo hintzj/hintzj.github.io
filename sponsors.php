@@ -32,6 +32,8 @@
         </div>
         <div class="text-field1">
             <h4>Sponsoren</h4>
+            <br>
+            <ul>
             <?php
                 try{
                     $conn = connect("public");
@@ -103,6 +105,7 @@
                     error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
                 }                
             ?>
+            </ul>
         </div>
         <?php include "footer.php"; ?>
     </div>
