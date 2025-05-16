@@ -1,3 +1,4 @@
+<!--
 <?php
     require 'functions.php';
 
@@ -331,3 +332,5 @@
 </body>
 
 </html>
+
+-->

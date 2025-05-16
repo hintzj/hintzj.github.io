@@ -33,13 +33,13 @@
             <h4>Funktionen</h4>
             <p>
                 <ul>
-                    <button onclick="">Termine verwalten</button>
+                    <input type="button" onclick="location.href='adminDate.php';" value="Termine verwalten" />
                     <br>
                     <br>
-                    <button onclick="">Artikel verwalten</button>
+                    <input type="button" onclick="location.href='adminArticle.php';" value="News verwalten" />
                     <br>
                     <br>
-                    <button onclick="">Mitgliederinfos verwalten</button>
+                    <input type="button" onclick="location.href='adminMitgliederinfo.php';" value="Mitgliederinfos verwalten" />
                 </ul>
             </p>
         </div>
