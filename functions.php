@@ -49,6 +49,7 @@
         $conn->close();
     };
 
+    /*
     function newMember($answers){
         print_r($answers);
         $conn = connect("private");
@@ -68,7 +69,7 @@
         
     }
 
-    /*
+    
     function newMember($anrede, $vorname, $name, $strasse, $plz, $ort, $email, $geburtstag, $beruf, $devision, $liegeplatz, $sonderbootPlatz, $anlegeplatz, $startDate, $accountName, $bic, $bank, $checkboxes, $recaptcha) {
         $conn = connect("private");
         if($conn == false){
@@ -84,8 +85,8 @@
     }
     */
 
-   /* 
-   function registerUser($email, $fName, $lName, $birthday, $username, $password, $confirm_password){
+    /* 
+    function registerUser($email, $fName, $lName, $birthday, $username, $password, $confirm_password){
         $conn = connect("private");
         if($conn == false){
             return "Error connecting to database";
@@ -178,8 +179,13 @@
         }
     };
 
+    */
+
     function loginUser($username, $password){
-        $conn = connect("private");
+        $conn = connect("private", "read");
+        if ($conn === false) {
+            return "Error connecting to database";
+        }
         $username = trim($username);
         $password = trim($password);
 
@@ -190,23 +196,37 @@
         $username = filter_var($username, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
         $password = filter_var($password, FILTER_SANITIZE_FULL_SPECIAL_CHARS);
 
-        $stmt = $conn->prepare("SELECT * FROM users WHERE username = ?");
+        try {
+            $stmt = $conn->prepare("SELECT * FROM login WHERE username = ?");
+        } catch (Exception $e) {
+            $error = $e->getMessage();
+            error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
+            return "Error preparing statement";
+        }
         $stmt->bind_param("s", $username);
         $stmt->execute();
         $result = $stmt->get_result();
         $stmt->close();
         $result = $result->fetch_assoc();
         if($result == NULL){
-            return "Username or password is incorrect";
+            return "Username or password is incorrect1";
         }
 
-        if(password_verify($password,$result['password']) == FALSE){
+        if($password != $result['password']){
+            return "Username or password is incorrect2";
+        } else {
+            $_SESSION["user"] = $username;
+            header("Location: adminDashboard.php");
+            exit();
+        }
+
+        /* if(password_verify($password, $result['password']) == FALSE){
             return "Username or password is incorrect";
         } else {
             $_SESSION["user"] = $username;
-            header("Location: account.php");
+            header("Location: adminDashboard.php");
             exit();
-        }
+        } */
 
     };
 
@@ -216,6 +236,7 @@
         exit();
     };
 
+    /*
     function passwordReset($email){
         $conn = connect("private");
         $email = trim($email);
@@ -261,7 +282,8 @@
         }
 
     };
-
+    */
+    
     function deleteAccount(){
         $conn = connect("private");
         $stmt = $conn->prepare("DELETE FROM users WHERE username = ?");
@@ -326,7 +348,7 @@
             return "success";
         }
     };
-*/
+
     function newDate($name, $date){
         $conn = connect("public", "write");
         

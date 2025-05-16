@@ -1,5 +1,10 @@
 <?php
     require 'functions.php';
+
+    if(!isset($_SESSION['user'])){
+        header("Location: index.php");
+        exit();
+    }
 ?>
 
 <!DOCTYPE HTML>

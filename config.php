@@ -3,7 +3,7 @@
     define('server', 'localhost');
 
     define('privateReadUsername', 'privateRUser');
-    define('privateReadPassword', 'OD8q_J4z4e[wjy9N');
+    define('privateReadPassword', '!pIUtXAYg1QK3hYw');
     define('privateWriteUsername', 'privateWUser');
     define('privateWritePassword', 'rHUQY-pm[CdpG9(D');
     define('privateDatabase', 'wsvprivate');

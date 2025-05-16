@@ -1,0 +1,22 @@
+2025-05-16 22:28:26 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:34:51 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:35:07 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:36:59 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:37:12 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:39:18 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:40:20 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:40:55 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:42:50 | Access denied for user 'privateRUser'@'localhost' (using password: NO) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:42:53 | Access denied for user 'privateRUser'@'localhost' (using password: NO) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+
+2025-05-16 22:46:27 | Access denied for user 'privateRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\WSV_Webpage\functions.php:185
+

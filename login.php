@@ -1,5 +1,9 @@
 <?php
     require 'functions.php';
+
+    if(isset($_POST['submit'])){
+        $response = loginUser($_POST['username'], $_POST['password']);
+    }
 ?>
 
 <!DOCTYPE HTML>
@@ -33,19 +37,22 @@
             <h4>Login</h4>
             <p>
                 <ul>
-                    <form action="adminDashboard.php" method="post">
-                            <label for="username">Benutzername:</label>
-                            <input type="text" id="username" name="username" required>
-                            <br>
-                            <label for="password">Passwort:</label>
-                            <input type="password" id="password" name="password" required>
-                            <br>
-                            <button type="submit">Einloggen</button>
-                        </li>
+                    <form action="" method="post">
+                        <label for="username">Benutzername:</label>
+                        <input type="text" id="username" name="username" required>
+                        <br>
+                        <label for="password">Passwort:</label>
+                        <input type="password" id="password" name="password" required>
+                        <br>
+                        <button type="submit" name="submit">Einloggen</button>
+                        <br>
+                        <br>
+                        <button onclick="alert('Bitte kontaktiere den Administrator, wenn du Probleme beim Einloggen hast.');">Passwort vergessen?</button>
+                        <p class="error">
+                            <?php echo @$response; ?>
+                        </p>
                     </form>
-                    <br>
-                    <br>
-                    <button onclick="alert('Bitte kontaktiere den Administrator, wenn du Probleme beim Einloggen hast.');">Passwort vergessen?</button>
+
                 </ul>
             </p>
         </div>
