@@ -455,5 +455,27 @@
         $site = end($parts);
 
         return $site;
-     }
+    }
+
+    function isSuperuser($username){
+        $conn = connect("private", "read");
+        if($conn == false){
+            return false;
+        }
+        $stmt = $conn->prepare("SELECT * FROM login WHERE username = ?");
+        $stmt->bind_param("s", $username);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $result = $result->fetch_assoc();
+        if($result == NULL){
+            return false;
+        } else {
+            if($result['superuser'] == 1){
+                return true;
+            } else {
+                return false;
+            }
+        }
+    }
 ?>

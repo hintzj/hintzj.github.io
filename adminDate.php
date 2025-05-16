@@ -43,6 +43,11 @@
                     <li>[*Insert Text Here*]</li>
                 </ul>
             </p>
+            <p>
+                <ul>
+                    <input type="button" style="background-color: royalblue;" onclick="location.href='adminDashboard.php';" value='Zurück' />
+                </ul>
+            </p>
         </div>
         <?php include "footer.php"; ?>
     </div>

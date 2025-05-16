@@ -4,6 +4,8 @@
     if(!isset($_SESSION['user'])){
         header("Location: index.php");
         exit();
+    } else {
+        $username = $_SESSION['user'];
     }
 ?>
 
@@ -45,6 +47,21 @@
                     <br>
                     <br>
                     <input type="button" onclick="location.href='adminMitgliederinfo.php';" value="Mitgliederinfos verwalten" />
+                    <?php
+                        if (isSuperuser($username)) {
+                            echo "<br>";
+                            echo "<br>";
+                            echo "<input type='button' onclick=\"location.href='adminUser.php';\" value='Benutzer verwalten' />";
+                        }
+                    ?>
+                    <br>
+                    <br>
+                    <input type="button" style="background-color: crimson;" onclick="" value="Logout" />
+                    <script>
+                        document.querySelector('input[type="button"][value="Logout"]').addEventListener('click', function() {
+                            window.location.href = 'logout.php';
+                        });
+                    </script>
                 </ul>
             </p>
         </div>

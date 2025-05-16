@@ -4,6 +4,9 @@
     if(!isset($_SESSION['user'])){
         header("Location: index.php");
         exit();
+    } else if (!isSuperuser($_SESSION['user'])) {
+        header("Location: index.php");
+        exit();
     }
 ?>
 
@@ -12,7 +15,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
-    <title>Artikel Verwalten - WSVL</title>
+    <title>Benutzer Verwalten - WSVL</title>
 </head>
 
 <body>
@@ -27,9 +30,9 @@
             <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
             <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
-            <h2>Artikel verwalten</h2>
+            <h2>Benutzer verwalten</h2>
             <p>
-                Willkommen im Administrationsbereich für die Artikel der Webseite. Hier kannst du Artikel hinzufügen, bearbeiten oder löschen. Bitte wähle ein Artikel aus oder erstelle einen neuen Artikel, um fortzufahren.
+                Willkommen im Administrationsbereich für die Benutzer der administrativen Seite der Webseite. Hier kannst du Benutzer hinzufügen, bearbeiten oder löschen. Bitte wähle einen Benutzer aus oder erstelle einen neuen Benutzer, um fortzufahren.
             </p>
         </div>
         </div>
