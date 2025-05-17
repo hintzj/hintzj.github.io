@@ -2,10 +2,10 @@
 -- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
--- Host: localhost
--- Generation Time: Jan 20, 2025 at 06:37 AM
--- Server version: 8.0.31
--- PHP Version: 7.4.33
+-- Host: 127.0.0.1
+-- Generation Time: May 17, 2025 at 04:47 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,8 +18,47 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
+-- Database: `wsvprivate`
+--
+CREATE DATABASE IF NOT EXISTS `wsvprivate` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wsvprivate`;
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `login`
+--
+
+CREATE TABLE `login` (
+  `personID` int(11) NOT NULL,
+  `username` varchar(32) NOT NULL,
+  `password` varchar(256) NOT NULL,
+  `superuser` tinyint(1) NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `login`
+--
+
+INSERT INTO `login` (`personID`, `username`, `password`, `superuser`) VALUES
+(1, 'rvetter', '12345678', 0),
+(8, 'ssand', '12345678', 0),
+(13, 'jhintz', '12345678', 1);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `login`
+--
+ALTER TABLE `login`
+  ADD PRIMARY KEY (`personID`);
+--
 -- Database: `wsvpublic`
 --
+CREATE DATABASE IF NOT EXISTS `wsvpublic` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_general_ci;
+USE `wsvpublic`;
 
 -- --------------------------------------------------------
 
@@ -28,24 +67,33 @@ SET time_zone = "+00:00";
 --
 
 CREATE TABLE `abteilungen` (
-  `abteilungID` int NOT NULL,
-  `abteilungName` varchar(20) COLLATE utf8mb4_general_ci NOT NULL,
-  `obmannID` int NOT NULL,
-  `iconName` varchar(32) COLLATE utf8mb4_general_ci NOT NULL
+  `abteilungID` int(11) NOT NULL,
+  `abteilungName` varchar(64) NOT NULL,
+  `obmannID` int(11) NOT NULL,
+  `iconName` varchar(32) NOT NULL,
+  `abteilungsPage` varchar(64) DEFAULT NULL,
+  `startPage` tinyint(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `abteilungen`
 --
 
-INSERT INTO `abteilungen` (`abteilungID`, `abteilungName`, `obmannID`, `iconName`) VALUES
-(2, 'Kanurennsport', 1, 'fa fa-trophy'),
-(3, 'Fitnesssport', 0, 'fa fa-heartbeat'),
-(4, 'Motorboot', 0, 'fa fa-ship'),
-(5, 'Kinderturnen', 0, 'fa fa-grav'),
-(6, 'Kindeswohl', 0, 'fa fa-child'),
-(7, 'Kultur', 0, 'fa fa-users'),
-(8, 'Kanupolo', 0, 'fa fa-futbol-o');
+INSERT INTO `abteilungen` (`abteilungID`, `abteilungName`, `obmannID`, `iconName`, `abteilungsPage`, `startPage`) VALUES
+(2, 'Kanurennsport', 6, 'fa fa-trophy', 'kanurennsport.php', 1),
+(3, 'Fitnesssport', 0, 'fa fa-heartbeat', 'fitnesssport.php', 1),
+(4, 'Motorboot', 15, 'fa fa-ship', 'motorboot.php', 1),
+(5, 'Kinderturnen', 30, 'fa fa-grav', 'kinderturnen.php', 1),
+(6, 'Kindeswohl', 0, 'fa fa-child', 'kindeswohl.php', 0),
+(7, 'Kultur', 0, 'fa fa-users', 'kultur.php', 1),
+(8, 'Kanupolo', 1, 'fa fa-futbol-o', 'kanupolo.php', 1),
+(9, 'Kanurennsport-Anfänger', 29, '', NULL, 0),
+(10, 'Frauengymnastik', 0, '', NULL, 0),
+(11, 'Bodyforming', 24, '', NULL, 0),
+(12, 'Männergymnastik', 0, '', NULL, 0),
+(13, 'Carnevals-Gremium Blau-Weiß', 25, '', NULL, 0),
+(14, 'Nutzung Campingplatz', 31, '', NULL, 0),
+(15, 'Mobile Kanueinheit', 1, '', 'mke.php', 0);
 
 -- --------------------------------------------------------
 
@@ -54,12 +102,12 @@ INSERT INTO `abteilungen` (`abteilungID`, `abteilungName`, `obmannID`, `iconName
 --
 
 CREATE TABLE `artikel` (
-  `artikelID` int NOT NULL,
+  `artikelID` int(11) NOT NULL,
   `date` date DEFAULT NULL,
-  `title` varchar(100) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `summary` tinytext COLLATE utf8mb4_general_ci,
-  `text` longtext COLLATE utf8mb4_general_ci,
-  `artikelType` int DEFAULT NULL
+  `title` varchar(100) DEFAULT NULL,
+  `summary` tinytext DEFAULT NULL,
+  `text` longtext DEFAULT NULL,
+  `artikelType` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -76,21 +124,37 @@ INSERT INTO `artikel` (`artikelID`, `date`, `title`, `summary`, `text`, `artikel
 -- --------------------------------------------------------
 
 --
--- Table structure for table `contactimages`
+-- Table structure for table `contactperson`
 --
 
-CREATE TABLE `contactimages` (
-  `site` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
-  `imagePath` varchar(256) COLLATE utf8mb4_general_ci NOT NULL
+CREATE TABLE `contactperson` (
+  `site` varchar(64) NOT NULL,
+  `personID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
--- Dumping data for table `contactimages`
+-- Dumping data for table `contactperson`
 --
 
-INSERT INTO `contactimages` (`site`, `imagePath`) VALUES
-('index', 'documents/pics/personPortraits/Rainer.jpg'),
-('kontakt', 'documents/pics/personPortraits/Rainer.jpg');
+INSERT INTO `contactperson` (`site`, `personID`) VALUES
+('archiv', 1),
+('kontakt', 1),
+('news', 1),
+('termine', 1),
+('WSV_Webpage', 1),
+('kanurennsport', 6),
+('adminArticle', 13),
+('adminDashboard', 13),
+('adminDate', 13),
+('adminEditArticle', 13),
+('adminEditDate', 13),
+('adminMitgliederinfo', 13),
+('adminUser', 13),
+('login', 13),
+('jugendnews', 14),
+('jugendvorstand', 14),
+('foerderverein', 28),
+('kinderturnen', 30);
 
 -- --------------------------------------------------------
 
@@ -99,12 +163,12 @@ INSERT INTO `contactimages` (`site`, `imagePath`) VALUES
 --
 
 CREATE TABLE `personen` (
-  `personID` int NOT NULL,
-  `Vorname` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `Nachname` varchar(32) COLLATE utf8mb4_general_ci NOT NULL,
-  `gender` varchar(1) COLLATE utf8mb4_general_ci NOT NULL,
-  `email` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
-  `bildURL` varchar(255) COLLATE utf8mb4_general_ci NOT NULL
+  `personID` int(11) NOT NULL,
+  `Vorname` varchar(32) NOT NULL,
+  `Nachname` varchar(32) NOT NULL,
+  `gender` varchar(1) NOT NULL,
+  `email` varchar(64) NOT NULL,
+  `bildURL` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -124,7 +188,25 @@ INSERT INTO `personen` (`personID`, `Vorname`, `Nachname`, `gender`, `email`, `b
 (10, 'Michael', 'Vetter', 'm', 'beisitzer3@wsv-lampertheim.de', 'Michael.jpg'),
 (11, 'Erik', 'Messirek', 'm', 'beisitzer4@wsv-lampertheim.de', 'Erik.jpg'),
 (12, 'Lukas', 'Heilmann', 'm', 'beisitzer5@wsv-lampertheim.de', 'Lukas.jpg'),
-(13, 'Jonathan', 'Hintz', 'm', 'beisitzer6@wsv-lampertheim.de', 'Jonathan.jpg');
+(13, 'Jonathan', 'Hintz', 'm', 'beisitzer6@wsv-lampertheim.de', 'Jonathan.jpg'),
+(14, 'Matteo', 'Lunkenbein', 'm', 'matteo.lunkenbein@icloud.com', 'Matteo.jpg'),
+(15, 'Joachim', 'Stapler', 'm', 'motorboot@wsv-lampertheim.de', ''),
+(16, 'Nico', 'Kruczek', 'm', 'wirtschaftsausschuss@wsv-lampertheim.de', ''),
+(17, 'Peter', 'Weber', 'm', '', ''),
+(18, 'Peter', 'Horstfeld', 'm', '', 'Peter_Horstfeld.jpg'),
+(19, 'Volker', 'Altenbach', 'm', '', ''),
+(20, 'Claudia', 'Forg', 'f', '', ''),
+(21, 'Carmen', 'Geppert', 'f', '', ''),
+(22, 'Werner', 'Herweh', 'm', '', ''),
+(23, 'Hans', 'Schlatter', 'm', '', 'Hans_Schlatter.jpg'),
+(24, 'Angela', 'Samson', 'f', '', ''),
+(25, 'Christa', 'Müller', 'f', 'carnevals-gremium-blau-weiss@wsv-lampertheim.de', ''),
+(26, 'Stefanie', 'Geiger', 'f', 'poloabteilung@wsv-lampertheim.de', ''),
+(27, 'Peter', 'Pfeifer', 'm', '', ''),
+(28, 'Mechthild', 'Kiebel', 'f', 'Mechthild.Kiebel@kcs-beratung.de', ''),
+(29, 'Patricia', 'Altamore', 'f', 'kinderturnen@wsv-lampertheim.de', ''),
+(30, 'Vanessa', 'Marzahn', 'f', '', ''),
+(31, 'Bernd', 'Volk', 'm', '', '');
 
 -- --------------------------------------------------------
 
@@ -133,10 +215,10 @@ INSERT INTO `personen` (`personID`, `Vorname`, `Nachname`, `gender`, `email`, `b
 --
 
 CREATE TABLE `sponsors` (
-  `sponsorID` int NOT NULL,
-  `sponsorName` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sponsorUrl` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
-  `sponsorLogoFile` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL
+  `sponsorID` int(11) NOT NULL,
+  `sponsorName` varchar(255) DEFAULT NULL,
+  `sponsorUrl` varchar(255) DEFAULT NULL,
+  `sponsorLogoFile` varchar(255) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -179,12 +261,12 @@ INSERT INTO `sponsors` (`sponsorID`, `sponsorName`, `sponsorUrl`, `sponsorLogoFi
 --
 
 CREATE TABLE `termine` (
-  `terminID` int NOT NULL,
-  `terminTitle` varchar(255) COLLATE utf8mb4_general_ci DEFAULT NULL,
+  `terminID` int(11) NOT NULL,
+  `terminTitle` varchar(255) DEFAULT NULL,
   `terminDate` date DEFAULT NULL,
   `terminTime` time DEFAULT NULL,
-  `terminType` int DEFAULT NULL,
-  `artikelID` int DEFAULT NULL
+  `terminType` int(11) DEFAULT NULL,
+  `artikelID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -207,15 +289,15 @@ INSERT INTO `termine` (`terminID`, `terminTitle`, `terminDate`, `terminTime`, `t
 --
 
 CREATE TABLE `vorstandsmitglieder` (
-  `mitgliedID` int NOT NULL,
-  `positionsID` int NOT NULL
+  `personID` int(11) NOT NULL,
+  `positionsID` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `vorstandsmitglieder`
 --
 
-INSERT INTO `vorstandsmitglieder` (`mitgliedID`, `positionsID`) VALUES
+INSERT INTO `vorstandsmitglieder` (`personID`, `positionsID`) VALUES
 (1, 1),
 (2, 2),
 (3, 3),
@@ -227,7 +309,6 @@ INSERT INTO `vorstandsmitglieder` (`mitgliedID`, `positionsID`) VALUES
 (9, 7),
 (10, 7),
 (11, 7),
-(12, 7),
 (13, 7);
 
 -- --------------------------------------------------------
@@ -237,10 +318,10 @@ INSERT INTO `vorstandsmitglieder` (`mitgliedID`, `positionsID`) VALUES
 --
 
 CREATE TABLE `vorstandspositionen` (
-  `vorstandspositionenID` int NOT NULL,
-  `positionsID` int NOT NULL,
-  `positionName` varchar(64) COLLATE utf8mb4_general_ci NOT NULL,
-  `gender` varchar(1) COLLATE utf8mb4_general_ci NOT NULL
+  `vorstandspositionenID` int(11) NOT NULL,
+  `positionsID` int(11) NOT NULL,
+  `positionName` varchar(64) NOT NULL,
+  `gender` varchar(1) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
@@ -278,7 +359,8 @@ INSERT INTO `vorstandspositionen` (`vorstandspositionenID`, `positionsID`, `posi
 -- Indexes for table `abteilungen`
 --
 ALTER TABLE `abteilungen`
-  ADD PRIMARY KEY (`abteilungID`);
+  ADD PRIMARY KEY (`abteilungID`),
+  ADD KEY `obmannID` (`obmannID`);
 
 --
 -- Indexes for table `artikel`
@@ -287,10 +369,11 @@ ALTER TABLE `artikel`
   ADD PRIMARY KEY (`artikelID`);
 
 --
--- Indexes for table `contactimages`
+-- Indexes for table `contactperson`
 --
-ALTER TABLE `contactimages`
-  ADD PRIMARY KEY (`site`);
+ALTER TABLE `contactperson`
+  ADD PRIMARY KEY (`site`),
+  ADD KEY `personID` (`personID`);
 
 --
 -- Indexes for table `personen`
@@ -314,13 +397,15 @@ ALTER TABLE `termine`
 -- Indexes for table `vorstandsmitglieder`
 --
 ALTER TABLE `vorstandsmitglieder`
-  ADD PRIMARY KEY (`mitgliedID`);
+  ADD PRIMARY KEY (`personID`),
+  ADD KEY `positionsID` (`positionsID`);
 
 --
 -- Indexes for table `vorstandspositionen`
 --
 ALTER TABLE `vorstandspositionen`
-  ADD PRIMARY KEY (`vorstandspositionenID`);
+  ADD PRIMARY KEY (`vorstandspositionenID`),
+  ADD KEY `positionsID` (`positionsID`);
 
 --
 -- AUTO_INCREMENT for dumped tables
@@ -330,37 +415,37 @@ ALTER TABLE `vorstandspositionen`
 -- AUTO_INCREMENT for table `abteilungen`
 --
 ALTER TABLE `abteilungen`
-  MODIFY `abteilungID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `abteilungID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikelID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `artikelID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
 
 --
 -- AUTO_INCREMENT for table `personen`
 --
 ALTER TABLE `personen`
-  MODIFY `personID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `personID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=32;
 
 --
 -- AUTO_INCREMENT for table `sponsors`
 --
 ALTER TABLE `sponsors`
-  MODIFY `sponsorID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
+  MODIFY `sponsorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=46;
 
 --
 -- AUTO_INCREMENT for table `termine`
 --
 ALTER TABLE `termine`
-  MODIFY `terminID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `terminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
 -- AUTO_INCREMENT for table `vorstandspositionen`
 --
 ALTER TABLE `vorstandspositionen`
-  MODIFY `vorstandspositionenID` int NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
+  MODIFY `vorstandspositionenID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=22;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
