@@ -25,7 +25,7 @@
                 <div>
             <h2>Archiv</h2>
             <p>
-                Hier kann man sich über die vergangenheit des WSV informieren
+                Hier kann man sich über die Vergangenheit des WSV informieren
             </p>
         </div>
         </div>
