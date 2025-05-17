@@ -64,7 +64,7 @@
         <div class="text-field2" >
             <h2>Mitgliederinfo</h2>
 
-            <object data="documents/mitgliedsinfos/Mitgliederinfo_2024.pdf" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
+            <object data="<?php echo getNewestMitgliederInfo(); ?>" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
                 <script>
                     hideButtons();
                 </script>
@@ -72,7 +72,7 @@
                 <?php
                     $dir = "documents\mitgliedsinfos";
                     $files = scandir($dir);
-                    print_r($files);
+                    //print_r($files);
                     foreach ($files as $file) {
                         if (strpos($file, ".pdf") !== false) {
                             echo "<div style='text-align: center;'><a href='documents/mitgliedsinfos/" . $file . "'>" . $file . "</a></div>";

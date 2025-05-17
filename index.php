@@ -140,7 +140,7 @@
                 </ul>
                 </p>
             </div>
-            <div class="text-field4">
+            <div class="text-field4" style="background-color:rgba(255, 124, 124, 0.74);">
                 <h4>Übungsleiter gesucht!</h4>
                     <ul>
                         Der WSV sucht eine Übungsleiterin oder einen Übungsleiter für Bodyforming, Kurszeit Donnerstags ab 20.00 Uhr.

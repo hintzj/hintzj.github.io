@@ -478,4 +478,92 @@
             }
         }
     }
+
+    function getMitgliederInfos() {
+        // return a list of all mitgliederInfos saved in the /document/mitgliedsinfos folder
+        $dir = "documents/mitgliedsinfos/";
+        $files = array();
+        if (is_dir($dir)) {
+            $files = scandir($dir);
+            foreach ($files as $file) {
+                if ($file != "." && $file != "..") {
+                    $returnFiles[] = $file;
+                }
+            }
+        } else {
+            return null;
+        }
+        $returnFiles = array_diff($files, array('..', '.'));
+        //print_r($returnFiles);
+        return $returnFiles;
+    }
+
+    function deleteMitgliederInfo() {
+        echo "deleteMitgliederInfo";
+        // delete the selected mitgliederInfo from the /document/mitgliedsinfos folder
+        $file = $_GET['file'];
+        $file = "documents/mitgliedsinfos/" . $file;
+        if (file_exists($file)) {
+            unlink($file);
+            return true;
+        } else {
+            return false;
+        }
+    }
+
+    function newMitgliederInfo($file) {
+        // upload a new mitgliederInfo to the /document/mitgliedsinfos folder
+        $target_dir = "documents/mitgliedsinfos/";
+        $target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            //echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($_FILES["fileToUpload"]["size"] > 100000000) {
+            //echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if ($imageFileType != "pdf") {
+            //echo "Sorry, only PDF is allowed.";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            //echo "Sorry, your file was not uploaded.";
+            // if everything is ok, try to upload file
+        } else {
+            if (move_uploaded_file($_FILES["fileToUpload"]["tmp_name"], $target_file)) {
+                //echo "The file ". htmlspecialchars( basename( $_FILES["fileToUpload"]["name"])). " has been uploaded.";
+                return true;
+            } else {
+                //echo "Sorry, there was an error uploading your file.";
+                return false;
+            }
+        }
+    }
+
+    function getNewestMitgliederInfo() {
+        $dir = "documents/mitgliedsinfos/";
+        $infos = getMitgliederInfos();
+        $newest = null;
+        $newestDate = 0;
+        foreach ($infos as $info) {
+            $file = "documents/mitgliedsinfos/" . $info;
+            $fileDate = filemtime($file);
+            if ($fileDate > $newestDate) {
+                $newestDate = $fileDate;
+                $newest = $info;
+            }
+        }
+        if ($newest != null) {
+            return $dir . $newest;
+        } else {
+            return null;
+        }
+    }
 ?>

@@ -33,22 +33,20 @@
             <h2>Benutzer verwalten</h2>
             <p>
                 Willkommen im Administrationsbereich für die Benutzer der administrativen Seite der Webseite. Hier kannst du Benutzer hinzufügen, bearbeiten oder löschen. Bitte wähle einen Benutzer aus oder erstelle einen neuen Benutzer, um fortzufahren.
+                <br>
+                <br>
+                <input type="button" style="background-color: royalblue;" onclick="location.href='adminDashboard.php';" value='Zurück' />
             </p>
         </div>
         </div>
         </div>
         <div class="text-field1">
-            <h4>[*Insert Text Here*]</h4>
+            <h4>Benutzer</h4>
             <p>
                 <ul>
                     <li>[*Insert Text Here*]</li>
                     <li>[*Insert Text Here*]</li>
                     <li>[*Insert Text Here*]</li>
-                </ul>
-            </p>
-            <p>
-                <ul>
-                    <input type="button" style="background-color: royalblue;" onclick="location.href='adminDashboard.php';" value='Zurück' />
                 </ul>
             </p>
         </div>
