@@ -349,7 +349,7 @@
         }
     };
 
-    function newDate($name, $date){
+    function newDate($name, $date, $time, $youth){
         $conn = connect("public", "write");
         
         $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate) VALUES (?, ?)");

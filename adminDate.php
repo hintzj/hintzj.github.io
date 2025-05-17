@@ -5,6 +5,10 @@
         header("Location: index.php");
         exit();
     }
+
+    if(isset($_POST['submit'])){
+        $response = loginUser($_POST['username'], $_POST['password']);
+    }
 ?>
 
 <!DOCTYPE HTML>
@@ -49,6 +53,75 @@
                 </ul>
             </p>
         </div>
+        <div class="text-field2">
+            <h4>Neuen Termin erstellen</h4>
+            <p>
+                <ul>
+                    <form action="" method="post">
+                        <input type="text" name="title" placeholder="Titel" required />
+                        <input type="date" name="date" required />
+                        <input type="time" name="time" required />
+                        <input type="checkbox" name="youthEvent" value="yes"> Jugendveranstaltung
+                        <input type="submit" name="submit" value="Termin erstellen">
+                    </form>
+                </ul>
+            </p>
+        </div>
+        <div class="text-field3">
+            <h4>Zukünftige Termine</h4>
+            <p>
+                <ul>
+                    <table>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Datum</th>
+                            <th>Uhrzeit</th>
+                            <th>Jugendveranstaltung</th>
+                        </tr>
+                        <tr>
+                            <td>Termin 1</td>
+                            <td>01.01.2024</td>
+                            <td>10:00</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Termin 2</td>
+                            <td>02.01.2024</td>
+                            <td>11:00</td>
+                            <td>Nein</td>
+                        </tr>
+                    </table>
+                </ul>
+            </p>
+        </div>
+        <div class="text-field4">
+            <h4>Vergangene Termine</h4>
+            <p>
+                <ul>
+                    <table>
+                        <tr>
+                            <th>Titel</th>
+                            <th>Datum</th>
+                            <th>Uhrzeit</th>
+                            <th>Jugendveranstaltung</th>
+                        </tr>
+                        <tr>
+                            <td>Termin 1</td>
+                            <td>01.01.2023</td>
+                            <td>10:00</td>
+                            <td>Ja</td>
+                        </tr>
+                        <tr>
+                            <td>Termin 2</td>
+                            <td>02.01.2023</td>
+                            <td>11:00</td>
+                            <td>Nein</td>
+                        </tr>
+                    </table>
+                </ul>
+            </p>
+        </div>
+            
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
