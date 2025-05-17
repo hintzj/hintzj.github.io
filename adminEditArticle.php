@@ -1,20 +1,5 @@
 <?php
-    require 'functions.php';
-
-    if(isset($_POST['submit'])){
-        $title = $_POST["title"];
-        $summary = $_POST["summary"];
-        $text = $_POST["text"];
-        $date = $_POST["date"];
-
-        $result = newArticle($date, $title, $summary, $text);
-
-        if($result == "success"){
-            //header("location: termine.php");
-        }else{
-            $response = $result;
-        }
-    }
+    require_once 'functions.php';
 ?>
 
 <!DOCTYPE HTML>
@@ -22,7 +7,7 @@
 
 <head>
     <?php include 'defaultHead.php'; ?>
-    <title>Neuer Artikel - WSVL</title>
+    <title>Artikel bearbeiten - WSVL</title>
 </head>
 
 <body>
@@ -37,18 +22,18 @@
             <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);";>
             <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
-            <h2>Neuer Artikel</h2>
+            <h2>Artikel bearbeiten</h2>
             <p>
-                Hier kann man einfach neue Artikel hinzufügen. Füllen Sie dafür das folgende Formular aus.
+                Willkommen im Administrationsbereich für die Artikel der Webseite. Hier kannst du den ausgwählten Artikel bearbeiten. Bitte fülle die Felder aus und klicke auf "Artikel speichern", um die Änderungen zu speichern.
                 <br>
                 <br>
-                <input type="button" style="background-color: royalblue;" onclick="location.href='adminArticle.php';" value='Zurück' />
+                <input type="button" style="background-color: royalblue;" onclick="location.href='adminDate.php';" value='Zurück' />
             </p>
         </div>
         </div>
         </div>
         <div class="text-field1">
-            <h4>Artikel</h4>
+            <h4>Artikel bearbeiten</h4>
             <p>
                 <ul>
                     <form action="" method="post">
@@ -70,11 +55,11 @@
                                 <td><input type="date" name="date" id="date"></td>
                             </tr>
                             <tr>
-                                <td><label>Bilder: </label></td>
+                                <td><label>Bilder hinzufügen: </label></td>
                                 <td><input type="file" name="fileToUpload" id="fileToUpload" multiple></td>
                             </tr>
                             <tr>
-                                <td colspan="2"><input type="submit" value="Absenden" name="submit"></td>
+                                <td colspan="2"><input type="submit" value="Artikel speichern" name="submit"></td>
                             </tr>
                         </table>
                     </form>

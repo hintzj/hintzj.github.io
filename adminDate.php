@@ -7,7 +7,18 @@
     }
 
     if(isset($_POST['submit'])){
-        $response = loginUser($_POST['username'], $_POST['password']);
+        $name = $_POST["name"];
+        $date = $_POST["date"];
+        $time = $_POST["time"];
+        $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
+
+        $result = newDate($name, $date, $time, $youthEvent);
+
+        if($result == "success"){
+            header("location: adminDate.php");
+        }else{
+            $response = $result;
+        }
     }
 ?>
 
@@ -34,88 +45,104 @@
             <h2>Termine verwalten</h2>
             <p>
                 Willkommen im Administrationsbereich für die Termine der Webseite. Hier kannst du Termine hinzufügen, bearbeiten oder löschen. Bitte wähle einen Termin aus oder erstelle einen neuen Termin, um fortzufahren.
+                <br>
+                <br>
+                <input type="button" style="background-color: royalblue;" onclick="location.href='adminDashboard.php';" value='Zurück' />
             </p>
         </div>
         </div>
         </div>
         <div class="text-field1">
-            <h4>[*Insert Text Here*]</h4>
-            <p>
-                <ul>
-                    <li>[*Insert Text Here*]</li>
-                    <li>[*Insert Text Here*]</li>
-                    <li>[*Insert Text Here*]</li>
-                </ul>
-            </p>
-            <p>
-                <ul>
-                    <input type="button" style="background-color: royalblue;" onclick="location.href='adminDashboard.php';" value='Zurück' />
-                </ul>
-            </p>
-        </div>
-        <div class="text-field2">
             <h4>Neuen Termin erstellen</h4>
             <p>
                 <ul>
                     <form action="" method="post">
-                        <input type="text" name="title" placeholder="Titel" required />
-                        <input type="date" name="date" required />
-                        <input type="time" name="time" required />
-                        <input type="checkbox" name="youthEvent" value="yes"> Jugendveranstaltung
+                        Title: <input type="text" name="title" placeholder="Titel" required />
+                        <br>
+                        <br>
+                        Datum: <input type="text" name="date" placeholder="TT.MM.JJJJ" required />
+                        <br>
+                        <br>
+                        Uhrzeit: <input type="text" name="time" placeholder="HH:MM" required />
+                        <br>
+                        <br>
+                        Jugendveranstaltung: <input type="checkbox" name="youthEvent" value="yes">
+                        <br>
+                        <br>
                         <input type="submit" name="submit" value="Termin erstellen">
                     </form>
                 </ul>
             </p>
         </div>
-        <div class="text-field3">
+        <div class="text-field2">
             <h4>Zukünftige Termine</h4>
             <p>
                 <ul>
-                    <table>
+                    <table class="adminTable">
                         <tr>
                             <th>Titel</th>
                             <th>Datum</th>
                             <th>Uhrzeit</th>
                             <th>Jugendveranstaltung</th>
+                            <th>Bearbeiten</th>
                         </tr>
                         <tr>
-                            <td>Termin 1</td>
-                            <td>01.01.2024</td>
+                            <td>Vaddertag am Lampertheimer Altrhein</td>
+                            <td>01.01.2026</td>
                             <td>10:00</td>
                             <td>Ja</td>
+                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
                         </tr>
                         <tr>
                             <td>Termin 2</td>
-                            <td>02.01.2024</td>
+                            <td>02.01.2026</td>
                             <td>11:00</td>
                             <td>Nein</td>
+                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
+                        </tr>
+                        <tr>
+                            <td>Termin 2</td>
+                            <td>02.01.2026</td>
+                            <td>11:00</td>
+                            <td>Nein</td>
+                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
+                        </tr>
+                        <tr>
+                            <td>Termin 2</td>
+                            <td>02.01.2026</td>
+                            <td>11:00</td>
+                            <td>Nein</td>
+                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
                         </tr>
                     </table>
                 </ul>
             </p>
         </div>
-        <div class="text-field4">
+        <div class="text-field3">
             <h4>Vergangene Termine</h4>
             <p>
                 <ul>
-                    <table>
+                    <table class="adminTable">
                         <tr>
                             <th>Titel</th>
                             <th>Datum</th>
                             <th>Uhrzeit</th>
                             <th>Jugendveranstaltung</th>
+                            <th>Bearbeiten</th>
                         </tr>
                         <tr>
                             <td>Termin 1</td>
                             <td>01.01.2023</td>
                             <td>10:00</td>
                             <td>Ja</td>
+                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
                         </tr>
                         <tr>
                             <td>Termin 2</td>
                             <td>02.01.2023</td>
                             <td>11:00</td>
                             <td>Nein</td>
+                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
                         </tr>
                     </table>
                 </ul>
