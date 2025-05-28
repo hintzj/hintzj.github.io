@@ -1,5 +1,34 @@
 <?php
     require_once 'functions.php';
+
+    if(!isset($_SESSION['user'])){
+        header("Location: index.php");
+        exit();
+    }
+
+    // get date id
+    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+        $dateId = $_GET['id'];
+        $terminDetails = getDateDetails($dateId);
+    } else {
+        header("Location: adminDate.php");
+        exit();
+    }
+
+    if(isset($_POST['submit'])){
+        $name = $_POST["title"];
+        $date = $_POST["date"];
+        $time = $_POST["time"];
+        $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
+
+        $result = editDate($dateId, $name, $date, $time, $youthEvent);
+
+        if($result == "success"){
+            header("location: adminDate.php");
+        }else{
+            $response = $result;
+        }
+    }
 ?>
 
 <!DOCTYPE HTML>
@@ -37,16 +66,16 @@
             <p>
                 <ul>
                     <form action="" method="post">
-                        Title: <input type="text" name="title" placeholder="Titel" required value="<?php echo null; ?>" />
+                        Title: <input type="text" name="title" placeholder="Titel" required value="<?php echo $terminDetails["terminTitle"]; ?>" />
                         <br>
                         <br>
-                        Datum: <input type="text" name="date" placeholder="TT.MM.JJJJ" required value="<?php echo null; ?>" />
+                        Datum: <input type="date" name="date" placeholder="TT.MM.JJJJ" required value="<?php echo $terminDetails["terminDate"]; ?>" />
                         <br>
                         <br>
-                        Uhrzeit: <input type="text" name="time" placeholder="HH:MM" required value="<?php echo null; ?>" />
+                        Uhrzeit: <input type="time" name="time" placeholder="HH:MM" required value="<?php echo $terminDetails["terminTime"]; ?>" />
                         <br>
                         <br>
-                        Jugendveranstaltung: <input type="checkbox" name="youthEvent" value="yes" value="<?php null; ?>" >
+                        Jugendveranstaltung: <input type="checkbox" name="youthEvent" <?php echo $terminDetails["terminType"] ? 'checked' : ''; ?> />
                         <br>
                         <br>
                         <input type="submit" name="submit" value="Termin ändern">

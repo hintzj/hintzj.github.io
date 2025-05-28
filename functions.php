@@ -362,6 +362,19 @@
         } 
     }
 
+    function editDate($id, $name, $date, $time, $youth){
+        $conn = connect("public", "write");
+        
+        $stmt = $conn->prepare("UPDATE termine SET terminTitle = ?, terminDate = ?, terminTime = ?, terminType = ? WHERE terminID = ?");
+        $stmt->bind_param("ssssi", $name, $date, $time, $youth, $id);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error updating date, please try again or contact an administrator";
+        } else {
+            return "success";
+        } 
+    }
+
     function newArticle($date, $title, $summary, $text){
         $conn = connect("public", "write");
 
@@ -602,5 +615,21 @@
         }
         destroyConnection($conn);
         return $dates;
+    }
+
+    function getDateDetails($id) {
+        // get the details of a date by id
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminID = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $date = $result->fetch_assoc();
+        destroyConnection($conn);
+        return $date;
     }
 ?>

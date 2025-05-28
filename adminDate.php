@@ -12,6 +12,10 @@
         $time = $_POST["time"];
         $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
 
+        if ($time == "") {
+            $time = null; // Set default time if not provided
+        }
+
         $result = newDate($name, $date, $time, $youthEvent);
 
         if($result == "success"){
@@ -63,7 +67,7 @@
                         Datum: <input type="date" name="date" placeholder="TT.MM.JJJJ" required />
                         <br>
                         <br>
-                        Uhrzeit: <input type="time" name="time" placeholder="HH:MM" required />
+                        Uhrzeit: <input type="time" name="time" placeholder="HH:MM" />
                         <br>
                         <br>
                         Jugendveranstaltung: <input type="checkbox" name="youthEvent" value="yes">

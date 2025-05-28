@@ -49,7 +49,11 @@
                         foreach ($termine as $termin) {
                             $date = $termin['terminDate'];
                             $date = date("d.m.Y", strtotime($date));
-                            echo "<li>" . $date . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
+                            if ($termin['terminTime'] != null) {
+                                echo "<li>" . $date . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
+                            } else {
+                                echo "<li>" . $date . " - " . $termin['terminTitle'] . "</li>";
+                            }
                         }
                     } catch (Exception $e) {
                         $error = $e->getMessage();
