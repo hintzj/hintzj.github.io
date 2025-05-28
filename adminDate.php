@@ -7,7 +7,7 @@
     }
 
     if(isset($_POST['submit'])){
-        $name = $_POST["name"];
+        $name = $_POST["title"];
         $date = $_POST["date"];
         $time = $_POST["time"];
         $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
@@ -60,10 +60,10 @@
                         Title: <input type="text" name="title" placeholder="Titel" required />
                         <br>
                         <br>
-                        Datum: <input type="text" name="date" placeholder="TT.MM.JJJJ" required />
+                        Datum: <input type="date" name="date" placeholder="TT.MM.JJJJ" required />
                         <br>
                         <br>
-                        Uhrzeit: <input type="text" name="time" placeholder="HH:MM" required />
+                        Uhrzeit: <input type="time" name="time" placeholder="HH:MM" required />
                         <br>
                         <br>
                         Jugendveranstaltung: <input type="checkbox" name="youthEvent" value="yes">
@@ -86,34 +86,22 @@
                             <th>Jugendveranstaltung</th>
                             <th>Bearbeiten</th>
                         </tr>
-                        <tr>
-                            <td>Vaddertag am Lampertheimer Altrhein</td>
-                            <td>01.01.2026</td>
-                            <td>10:00</td>
-                            <td>Ja</td>
-                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
-                        </tr>
-                        <tr>
-                            <td>Termin 2</td>
-                            <td>02.01.2026</td>
-                            <td>11:00</td>
-                            <td>Nein</td>
-                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
-                        </tr>
-                        <tr>
-                            <td>Termin 2</td>
-                            <td>02.01.2026</td>
-                            <td>11:00</td>
-                            <td>Nein</td>
-                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
-                        </tr>
-                        <tr>
-                            <td>Termin 2</td>
-                            <td>02.01.2026</td>
-                            <td>11:00</td>
-                            <td>Nein</td>
-                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
-                        </tr>
+                        <?php
+                            $dates = getFutureDates();
+                            if($dates){
+                                foreach($dates as $date){
+                                    echo "<tr>";
+                                    echo "<td>" . htmlspecialchars($date['terminTitle']) . "</td>";
+                                    echo "<td>" . htmlspecialchars(date('d.m.Y', strtotime($date['terminDate']))) . "</td>";
+                                    echo "<td>" . htmlspecialchars(date('H:i', strtotime($date['terminTime']))) . "</td>";
+                                    echo "<td>" . ($date['terminType'] ? 'Ja' : 'Nein') . "</td>";
+                                    echo "<td><input type='button' style='background-color: royalblue;' onclick=\"location.href='adminEditDate.php?id=" . $date['terminID'] . "';\" value='Bearbeiten' /></td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='5'>Keine zukünftigen Termine gefunden.</td></tr>";
+                            }
+                        ?>
                     </table>
                 </ul>
             </p>
@@ -130,20 +118,22 @@
                             <th>Jugendveranstaltung</th>
                             <th>Bearbeiten</th>
                         </tr>
-                        <tr>
-                            <td>Termin 1</td>
-                            <td>01.01.2023</td>
-                            <td>10:00</td>
-                            <td>Ja</td>
-                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
-                        </tr>
-                        <tr>
-                            <td>Termin 2</td>
-                            <td>02.01.2023</td>
-                            <td>11:00</td>
-                            <td>Nein</td>
-                            <td><input type="button" style="background-color: royalblue;" onclick="location.href='adminEditDate.php';" value='Bearbeiten' /></td>
-                        </tr>
+                        <?php
+                            $pastDates = getPastDates();
+                            if($pastDates){
+                                foreach($pastDates as $date){
+                                    echo "<tr>";
+                                    echo "<td>" . htmlspecialchars($date['terminTitle']) . "</td>";
+                                    echo "<td>" . htmlspecialchars(date('d.m.Y', strtotime($date['terminDate']))) . "</td>";
+                                    echo "<td>" . htmlspecialchars(date('H:i', strtotime($date['terminTime']))) . "</td>";
+                                    echo "<td>" . ($date['terminType'] ? 'Ja' : 'Nein') . "</td>";
+                                    echo "<td><input type='button' style='background-color: royalblue;' onclick=\"location.href='adminEditDate.php?id=" . $date['terminID'] . "';\" value='Bearbeiten' /></td>";
+                                    echo "</tr>";
+                                }
+                            } else {
+                                echo "<tr><td colspan='5'>Keine vergangenen Termine gefunden.</td></tr>";
+                            }
+                        ?>
                     </table>
                 </ul>
             </p>

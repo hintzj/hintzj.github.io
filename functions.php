@@ -352,8 +352,8 @@
     function newDate($name, $date, $time, $youth){
         $conn = connect("public", "write");
         
-        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate) VALUES (?, ?)");
-        $stmt->bind_param("ss", $name, $date);
+        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate, terminTime, terminType) VALUES (?, ?, ?, ?)");
+        $stmt->bind_param("ssss", $name, $date, $time, $youth);
         $stmt->execute();
         if($stmt->affected_rows != 1){
             return "Error creating account, please try again or contact an administrator";
@@ -565,5 +565,42 @@
         } else {
             return null;
         }
+    }
+
+    function getFutureDates() {
+        // get all future dates from the database
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminDate >= CURDATE() ORDER BY terminDate ASC");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $dates = array();
+        while ($row = $result->fetch_assoc()) {
+            $dates[] = $row;
+        }
+        destroyConnection($conn);
+        return $dates;
+    }
+
+    function getPastDates($num = 5) {
+        // get all past dates from the database
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminDate < CURDATE() ORDER BY terminDate DESC LIMIT ?");
+        $stmt->bind_param("i", $num);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $dates = array();
+        while ($row = $result->fetch_assoc()) {
+            $dates[] = $row;
+        }
+        destroyConnection($conn);
+        return $dates;
     }
 ?>

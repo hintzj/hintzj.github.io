@@ -49,9 +49,9 @@
                     <input type="button" onclick="location.href='adminMitgliederinfo.php';" value="Mitgliederinfos verwalten" />
                     <?php
                         if (isSuperuser($username)) {
-                            echo "<br>";
-                            echo "<br>";
-                            echo "<input type='button' onclick=\"location.href='adminUser.php';\" value='Benutzer verwalten' />";
+                            //echo "<br>";
+                            //echo "<br>";
+                            //echo "<input type='button' onclick=\"location.href='adminUser.php';\" value='Benutzer verwalten' />";
                         }
                     ?>
                     <br>
