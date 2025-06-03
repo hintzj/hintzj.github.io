@@ -393,7 +393,7 @@
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("INSERT INTO termine(date, title, summary, text) VALUES (?, ?, ?, ?)");
+        $stmt = $conn->prepare("INSERT INTO artikel(date, title, summary, text) VALUES (?, ?, ?, ?)");
         $stmt->bind_param("ssss", $date, $title, $summary, $text);
         $stmt->execute();
         if($stmt->affected_rows != 1){

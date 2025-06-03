@@ -63,7 +63,7 @@
                             </tr>
                             <tr>
                                 <td><label>Inhalt: </label></td>
-                                <td><textarea placeholder="Inhalt" name="summary" id="summary" required rows="10" cols="60" style="resize: none;"></textarea></td>
+                                <td><textarea placeholder="Inhalt" name="text" id="text" required rows="10" cols="60" style="resize: none;"></textarea></td>
                             </tr>
                             <tr>
                                 <td><label>Datum: </label></td>

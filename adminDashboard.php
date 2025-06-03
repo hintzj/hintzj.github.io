@@ -43,7 +43,7 @@
                     <input type="button" onclick="location.href='adminDate.php';" value="Termine verwalten" />
                     <br>
                     <br>
-                    <input type="button" onclick="location.href='adminArticle.php';" value="News verwalten" />
+                    <input type="button" onclick="location.href='adminArticle.php';" value="News/Artikel verwalten" />
                     <br>
                     <br>
                     <input type="button" onclick="location.href='adminMitgliederinfo.php';" value="Mitgliederinfos verwalten" />
