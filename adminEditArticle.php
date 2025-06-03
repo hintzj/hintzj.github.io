@@ -21,7 +21,7 @@
         $summary = $_POST["summary"];
         $content = $_POST["content"];
         $date = $_POST["date"];
-        $fileToUpload = $_FILES['fileToUpload'];
+        $filesToUpload = $_FILES['fileToUpload'];
 
         // Validate inputs
         if(empty($title) || empty($summary) || empty($content)){
@@ -31,8 +31,11 @@
 
         // Save article to database
         $result = editArticle($articleId, $date, $title, $summary, $content);
-        if($targetFile){
-            $result = addArticleImage($articleId, $fileToUpload);
+        if(!empty($filesToUpload['name'][0])){
+            echo "<br>Hinzufügen von Bildern...";
+            print_r($filesToUpload);
+            echo "<br>";
+            $result = addMultipleArticleImages($articleId, $filesToUpload);
         }
         echo $result;
 
@@ -98,7 +101,7 @@
                             </tr>
                             <tr>
                                 <td><label>Bilder hinzufügen: </label></td>
-                                <td><input type="file" name="fileToUpload" id="fileToUpload" multiple></td>
+                                <td><input type="file" name="fileToUpload[]" id="fileToUpload" accept="image/jpg, image/jpeg" multiple></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="submit" value="Artikel speichern" name="submit"></td>

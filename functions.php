@@ -424,7 +424,29 @@
         if (checkInputForSQLInjection($id) == false || !is_array($files)) {
             return "Invalid input";
         }
-        foreach ($files as $file) {
+
+        print_r($files);
+
+        // If $files is in the $_FILES format, restructure it to an array of file arrays
+        if (isset($files['name']) && is_array($files['name'])) {
+            echo "<br>Restructuring files...<br>";
+            $restructuredFiles = [];
+            foreach ($files['name'] as $key => $name) {
+                $restructuredFiles[] = [
+                    'name' => $name,
+                    'type' => $files['type'][$key],
+                    'tmp_name' => $files['tmp_name'][$key],
+                    'error' => $files['error'][$key],
+                    'size' => $files['size'][$key]
+                ];
+            }
+        } else {
+            $restructuredFiles = $files;
+        }
+        foreach ($restructuredFiles as $file) {
+            echo "<br>";
+            print_r($file);
+            echo "<br>";
             $result = addArticleImage($id, $file);
             if ($result != "success") {
                 return $result; // Return error if any file fails to upload
@@ -437,39 +459,43 @@
         if (checkInputForSQLInjection($id) == false) {
             return "Invalid input";
         }
-        $target_dir = "documents/pics/siteImageScroll/artikel_" . $id . "/";
+        $target_dir = "documents/pics/siteImageScroll/artikel/artikel_" . $id . "/";
         if (!is_dir($target_dir)) {
             mkdir($target_dir, 0777, true);
         }
-        $target_file = $target_dir . basename($file["name"]);
+
+        print_r($file);
+        
+        if (!isset($file) || !isset($file["name"]) || !isset($file["tmp_name"])) {
+            return "Invalid file input";
+        }
+        
+
+        $filename = basename($file["name"]);
+        $target_file = $target_dir . $filename;
         $uploadOk = 1;
         $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
         // Check if file already exists
         if (file_exists($target_file)) {
-            //echo "Sorry, file already exists.";
             $uploadOk = 0;
         }
         // Check file size
         if ($file["size"] > 100000000) {
-            //echo "Sorry, your file is too large.";
             $uploadOk = 0;
         }
         // Allow certain file formats
-        if ($imageFileType != "jpg") {
-            //echo "Sorry, only JPG is allowed.";
+        if ($imageFileType != "jpg" && $imageFileType != "jpeg") {
             $uploadOk = 0;
         }
         // Check if $uploadOk is set to 0 by an error
         if ($uploadOk == 0) {
-            //echo "Sorry, your file was not uploaded.";
             return "Error uploading image";
         } else {
             if (move_uploaded_file($file["tmp_name"], $target_file)) {
-                //echo "The file ". htmlspecialchars( basename( $file["name"])). " has been uploaded.";
-                return "success";
+            return "success";
             } else {
-                //echo "Sorry, there was an error uploading your file.";
-                return "Error uploading image";
+            return "Error uploading image";
             }
         }
     }
