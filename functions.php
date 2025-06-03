@@ -182,6 +182,9 @@
     */
 
     function loginUser($username, $password){
+        if (checkInputForSQLInjection($username) == false || checkInputForSQLInjection($password) == false) {
+            return "Invalid input";
+        }
         $conn = connect("private", "read");
         if ($conn === false) {
             return "Error connecting to database";
@@ -300,6 +303,9 @@
     };
 
     function changePassword($username, $old_password, $new_password, $confirm_new_password){
+        if (checkInputForSQLInjection($username) == false || checkInputForSQLInjection($old_password) == false || checkInputForSQLInjection($new_password) == false || checkInputForSQLInjection($confirm_new_password) == false) {
+            return "Invalid input";
+        }
         $conn = connect("private");
         $username = trim($username);
         $old_password = trim($old_password);
@@ -350,6 +356,9 @@
     };
 
     function newDate($name, $date, $time, $youth){
+        if (checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false) {
+            return "Invalid input";
+        }
         $conn = connect("public", "write");
         
         $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate, terminTime, terminType) VALUES (?, ?, ?, ?)");
@@ -363,6 +372,9 @@
     }
 
     function editDate($id, $name, $date, $time, $youth){
+        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false) {
+            return "Invalid input";
+        }
         $conn = connect("public", "write");
         
         $stmt = $conn->prepare("UPDATE termine SET terminTitle = ?, terminDate = ?, terminTime = ?, terminType = ? WHERE terminID = ?");
@@ -376,6 +388,9 @@
     }
 
     function newArticle($date, $title, $summary, $text){
+        if (checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false) {
+            return "Invalid input";
+        }
         $conn = connect("public", "write");
 
         $stmt = $conn->prepare("INSERT INTO termine(date, title, summary, text) VALUES (?, ?, ?, ?)");
@@ -388,7 +403,99 @@
         } 
     }
 
+    function editArticle($id, $date, $title, $summary, $text){
+        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false) {
+            return "Invalid input";
+        }
+        $conn = connect("public", "write");
+
+        $stmt = $conn->prepare("UPDATE artikel SET date = ?, title = ?, summary = ?, text = ? WHERE artikelID = ?");
+        $stmt->bind_param("ssssi", $date, $title, $summary, $text, $id);
+        //echo $stmt;
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error updating article, please try again or contact an administrator";
+        } else {
+            return "success";
+        } 
+    }
+
+    function addMultipleArticleImages($id, $files){
+        if (checkInputForSQLInjection($id) == false || !is_array($files)) {
+            return "Invalid input";
+        }
+        foreach ($files as $file) {
+            $result = addArticleImage($id, $file);
+            if ($result != "success") {
+                return $result; // Return error if any file fails to upload
+            }
+        }
+        return "success"; // Return success if all files are uploaded
+    }
+
+    function addArticleImage($id, $file){
+        if (checkInputForSQLInjection($id) == false) {
+            return "Invalid input";
+        }
+        $target_dir = "documents/pics/siteImageScroll/artikel_" . $id . "/";
+        if (!is_dir($target_dir)) {
+            mkdir($target_dir, 0777, true);
+        }
+        $target_file = $target_dir . basename($file["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            //echo "Sorry, file already exists.";
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($file["size"] > 100000000) {
+            //echo "Sorry, your file is too large.";
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if ($imageFileType != "jpg") {
+            //echo "Sorry, only JPG is allowed.";
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            //echo "Sorry, your file was not uploaded.";
+            return "Error uploading image";
+        } else {
+            if (move_uploaded_file($file["tmp_name"], $target_file)) {
+                //echo "The file ". htmlspecialchars( basename( $file["name"])). " has been uploaded.";
+                return "success";
+            } else {
+                //echo "Sorry, there was an error uploading your file.";
+                return "Error uploading image";
+            }
+        }
+    }
+
+    function getArticleDetails($id){
+        if (checkInputForSQLInjection($id) == false) {
+            return "Invalid input";
+        }
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM artikel WHERE artikelID = ?");
+        $stmt->bind_param("i", $id);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $article = $result->fetch_assoc();
+        destroyConnection($conn);
+        return $article;
+    }
+
     function getContactImage($site = "kontakt.php"){
+        if (checkInputForSQLInjection($site) == false) {
+            return "Invalid input";
+        }
         $site = basename($site, ".php");
 
         $conn = connect("public", "read");
@@ -471,6 +578,9 @@
     }
 
     function isSuperuser($username){
+        if (checkInputForSQLInjection($username) == false) {
+            return false; // Invalid input
+        }
         $conn = connect("private", "read");
         if($conn == false){
             return false;
@@ -599,6 +709,9 @@
     }
 
     function getPastDates($num = 5) {
+        if (!is_numeric($num) || $num <= 0) {
+            return "Invalid number of past dates requested";
+        }
         // get all past dates from the database
         $conn = connect("public", "read");
         if($conn == false){
@@ -618,6 +731,9 @@
     }
 
     function getDateDetails($id) {
+        if (!is_numeric($id)) {
+            return "Invalid date ID";
+        }
         // get the details of a date by id
         $conn = connect("public", "read");
         if($conn == false){
@@ -631,5 +747,21 @@
         $date = $result->fetch_assoc();
         destroyConnection($conn);
         return $date;
+    }
+
+    function checkInputForSQLInjection($input) {
+        // Check if the input contains any SQL injection patterns
+        $patterns = [
+            '/\b(SELECT|INSERT|UPDATE|DELETE|DROP|CREATE|ALTER|TRUNCATE|EXECUTE)\b/i',
+            '/--/',
+            '/;/', 
+            '/\b(OR|AND)\b/i'
+        ];
+        foreach ($patterns as $pattern) {
+            if (preg_match($pattern, $input)) {
+                return false; // Input is unsafe
+            }
+        }
+        return true; // Input is safe
     }
 ?>

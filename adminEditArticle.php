@@ -1,5 +1,47 @@
 <?php
     require_once 'functions.php';
+
+    if(!isset($_SESSION['user'])){
+        header("Location: index.php");
+        exit();
+    }
+
+    // get article id
+    if (isset($_GET['id']) && is_numeric($_GET['id'])) {
+        $articleId = $_GET['id'];
+        $articleDetails = getArticleDetails($articleId);
+        //print_r($articleDetails);
+    } else {
+        header("Location: adminArticle.php");
+        exit();
+    }
+
+    if(isset($_POST['submit'])){
+        $title = $_POST["title"];
+        $summary = $_POST["summary"];
+        $content = $_POST["content"];
+        $date = $_POST["date"];
+        $fileToUpload = $_FILES['fileToUpload'];
+
+        // Validate inputs
+        if(empty($title) || empty($summary) || empty($content)){
+            $response = "Bitte fülle alle Pflichtfelder aus.";
+            return;
+        }
+
+        // Save article to database
+        $result = editArticle($articleId, $date, $title, $summary, $content);
+        if($targetFile){
+            $result = addArticleImage($articleId, $fileToUpload);
+        }
+        echo $result;
+
+        if($result == "success"){
+            header("location: adminArticle.php");
+        }else{
+            $response = $result;
+        }
+    }
 ?>
 
 <!DOCTYPE HTML>
@@ -27,7 +69,7 @@
                 Willkommen im Administrationsbereich für die Artikel der Webseite. Hier kannst du den ausgwählten Artikel bearbeiten. Bitte fülle die Felder aus und klicke auf "Artikel speichern", um die Änderungen zu speichern.
                 <br>
                 <br>
-                <input type="button" style="background-color: royalblue;" onclick="location.href='adminDate.php';" value='Zurück' />
+                <input type="button" style="background-color: royalblue;" onclick="location.href='adminArticle.php';" value='Zurück' />
             </p>
         </div>
         </div>
@@ -36,23 +78,23 @@
             <h4>Artikel bearbeiten</h4>
             <p>
                 <ul>
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <table class="adminTable">
                             <tr>
                                 <td><label>Titel: </label></td>
-                                <td><input type="text" placeholder="Titel des Artikels" name="title" id="title" required></td>
+                                <td><input type="text" placeholder="Titel des Artikels" name="title" id="title" value="<?php echo $articleDetails["title"]; ?>" required></td>
                             </tr>
                             <tr>
                                 <td><label>Zusammenfassung: </label></td>
-                                <td><textarea placeholder="Inhalt" name="summary" id="summary" required rows="5" cols="60" style="resize: none;"></textarea></td>
+                                <td><textarea placeholder="Zusammenfassung" name="summary" id="summary" required rows="5" cols="60" style="resize: none;" required><?php echo $articleDetails["summary"]; ?></textarea></td>
                             </tr>
                             <tr>
                                 <td><label>Inhalt: </label></td>
-                                <td><textarea placeholder="Inhalt" name="summary" id="summary" required rows="10" cols="60" style="resize: none;"></textarea></td>
+                                <td><textarea placeholder="Inhalt" name="content" id="content" required rows="10" cols="60" style="resize: none;" required><?php echo $articleDetails["text"]; ?></textarea></td>
                             </tr>
                             <tr>
                                 <td><label>Datum: </label></td>
-                                <td><input type="date" name="date" id="date"></td>
+                                <td><input type="date" name="date" id="date" value="<?php echo $articleDetails["date"]; ?>"></td>
                             </tr>
                             <tr>
                                 <td><label>Bilder hinzufügen: </label></td>
