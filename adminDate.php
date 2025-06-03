@@ -70,7 +70,7 @@
                         Uhrzeit: <input type="time" name="time" placeholder="HH:MM" />
                         <br>
                         <br>
-                        Jugendveranstaltung: <input type="checkbox" name="youthEvent" value="yes">
+                        Jugendveranstaltung: <input type="checkbox" name="youthEvent">
                         <br>
                         <br>
                         <input type="submit" name="submit" value="Termin erstellen">

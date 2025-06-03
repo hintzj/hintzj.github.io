@@ -387,30 +387,36 @@
         } 
     }
 
-    function newArticle($date, $title, $summary, $text){
+    function newArticle($date, $title, $summary, $text, $isJugendEvent = false){
         if (checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("INSERT INTO artikel(date, title, summary, text) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $date, $title, $summary, $text);
+        $stmt = $conn->prepare("INSERT INTO artikel(date, title, summary, text, artikelType) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssss", $date, $title, $summary, $text, $isJugendEvent);
         $stmt->execute();
         if($stmt->affected_rows != 1){
             return "Error creating account, please try again or contact an administrator";
         } else {
-            return "success";
+            //if the article was created successfully, return the id of the new article
+            $newArticleId = $stmt->insert_id;
+            $stmt->close();
+            destroyConnection($conn);
+
+            //return the id of the new article
+            return $newArticleId; // Return the new article ID
         } 
     }
 
-    function editArticle($id, $date, $title, $summary, $text){
+    function editArticle($id, $date, $title, $summary, $text, $isJugendEvent){
         if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("UPDATE artikel SET date = ?, title = ?, summary = ?, text = ? WHERE artikelID = ?");
-        $stmt->bind_param("ssssi", $date, $title, $summary, $text, $id);
+        $stmt = $conn->prepare("UPDATE artikel SET date = ?, title = ?, summary = ?, text = ?, artikelType = ? WHERE artikelID = ?");
+        $stmt->bind_param("sssssi", $date, $title, $summary, $text, $isJugendEvent, $id);
         //echo $stmt;
         $stmt->execute();
         if($stmt->affected_rows != 1){
@@ -425,11 +431,11 @@
             return "Invalid input";
         }
 
-        print_r($files);
+        //print_r($files);
 
         // If $files is in the $_FILES format, restructure it to an array of file arrays
         if (isset($files['name']) && is_array($files['name'])) {
-            echo "<br>Restructuring files...<br>";
+            //echo "<br>Restructuring files...<br>";
             $restructuredFiles = [];
             foreach ($files['name'] as $key => $name) {
                 $restructuredFiles[] = [
@@ -444,9 +450,9 @@
             $restructuredFiles = $files;
         }
         foreach ($restructuredFiles as $file) {
-            echo "<br>";
-            print_r($file);
-            echo "<br>";
+            //echo "<br>";
+            //print_r($file);
+            //echo "<br>";
             $result = addArticleImage($id, $file);
             if ($result != "success") {
                 return $result; // Return error if any file fails to upload
@@ -464,7 +470,7 @@
             mkdir($target_dir, 0777, true);
         }
 
-        print_r($file);
+        //print_r($file);
         
         if (!isset($file) || !isset($file["name"]) || !isset($file["tmp_name"])) {
             return "Invalid file input";

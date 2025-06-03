@@ -21,6 +21,7 @@
         $summary = $_POST["summary"];
         $content = $_POST["content"];
         $date = $_POST["date"];
+        $isJugendEvent = isset($_POST["isJugendEvent"]) ? 1 : 0;
         $filesToUpload = $_FILES['fileToUpload'];
 
         // Validate inputs
@@ -30,7 +31,7 @@
         }
 
         // Save article to database
-        $result = editArticle($articleId, $date, $title, $summary, $content);
+        $result = editArticle($articleId, $date, $title, $summary, $content, $isJugendEvent);
         if(!empty($filesToUpload['name'][0])){
             echo "<br>Hinzufügen von Bildern...";
             print_r($filesToUpload);
@@ -98,6 +99,10 @@
                             <tr>
                                 <td><label>Datum: </label></td>
                                 <td><input type="date" name="date" id="date" value="<?php echo $articleDetails["date"]; ?>"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Jugendevent: </label></td>
+                                <td><input type="checkbox" name="isJugendEvent" id="isJugendEvent" <?php if($articleDetails["artikelType"]) {echo "checked";} ?>></td>
                             </tr>
                             <tr>
                                 <td><label>Bilder hinzufügen: </label></td>

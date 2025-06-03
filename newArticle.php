@@ -6,8 +6,24 @@
         $summary = $_POST["summary"];
         $text = $_POST["text"];
         $date = $_POST["date"];
-
-        $result = newArticle($date, $title, $summary, $text);
+        $isJugendEvent = isset($_POST["isJugendEvent"]) ? 1 : 0;
+        $filesToUpload = $_FILES["fileToUpload"];
+        
+        
+        // Validate inputs
+        if(empty($title) || empty($summary) || empty($text)){
+            $response = "Bitte fülle alle Pflichtfelder aus.";
+            return;
+        }
+        // Save article to database
+        $result = newArticle($date, $title, $summary, $text, $isJugendEvent);
+        if(!empty($filesToUpload['name'][0])){
+            //echo "<br>Hinzufügen von Bildern...";
+            //print_r($filesToUpload);
+            //echo "<br>";
+            $result = addMultipleArticleImages($result, $filesToUpload);
+        }
+        //echo $result;
 
         if($result == "success"){
             //header("location: termine.php");
@@ -51,7 +67,7 @@
             <h4>Artikel</h4>
             <p>
                 <ul>
-                    <form action="" method="post">
+                    <form action="" method="post" enctype="multipart/form-data">
                         <table class="adminTable">
                             <tr>
                                 <td><label>Titel: </label></td>
@@ -70,8 +86,12 @@
                                 <td><input type="date" name="date" id="date"></td>
                             </tr>
                             <tr>
+                                <td><label>Jugendevent: </label></td>
+                                <td><input type="checkbox" name="isJugendEvent" id="isJugendEvent"></td>
+                            </tr>
+                            <tr>
                                 <td><label>Bilder: </label></td>
-                                <td><input type="file" name="fileToUpload" id="fileToUpload" multiple></td>
+                                <td><input type="file" name="fileToUpload[]" id="fileToUpload" accept="image/jpg, image/jpeg" multiple></td>
                             </tr>
                             <tr>
                                 <td colspan="2"><input type="submit" value="Absenden" name="submit"></td>
