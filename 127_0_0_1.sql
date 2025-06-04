@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: May 17, 2025 at 04:47 PM
+-- Generation Time: Jun 04, 2025 at 12:01 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -115,11 +115,12 @@ CREATE TABLE `artikel` (
 --
 
 INSERT INTO `artikel` (`artikelID`, `date`, `title`, `summary`, `text`, `artikelType`) VALUES
-(1, '2023-04-04', 'Trainingslager in Frankreich', 'Die Rennsportgruppe des WSV Lampertheims macht ein Trainingslager in Südfrankreich.', 'Die Rennsportgruppe des WSV Lampertheims macht ein Trainingslager in Südfrankreich. Dort haben sie sehr viel Spaß!', NULL),
-(12, '2022-03-03', 'Jugendfeier', 'Die Jugend macht eine Feier.', 'Die Jugend feiert ihr ein jähriges Bestehen mit einer großen Feier.', 1),
-(13, '2023-04-10', 'Trainingslagerbericht', 'Das Trainingslager in Süd-Frankreich macht den Kanurennpoetlern viel Spaß!', 'Der Text muss nicht weiter ausgeführt werden, er ist nur als Demo hier...', NULL),
-(14, '2024-07-04', 'Sommerfest 2024', 'Hier feiert der WSV ein großes Sommerfest', 'Jeder ist zu diesem Spektakel eingeladen, es ist ein Fest für jeden! Für Essen, Getränke und Unterhaltung ist natürlich gesorgt. Es wird wieder ein Canadierrennen geben', 1),
-(15, NULL, 'TEst', 'oijsvoiajvsionvosnvonvoienwviuenoivmopemvnjern ', 'wkvnwpivnoiwnbvuierbhviopwnefjkbnokdfjvoedhfiovbmdifjbnidf', NULL);
+(1, '2025-03-30', 'Saisoneröffnung 2025', 'Der WSV Lampertheim startete mit Ehrengästen, sportlichem Ausblick, Bootstaufen und Kinderprogramm in die Saison. Höhepunkte sind die Regatten und Meisterschaften im Sommer.', 'Der WSV Lampertheim veranstaltete am vergangenen Sonntag seine traditionelle Saisoneröffnung auf dem Vereinsgelände am Altrhein.\n\nDer 1. Vorsitzende Rainer Vetter begrüßte neben den zahlreich erschienenen Sportlern, Angehörigen und Vereinsmitgliedern auch den 1. Stadtrat Marius Schmidt, die Fraktionsvorsitzenden von CDU (Alexander Scholl), SPD (Jens Klingler) und FDP (Gernot Diehlmann), den Vorsitzenden der Sportkommission Joachim Stumpf und seinen Vorgänger Hans Schlatter, vom Hessischen Kanuverband den Ressortleiter Kanurennsport Peter Horstfeld. Claudia Schlappner und Herrn Engert vom Rotary Club sowie Frau Schwarz vom Sparkassen und Giroverband Hessen-Thüringen.\n\nNach einer kurzen Einleitung und Ausblick auf die anstehenden Aufgaben wie die Lampertheimer Regatta und den geplanten barrierefreien Umbau der Toiletten übergab er das Wort an Marius Schmidt. Dieser lobte die vorbildliche Arbeit des Vereins seit vielen Jahren, was sich an den errungenen Erfolgen ablesen lässt und sich auch bei der Sportlerehrung der Stadt Lampertheim 2 Tage zuvor niederschlug. Besonders lobte er die seit 10 Jahren bestehende Ganztagesbetreuung der Kanuakademie.\n\nSportwart Dieter Brechenser berichtete von den Trainingslagern zur Saisonvorbereitung, von denen das erste in Portugal bereits stattgefunden hat. In den Osterferien geht es für 2 Wochen nach Saarlouis. Saisonhöhepunkte sind die Lampertheimer Regatta mit Hessenmeisterschaft Anfang Mai, die Süddeutsche Meisterschaft in Sandhofen im Juli und die Deutsche Meisterschaft in Köln im August.\n\nIm Anschluss erfolgte die Taufe von 6 neuen Kajaks. 4 Schülerboote taufte Frau Schwarz von der Sparkasse Hessen-Thüringen als Sponsor, 1 Masterboot Marion Roth-Hintz, die sich finanziell am Kauf beteiligt hatte. Letzter Taufpate war Kyara Marzahn, die ihr Privatboot auf den Namen Dori taufte.\n\nZum Ausklang gab es noch einen durch den Kulturausschuss vorbereiteten Imbiss und Getränke, für die kleinen Gäste standen eine Hüpfburg und eine Slackline bereit.', 1),
+(2, '2025-03-22', 'Arbeitseinsatz am WSV', 'Beim Helfertag säuberte der WSV das Vereinsgelände und beteiligte sich an der Aktion „Saubere Gemarkung“. Im Anschluss gab es für die vielen Helfer einen Imbiss vom Kulturausschuss.', 'Wie immer im Frühjahr führte der WSV seinen Helfertag durch, verbunden mit der Teilnahme an der Aktion Saubere Gemarkung.\r\n\r\nDas gesamte Außengelände wurde auf Vordermann gebracht, das Altrheinufer bis zum Bau von Müll gesäubert und auch die Boxen und der Kraftraum aufgeräumt. So kann der Saisonauftakt kommen!\r\n\r\nIm Anschluß konnten sich die Helfer mit einem kleinen Imbiß stärken, um den sich der Kulturausschuß gekümmert hatte.\r\n\r\nVielen Dank an die zahlreichen Helfer!', 1),
+(3, '2024-11-16', 'Ehrenabend 2024', 'Beim Ehrenabend ehrte der WSV langjährige Mitglieder und erfolgreiche Sportler. Besonders ausgezeichnet wurden Femke Rupf sowie Trainer und Helfer. Der Abend endete mit einem Imbiss und geselligem Beisammensein.', 'Am vergangenen Samstag führte der WSV Lampertheim seinen Ehrenabend in der Wassersporthalle durch.\r\n\r\nNach einer kurzen Begrüßung bat der 1. Vorsitzende Rainer Vetter die zahlreich erschienenen Jubilare auf die Bühne. Für 10, 25 und 40 Jahre erhielten die Geehrten eine Urkunde, die Ehrennadel sowie ein kleines Präsent.\r\n\r\nFür 50 Jahre wurde neben Ehrennadel und Präsent mit der Urkunde die Ehrenmitgliedschaft verliehen.\r\n\r\nEin besonderes Ereignis waren gleich 4 Mitglieder, die auf die stolze Dauer von 60 Jahren Vereinszugehörigkeit zurückblieben können, sowie weitere 4 Mitglieder, die dem WSV bereits seit 70 Jahren die Treue halten. Sie erhielten neben Urkunde und Präsent noch eine besondere Ehrengabe in Form einer gravierten Glastrophäe.\r\n\r\nDanach übernahm Kevin Marzahn die Ehrungen der erfolgreichen Sportler für das Jahr 2024. Geehrt wurden 25 Sportler, die entweder Hessenmeister oder Dritter bei der Süddeutschen Meisterschaft wurden.\r\n\r\nHerausragend dabei war Femke Rupf, die 2 Deutsche Meistertitel nach Lampertheim holte und Deutschland bei den Olympic Hope Games vertreten durfte, wo sie 2 Gold- und eine Silbermedaille errang.\r\n\r\nDiese Erfolge sind nicht möglich ohne die Hilfe der Eltern, aber es braucht auch den Einsatz vieler Trainer, die deshalb  durch den Vorsitzenden Rainer Vetter und Jugendvorstand Matteo Lunkenbein stellvertretend für die Sportler noch entsprechend geehrt wurden.\r\n\r\nKevin Marzahn wurde für seine Verdienste um den Verein in den zurückliegenden Jahren mit dem Vereinsehrenbrief ausgezeichnet, den er sichtlich gerührt unter dem Applaus der Anwesenden entgegennahm.\r\n\r\nAusklingen ließ man den Abend mit einem vom Kulturausschuss vorbereiteten Imbiß und geselligem Beisammensein von Jung und Alt.', 1),
+(4, '2024-10-26', 'Arbeitseinsatz Oktober 2024', 'Beim Helfertag am 26. Oktober brachten viele engagierte Mitglieder das Vereinsgelände, die Halle, Boxen und Außenanlagen des WSV Lampertheim auf Vordermann. Zum Dank gab es eine kleine Stärkung für alle Helfer.', 'Wie jedes Jahr im Herbst fand am 26. Oktober Wassersportverein ein Helfertag statt.Dabei wurden durch zahlreiche fleißige Mitglieder aus verschiedenen Abteilungen die Boxen, Kraftraum und Halle sauber gemacht un d aufgeräumt.\r\n\r\nAuch die Außenanlage sowohl am Altrhein als auch am Damm wurden auf Vordermann gebracht, ebenso die Bpulebahn und die Bootsanlegestege.\r\n\r\nAnchließend gab es eine kleine Stärkung für die Helfer.\r\n\r\nDer Vorstand bedankt sich ganz herzlich für die Hilfe.', 1),
+(5, '2025-03-09', 'Ehrungen beim Hessischen Kanutag', 'Beim Hessischen Kanutag am 9. März wurden Briska Horstfeld und Erika Gabler für ihr jahrzehntelanges ehrenamtliches Engagement im WSV Lampertheim mit Ehrennadeln und Urkunden des Hessischen Kanuverbands ausgezeichnet.', 'Am Sonntag, den 9. März, fand in Wiesbaden der Hessische Kanutag statt. Dabei waren als Delegierte Sportwart Dieter Brechenser für die Kanuakademie, Rainer Vetter als Vorsitzender des Wassersportvereins und  Referent für Kanupolo sowie Peter Horstfeld als Ressortleiter für Kanurennsport.\r\n\r\nIm Rahmen des Verbandstages wurden durch Vizepräsident Thomas Sommer 2 Ehrungen für Vorstandsmitglieder des Wassersportvereins vorgenommen.\r\n\r\nBriska Horstfeld wurde für mehr als 40jährige ehrenamtliche Tätigkeit im Verein und Verband mit der Ehrennadel in Silber und einer Urkunde ausgezeichnet.\r\n\r\nSie war von 1978 bis 1989 und von 1997 bis 2003 Schriftführerin, seit 2003 ist sie Kassenwartin des WSV, außerdem verwaltet sie die Finanzen für das Kajakteam Hessen, den WSV 2002 sowie die Regattagemeinschaft Lampertheim. Im Hessischen Kanuverband wird sie regelmäßig als Kassenprüferin eingesetzt. 2022 wurde sie zum Ehrenvorstandsmitglied des WSV Lampertheim ernannt.\r\n\r\n Erika Gabler erhielt für ihre jahrzentelange ehrenamtliche Tätigkeit die Ehrennadel in Gold sowie eine Ehrenurkunde.\r\n\r\nNachdem sie bereits in jungen Jahren seit 1989 als Schriftführerin tätig war, übernahm sie 1997 das Amt der 1. Vorsitzenden und führte den Verein 23 Jahre, seit 2020 übt sie das Amt der 2. Vorsitzenden aus. In ihre Amtszeit fielen mehrere große Bauprojekte, die sie koordinieren und Fördermittel beantragen musste, ebenso die Gründung der Kanuakademie 2014. Auch bei der Lampertheimer Regatta ist sie seit vielen Jahren nicht wegzudenken. „Ihr“ WSV ernannte sie 2020 zur Ehrenvorsitzenden.', 0),
+(6, '2024-06-01', 'Hochwasser 2024', 'Ein Hochwasser überflutete Anfang Juni das Gelände des WSV Lampertheim. Dank über 100 Helfern, Sandsäcken und großer Solidarität konnten Schäden begrenzt werden. Nach Rückgang des Pegels begannen umfangreiche Aufräumarbeiten auf dem Gelände.', 'Der hohe Pegel des Rheins sorgte über den Altrheinarm am Biedensand auch für eine Überflutung des Vereinsgeländes und des Gebäudes beim WSV Lampertheim.\r\n\r\nBereits am Samstag, den 1. Juni, wurden durch Helfer die ersten tiefer gelegenen Boxen ausgeräumt und Möbel, Elektrogeräte und Maschinen in Sicherheit gebracht.\r\n\r\nDie Feuerwehr half zum wiederholten Male mit der Lieferung von 100 Sandsäcken aus.\r\n\r\nAm Sonntag mussten dann, nachdem die Prognosen des Wasserstands immer weiter nach oben gingen, auch die unteren Lagen in den Bootsboxen ausgeräumt werden, die Vereinsfahrzeuge wurden hinter dem Damm in Sicherheit gebracht.\r\n\r\n20 Helfer am Samstag und nochmal 40 am Sonntag konnten so einen allzu großen Schaden verhindern.\r\n\r\nLeider wurden, hauptsächlich durch Druckwasser, der Kraftraum und eine als Küche ausgebaute Box trotz Absperrung und Pumpe durch das Hochwasser in Mitleidenschaft gezogen.\r\n\r\nDas Sportstudio clever fit reagierte spontan und lud die Wassesportler zum Training in ihre Räumlichkeiten ein. Eine tolle Solidaritätsaktion!\r\n\r\nEbenso boten Vereine, die bereits zum Paddeln beim WSV waren, ihre Hilfe beim Aufräumen an.\r\n\r\nNachdem der Wasserstand am Mittwoch unter die für den Verein kritische Marke gesunken war, wurden die Boxen wieder geöffnet und tiefer gelegene Räume ausgepumpt.\r\n\r\nZurück ließ das Hochwasser hauptsächlich Treibgut, vom Schlamm blieb der WSV dieses Mal glücklicherweise verschont.\r\n\r\nAm 8. Juni, genau eine Woch nach den ersten Vorbereitungen auf das Hochwasser, wurden dann durch mehr als 100 Helfer die inzwischen größtenteils trockenen Boxen gereinigt und wieder eingeräumt.\r\n\r\nAuch das Gelände und die Zufahrt mussten gesäubert und von viel Müll befreit werden. Alleine 2 Anhänger voll mit Treibgut wurden bei der ZAKB entsorgt, der Rest erfolgt über die normale Müllabfuhr und eine Sperrmüllabholung.', 0);
 
 -- --------------------------------------------------------
 
@@ -151,6 +152,7 @@ INSERT INTO `contactperson` (`site`, `personID`) VALUES
 ('adminMitgliederinfo', 13),
 ('adminUser', 13),
 ('login', 13),
+('newArticle', 13),
 ('jugendnews', 14),
 ('jugendvorstand', 14),
 ('foerderverein', 28),
@@ -274,13 +276,12 @@ CREATE TABLE `termine` (
 --
 
 INSERT INTO `termine` (`terminID`, `terminTitle`, `terminDate`, `terminTime`, `terminType`, `artikelID`) VALUES
-(6, 'Ehrenabend', '2023-11-04', '19:00:00', NULL, NULL),
-(7, 'Weihnachtsfest am WSV', '2023-12-16', '18:30:00', NULL, NULL),
-(8, 'Jugendabend', '2024-01-13', '16:00:00', 1, NULL),
-(9, 'Vereinsjugend im Kletterwald', '2023-06-24', '13:00:00', 1, NULL),
-(10, 'Sommerfest am WSV', '2024-07-04', '12:30:00', NULL, NULL),
-(11, 'Kinderfastnacht', '2024-02-11', '11:11:00', NULL, NULL),
-(13, 'Schlittschuhlaufen', '2024-01-27', '10:00:00', 1, 15);
+(1, 'Mitgliederversammlung', '2025-03-07', '19:30:00', 0, NULL),
+(2, 'Arbeitseinsatz', '2025-03-22', '09:30:00', 1, NULL),
+(3, 'Saisoneröffnung', '2025-03-30', '10:30:00', 1, NULL),
+(4, 'Lampertheimer Regatta', '2025-05-03', NULL, 1, NULL),
+(5, 'Vatertag am WSV', '2025-05-29', '10:30:00', 0, NULL),
+(6, 'Ehrenabend', '2025-11-08', '19:00:00', 1, NULL);
 
 -- --------------------------------------------------------
 
@@ -421,7 +422,7 @@ ALTER TABLE `abteilungen`
 -- AUTO_INCREMENT for table `artikel`
 --
 ALTER TABLE `artikel`
-  MODIFY `artikelID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=16;
+  MODIFY `artikelID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT for table `personen`
@@ -439,7 +440,7 @@ ALTER TABLE `sponsors`
 -- AUTO_INCREMENT for table `termine`
 --
 ALTER TABLE `termine`
-  MODIFY `terminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
+  MODIFY `terminID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 
 --
 -- AUTO_INCREMENT for table `vorstandspositionen`
