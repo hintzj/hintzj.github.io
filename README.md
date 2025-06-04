@@ -19,5 +19,6 @@ Nützliche Links:
 - [x] Administratorbereich
 - [ ] Schriftgröße auf Mobileseite ändern
 - [ ] Menü auf Mobile anpassen
+- [ ] Admins Sponsoren bearbeiten lassen
 
 Rückmeldung zur Webseite: https://forms.office.com/e/Dg0RKR74h8
