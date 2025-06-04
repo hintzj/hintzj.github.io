@@ -44,7 +44,8 @@
                         $text = nl2br($article['text']);
                         echo "<p>" . $text . "</p>";
                     ?>
-
+                    <br>
+                    <input type="button" class="button" value="Zurück" onclick="history.back()">
                 </ul>
             </p>
         </div>
