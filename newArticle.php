@@ -26,7 +26,7 @@
         //echo $result;
 
         if($result == "success"){
-            //header("location: termine.php");
+            header("location: adminArticle.php");
         }else{
             $response = $result;
         }
