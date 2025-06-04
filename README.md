@@ -16,6 +16,8 @@ Nützliche Links:
 - [x] Telefonnummern streichen
 - [x] Bilder für Abteilungen hochladen
 - [x] Ansprechpartner aktualisieren
-- [ ] (Zweiter Server für Datenbankaktualisierungen)
+- [x] Administratorbereich
+- [ ] Schriftgröße auf Mobileseite ändern
+- [ ] Menü auf Mobile anpassen
 
 Rückmeldung zur Webseite: https://forms.office.com/e/Dg0RKR74h8
