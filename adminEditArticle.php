@@ -90,7 +90,7 @@
                             </tr>
                             <tr>
                                 <td><label>Zusammenfassung: </label></td>
-                                <td><textarea placeholder="Zusammenfassung" name="summary" id="summary" required rows="5" cols="60" style="resize: none;" required><?php echo $articleDetails["summary"]; ?></textarea></td>
+                                <td><textarea placeholder="Zusammenfassung" name="summary" id="summary" required rows="5" cols="60" style="resize: none;" required maxlength="255"><?php echo $articleDetails["summary"]; ?></textarea></td>
                             </tr>
                             <tr>
                                 <td><label>Inhalt: </label></td>

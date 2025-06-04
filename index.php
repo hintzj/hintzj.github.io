@@ -97,8 +97,8 @@
                         //make a div for every article that has a read more button that links to the article
                         foreach ($articles as $article) {
                             echo "<div class='article'>";
-                            echo "<h3 style='text-indent: 1em;'>" . $article['title'] . "</h3>";
-                            echo "<p style='text-indent: 2em;'>" . $article['summary'] . "</p>";
+                            echo "<h3>" . $article['title'] . "</h3>";
+                            echo "<p>" . $article['summary'] . "</p>";
                             echo "<input type='button' style='margin-left: 2em;' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $article['artikelID'] . "\"'>";
                             echo "</div>";
                             echo "<br>";

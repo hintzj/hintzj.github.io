@@ -75,7 +75,7 @@
                             </tr>
                             <tr>
                                 <td><label>Zusammenfassung: </label></td>
-                                <td><textarea placeholder="Inhalt" name="summary" id="summary" required rows="5" cols="60" style="resize: none;"></textarea></td>
+                                <td><textarea placeholder="Inhalt" name="summary" id="summary" required rows="5" cols="60" style="resize: none;" maxlength="255"></textarea></td>
                             </tr>
                             <tr>
                                 <td><label>Inhalt: </label></td>
