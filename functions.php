@@ -587,9 +587,17 @@
     }
 
     function clean($site) {
+        // This is just for xampp
         if ($site == "/WSV_Webpage/") {
             $site = "index.php";
         }
+
+        // This is just for the server
+        /*
+        if ($site == "/") {
+            $site = "index.php";
+        }
+        */
             
         //look if there is a folder with the name of the site in documents/pics/siteImageScroll
         $site = strtolower($site);
