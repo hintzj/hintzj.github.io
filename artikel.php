@@ -40,7 +40,9 @@
             <p>
                 <ul>
                     <?php
-                        echo "<p>" . $article['text'] . "</p>";
+                        // Print the article along with all new lines
+                        $text = nl2br($article['text']);
+                        echo "<p>" . $text . "</p>";
                     ?>
 
                 </ul>
