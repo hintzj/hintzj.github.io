@@ -19,7 +19,7 @@ Nützliche Links:
 - [x] Administratorbereich
 - [ ] Schriftgröße auf Mobileseite ändern
 - [ ] Menü auf Mobile anpassen
-- [ ] Admins Sponsoren bearbeiten lassen
+- [x] Admins Sponsoren bearbeiten lassen
 - [ ] Mitglieder Infos Pfad wechseln
 
 Rückmeldung zur Webseite: https://forms.office.com/e/Dg0RKR74h8

@@ -75,7 +75,7 @@
                     //print_r($files);
                     foreach ($files as $file) {
                         if (strpos($file, ".pdf") !== false) {
-                            echo "<div style='text-align: center;'><a href='documents/mitgliedsinfos/" . $file . "'>" . $file . "</a></div>";
+                            echo "<div style='text-align: center;'><a href='/documents/mitgliedsinfos/" . $file . "'>" . $file . "</a></div>";
                         }
                     }
                 ?>
