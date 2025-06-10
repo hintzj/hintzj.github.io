@@ -804,4 +804,154 @@
         }
         return true; // Input is safe
     }
+
+    function getAllSponsors() {
+        // Get all sponsors from the database
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM sponsors");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $sponsors = array();
+        while ($row = $result->fetch_assoc()) {
+            $sponsors[] = $row;
+        }
+        destroyConnection($conn);
+        return $sponsors;
+    }
+
+    function uploadSponsorLogo($logo) {
+        if (!isset($logo) || !isset($logo["name"]) || !isset($logo["tmp_name"])) {
+            return "Invalid file input";
+        }
+
+        $target_dir = "documents/pics/sponsorLogos/";
+        $target_file = $target_dir . basename($logo["name"]);
+        $uploadOk = 1;
+        $imageFileType = strtolower(pathinfo($target_file, PATHINFO_EXTENSION));
+
+        // Check if file already exists
+        if (file_exists($target_file)) {
+            $uploadOk = 0;
+        }
+        // Check file size
+        if ($logo["size"] > 10000000) {
+            $uploadOk = 0;
+        }
+        // Allow certain file formats
+        if ($imageFileType != "jpg" && $imageFileType != "jpeg" && $imageFileType != "png") {
+            $uploadOk = 0;
+        }
+        // Check if $uploadOk is set to 0 by an error
+        if ($uploadOk == 0) {
+            return "Error uploading logo";
+        } else {
+            if (move_uploaded_file($logo["tmp_name"], $target_file)) {
+                return basename($logo["name"]); // Return the name of the uploaded file
+            } else {
+                return "Error uploading logo";
+            }
+        }
+    }
+
+    function addSponsor($title, $url, $logoFileName) {
+        if (checkInputForSQLInjection($title) == false || checkInputForSQLInjection($url) == false || checkInputForSQLInjection($logoFileName) == false) {
+            return "Invalid input";
+        }
+        $conn = connect("public", "write");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+
+        $stmt = $conn->prepare("INSERT INTO sponsors (sponsorName, sponsorUrl, sponsorLogoFile) VALUES (?, ?, ?)");
+        $stmt->bind_param("sss", $title, $url, $logoFileName);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error adding sponsor, please try again or contact an administrator";
+        } else {
+            return "success";
+        }
+    }
+
+    function sponsorExists($sponsorId) {
+        if (!is_numeric($sponsorId)) {
+            return false; // Invalid input
+        }
+        $conn = connect("public", "read");
+        if($conn == false){
+            return false; // Error connecting to database
+        }
+        $stmt = $conn->prepare("SELECT * FROM sponsors WHERE sponsorID = ?");
+        $stmt->bind_param("i", $sponsorId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        destroyConnection($conn);
+        return $result->num_rows > 0; // Returns true if sponsor exists, false otherwise
+    }
+
+    function getSponsorLogo($sponsorId) {
+        if (!is_numeric($sponsorId)) {
+            return null; // Invalid input
+        }
+        $conn = connect("public", "read");
+        if($conn == false){
+            return null; // Error connecting to database
+        }
+        $stmt = $conn->prepare("SELECT sponsorLogoFile FROM sponsors WHERE sponsorID = ?");
+        $stmt->bind_param("i", $sponsorId);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        destroyConnection($conn);
+        
+        if ($result->num_rows > 0) {
+            $row = $result->fetch_assoc();
+            return $row['sponsorLogoFile']; // Return the logo file name
+        } else {
+            return null; // Sponsor not found
+        }
+    }
+
+    function deleteSponsor($sponsorId) {
+        if (!is_numeric($sponsorId)) {
+            return "Invalid sponsor ID"; // Invalid input
+        }
+        if (!sponsorExists($sponsorId)) {
+            return "Sponsor does not exist"; // Sponsor not found
+        }
+        $conn = connect("public", "write");
+        if($conn == false){
+            return "Error connecting to database"; // Error connecting to database
+        }
+        
+        $stmt = $conn->prepare("DELETE FROM sponsors WHERE sponsorID = ?");
+        $stmt->bind_param("i", $sponsorId);
+        $stmt->execute();
+        if($stmt->affected_rows != 1){
+            return "Error deleting sponsor, please try again or contact an administrator";
+        } else {
+            destroyConnection($conn);
+            return "success";
+        }
+    }
+
+    function deleteSponsorLogo($logoFileName) {
+        if (checkInputForSQLInjection($logoFileName) == false) {
+            return "Invalid input"; // Invalid input
+        }
+        $filePath = "documents/pics/sponsorLogos/" . $logoFileName;
+        if (file_exists($filePath)) {
+            if (unlink($filePath)) {
+                return "success"; // Logo deleted successfully
+            } else {
+                return "Error deleting logo"; // Error deleting logo
+            }
+        } else {
+            return "Logo file does not exist"; // Logo file not found
+        }
+    }
 ?>

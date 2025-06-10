@@ -47,6 +47,9 @@
                     <br>
                     <br>
                     <input type="button" onclick="location.href='adminMitgliederinfo.php';" value="Mitgliederinfos verwalten" />
+                    <br>
+                    <br>
+                    <input type="button" onclick="location.href='adminSponsor.php';" value="Sponsoren verwalten" />
                     <?php
                         if (isSuperuser($username)) {
                             //echo "<br>";
