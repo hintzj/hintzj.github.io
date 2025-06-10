@@ -64,7 +64,13 @@
                             $tableScript .= "</a>";
                             $tableScript .= "</td>";
                             $counter++;
-                            if ($counter == 3) {
+                            // If the user is on mobile or tablet, we want to show only two columns
+                            if (isMobile()) {
+                                $maxColumns = 2;
+                            } else {
+                                $maxColumns = 3;
+                            }
+                            if ($counter == $maxColumns) {
                                 $tableScript .= "</tr>";
                                 $counter = 0;
                             }

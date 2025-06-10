@@ -44,8 +44,14 @@ body header{
     max-width: 20%;
 }
 .greeting p {
-    font-size: 20px;
+    font-size: 1.3em;
     font-weight: bold;
+}
+
+.greeting a {
+    font-size: 1.5em;
+    font-weight: bold;
+    color: #000000;
 }
 
 .greeting {

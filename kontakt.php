@@ -49,63 +49,23 @@
             </p>
         </div>
         <div class="text-field2" id="abteilungsleiter">
-        <table style="margin-left:auto; margin-right:auto;">
+        <table style="margin-left:auto; margin-right:auto; width: 100%;">
             <h4>Abteilungsleiter</h4>
                     <tr>
                         <th>Abteilung</th>
                         <th>Name</th>
                         <th>E-Mail</th>
                     </tr>
-                    <tr>
-                        <td>Kanurennsport</td>
-                        <td>Dieter Brechenser</td>
-                        <td><a href="mailto:kanurennsport@wsv-lampertheim.de">kanurennsport@wsv-lampertheim.de</a></td>
-                    </tr>
-                    <tr>
-                        <td>Kanurennsport-Anfänger</td>
-                        <td>Patricia Herrmann</td>
-                        <td><a href="mailto:"></a></td>
-                    </tr>
-                    <tr>
-                        <td>Kanupolo</td>
-                        <td>Rainer Vetter</td>
-                        <td><a href="mailto:kanupolo@wsv-lampertheim.de">kanupolo@wsv-lampertheim.de</a></td>
-                    </tr>
-                    <tr>
-                        <td>Frauen-Gymnastik</td>
-                        <td>Christa Müller</td>
-                        <td><a href="mailto:"></a></td>
-                    </tr>
-                    <tr>
-                        <td>Kinderturnen</td>
-                        <td>Patricia Herrmann</td>
-                        <td><a href="mailto:"></a></td>
-                    </tr>
-                    <tr>
-                        <td>Bodyforming</td>
-                        <td>Angela Samson</td>
-                        <td><a href="mailto:"></a></td>
-                    </tr>
-                    <tr>
-                        <td>Männergymnastik</td>
-                        <td>Gunter Saeger</td>
-                        <td><a href="mailto:"></a></td>
-                    </tr>
-                    <tr>
-                        <td>Carnevals-Gremium Blau-Weiss</td>
-                        <td>Christa Müller</td>
-                        <td><a href="mailto:carnevals-gremium-blau-weiss@wsv-lampertheim.de">carnevals-gremium-blau-weiss@wsv-lampertheim.de</a></td>
-                    </tr>
-                    <tr>
-                        <td>Nutzung Campingplatz</td>
-                        <td>Bernd Volk</td>
-                        <td><a href="mailto:"></a></td>
-                    </tr>
-                    <tr>
-                        <td>Vereinsjugend</td>
-                        <td>Matteo Lunkenbein</td>
-                        <td><a href="mailto:matteo.lunkenbein@icloud.com">matteo.lunkenbein@icloud.com</a></td>
-                    </tr>
+                    <?php
+                        $contactPersons = getAllAnsprechpartner();
+                        foreach ($contactPersons as $person) {
+                            echo "<tr>";
+                            echo "<td>" . htmlspecialchars($person['abteilungName']) . "</td>";
+                            echo "<td>" . htmlspecialchars($person['Vorname']) . " " . htmlspecialchars($person['Nachname']). "</td>";
+                            echo "<td><a href='mailto:" . htmlspecialchars($person['email']) . "'>" . htmlspecialchars($person['email']) . "</a></td>";
+                            echo "</tr>";
+                        }
+                    ?>
                 </table>
         </div>
         <div class="text-field3">

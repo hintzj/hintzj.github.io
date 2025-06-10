@@ -954,4 +954,26 @@
             return "Logo file does not exist"; // Logo file not found
         }
     }
+
+    function isMobile() {
+        return preg_match("/(android|avantgo|blackberry|bolt|boost|cricket|docomo|fone|hiptop|mini|mobi|palm|phone|pie|tablet|up\.browser|up\.link|webos|wos)/i", $_SERVER["HTTP_USER_AGENT"]);
+    }
+
+    function getAllAnsprechpartner() {
+        // Get all contact persons from the database
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM personen INNER JOIN abteilungen ON abteilungen.obmannID = personen.personID ORDER BY abteilungen.abteilungName ASC");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $ansprechpartner = array();
+        while ($row = $result->fetch_assoc()) {
+            $ansprechpartner[] = $row;
+        }
+        destroyConnection($conn);
+        return $ansprechpartner;
+    }
 ?>
