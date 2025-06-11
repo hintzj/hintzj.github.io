@@ -587,17 +587,15 @@
     }
 
     function clean($site) {
-        // This is just for xampp
-        if ($site == "/WSV_Webpage/") {
-            $site = "index.php";
+        if (isRunningOnLinux()) {
+            if ($site == "/") {
+                $site = "index.php";
+            }
+        } else {
+            if ($site == "/WSV_Webpage/") {
+                $site = "index.php";
+            }
         }
-
-        // This is just for the server
-        /*
-        if ($site == "/") {
-            $site = "index.php";
-        }
-        */
             
         //look if there is a folder with the name of the site in documents/pics/siteImageScroll
         $site = strtolower($site);
@@ -975,5 +973,14 @@
         }
         destroyConnection($conn);
         return $ansprechpartner;
+    }
+
+    function isRunningOnLinux() {
+        $opSys = php_uname("s");
+        if (stripos($opSys, 'Linux') !== false) {
+            return true; // Running on Linux
+        } else {
+            return false; // Not running on Linux
+        }
     }
 ?>
