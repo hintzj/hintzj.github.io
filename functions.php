@@ -524,7 +524,7 @@
         return $article;
     }
 
-    function getContactImage($site = "kontakt.php"){
+    function getContactDetails($site = "kontakt.php"){
         if (checkInputForSQLInjection($site) == false) {
             return "Invalid input";
         }
@@ -981,6 +981,41 @@
             return true; // Running on Linux
         } else {
             return false; // Not running on Linux
+        }
+    }
+
+    function getVorstandPeopleDetails($vorstandsID = 1) {
+        if (!is_numeric($vorstandsID)) {
+            return "Invalid Vorstand ID"; // Invalid input
+        }
+        // Get the details of the Vorstand members
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $sql = "SELECT * FROM vorstandsmitglieder AS vm
+                        INNER JOIN personen AS p ON vm.personID = p.personID
+                        INNER JOIN vorstandspositionen AS vp ON p.gender = vp.gender
+                            AND vm.positionsID = vp.positionsID 
+                        WHERE vm.vorstandID = ?
+                        ORDER BY vm.positionsID ASC";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("i", $vorstandsID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $vorstandDetails = array();
+        while ($row = $result->fetch_assoc()) {
+            if ($row['bildURL'] == "") {
+                $row['bildURL'] = "default.png"; // Set default image if no image is set
+            }
+            $vorstandDetails[] = $row;
+        }
+        destroyConnection($conn);
+        if (empty($vorstandDetails)) {
+            return "No Vorstand members found for the given ID";
+        } else {
+            return $vorstandDetails; // Return the details of the Vorstand members
         }
     }
 ?>

@@ -36,6 +36,7 @@
             <h4>Amtsinhaber</h4>
             <p>
                 <?php
+                    /*
                     $conn = connect();
                     if ($conn == false) {
                         throw new Exception("DB Connection failed");
@@ -48,6 +49,7 @@
                         INNER JOIN personen AS p ON vm.personID = p.personID
                         INNER JOIN vorstandspositionen AS vp ON p.gender = vp.gender
                             AND vm.positionsID = vp.positionsID 
+                        WHERE vm.vorstandID = 1
                         ORDER BY vm.positionsID ASC";
                         $result = $conn->query($sql);
                         $tableScript = "<table style='width: 100%'>";
@@ -79,7 +81,42 @@
                     
                     echo writeTable($conn);
                     $conn->close();
+                    */
+                    $details = getVorstandPeopleDetails();
+                    if ($details == false) {
+                        echo "<p>Es sind keine Vorstandsmitglieder eingetragen.</p>";
+                    } else {
+                        echo "<table style='width: 100%'>";
+                        $counter = 0;
+                        foreach ($details as $row) {
+                            if ($counter == 0) {
+                                echo "<tr>";
+                            }
+                            echo "<td>";
+                            echo "<img src='documents/pics/personPortraits/" . $row['bildURL'] . "' alt='" . $row['Vorname'] . " " . $row['Nachname'] . "' style='width: 10em; border-radius: 5%;' />";
+                            echo "<br>";
+                            echo "<a href='mailto:" . $row['email'] . "'>";
+                            echo $row['Vorname'] . " " . $row['Nachname'];
+                            echo "</a>";
+                            echo "<br>";
+                            echo $row['positionName'];
+                            echo "<br>";
+                            echo "<br>";
+                            echo "</td>";
+                            $counter++;
+                            if ($counter == 3) {
+                                echo "</tr>";
+                                $counter = 0;
+                            }
+                        }
+                        if ($counter != 0) {
+                            echo "</tr>"; // Close the last row if it wasn't closed
+                        }
+                        echo "</table>";
+                    }
+
                 ?>
+                
 
             </p>
         </div>

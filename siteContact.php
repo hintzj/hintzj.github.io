@@ -1,9 +1,9 @@
 <?php
     require_once 'functions.php';
     $var = $_SERVER['REQUEST_URI'];
-    $data = getContactImage($var);
+    $data = getContactDetails($var);
     if ($data == null) {
-        $data = getContactImage();
+        $data = getContactDetails();
     }
 
     $imagePath = $data[0];
