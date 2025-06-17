@@ -22,16 +22,17 @@
         $content = $_POST["content"];
         $date = $_POST["date"];
         $isJugendEvent = isset($_POST["isJugendEvent"]) ? 1 : 0;
+        $abteilungID = isset($_POST["abteilungID"]) ? $_POST["abteilungID"] : 0;
         $filesToUpload = $_FILES['fileToUpload'];
 
         // Validate inputs
-        if(empty($title) || empty($summary) || empty($content)){
+        if(empty($title) || empty($summary) || empty($content) || is_numeric($abteilungID) == false){
             $response = "Bitte fülle alle Pflichtfelder aus.";
             return;
         }
-
+        
         // Save article to database
-        $result = editArticle($articleId, $date, $title, $summary, $content, $isJugendEvent);
+        $result = editArticle($articleId, $date, $title, $summary, $content, $isJugendEvent, $abteilungID);
         if(!empty($filesToUpload['name'][0])){
             echo "<br>Hinzufügen von Bildern...";
             print_r($filesToUpload);
@@ -104,6 +105,24 @@
                                 <td><label>Jugendevent: </label></td>
                                 <td><input type="checkbox" name="isJugendEvent" id="isJugendEvent" <?php if($articleDetails["artikelType"]) {echo "checked";} ?>></td>
                             </tr>
+                            <tr>
+                                <td><label>Abteilung: </label></td>
+                                <td>
+                                    <select name="abteilungID" id="abteilungID">
+                                        <?php
+                                            $abteilungen = getAbteilungenWithWebpage();
+                                            if(empty($abteilungen)){
+                                                echo "<option value='0'>Keine Abteilung gefunden</option>";
+                                            }
+                                            $abteilungen = array_merge(array(array("abteilungID" => 0, "abteilungName" => "Allgemein")), $abteilungen);
+                                            foreach($abteilungen as $abteilung){
+                                                $selected = ($articleDetails["abteilungID"] == $abteilung["abteilungID"]) ? "selected" : "";
+                                                echo "<option value='" . $abteilung["abteilungID"] . "' " . $selected . ">" . $abteilung["abteilungName"] . "</option>";
+                                            }
+                                        ?>
+                                    </select>
+                                </td>
+                            </tr>   
                             <tr>
                                 <td><label>Bilder hinzufügen: </label></td>
                                 <td><input type="file" name="fileToUpload[]" id="fileToUpload" accept="image/jpg, image/jpeg" multiple></td>

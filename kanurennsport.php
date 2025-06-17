@@ -110,6 +110,24 @@
             <img src="https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.png?start=P14D&width=1200&height=400&enableSecondaryYAxis=true"
                 alt="Wasserstand" style="width: 100%; ">
         </div>
+        <?php
+            $news = getAbteilungsNews(2);
+            if (count($news) > 0) {
+                echo '<div class="text-field4">';
+                echo '<h4>News</h4>';
+                foreach ($news as $item) {
+                    echo "<ul>";
+                    echo "<div class='article'>";
+                    echo "<h4>" . $item['title'] . "</h4>";
+                    echo "<p>" . $item['summary'] . "</p>";
+                    echo "<input type='button' style='margin-left: 2em;' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $item['artikelID'] . "\"'>";
+                    echo "</div>";
+                    echo "</ul>";
+                    echo "<br>";
+                }
+                echo '</div>';
+            }
+        ?>
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>

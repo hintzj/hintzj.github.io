@@ -31,7 +31,7 @@
         </div>
         </div>
         <div class="text-field1">
-            <h2>Berichte</h2>
+            <h4>Berichte</h4>
             <?php
                 try {
                     $conn = connect("public");
@@ -49,7 +49,7 @@
                         echo "<div class='article'>";
                         echo "<h2>" . $article['title'] . "</h2>";
                         echo "<p>" . $article['summary'] . "</p>";
-                        echo "<input type='button' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $article['artikelID'] . "\"'>";
+                        echo "<input type='button' style='margin-left: 2em;' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $article['artikelID'] . "\"'>";
                         echo "</div>";
                         echo "</ul>";
                         echo "<br>";
@@ -62,24 +62,28 @@
             ?>
         </div>
         <div class="text-field2" >
-            <h2>Mitgliederinfo</h2>
-
+            <h4>Mitgliederinfo</h4>
+            <br>
             <object data="<?php echo getNewestMitgliederInfo(); ?>" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
                 <script>
                     hideButtons();
                 </script>
-                <p>Es sieht so aus, als ob dein Browser keine PDFs anzeigen kann. Kein Problem! Du kannst die Mitgliederinfos hier herunterladen.</p>
+                <p>
+                    Es sieht so aus, als ob dein Browser keine PDFs anzeigen kann. Kein Problem! Du kannst die Mitgliederinfos hier herunterladen.
+                
                 <?php
-                    $dir = "documents\mitgliedsinfos";
+                    $dir = "documents/mitgliedsinfos";
                     $files = scandir($dir);
                     //print_r($files);
                     foreach ($files as $file) {
                         if (strpos($file, ".pdf") !== false) {
-                            echo "<div style='text-align: center;'><a href='/documents/mitgliedsinfos/" . $file . "'>" . $file . "</a></div>";
+                            echo "<div style='text-align: center;'><a href='" . $dir . "/" . $file . "'>" . $file . "</a></div>";
                         }
                     }
                 ?>
+                </p>
             </object>
+
 
             <script>
                 var pdfViewer = document.getElementById('pdfViewer');
@@ -142,7 +146,7 @@
 
         </div>
         <div class="text-field3">
-            <h2>Alte Webseite</h2>
+            <h4>Alte Webseite</h4>
             <ul>
             <p>
                 Wie Sie schon gesehen haben ist die neue Webseite des WSVL online. Diese Webseite ist noch in der Testphase und wird immer wieder aktualisiert. Wenn Sie die alte Webseite einsehen wollen, können Sie das <a href="https://archiv.hin.tz">hier</a> tun.

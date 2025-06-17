@@ -7,16 +7,16 @@
         $text = $_POST["text"];
         $date = $_POST["date"];
         $isJugendEvent = isset($_POST["isJugendEvent"]) ? 1 : 0;
+        $abteilungID = isset($_POST["abteilung"]) ? $_POST["abteilung"] : 0;
         $filesToUpload = $_FILES["fileToUpload"];
         
         
         // Validate inputs
         if(empty($title) || empty($summary) || empty($text)){
             $response = "Bitte fülle alle Pflichtfelder aus.";
-            return;
         }
         // Save article to database
-        $result = newArticle($date, $title, $summary, $text, $isJugendEvent);
+        $result = newArticle($date, $title, $summary, $text, $isJugendEvent, $abteilungID);
         if(!empty($filesToUpload['name'][0])){
             //echo "<br>Hinzufügen von Bildern...";
             //print_r($filesToUpload);
@@ -25,8 +25,9 @@
         }
         //echo $result;
 
-        if($result == "success"){
+        if(is_numeric($result) && $result > 0){
             header("location: adminArticle.php");
+            exit;
         }else{
             $response = $result;
         }
@@ -65,6 +66,7 @@
         </div>
         <div class="text-field1">
             <h4>Artikel</h4>
+            <!--<?php if (!empty($response)) { echo '<div style="color:red;">' . htmlspecialchars($response) . '</div>'; } ?>-->
             <p>
                 <ul>
                     <form action="" method="post" enctype="multipart/form-data">
@@ -88,6 +90,26 @@
                             <tr>
                                 <td><label>Jugendevent: </label></td>
                                 <td><input type="checkbox" name="isJugendEvent" id="isJugendEvent"></td>
+                            </tr>
+                            <tr>
+                                <td><label>Abteilung: </label></td>
+                                <td>
+                                    <select name="abteilung" id="abteilung">
+                                        <?php
+                                            $abteilungen = getAbteilungenWithWebpage();
+                                            if($abteilungen == null){
+                                                echo "<option value='0'>Keine Abteilung gefunden</option>";
+                                                return;
+                                            }
+
+                                            echo "<option value='0'>Allgemein</option>";
+
+                                            foreach ($abteilungen as $abteilung) {
+                                                echo "<option value='" . $abteilung['abteilungID'] . "'>" . $abteilung['abteilungName'] . "</option>";
+                                            }
+                                        ?>
+                                    </select>
+                                </td>
                             </tr>
                             <tr>
                                 <td><label>Bilder: </label></td>

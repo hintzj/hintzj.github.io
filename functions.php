@@ -387,14 +387,14 @@
         } 
     }
 
-    function newArticle($date, $title, $summary, $text, $isJugendEvent = false){
-        if (checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false) {
+    function newArticle($date, $title, $summary, $text, $isJugendEvent = false, $abteilungID = 0){
+        if (checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false || !is_numeric($isJugendEvent) || !is_numeric($abteilungID)) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("INSERT INTO artikel(date, title, summary, text, artikelType) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("sssss", $date, $title, $summary, $text, $isJugendEvent);
+        $stmt = $conn->prepare("INSERT INTO artikel(date, title, summary, text, artikelType, abteilungID) VALUES (?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssi", $date, $title, $summary, $text, $isJugendEvent, $abteilungID);
         $stmt->execute();
         if($stmt->affected_rows != 1){
             return "Error creating account, please try again or contact an administrator";
@@ -409,14 +409,14 @@
         } 
     }
 
-    function editArticle($id, $date, $title, $summary, $text, $isJugendEvent){
-        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false) {
+    function editArticle($id, $date, $title, $summary, $text, $isJugendEvent, $abteilungID = 0){
+        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false || !is_numeric($isJugendEvent) || !is_numeric($abteilungID)) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("UPDATE artikel SET date = ?, title = ?, summary = ?, text = ?, artikelType = ? WHERE artikelID = ?");
-        $stmt->bind_param("sssssi", $date, $title, $summary, $text, $isJugendEvent, $id);
+        $stmt = $conn->prepare("UPDATE artikel SET date = ?, title = ?, summary = ?, text = ?, artikelType = ?, abteilungID = ? WHERE artikelID = ?");
+        $stmt->bind_param("ssssssi", $date, $title, $summary, $text, $isJugendEvent, $abteilungID, $id);
         //echo $stmt;
         $stmt->execute();
         if($stmt->affected_rows != 1){
@@ -1016,6 +1016,64 @@
             return "No Vorstand members found for the given ID";
         } else {
             return $vorstandDetails; // Return the details of the Vorstand members
+        }
+    }
+
+    function getAllMitgliederInfos() {
+        $path = "documents/mitgliedsinfos/";
+        if (!is_dir($path)) {
+            return "Directory does not exist"; // Directory not found
+        }
+        $files = scandir($path);
+        $returnFiles = array();
+        foreach ($files as $file) {
+            if ($file != "." && $file != "..") {
+                $returnFiles[] = $file; // Add file to the return array
+            }
+        }
+        return $returnFiles;
+    }
+
+    function getAbteilungsNews($abteilungsID) {
+        if (!is_numeric($abteilungsID)) {
+            return "Invalid Abteilungs ID"; // Invalid input
+        }
+        // Get the news for a specific Abteilung
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM artikel WHERE abteilungID = ? AND date >= CURRENT_DATE - INTERVAL 30 DAY ORDER BY date DESC");
+        $stmt->bind_param("i", $abteilungsID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $news = array();
+        while ($row = $result->fetch_assoc()) {
+            $news[] = $row;
+        }
+        return $news;
+    }
+
+    function getAbteilungenWithWebpage() {
+        // Get all Abteilungen that have a webpage
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT abteilungID, abteilungName FROM abteilungen WHERE abteilungsPage IS NOT NULL AND abteilungsPage != ''");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $abteilungen = array();
+        while ($row = $result->fetch_assoc()) {
+            $abteilungen[] = $row;
+        }
+        destroyConnection($conn);
+        if (empty($abteilungen)) {
+            return null; // No Abteilungen with webpages
+        } else {
+            return $abteilungen; // Return the list of Abteilungen with webpages
         }
     }
 ?>
