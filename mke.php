@@ -46,6 +46,24 @@
                 
             </p>
         </div>
+        <?php
+            $news = getAbteilungsNews(15);
+            if (count($news) > 0) {
+                echo '<div class="text-field2">';
+                echo '<h4>News</h4>';
+                foreach ($news as $item) {
+                    echo "<ul>";
+                    echo "<div class='article'>";
+                    echo "<h4>" . $item['title'] . "</h4>";
+                    echo "<p>" . $item['summary'] . "</p>";
+                    echo "<input type='button' style='margin-left: 2em;' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $item['artikelID'] . "\"'>";
+                    echo "</div>";
+                    echo "</ul>";
+                    echo "<br>";
+                }
+                echo '</div>';
+            }
+        ?>
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
