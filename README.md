@@ -22,4 +22,4 @@ Nützliche Links:
 - [x] Admins Sponsoren bearbeiten lassen
 - [ ] Mitglieder Infos Pfad wechseln
 
-Rückmeldung zur Webseite: https://forms.office.com/e/Dg0RKR74h8
+Rückmeldung zur Webseite: https://cloud.hin.tz/index.php/apps/forms/s/tKMfYaT25R9crAkSYReAf4nw
