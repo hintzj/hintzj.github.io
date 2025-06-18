@@ -1,0 +1,2 @@
+2025-06-18 15:59:30 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+

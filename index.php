@@ -147,10 +147,13 @@
                 </p>
             </div>
             <div class="text-field4" style="background-color:rgba(255, 124, 124, 0.74);">
-                <h4>Übungsleiter gesucht!</h4>
+                <h4>Fusion der Volksbank mit der Mainzer Volksbank</h4>
                     <ul>
-                        Der WSV sucht eine Übungsleiterin oder einen Übungsleiter für Bodyforming, Kurszeit Donnerstags ab 20.00 Uhr.
-                        Interessenten melden sich bitte <a href="mailto:info@wsv-lampertheim.de">hier</a>.
+                        Durch die Fusion der Volksbank mit der Mainzer Volksbank gibt es neue Kontonummern, da die BLZ von Mainz übernommen wird.
+                        <br>
+                        Bitte teilt uns zeitnah eure neue Kontonummer mit, falls ihr betroffen seid.
+                        <br>
+                        Schreibt einfach eine kurze Mail an: <a href="mailto:jsoballa@aol.com">jsoballa@aol.com</a>
                     </ul>
             </div>
         </main>
