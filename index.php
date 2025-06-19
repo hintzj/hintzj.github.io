@@ -146,15 +146,25 @@
                 </ul>
                 </p>
             </div>
+
             <div class="text-field4" style="background-color:rgba(255, 124, 124, 0.74);">
                 <h4>Fusion der Volksbank mit der Mainzer Volksbank</h4>
-                    <ul>
-                        Durch die Fusion der Volksbank mit der Mainzer Volksbank gibt es neue Kontonummern, da die BLZ von Mainz übernommen wird.
-                        <br>
-                        Bitte teilt uns zeitnah eure neue Kontonummer mit, falls ihr betroffen seid.
-                        <br>
-                        Schreibt einfach eine kurze Mail an: <a href="mailto:jsoballa@aol.com">jsoballa@aol.com</a>
-                    </ul>
+                <table>
+                    <tr>
+                        <td style="width: 80%;">
+                            <ul style="text-align: left;">
+                                Durch die Fusion der Volksbank mit der Mainzer Volksbank gibt es neue Kontonummern, da die BLZ von Mainz übernommen wird.
+                                <br>
+                                Bitte teilt uns zeitnah eure neue Kontonummer mit, falls ihr betroffen seid.
+                                <br>
+                                Schreibt einfach eine kurze Mail an: <a href="mailto:jsoballa@aol.com">jsoballa@aol.com</a>
+                            </ul>
+                        </td>
+                        <td style="width: 20%;">
+                            <img src="https://logosandtypes.com/wp-content/uploads/2020/08/volksbanken-raiffeisenbanken.png" alt="Logo der Volksbank" style="width: 100%;">
+                        </td>
+                    </tr>
+                </table>
             </div>
         </main>
         <?php include "footer.php"; ?>
