@@ -1076,4 +1076,25 @@
             return $abteilungen; // Return the list of Abteilungen with webpages
         }
     }
+
+    function getMitgliederverwaltungPerson() {
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM personen INNER JOIN vorstandsmitglieder ON personen.personID = vorstandsmitglieder.personID WHERE vorstandsmitglieder.vorstandID = 1 AND vorstandsmitglieder.positionsID = 5");
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $person = $result->fetch_assoc();
+        destroyConnection($conn);
+        if ($person == NULL) {
+            return "No person found for the given criteria"; // No person found
+        } else {
+            if ($person['bildURL'] == "") {
+                $person['bildURL'] = "default.png"; // Set default image if no image is set
+            }
+            return $person; // Return the person's details
+        }
+    }
 ?>

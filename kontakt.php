@@ -44,13 +44,12 @@
                     Vorsitzender: Rainer Vetter
                     <ul>Telefon: <a href="tel:+490620612483">06206/12483</a></ul>
                     <ul>E-Mail: <a href="mailto:kanupolo@wsv-lampertheim.de">kanupolo@wsv-lampertheim.de</a></ul>
-                    <br>
                 </ul>
             </p>
         </div>
         <div class="text-field2" id="abteilungsleiter">
-        <table style="margin-left:auto; margin-right:auto; width: 100%;">
-            <h4>Abteilungsleiter</h4>
+            <table style="margin-left:auto; margin-right:auto; width: 100%;">
+                <h4>Abteilungsleiter</h4>
                     <tr>
                         <th>Abteilung</th>
                         <th>Name</th>
@@ -66,9 +65,36 @@
                             echo "</tr>";
                         }
                     ?>
-                </table>
+            </table>
         </div>
         <div class="text-field3">
+            <h4>Mitgliedschaft</h4>
+            <p>
+                <ul>
+                    Hier findest du alle wichtigen Dokumente zur Mitgliedschaft im WSV Lampertheim:
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <li><a href="documents/aufnahmeantrag.pdf" target="_blank">Aufnahmeantrag</a></li>
+                    <li><a href="documents/vereinssatzung.pdf" target="_blank">Vereinssatzung</a></li>
+                    <li><a href="documents/dataenschutz.pdf" target="_blank">Datenschutzordnung</a></li>
+                    <li><a href="documents/zustimmungserklaerung.pdf" target="_blank">Zustimmungserklärung</a></li>
+                </ul>
+            </p>
+            <p>
+                <ul>
+                    <?php
+                        $person = getMitgliederverwaltungPerson();
+                        if ($person) {
+                            echo "Bei Fragen zur Mitgliedschaft kannst du dich gerne an <a href='mailto:" . htmlspecialchars($person['email']) . "'>" . htmlspecialchars($person['Vorname']) . " " . htmlspecialchars($person['Nachname']) . "</a> wenden.";
+                        } else {
+                            echo "Bei Fragen zur Mitgliedschaft kannst du dich gerne an den Vorstand wenden.";
+                        }
+                    ?>
+                </ul>
+        </div>
+        <div class="text-field4">
             <h4>Bankverbindung</h4>
             <p>
             <ul>Bank: Volksbank Darmstadt - Südhessen eG</ul>
