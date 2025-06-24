@@ -26,7 +26,7 @@
             "g-recaptcha-response" => $_POST['g-recaptcha-response']
         );
 
-        $response = newMember($answers);
+        //$response = newMember($answers);
 
         echo "<script>console.log('{$response}');</script>";
     }
