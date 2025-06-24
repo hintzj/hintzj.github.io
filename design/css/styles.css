@@ -155,11 +155,11 @@
 .adminTable {
     width: 100%;
     border-collapse: collapse;
-    margin-top: 20px;
+    margin-top: 2em;
 }
 .adminTable th,
 .adminTable td {
-    padding: 8px;
+    padding: 1em;
     text-align: left;
     border-radius: 2px;
     text-align: center;

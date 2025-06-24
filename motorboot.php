@@ -39,7 +39,7 @@
                 </ul>
                 <br>
                 <img src="documents/pics/motorbootLage.jpg" alt="Lage des Motorbootstegs"
-                    style="width: 100%; height: auto;">
+                    style="width: 97%; height: auto; margin-left: 1.5em;">
                 
             </p>
         </div>

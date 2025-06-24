@@ -12,7 +12,7 @@
     //print_r($imagePaths);
 ?>
 
-<div class="text-field4">
+<div class="img-field">
     <h4>Impressionen</h4>
     <?php
         try {

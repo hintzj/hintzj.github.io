@@ -42,6 +42,9 @@
 .text-field5 {
     background-color: hsl(207, 27%, 40%);
 }
+.img-field {
+    background-color: hsl(207, 27%, 50%);
+}
 .endOfPage{
     background-color: hsl(207, 27%, 40%);
 }
