@@ -122,6 +122,12 @@
                     Sicherheitslücken aufweisen kann. Ein lückenloser Schutz der Daten vor dem Zugriff durch Dritte ist
                     nicht möglich.</p>
             </ul>
+            <ul>
+                <a href="documents/datenschutz.pdf" target="_blank">Datenschutzordnung</a>
+            </ul>
+            <ul>
+                <a href="documents/zustimmungserklaerung.pdf" target="_blank">Zustimmungserklärung</a>
+            </ul>
             </p>
 
 
