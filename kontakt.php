@@ -78,7 +78,7 @@
                 <ul>
                     <li><a href="documents/aufnahmeantrag.pdf" target="_blank">Aufnahmeantrag</a></li>
                     <li><a href="documents/vereinssatzung.pdf" target="_blank">Vereinssatzung</a></li>
-                    <li><a href="documents/dataenschutz.pdf" target="_blank">Datenschutzordnung</a></li>
+                    <li><a href="documents/datenschutz.pdf" target="_blank">Datenschutzordnung</a></li>
                     <li><a href="documents/zustimmungserklaerung.pdf" target="_blank">Zustimmungserklärung</a></li>
                 </ul>
             </p>
