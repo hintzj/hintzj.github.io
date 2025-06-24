@@ -58,7 +58,7 @@
                         return;
                     }
                     // Pagination logic
-                    $articlesPerPage = 10; // Number of articles per page
+                    $articlesPerPage = 6; // Number of articles per page
                     $totalArticles = count($articles);
                     $totalPages = ceil($totalArticles / $articlesPerPage);
                     $startIndex = ($page - 1) * $articlesPerPage;
