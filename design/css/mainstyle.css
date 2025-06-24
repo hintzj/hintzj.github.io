@@ -146,38 +146,39 @@ body header{
 
 .cookie-consent{
     position: fixed;
-    bottom: 8px;
-    left: 20px;
-    width: 20%;
-    min-width: 250px;
-    padding-top: 7px;
-    height: 90px;
+    bottom: 1em;
+    left: 2em;
+    right: 2em;
+    min-width: 10em;
+    padding-top: 1em;
+    padding-bottom: 5em;
+    height: 5em;
     color: #ffffff;
     text-align: center;
 
-    line-height: 20px;
-    padding-left: 10px;
-    padding-right: 10px;
+    line-height: 1em;
+    padding-left: 1em;
+    padding-right: 1em;
     font-family: 'Arial', sans-serif;
-    font-size: 10px;
+    font-size: 1em;
     background: #292929;
     z-index: 120;
-    border-radius: 10px;
+    border-radius: 1em;
     }
 
 .cookie-consent .allow-button{
-    height: 20px;
-    width: 104px;
+    height: 2em;
+    width: 20em;
     color: #000000;
-    font-size: 10px;
+    font-size: 1em;
     font-family: 'Arial', sans-serif;
-    line-height: 10px;
-    border-radius: 5px;
+    line-height: 1em;
+    border-radius: 0.5em;
     background-color: #00ca00;
 }
 
 .cookie-consent .allow-button:hover{
-    background-color: #00ca00;
+    background-color: #009200;
     color: #ffffff;
     cursor: pointer;
 }

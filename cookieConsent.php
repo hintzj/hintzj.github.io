@@ -6,8 +6,9 @@
         </span>
         <br>
         <div class='mt-2 d-flex align-items-center justify-content-center g-2'>
-        <button class='allow-button mr-1'>Alles klar!</button>
-        <button class='allow-button'>Nur notwendige!</button>
+        <br>
+        <button class='allow-button accept mr-1'>Alles klar!</button>
+        <button class='allow-button necessary'>Nur notwendige!</button>
         </div>
 
         <script>
@@ -27,14 +28,14 @@
                 }
             }
             //on click of allow button set local storage to true and hide the cookie consent
-            document.querySelector('.allow-button').addEventListener('click', function(){
+            document.querySelector('.accept').addEventListener('click', function(){
                 console.log('cookies allowed');
                 localStorage.setItem('cookieconsent', 'true');
                 document.querySelector('.cookie-consent').style.display = 'none';
             });
 
-            //on click of cancel button set local storage to false and hide the cookie consent
-            document.querySelector('.allow-button:nth-child(2)').addEventListener('click', function(){
+            //on click of necessary button set local storage to false and hide the cookie consent
+            document.querySelector('.necessary').addEventListener('click', function(){
                 console.log('cookies not allowed');
                 localStorage.setItem('cookieconsent', 'false');
                 document.querySelector('.cookie-consent').style.display = 'none';
