@@ -30,9 +30,9 @@
                 <li class='dropdown'>
                     <a href='#' class='dropdown-toggle'>Unser Verein</a>
                     <ul class='dropdown-menu'>
+                        <li><a href='termine.php'>Termine</a></li>
                         <li><a href='news.php'>News</a></li>
                         <li><a href='archiv.php'>Archiv</a></li>
-                        <li><a href='termine.php'>Termine</a></li>
                         <li><a href='vorstand.php'>Vorstand</a></li>
                         <li><a href='sponsors.php'>Sponsoren</a></li>
                         <li><a href='foerderverein.php'>Förderverein</a></li>
