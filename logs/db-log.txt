@@ -1,0 +1,6 @@
+2025-06-26 16:36:36 | You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near 'ORDER BY date DESC' at line 1 | :
+
+2025-06-26 16:37:17 | You have an error in your SQL syntax; check the manual that corresponds to your MariaDB server version for the right syntax to use near '= 1) LIMIT 6 ORDER BY date DESC' at line 1 | :
+
+2025-06-26 16:37:36 | Page number out of range | :
+

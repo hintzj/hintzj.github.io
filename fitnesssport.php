@@ -46,48 +46,57 @@
         <div class="text-field2">
             <h4>Unsere Angebote</h4>
             <ul>
-                <li><h3>Bodyforming</h3></li>
-                <ul>
-                    Seit über 15 Jahren besteht im Bereich Fitness das Kursangebot Aerobic/Bodyforming. Der Kurs richtet
-                    sich an alle Frauen, die etwas für bzw. gegen ihre Problemzonen machen wollen, oder einfach nur Spaß
-                    an der Bewegung mit Musik haben. Der Stundenschwerpunkt liegt auf einem ausgewogenen Powertraining
-                    mit Muskelkräftigung und Fatburning.
-                </ul>
-                <li><h3>AH-Guppe</h3></li>
-                <ul>
-                    Die größte Breitensportabteilung ist die AH. Im Winterhalbjahr wird jeden Freitag ausgiebig
-                    Gymnastik gemacht. Das Angebot ist sehr beliebt, da es für alle Altersgruppen geeignet ist. Nach der
-                    Gymnastik wird noch Hallenhockey oder Fußball gespielt. Den Abschluß dieses Freitags bildet der
-                    gesellige Abend in der Vereinsgaststätte.Montags und Mittwochs finden noch Saunaabende statt.Im
-                    Sommerhalbjahr kann man sich, je nach Geschmack, den Paddlern anschließen, die den heimischen
-                    Altrhein befahren oder den Radfahrern, die Touren rund um Lampertheim machen. Wanderungen und
-                    Kameradschaftsabende runden das Jahresprogramm ab. Die sangesfreudige Gruppe ist auch bei der WSV-
-                    Faßnacht aktiv. Sie sind als "Fidele Paddler" ein fester Bestandteil der Prunksitzungen.
-                </ul>
-                <li><h3>Rücken-Fitness</h3></li>
-                <ul>
-                    Bei uns sind die Kurse geprüft.
-
-                    Wer sich überzeugen will, kommt mittwochs in die WSV Sporthalle:
-
-                    09:00 bis 10:15 Uhr unter der Leitung von Hans Schlatter, Tel. 06206/57613
-
-                    Man barucht Sportkleidung und ein großes Handtuch; Matten, Redondo-Bälle, Pezzibälle, Kleinhanteln
-                    und Therabänder sind vorhanden. Egal welches Alter, die Übungen können so variiert werden, dass vom
-                    Beginner bis zum Fortgeschrittenen etwas dabei ist.
-
-                    Auch für Nichtmitglieder.
-                </ul>
-                <li><h3>Kanuwandersport</h3></li>
-                <ul>
-                    Donnerstags um 18:00 Uhr treffen sich alle, die auf dem Altrhein eine gemütliche Runde drehen
-                    wollen. Ab dem 26. April geht es los. Am besten schon paddelfertig anrücken, wenn wir dann mit
-                    unserer Tour fertig sind, haben wir freie Umkleiden und Duschen zur Verfügung.
-
-                    Gepaddelt wird in sieben Einerkajaks und in sieben Zweierkajaks, die uns zur Verfügung stehen.
-                    Natürlich mit Paddel, Schwimmweste und Spritzdecke. Die Boote sind für Anfänger und Profis
-                    gleichermaßen tauglich. Mit besseren Paddelkenntnissen werden wir auch größere Touren angehen.
-                </ul>
+                <li>
+                    <div class="article"> 
+                        <h3>Bodyforming</h3>
+                        <p>
+                            Seit über 15 Jahren besteht im Bereich Fitness das Kursangebot Aerobic/Bodyforming. Der Kurs richtet
+                            sich an alle Frauen, die etwas für bzw. gegen ihre Problemzonen machen wollen, oder einfach nur Spaß
+                            an der Bewegung mit Musik haben. Der Stundenschwerpunkt liegt auf einem ausgewogenen Powertraining
+                            mit Muskelkräftigung und Fatburning.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="article">
+                        <h3>AH-Gruppe</h3>
+                        <p>
+                            Die größte Breitensportabteilung ist die AH. Im Winterhalbjahr wird jeden Freitag ausgiebig
+                            Gymnastik gemacht. Das Angebot ist sehr beliebt, da es für alle Altersgruppen geeignet ist. Nach der
+                            Gymnastik wird noch Hallenhockey oder Fußball gespielt. Den Abschluss dieses Freitags bildet der
+                            gesellige Abend in der Vereinsgaststätte. Montags und Mittwochs finden noch Saunaabende statt. Im
+                            Sommerhalbjahr kann man sich, je nach Geschmack, den Paddlern anschließen, die den heimischen
+                            Altrhein befahren oder den Radfahrern, die Touren rund um Lampertheim machen. Wanderungen und
+                            Kameradschaftsabende runden das Jahresprogramm ab. Die sangesfreudige Gruppe ist auch bei der WSV-
+                            Faßnacht aktiv. Sie sind als "Fidele Paddler" ein fester Bestandteil der Prunksitzungen.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="article">
+                        <h3>Rücken-Fitness</h3>
+                        <p>
+                            Bei uns sind die Kurse geprüft. Wer sich überzeugen will, kommt mittwochs in die WSV Sporthalle:
+                            09:00 bis 10:15 Uhr unter der Leitung von Hans Schlatter, Tel. 06206/57613.
+                            Man braucht Sportkleidung und ein großes Handtuch; Matten, Redondo-Bälle, Pezzibälle, Kleinhanteln
+                            und Therabänder sind vorhanden. Egal welches Alter, die Übungen können so variiert werden, dass vom
+                            Beginner bis zum Fortgeschrittenen etwas dabei ist. Auch für Nichtmitglieder.
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="article">
+                        <h3>Kanuwandersport</h3>
+                        <p>
+                            Donnerstags um 18:00 Uhr treffen sich alle, die auf dem Altrhein eine gemütliche Runde drehen
+                            wollen. Ab dem 26. April geht es los. Am besten schon paddelfertig anrücken, wenn wir dann mit
+                            unserer Tour fertig sind, haben wir freie Umkleiden und Duschen zur Verfügung.
+                            Gepaddelt wird in sieben Einerkajaks und in sieben Zweierkajaks, die uns zur Verfügung stehen.
+                            Natürlich mit Paddel, Schwimmweste und Spritzdecke. Die Boote sind für Anfänger und Profis
+                            gleichermaßen tauglich. Mit besseren Paddelkenntnissen werden wir auch größere Touren angehen.
+                        </p>
+                    </div>
+                </li>
             </ul>
             
         </div>

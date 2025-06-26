@@ -92,6 +92,10 @@
                             if ($counter == 0) {
                                 echo "<tr>";
                             }
+                            if ($row == end($details) && $counter != 2) {
+                                echo "<td></td>"; // Add an empty cell if the last row is not complete
+                            }
+
                             echo "<td>";
                             echo "<img src='documents/pics/personPortraits/" . $row['bildURL'] . "' alt='" . $row['Vorname'] . " " . $row['Nachname'] . "' style='width: 10em; border-radius: 5%;' />";
                             echo "<br>";
