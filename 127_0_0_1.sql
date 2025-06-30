@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jun 24, 2025 at 09:27 AM
+-- Generation Time: Jun 30, 2025 at 10:35 PM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -235,6 +235,7 @@ INSERT INTO `contactperson` (`site`, `personID`) VALUES
 ('newArticle', 13),
 ('jugendnews', 14),
 ('jugendvorstand', 14),
+('motorboot', 15),
 ('foerderverein', 28),
 ('kinderturnen', 30);
 
@@ -341,7 +342,8 @@ INSERT INTO `sponsors` (`sponsorID`, `sponsorName`, `sponsorUrl`, `sponsorLogoFi
 (43, 'Gartenklause Rainer Hilsheimer', NULL, NULL),
 (44, 'Steuerberaterin Frau Inge Weyrich-Konopka', NULL, NULL),
 (45, 'Klaus Schlappner', NULL, NULL),
-(46, 'Marzahn Trockenbau', 'https://www.instagram.com/marzahn92/', 'marzahn.png');
+(46, 'Marzahn Trockenbau', 'https://www.instagram.com/marzahn92/', 'marzahn.png'),
+(54, 'Rotary Club Lampertheim', 'https://lampertheim.rotary.de/', 'RotaryClub.jpg');
 
 -- --------------------------------------------------------
 
@@ -556,7 +558,7 @@ ALTER TABLE `personen`
 -- AUTO_INCREMENT for table `sponsors`
 --
 ALTER TABLE `sponsors`
-  MODIFY `sponsorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=54;
+  MODIFY `sponsorID` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=55;
 
 --
 -- AUTO_INCREMENT for table `termine`
