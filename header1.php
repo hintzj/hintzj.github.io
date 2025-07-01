@@ -47,7 +47,7 @@
                     </ul>
                 </li>
                 <li><a href='kontakt.php'>Kontakt</a></li>
-                <li><a href='https://cloud.hin.tz'>Vereinscloud</a></li>
+                <li><a href='https://cloud.wsv-lampertheim.de'>Vereinscloud</a></li>
             </ul>
 
             <script src='script.js'></script>

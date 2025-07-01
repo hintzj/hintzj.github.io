@@ -54,9 +54,11 @@
                 </ul>
                 <p>Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV:</p>
                 <ul>
-                <p>WSV Lampertheim e.V.</p>
-                <p>Vertreten durch:</p>
-                <p>Webmaster: <a href="mailto:hintz.jonathan@gmail.com">Jonathan Hintz</a></p>
+                <p>Webmaster des WSV Lampertheim e.V.</p>
+                <p>Jonathan Hintz</p>
+                <p><a href="mailto:hintz.jonathan@gmail.com">hintz.jonathan@gmail.com</a></p>
+                <p>Oberstraße 19, 64653 Lorsch</p>
+                
                 </ul>
             </ul>
             </p>

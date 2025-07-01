@@ -212,7 +212,7 @@
             <h4>Alte Webseite</h4>
             <ul>
             <p>
-                Wie Sie schon gesehen haben ist die neue Webseite des WSVL online. Diese Webseite ist noch in der Testphase und wird immer wieder aktualisiert. Wenn Sie die alte Webseite einsehen wollen, können Sie das <a href="https://archiv.hin.tz">hier</a> tun.
+                Wie Sie schon gesehen haben ist die neue Webseite des WSVL online. Diese Webseite ist noch in der Testphase und wird immer wieder aktualisiert. Wenn Sie die alte Webseite einsehen wollen, können Sie das <a href="https://archiv.wsv-lampertheim.de">hier</a> tun.
             </p>
             </ul>
         </div>
