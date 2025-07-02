@@ -20,6 +20,7 @@ Nützliche Links:
 - [ ] Schriftgröße auf Mobileseite ändern
 - [ ] Menü auf Mobile anpassen
 - [x] Admins Sponsoren bearbeiten lassen
-- [ ] Mitglieder Infos Pfad wechseln
+- [ ] Mitglieder Infos Pfad wechseln (!)
+- [x] Cloud Domain ändern
 
 Rückmeldung zur Webseite: https://cloud.hin.tz/index.php/apps/forms/s/tKMfYaT25R9crAkSYReAf4nw
