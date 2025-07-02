@@ -164,6 +164,8 @@
                     echo "];";
                 ?>
 
+                console.log(pdfFiles);
+
                 function nextPdf() {
                     console.log(pdfFiles);
                     var currentPdf = pdfViewer.getAttribute('data');
