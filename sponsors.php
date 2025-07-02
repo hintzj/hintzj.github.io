@@ -76,29 +76,32 @@
 
                     echo sponsorTable($sponsorsLogos);
 
-                    echo "<br>";
-                    echo "<br>";
+                    if (count($sponsorsNoLogos) > 0) {
+                        echo "<br>";
+                        echo "<br>";
 
-                    echo "<div class='without'>";
-                    echo "Außerdem bedanken wir uns bei unseren kleineren Sponsoren:";
-                    echo "<br>";
-                    echo "<ul>";
-                    //list all the sponsors without a logo
-                    foreach ($sponsorsNoLogos as $sponsor) {
-                        //echo "<div class='sponsor'>";
-                        echo "<li>";
-                        if ($sponsor['sponsorUrl'] == "") {
-                            echo $sponsor['sponsorName'];
-                        } else {
-                            echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'>" . $sponsor['sponsorName'] . "</a>";
-                        }
+                        echo "<div class='without'>";
+                        echo "Außerdem bedanken wir uns bei unseren kleineren Sponsoren:";
 
                         echo "<br>";
-                        echo "</li>";
-                        //echo "</div>";
+                        echo "<ul>";
+                        //list all the sponsors without a logo
+                        foreach ($sponsorsNoLogos as $sponsor) {
+                            //echo "<div class='sponsor'>";
+                            echo "<li>";
+                            if ($sponsor['sponsorUrl'] == "") {
+                                echo $sponsor['sponsorName'];
+                            } else {
+                                echo "<a href='" . $sponsor['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'>" . $sponsor['sponsorName'] . "</a>";
+                            }
+
+                            echo "<br>";
+                            echo "</li>";
+                            //echo "</div>";
+                        }
+                        echo "</ul>";
+                        echo "</div>";
                     }
-                    echo "</ul>";
-                    echo "</div>";
                 } catch (Exception $e) {
                     $error = $e->getMessage();
                     echo "Error: " . $error;
