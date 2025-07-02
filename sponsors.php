@@ -63,7 +63,7 @@
                             $tableScript .= "<a href='" . $row['sponsorUrl'] . "' target='_blank' rel='noopener noreferrer'>";
                             $tableScript .= "<img src='documents/pics/sponsorLogos/" . $row['sponsorLogoFile'] . "' alt='" . $row['sponsorName'] . "' style='max-width: 100%; height: auto;'>";
                             $tableScript .= "</a>";
-                            $tableScript .= "<td>";
+                            $tableScript .= "</td>";
                             $counter++;
                             if ($counter == 3) {
                                 $tableScript .= "</tr>";
