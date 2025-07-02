@@ -6,3 +6,23 @@
 
 2025-07-01 09:33:02 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
 
+2025-07-01 09:43:06 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 12:25:32 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 17:10:24 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 17:11:39 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 17:13:21 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 17:14:35 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 17:14:48 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 18:06:30 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-01 18:58:59 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-02 08:20:11 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+

@@ -142,7 +142,9 @@
                     <br>
                     <b>Yoga:</b> Mittwochs 18.30 - 20.00 Uhr
                     <br>
-                    <b>Boule:</b> Freitags 15.00 - 17.00 Uhr
+                    <b>Bodyforming:</b> Donnerstags 19.30 - 20.30 Uhr
+                    <br>
+                    <b>Boule:</b> Donnerstags 15.00 - 17.00 Uhr
                 </ul>
                 </p>
             </div>
