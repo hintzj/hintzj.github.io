@@ -72,7 +72,7 @@
                 </li>
                 <li>
                     <div class="article">
-                        <h3>Nachwuchsrekrutierung:</h3>
+                        <h3>Nachwuchsarbeit:</h3>
                         <p>
                             Eltern bringen in der heutigen Zeit, ihre Kinder immer früher in die Sportvereine. Wenn Kanuvereine
                             Kinder erst in ihre Trainingsgruppen aufnehmen, wenn diese schwimmen können, bekommen sie dadurch meist
@@ -84,7 +84,7 @@
                             Tendenz steigend und auch im Schüler B Bereich trägt unser Konzept Früchte, Im Jahr 1998 konnten wir 25
                             Schüler B auf den Regatten melden. Der Zeitaufwand, einmal die Woche eine Übungsstunde mit 3-6 jährigen
                             abzuhalten, ist relativ gering. Es ist also leichter für die Vereine, für eine Kindergruppe einen
-                            Übungsleiter zufinden, als eine Kanurennsporttrainer.
+                            Übungsleiter zufinden, als einen Kanurennsporttrainer.
                         </p>
                     </div>
                 </li>
