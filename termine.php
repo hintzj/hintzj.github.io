@@ -68,7 +68,7 @@
             <h4>Terminkalender</h4>
             <br>
             <div style="text-align: center;">
-            <iframe width="90%" height="1200" src="https://cloud.hin.tz/index.php/apps/calendar/embed/E4WRd829yYyZdLSf" style="border: none;"></iframe>
+            <iframe width="90%" height="1200" src="hhttps://cloud.wsv-lampertheim.de/index.php/apps/calendar/p/E4WRd829yYyZdLSf" style="border: none;"></iframe>
             </div>
             <br>
         </div>
