@@ -61,12 +61,10 @@
                     <div class="article"> 
                         <h3>Grundlage:</h3>
                         <p>
-                            Als Grundlage unseres Vereinskonzeptes diente die Rahmentrainingskonzeption Kanurennsport des Deutschen
-                            Kanuverbandes vom Oktober 1997. Das WSV Leistunssportkonzept macht diese Rahmenkonzeption des DKV in
-                            Trainingsinhalte und Trainingsumfänge für "normale Vereine" umsetzbar. Unter "normalen Vereinen"
-                            verstehen wir Vereine ohne Sportinternat oder eine Anbindung an eine sportbetonte Schule. Das
-                            Hauptproblem, das es dabei zu meistern galt, war Möglichkeiten zu finden, die großen Trainingsumfänge ab
-                            der Jugendklasse in einem Verein umsetzen zu können.
+                            Unsere Vereinsarbeit basiert auf der neuen Rahmentrainingskonzeption Kanurennsport des Deutschen Kanuverbandes von 2024.
+                            Das WSV-Leistungssportkonzept setzt diese Konzepte so um, dass sie auch für "normale Vereine" ohne Sportinternat oder spezielle Sportschulen praktikabel sind.
+                            Die größte Herausforderung besteht darin, die umfangreichen Trainingsanforderungen ab der Jugendklasse im Vereinsalltag umzusetzen.
+                            Unser Konzept bietet dafür konkrete Lösungen und passt die Trainingsinhalte und -umfänge an die Möglichkeiten unseres Vereins an.
                         </p>
                     </div>
                 </li>
