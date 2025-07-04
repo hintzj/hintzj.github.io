@@ -28,3 +28,7 @@
 
 2025-07-02 08:53:54 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
 
+2025-07-02 12:10:42 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
+2025-07-02 12:11:50 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\WSV_Webpage\header1.php:17
+
