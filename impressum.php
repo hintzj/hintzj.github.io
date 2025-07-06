@@ -56,7 +56,7 @@
                 <ul>
                 <p>Webmaster des WSV Lampertheim e.V.</p>
                 <p>Jonathan Hintz</p>
-                <p><a href="mailto:hintz.jonathan@gmail.com">hintz.jonathan@gmail.com</a></p>
+                <p><a href="mailto:webmaster@wsv-lampertheim.de">webmaster@wsv-lampertheim.de</a></p>
                 <p>Oberstraße 19, 64653 Lorsch</p>
                 
                 </ul>

@@ -159,7 +159,7 @@
                                 <br>
                                 Bitte teilt uns zeitnah eure neue Kontonummer mit, falls ihr betroffen seid.
                                 <br>
-                                Schreibt einfach eine kurze Mail an: <a href="mailto:jsoballa@aol.com">jsoballa@aol.com</a>
+                                Schreibt einfach eine kurze Mail an: <a href="mailto:mitgliederverwaltung@wsv-lampertheim.de">mitgliederverwaltung@wsv-lampertheim.de</a>
                             </ul>
                         </td>
                         <td style="width: 20%;">
