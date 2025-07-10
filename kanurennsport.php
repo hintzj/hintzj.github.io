@@ -31,9 +31,9 @@
             <h4>Trainingszeiten</h4>
             <p>
             <ul>
-                <li>Montag: 18:00 - 20:00 Uhr</li>
-                <li>Mittwoch: 18:00 - 20:00 Uhr</li>
-                <li>Freitag: 18:00 - 20:00 Uhr</li>
+                <li>Montag: 16:00 - 18:00 Uhr</li>
+                <li>Mittwoch: 16:00 - 18:00 Uhr</li>
+                <li>Freitag: 16:00 - 18:00 Uhr</li>
             </ul>
             </p>
         </div>
