@@ -22,5 +22,7 @@ Nützliche Links:
 - [x] Admins Sponsoren bearbeiten lassen
 - [ ] Mitglieder Infos Pfad wechseln (!)
 - [x] Cloud Domain ändern
+- [ ] Jugend Artikel nicht nur alte, auch zukünftige
+- [ ] Filter auf Artikel-Seite
 
 Rückmeldung zur Webseite: https://cloud.hin.tz/index.php/apps/forms/s/tKMfYaT25R9crAkSYReAf4nw
