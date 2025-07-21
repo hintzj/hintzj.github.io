@@ -27,7 +27,7 @@
                         <p>
                             Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und
                             Kanupolo.
-                            <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit ist uns wichtig.
+                            <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit sind uns wichtig.
                             <br>Die Kanuakademie ist teil unserer Philosophie der Vereinbarung von Sport und Schule
                             <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
                             <br>

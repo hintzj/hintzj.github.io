@@ -55,9 +55,10 @@
                     <br>
                     Zuschüsse für den Vereinsbus und das Motorboot für die Trainer
                     <br>
-                    Zuschüsse für den Ankaufg von Paddelergometern
+                    Zuschüsse für den Ankauf von Paddelergometern
                     <br>
                     Und natürlich beträchtliche Zuschüsse für die jährlichen Trainingslager
+                    <br>
                     Um die Sportler weiter so fördern zu können brauchen wir Unterstützung
                 </ul>
                 <br>
