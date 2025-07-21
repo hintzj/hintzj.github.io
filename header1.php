@@ -34,6 +34,7 @@
                         <li><a href='news.php'>News</a></li>
                         <li><a href='archiv.php'>Archiv</a></li>
                         <li><a href='vorstand.php'>Vorstand</a></li>
+                        <li><a href='kindeswohl.php'>Kindeswohl</a></li>
                         <li><a href='sponsors.php'>Sponsoren</a></li>
                         <li><a href='foerderverein.php'>Förderverein</a></li>
                         <li><a href='links.php'>Links</a></li>
