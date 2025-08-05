@@ -39,6 +39,9 @@
                 </div>
             </div>
             <div class="text-field1">
+                <a href="https://www.penny.de/aktionen/foerderpenny#voting"><img src="documents/pics/Foerderpenny.jpg" alt="Förderpenny" style="width: 100%; height: auto; margin-left: 1.5%;"></a>
+            </div>
+            <div class="text-field1">
                 <h4>Unsere Abteilungen</h4>
                 <p>
                     <?php
@@ -173,5 +176,6 @@
     </div>
     <?php include "wavesFooter.php"; ?>
 </body>
+
 
 </html>
