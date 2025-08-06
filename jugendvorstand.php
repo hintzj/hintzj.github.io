@@ -121,6 +121,12 @@
 
             </p>
         </div>
+        <div class="text-field2">
+            <h4>Jugendordnung</h4>
+            <p>
+                Die Jugendordnung des WSVL ist hier zu finden: <a href="documents/Jugendordnung.pdf" target="_blank">Jugendordnung WSVL</a>
+            </p>
+        </div>
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
