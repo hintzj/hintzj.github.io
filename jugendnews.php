@@ -62,6 +62,40 @@
                 ?>
             </ul>
         </div>
+        <?php
+            try {
+                $conn = connect("public");
+                if ($conn == false) {
+                    throw new Exception("DB Connection failed");
+                }
+                $sql = "SELECT * FROM artikel WHERE (date > NOW() AND artikelType = 1) ORDER BY date ASC";
+                $result = mysqli_query($conn, $sql);
+                $articles = mysqli_fetch_all($result, MYSQLI_ASSOC);
+                mysqli_free_result($result);
+                mysqli_close($conn);
+                if (!empty($articles)) {
+                    echo "<div class='text-field2'>";
+                    echo "<h4>Artikel zu den zukünftigen Events der Vereinsjugend</h4>";
+                    //make a div for every article that has a read more button that links to the article
+                    foreach ($articles as $article) {
+                        echo "<ul>";
+                        echo "<div class='article'>";
+                        echo "<h2>" . $article['title'] . "</h2>";
+                        echo "<p>" . $article['summary'] . "</p>";
+                        echo "<input type='button' style='margin-left: 2em;' value='Weiterlesen' onclick='window.location.href=\"artikel.php?id=" . $article['artikelID'] . "\"'>";
+                        echo "</div>";
+                        echo "</ul>";
+                        echo "<br>";
+                    }
+                    echo "</div>";
+                }
+            } catch (Exception $e) {
+                $error = $e->getMessage();
+                echo "Error: " . $error;
+                error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
+            }
+        ?>
+
         <div class="text-field2">
             <h4>Artikel zu den vergangenen Events der Vereinsjugend</h4>
             <?php
@@ -102,7 +136,7 @@
                 <input type="button" style="margin-left: 2em;" value="Alle Artikel anzeigen" onclick="window.location.href='archiv.php'">
             </div>
         </div>
-
+        
         <?php include "footer.php"; ?>
     </div>
     <?php include "wavesFooter.php"; ?>
