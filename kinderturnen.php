@@ -42,7 +42,6 @@
                     <ul>
                         <li>Mittwoch, 16:30 – 17:30 Uhr: 2–4 Jahre</li>
                         <li>Donnerstag, 17:00 – 18:00 Uhr: 3–7 Jahre</li>
-                        <li>Freitag, 16:30 – 17:30 Uhr: 3–7 Jahre</li>
                     </ul>
                 </p>
 

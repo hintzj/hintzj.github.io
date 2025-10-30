@@ -3,6 +3,10 @@
     src: url("../fonts/CreteRound-Italic.ttf");
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body header img{
     float: left;
     width: max(80px,7vw);

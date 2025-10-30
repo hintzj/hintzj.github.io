@@ -25,6 +25,8 @@
                             echo "<li><a href='" . strtolower($row['abteilungsPage']) . "'>" . $row['abteilungName'] . "</a></li>";
                         }
 
+                        echo "<li><a href='https://www.teilzeitinternat-kanurennsport-lampertheim.de/'>Kanuakademie</a></li>";
+
     echo            "</ul>
                 </li>
                 <li class='dropdown'>

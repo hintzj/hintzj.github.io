@@ -48,7 +48,7 @@
             <ul>
             Unsere Steganlage verfügt über 2 Gastplätze (max 13m Bootslänge), wenn möglich bitte vorher über
             Verfügbarkeit informieren. Legen Sie zunächst an einem freien Steg an, sofern Ihnen kein anderer zugewiesen
-            wurde. Bitte melden Sie sich anschließend bei unserem Hafenmeister Herrn K. Roos (Tel.: 01605900164) an. Er
+            wurde. Bitte melden Sie sich anschließend bei unserem Hafenmeister Herrn K. Roos (Tel.: 0160-5900164) an. Er
             unterstützt Sie in Ihren Anliegen so gut es möglich ist.
 
             Bitte beachten Sie unsere Hafenordnung. Wir weisen darauf hin, dass auch für Gastboote eine ausreichende

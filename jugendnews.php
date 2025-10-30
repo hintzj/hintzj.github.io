@@ -61,6 +61,13 @@
                     }
                 ?>
             </ul>
+            <br>
+            <!--Instagram Link zum Jugendaccount-->
+            <div class="button-container" style="text-align: center;">
+                <p>Weitere Informationen zu den kommenden Events findest du auf dem Instagram-Account der WSV-Jugendgruppe:
+                    <input type='button' style='margin-left: 2em;' value='wsvlampertheim.jugend' onclick='window.location.href="https://www.instagram.com/wsvlampertheim.jugend/"'>
+                </p>
+            </div>
         </div>
         <?php
             try {

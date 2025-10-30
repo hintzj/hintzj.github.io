@@ -28,12 +28,14 @@
             </div>
         </div>
         <div class="text-field1">
-            <h4>Trainingszeiten</h4>
+            <h4>Trainingszeiten der Schüler:</h4>
             <p>
             <ul>
                 <li>Montag: 16:00 - 18:00 Uhr</li>
                 <li>Mittwoch: 16:00 - 18:00 Uhr</li>
                 <li>Freitag: 16:00 - 18:00 Uhr</li>
+                <br>
+                Ab der Altersklasse 'Jugend' werden die Trainingszeiten mit dem Sportler abgestimmt.
             </ul>
             </p>
         </div>
@@ -72,17 +74,11 @@
                     <div class="article">
                         <h3>Nachwuchsarbeit:</h3>
                         <p>
-                            Eltern bringen in der heutigen Zeit, ihre Kinder immer früher in die Sportvereine. Wenn Kanuvereine
-                            Kinder erst in ihre Trainingsgruppen aufnehmen, wenn diese schwimmen können, bekommen sie dadurch meist
-                            nur noch Quereinsteiger. Deshalb sollten Kanuvereine auch Nichtschwimmern die Möglichkeit geben, Sport
-                            zu treiben. Der WSV beginnt, Kindern ab 3 Jahre Übungsstunden anzubieten. Viele dieser Kinder gehen mit
-                            6Jahren in unsere Nichtschwimmergruppe oder gleich in unsere Paddelgruppe. In ganz kurzer Zeit ist
-                            unsere erste Kindergruppe überfüllt gewesen und wir haben eine zweite Kindergruppe angeboten. Zur Zeit
-                            haben wir 50 Kinder unter 6 Jahren in den Übungsstunden. Unsere Nichtschwimmergruppe hat 20 Kinder
-                            Tendenz steigend und auch im Schüler B Bereich trägt unser Konzept Früchte, Im Jahr 1998 konnten wir 25
-                            Schüler B auf den Regatten melden. Der Zeitaufwand, einmal die Woche eine Übungsstunde mit 3-6 jährigen
-                            abzuhalten, ist relativ gering. Es ist also leichter für die Vereine, für eine Kindergruppe einen
-                            Übungsleiter zufinden, als einen Kanurennsporttrainer.
+                            Immer mehr Eltern legen Wert darauf, dass ihre Kinder schon früh Bewegung und Spaß im Sport erleben. Genau hier setzt der WSV Lampertheim an: Wir möchten Kindern den Einstieg in den Sport ermöglichen, unabhängig davon, ob sie bereits schwimmen können oder nicht.
+                            Deshalb bieten wir schon für Kinder ab drei Jahren spielerische Übungsstunden an, in denen sie sich austoben, neue Bewegungen entdecken und Freude am gemeinsamen Sport entwickeln. Viele dieser Kinder wechseln später in unsere Nichtschwimmergruppe oder direkt in die Paddelgruppe und bleiben dem Verein so langfristig verbunden.
+                            Die Nachfrage ist groß: Unsere erste Kindergruppe war schnell ausgebucht, sodass wir eine zweite Gruppe eröffnet haben. Inzwischen nehmen rund 50 Kinder unter sechs Jahren regelmäßig an den Übungsstunden teil. Auch die Nichtschwimmergruppe mit etwa 20 Kindern wächst stetig weiter.
+                            Unser Konzept zahlt sich aus: immer mehr Kinder finden den Weg in den Kanusport. Aktuell können wir bei Regatten bis zu 30 junge Sportlerinnen und Sportler der Altersklasse Schüler melden.
+                            Der organisatorische Aufwand für eine wöchentliche Kinderstunde ist überschaubar, was es leichter macht, engagierte Übungsleiterinnen und Übungsleiter zu gewinnen. So schaffen wir gemeinsam die Grundlage dafür, dass schon die Kleinsten Spaß am Sport entwickeln und vielleicht die Kanutalente von morgen werden.
                         </p>
                     </div>
                 </li>

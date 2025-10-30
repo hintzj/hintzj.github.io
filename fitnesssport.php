@@ -54,6 +54,8 @@
                             sich an alle Frauen, die etwas für bzw. gegen ihre Problemzonen machen wollen, oder einfach nur Spaß
                             an der Bewegung mit Musik haben. Der Stundenschwerpunkt liegt auf einem ausgewogenen Powertraining
                             mit Muskelkräftigung und Fatburning.
+                            <br>
+                            <input type="button" class="button" value="Kontakt" onclick="window.location.href='/kontakt.php#abteilungsleiter'">
                         </p>
                     </div>
                 </li>
@@ -69,6 +71,8 @@
                             Altrhein befahren oder den Radfahrern, die Touren rund um Lampertheim machen. Wanderungen und
                             Kameradschaftsabende runden das Jahresprogramm ab. Die sangesfreudige Gruppe ist auch bei der WSV-
                             Faßnacht aktiv. Sie sind als "Fidele Paddler" ein fester Bestandteil der Prunksitzungen.
+                            <br>
+                            <input type="button" class="button" value="Kontakt" onclick="window.location.href='#contactCard'">
                         </p>
                     </div>
                 </li>
@@ -77,10 +81,12 @@
                         <h3>Rücken-Fitness</h3>
                         <p>
                             Bei uns sind die Kurse geprüft. Wer sich überzeugen will, kommt mittwochs in die WSV Sporthalle:
-                            09:00 bis 10:15 Uhr unter der Leitung von Hans Schlatter, Tel. 06206/57613.
+                            xx:xx bis xx:xx Uhr unter der Leitung von xx.
                             Man braucht Sportkleidung und ein großes Handtuch; Matten, Redondo-Bälle, Pezzibälle, Kleinhanteln
                             und Therabänder sind vorhanden. Egal welches Alter, die Übungen können so variiert werden, dass vom
                             Beginner bis zum Fortgeschrittenen etwas dabei ist. Auch für Nichtmitglieder.
+                            <br>
+                            <input type="button" class="button" value="Kontakt" onclick="window.location.href='/kontakt.php#abteilungsleiter'">
                         </p>
                     </div>
                 </li>
@@ -88,12 +94,30 @@
                     <div class="article">
                         <h3>Kanuwandersport</h3>
                         <p>
-                            Donnerstags um 18:00 Uhr treffen sich alle, die auf dem Altrhein eine gemütliche Runde drehen
-                            wollen. Ab dem 26. April geht es los. Am besten schon paddelfertig anrücken, wenn wir dann mit
-                            unserer Tour fertig sind, haben wir freie Umkleiden und Duschen zur Verfügung.
-                            Gepaddelt wird in sieben Einerkajaks und in sieben Zweierkajaks, die uns zur Verfügung stehen.
-                            Natürlich mit Paddel, Schwimmweste und Spritzdecke. Die Boote sind für Anfänger und Profis
-                            gleichermaßen tauglich. Mit besseren Paddelkenntnissen werden wir auch größere Touren angehen.
+                            Dienstags um 18:00 Uhr treffen sich im Sommerhalbjahr alle, die auf dem
+                            Altrhein eine gemütliche Runde drehen wollen. Gepaddelt wird in
+                            Einerkajaks oder im Canadier, die zur Verfügung gestellt werden,
+                            natürlich mit Paddel und Schwimmweste. Die Boote sind für Anfänger und
+                            Profis gleichermaßen geeignet. Nach vorheriger Absprache werden wir auch
+                            größere Touren, z. B. zum Faudi oder zum Klenk, angehen.
+                            <br>
+                            <input type="button" class="button" value="Kontakt" onclick="window.location.href='#contactCard'">
+                        </p>
+                    </div>
+                </li>
+                <li>
+                    <div class="article">
+                        <h3>Yoga</h3>
+                        <p>
+                            Beim Yoga für Alle bieten wir dir die Möglichkeit, den Alltag hinter dir zu lassen und etwas Gutes für Körper und Geist zu tun. Jeden Mittwochabend fließen wir gemeinsam durch abwechslungsreiche Yogasequenzen, die Kraft, Beweglichkeit und innere Ruhe fördern. Praktiziert wird klassisches Hatha Yoga, ergänzt durch Elemente aus Yogatherapie, Pilates und Pranayama (Atemtechniken).
+                            <br>
+                            Im Mittelpunkt steht dabei eine gesunde und individuelle Ausrichtung, die an die eigenen körperlichen Voraussetzungen angepasst wird. So entsteht eine Praxis, die für alle geeignet ist – egal ob du schon Yoga-Erfahrung hast oder ganz neu einsteigst. Die Einheiten sind funktional, kräftigend, mobilisierend und ausgleichend gestaltet, sodass jede*r Teilnehmende auf seine Weise profitiert und mit einem guten Gefühl aus der Stunde geht.
+                            <br>
+                            Geleitet wird der Kurs von Julia Hartmann, Bewegungspädagogin und Yogalehrerin mit therapeutischem Hintergrund. Mit viel Erfahrung, Achtsamkeit und einem geschulten Blick auf eine gesunde Körperhaltung begleitet sie die Teilnehmenden durch die Praxis und zeigt, wie Yoga nachhaltig zu mehr Wohlbefinden beitragen kann.
+                            <br>
+                            Wenn du noch unsicher bist, ob Yoga das Richtige für dich ist, kannst du ganz unkompliziert an einer kostenlosen Probestunde Mittwochs von 18:30 bis 20:00 Uhr teilnehmen. Komm einfach vorbei, atme durch und erlebe, wie wohltuend Yoga für Körper, Geist und Seele sein kann.
+                            <br>
+                            <input type="button" class="button" value="Kontakt" onclick="window.location.href='/kontakt.php#abteilungsleiter'">
                         </p>
                     </div>
                 </li>

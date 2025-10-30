@@ -28,7 +28,7 @@
                             Gelegen am schönen Althrein betreiben wir hier am WSV erfolgreichen Kanurennsport und
                             Kanupolo.
                             <br>Doch auch ein schönes Vereinsleben und eine gute Jugendarbeit sind uns wichtig.
-                            <br>Die Kanuakademie ist teil unserer Philosophie der Vereinbarung von Sport und Schule
+                            <br>Die Kanuakademie ist Teil unserer Philosophie der Vereinbarung von Sport und Schule
                             <br>und wirkt als Teilzeitinternat im Bereich der Kindernachmittagsbetreuung.
                             <br>
                             <br>
@@ -138,13 +138,13 @@
                     <br>
                     <b>Wanderpaddeln:</b> Dienstags 18.00 - 20.00 Uhr
                     <br>
-                    <b>Rückengymnastik:</b> Mittwochs 09.00 - 10.30 Uhr
+                    <b>Rückengymnastik:</b> Mittwochs 09.00 - 10.00 Uhr
                     <br>
                     <b>Yoga:</b> Mittwochs 18.30 - 20.00 Uhr
                     <br>
                     <b>Bodyforming:</b> Donnerstags 19.30 - 20.30 Uhr
                     <br>
-                    <b>Boule:</b> Donnerstags 15.00 - 17.00 Uhr
+                    <b>Boule:</b> Donnerstags im Winter 14.00 - 16.00 Uhr
                 </ul>
                 </p>
             </div>

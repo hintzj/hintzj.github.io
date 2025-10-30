@@ -38,7 +38,6 @@
                     <ul>Wassersportverein Lampertheim 1929 e.V.
                         <br>Albrecht-Dürer-Str. 46
                         <br>68623 Lampertheim
-                        <br>Tel.: 06206/12483
                     </ul>
                     <br>
                     Vorsitzender: Rainer Vetter
