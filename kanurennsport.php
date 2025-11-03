@@ -85,7 +85,7 @@
             </ul>
             
         </div>
-        <div class="text-field3">
+        <div class="text-field3" style="padding-right: 3em;">
             <h4>Wasserstand</h4>
             <ul>
             <?php
@@ -111,7 +111,7 @@
             <br>
             </ul>
             <img src="https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.png?start=P14D&width=1200&height=400&enableSecondaryYAxis=true"
-                alt="Wasserstand" style="width: 100%; padding-left: 1.5em;">
+                alt="Wasserstand" style="width: 100%; margin-left: 1.5em;">
         </div>
         <?php
             $news = getAbteilungsNews(2);
@@ -128,6 +128,24 @@
                     echo "</ul>";
                     echo "<br>";
                 }
+                echo '</div>';
+            }
+
+            $termine = getAbteilungsTermine(2);
+            if (count($termine) > 0) {
+                echo '<div class="text-field4">';
+                echo '<h4>Demnächst in der Abteilung Kanurennsport</h4>';
+                echo '<ul>';
+                foreach ($termine as $termin) {
+                    $date = $termin['terminDate'];
+                    $date = date("d.m.Y", strtotime($date));
+                    if ($termin['terminTime'] != null) {
+                        echo "<li>" . $date . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
+                    } else {
+                        echo "<li>" . $date . " - " . $termin['terminTitle'] . "</li>";
+                    }
+                }
+                echo '</ul>';
                 echo '</div>';
             }
         ?>

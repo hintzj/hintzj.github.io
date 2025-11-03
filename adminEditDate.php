@@ -20,8 +20,9 @@
         $date = $_POST["date"];
         $time = $_POST["time"];
         $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
+        $abteilung = $_POST["abteilung"];
 
-        $result = editDate($dateId, $name, $date, $time, $youthEvent);
+        $result = editDate($dateId, $name, $date, $time, $youthEvent, $abteilung);
 
         if($result == "success"){
             header("location: adminDate.php");
@@ -76,6 +77,23 @@
                         <br>
                         <br>
                         Jugendveranstaltung: <input type="checkbox" name="youthEvent" <?php echo $terminDetails["terminType"] ? 'checked' : ''; ?> />
+                        <br>
+                        <br>
+                        Abteilung: <select name="abteilung" id="abteilung">
+                                    <?php
+                                        $abteilungen = getAbteilungenWithWebpage();
+                                        if($abteilungen == null){
+                                            echo "<option value='0'>Keine Abteilung gefunden</option>";
+                                            return;
+                                        }
+
+                                        echo "<option value='0'>Allgemein</option>";
+
+                                        foreach ($abteilungen as $abteilung) {
+                                            echo "<option value='" . $abteilung['abteilungID'] . "'" . ($abteilung['abteilungID'] == $terminDetails["abteilungID"] ? " selected" : "") . ">" . $abteilung['abteilungName'] . "</option>";
+                                        }
+                                    ?>
+                                </select>
                         <br>
                         <br>
                         <input type="submit" name="submit" value="Termin ändern">

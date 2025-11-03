@@ -39,7 +39,7 @@
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
                         }
-                        $sql = "SELECT * FROM termine WHERE terminDate > NOW() ORDER BY terminDate ASC";
+                        $sql = "SELECT * FROM termine WHERE terminDate > NOW() AND abteilungID = 0 ORDER BY terminDate ASC";
                         $result = mysqli_query($conn, $sql);
                         $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         mysqli_free_result($result);

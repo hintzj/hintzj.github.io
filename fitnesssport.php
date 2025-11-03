@@ -81,8 +81,8 @@
                         <h3>Rücken-Fitness</h3>
                         <p>
                             Bei uns sind die Kurse geprüft. Wer sich überzeugen will, kommt mittwochs in die WSV Sporthalle:
-                            xx:xx bis xx:xx Uhr unter der Leitung von xx.
-                            Man braucht Sportkleidung und ein großes Handtuch; Matten, Redondo-Bälle, Pezzibälle, Kleinhanteln
+                            09:00 bis 10:00 Uhr unter der Leitung von xx.
+                            Man braucht Sportkleidung, ein großes Handtuch und eine Matte. Redondo-Bälle, Pezzibälle, Kleinhanteln
                             und Therabänder sind vorhanden. Egal welches Alter, die Übungen können so variiert werden, dass vom
                             Beginner bis zum Fortgeschrittenen etwas dabei ist. Auch für Nichtmitglieder.
                             <br>

@@ -11,12 +11,13 @@
         $date = $_POST["date"];
         $time = $_POST["time"];
         $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
+        $abteilung = $_POST["abteilung"];
 
         if ($time == "") {
             $time = null; // Set default time if not provided
         }
 
-        $result = newDate($name, $date, $time, $youthEvent);
+        $result = newDate($name, $date, $time, $youthEvent, $abteilung);
 
         if($result == "success"){
             header("location: adminDate.php");
@@ -73,6 +74,23 @@
                         Jugendveranstaltung: <input type="checkbox" name="youthEvent">
                         <br>
                         <br>
+                        Abteilung: <select name="abteilung" id="abteilung">
+                                    <?php
+                                        $abteilungen = getAbteilungenWithWebpage();
+                                        if($abteilungen == null){
+                                            echo "<option value='0'>Keine Abteilung gefunden</option>";
+                                            return;
+                                        }
+
+                                        echo "<option value='0'>Allgemein</option>";
+
+                                        foreach ($abteilungen as $abteilung) {
+                                            echo "<option value='" . $abteilung['abteilungID'] . "'>" . $abteilung['abteilungName'] . "</option>";
+                                        }
+                                    ?>
+                                </select>
+                        <br>
+                        <br>                    
                         <input type="submit" name="submit" value="Termin erstellen">
                     </form>
                 </ul>
@@ -88,6 +106,7 @@
                             <th>Datum</th>
                             <th>Uhrzeit</th>
                             <th>Jugendveranstaltung</th>
+                            <th>Abteilung</th>
                             <th>Bearbeiten</th>
                         </tr>
                         <?php
@@ -99,6 +118,7 @@
                                     echo "<td>" . htmlspecialchars(date('d.m.Y', strtotime($date['terminDate']))) . "</td>";
                                     echo "<td>" . htmlspecialchars(date('H:i', strtotime($date['terminTime']))) . "</td>";
                                     echo "<td>" . ($date['terminType'] ? 'Ja' : 'Nein') . "</td>";
+                                    echo "<td>" . htmlspecialchars(getAbteilungNameByID($date['abteilungID'])) . "</td>";
                                     echo "<td><input type='button' style='background-color: royalblue;' onclick=\"location.href='adminEditDate.php?id=" . $date['terminID'] . "';\" value='Bearbeiten' /></td>";
                                     echo "</tr>";
                                 }

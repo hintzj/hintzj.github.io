@@ -355,30 +355,30 @@
         }
     };
 
-    function newDate($name, $date, $time, $youth){
-        if (checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false) {
+    function newDate($name, $date, $time, $youth, $abteilungID){
+        if (checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false || checkInputForSQLInjection($abteilungID) == false) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
-        
-        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate, terminTime, terminType) VALUES (?, ?, ?, ?)");
-        $stmt->bind_param("ssss", $name, $date, $time, $youth);
+
+        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate, terminTime, terminType, abteilungID) VALUES (?, ?, ?, ?, ?)");
+        $stmt->bind_param("ssssi", $name, $date, $time, $youth, $abteilungID);
         $stmt->execute();
         if($stmt->affected_rows != 1){
-            return "Error creating account, please try again or contact an administrator";
+            return "Error creating Date, please try again or contact an administrator";
         } else {
             return "success";
         } 
     }
 
-    function editDate($id, $name, $date, $time, $youth){
-        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false) {
+    function editDate($id, $name, $date, $time, $youth, $abteilungID){
+        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false || checkInputForSQLInjection($abteilungID) == false) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
-        
-        $stmt = $conn->prepare("UPDATE termine SET terminTitle = ?, terminDate = ?, terminTime = ?, terminType = ? WHERE terminID = ?");
-        $stmt->bind_param("ssssi", $name, $date, $time, $youth, $id);
+
+        $stmt = $conn->prepare("UPDATE termine SET terminTitle = ?, terminDate = ?, terminTime = ?, terminType = ?, abteilungID = ? WHERE terminID = ?");
+        $stmt->bind_param("sssiii", $name, $date, $time, $youth, $abteilungID, $id);
         $stmt->execute();
         if($stmt->affected_rows != 1){
             return "Error updating date, please try again or contact an administrator";
@@ -1053,6 +1053,55 @@
             $news[] = $row;
         }
         return $news;
+    }
+
+    function getAbteilungsTermine($abteilungsID) {
+        if (!is_numeric($abteilungsID)) {
+            return "Invalid Abteilungs ID"; // Invalid input
+        }
+        // Get the Termine for a specific Abteilung
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE abteilungID = ? AND terminDate >= CURDATE() ORDER BY terminDate ASC");
+        $stmt->bind_param("i", $abteilungsID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $termine = array();
+        while ($row = $result->fetch_assoc()) {
+            $termine[] = $row;
+        }
+        return $termine;
+    }
+
+    function getAbteilungNameByID($abteilungsID) {
+        if (!is_numeric($abteilungsID)) {
+            return "Invalid Abteilungs ID"; // Invalid input
+        }
+
+        if ($abteilungsID == 0) {
+            return "Gesamter Verein"; // Special case for all Abteilungen
+        }
+
+        // Get the name of the Abteilung by its ID
+        $conn = connect("public", "read");
+        if($conn == false){
+            return "Error connecting to database";
+        }
+        $stmt = $conn->prepare("SELECT abteilungName FROM abteilungen WHERE abteilungID = ?");
+        $stmt->bind_param("i", $abteilungsID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $abteilung = $result->fetch_assoc();
+        destroyConnection($conn);
+        if ($abteilung == NULL) {
+            return "Abteilung not found"; // Abteilung not found
+        } else {
+            return $abteilung['abteilungName']; // Return the name of the Abteilung
+        }
     }
 
     function getAbteilungenWithWebpage() {

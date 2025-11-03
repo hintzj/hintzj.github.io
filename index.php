@@ -148,6 +148,35 @@
                 </ul>
                 </p>
             </div>
+            <a href="https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.png?start=P14D&width=2000&height=1000&enableSecondaryYAxis=true" style="text-decoration: none;">
+                <div class="text-field4" style="padding-right: 3em;">
+                    <h4>Wasserstand</h4>
+                    <ul>
+                        <?php
+                                try{
+                                    $response = file_get_contents('https://www.pegelonline.wsv.de/webservices/rest-api/v2/stations/WORMS/W/measurements.json?start=P1D');
+                                } catch (Exception $e) {
+                                    echo $e;
+                                }
+
+                                $response = json_decode($response);
+                                $response = (end($response));
+                                $tiefe = $response->value;
+                                $zeit = $response->timestamp;
+                                $zeit = date('H:i', strtotime($zeit));
+                                $datum = $response->timestamp;
+                                $datum = date('d.m.Y', strtotime($datum));
+                                echo 'Aktueller Wasserstand in Worms: ' . $tiefe . 'cm um ' . $zeit . ' Uhr' . ' am ' . $datum;
+                                $tiefeLA = ($response->value) - 15;
+                                echo '<br>';
+                                echo 'Daraus folgt ein ungefährer Wasserstand vor unserem Steg von circa ' . $tiefeLA . 'cm';
+                            ?>
+                            <br>
+                            <br>
+                            Für eine Langzeitansicht kannst du auch hier clicken!
+                    </ul>
+                </div>
+            </a>
 
             <div class="text-field4" style="background-color:rgba(255, 124, 124, 0.74);">
                 <h4>Fusion der Volksbank mit der Mainzer Volksbank</h4>
