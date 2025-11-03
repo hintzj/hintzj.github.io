@@ -38,7 +38,7 @@
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
                         }
-                        $sql = "SELECT * FROM termine WHERE (terminDate > NOW() AND terminType = 1) ORDER BY terminDate ASC";
+                        $sql = "SELECT * FROM termine WHERE (terminDateStart > NOW() AND terminType = 1) ORDER BY terminDateStart ASC";
                         $result = mysqli_query($conn, $sql);
                         $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         mysqli_free_result($result);
@@ -46,10 +46,10 @@
                         
                         //print every event in a list along with the date
                         foreach ($termine as $termin) {
-                            $date = $termin['terminDate'];
+                            $date = $termin['terminDateStart'];
                             $date = date("d.m.Y", strtotime($date));
-                            if ($termin['terminTime'] != null) {
-                                echo "<li>" . $date . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
+                            if ($termin['terminTimeStart'] != null) {
+                                echo "<li>" . $date . " ab " . substr($termin['terminTimeStart'], 0, strpos($termin['terminTimeStart'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
                             } else {
                                 echo "<li>" . $date . " - " . $termin['terminTitle'] . "</li>";
                             }

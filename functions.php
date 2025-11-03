@@ -355,14 +355,14 @@
         }
     };
 
-    function newDate($name, $date, $time, $youth, $abteilungID){
-        if (checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false || checkInputForSQLInjection($abteilungID) == false) {
+    function newDate($name, $startDate, $startTime, $endDate, $endTime, $youth, $abteilungID){
+        if (checkInputForSQLInjection($name) == false || checkInputForSQLInjection($startDate) == false || checkInputForSQLInjection($startTime) == false || checkInputForSQLInjection($endDate) == false || checkInputForSQLInjection($endTime) == false || checkInputForSQLInjection($youth) == false || checkInputForSQLInjection($abteilungID) == false) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDate, terminTime, terminType, abteilungID) VALUES (?, ?, ?, ?, ?)");
-        $stmt->bind_param("ssssi", $name, $date, $time, $youth, $abteilungID);
+        $stmt = $conn->prepare("INSERT INTO termine(terminTitle, terminDateStart, terminTimeStart, terminDateEnd, terminTimeEnd, terminType, abteilungID) VALUES (?, ?, ?, ?, ?, ?, ?)");
+        $stmt->bind_param("sssssii", $name, $startDate, $startTime, $endDate, $endTime, $youth, $abteilungID);
         $stmt->execute();
         if($stmt->affected_rows != 1){
             return "Error creating Date, please try again or contact an administrator";
@@ -371,14 +371,14 @@
         } 
     }
 
-    function editDate($id, $name, $date, $time, $youth, $abteilungID){
-        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($name) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($time) == false || checkInputForSQLInjection($youth) == false || checkInputForSQLInjection($abteilungID) == false) {
+    function editDate($id, $name, $startDate, $startTime, $endDate, $endTime, $youth, $abteilungID){
+        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($name) == false || checkInputForSQLInjection($startDate) == false || checkInputForSQLInjection($startTime) == false || checkInputForSQLInjection($endDate) == false || checkInputForSQLInjection($endTime) == false || checkInputForSQLInjection($youth) == false || checkInputForSQLInjection($abteilungID) == false) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
 
-        $stmt = $conn->prepare("UPDATE termine SET terminTitle = ?, terminDate = ?, terminTime = ?, terminType = ?, abteilungID = ? WHERE terminID = ?");
-        $stmt->bind_param("sssiii", $name, $date, $time, $youth, $abteilungID, $id);
+        $stmt = $conn->prepare("UPDATE termine SET terminTitle = ?, terminDateStart = ?, terminTimeStart = ?, terminDateEnd = ?, terminTimeEnd = ?, terminType = ?, abteilungID = ? WHERE terminID = ?");
+        $stmt->bind_param("sssssiii", $name, $startDate, $startTime, $endDate, $endTime, $youth, $abteilungID, $id);
         $stmt->execute();
         if($stmt->affected_rows != 1){
             return "Error updating date, please try again or contact an administrator";
@@ -734,7 +734,7 @@
         if($conn == false){
             return "Error connecting to database";
         }
-        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminDate >= CURDATE() ORDER BY terminDate ASC");
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminDateStart >= CURDATE() ORDER BY terminDateStart ASC");
         $stmt->execute();
         $result = $stmt->get_result();
         $stmt->close();
@@ -755,7 +755,7 @@
         if($conn == false){
             return "Error connecting to database";
         }
-        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminDate < CURDATE() ORDER BY terminDate DESC LIMIT ?");
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE terminDateStart < CURDATE() ORDER BY terminDateStart DESC LIMIT ?");
         $stmt->bind_param("i", $num);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -1064,7 +1064,7 @@
         if($conn == false){
             return "Error connecting to database";
         }
-        $stmt = $conn->prepare("SELECT * FROM termine WHERE abteilungID = ? AND terminDate >= CURDATE() ORDER BY terminDate ASC");
+        $stmt = $conn->prepare("SELECT * FROM termine WHERE abteilungID = ? AND terminDateStart >= CURDATE() ORDER BY terminDateStart ASC");
         $stmt->bind_param("i", $abteilungsID);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -1144,6 +1144,90 @@
                 $person['bildURL'] = "default.png"; // Set default image if no image is set
             }
             return $person; // Return the person's details
+        }
+    }
+
+    function printOutDatesOfAbteilung($abteilungsID) {
+        //make a request to the termine table of the database and filter for all upcoming events
+        try{
+            $conn = connect("public");
+            if ($conn == false) {
+                throw new Exception("DB Connection failed");
+            }
+            $sql = "SELECT * FROM termine WHERE terminDateStart > NOW() AND abteilungID = " . $abteilungsID . " ORDER BY terminDateStart ASC";
+            $result = mysqli_query($conn, $sql);
+            $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);
+            mysqli_free_result($result);
+            mysqli_close($conn);
+
+            if (count($termine) > 0) {
+                echo '<div class="text-field3">';
+                echo '<h4>Demnächst in der Abteilung ' . getAbteilungNameByID($abteilungsID) . '</h4>';
+                echo '<ul>';
+
+                //print every event in a list along with the date
+                foreach ($termine as $termin) {
+                    $startDate = $termin['terminDateStart'];
+                    $startDate = date("d.m.Y", strtotime($startDate));
+                    if ($termin['terminDateEnd'] != null) {
+                        $endDate = $termin['terminDateEnd'];
+                        $endDate = date("d.m.Y", strtotime($endDate));
+                    }
+
+                    // helper to format time (if minutes are "00" show only hour)
+                    $formatTime = function($t) {
+                        $tm = date("H:i", strtotime($t));
+                        if (substr($tm, 3) === '00') {
+                            return intval(substr($tm, 0, 2)); // drop leading zero
+                        }
+                        return $tm;
+                    };
+
+                    $hasEndDate = !empty($termin['terminDateEnd']);
+                    $hasStartTime = !empty($termin['terminTimeStart']);
+                    $hasEndTime = !empty($termin['terminTimeEnd']);
+
+                    if ($hasEndDate) {
+                        // start and end date present
+                        if ($hasStartTime && $hasEndTime) {
+                            $tStart = $formatTime($termin['terminTimeStart']);
+                            $tEnd = $formatTime($termin['terminTimeEnd']);
+                            echo "<li>{$startDate} {$tStart} Uhr bis {$endDate} {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                        } elseif ($hasStartTime) {
+                            $tStart = $formatTime($termin['terminTimeStart']);
+                            echo "<li>{$startDate} ab {$tStart} Uhr bis {$endDate} - {$termin['terminTitle']}</li>";
+                        } elseif ($hasEndTime) {
+                            $tEnd = $formatTime($termin['terminTimeEnd']);
+                            echo "<li>{$startDate} bis {$endDate}, Ende: {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                        } else {
+                            echo "<li>{$startDate} bis {$endDate} - {$termin['terminTitle']}</li>";
+                        }
+                    } else {
+                        // only start date
+                        if ($hasStartTime && $hasEndTime) {
+                            $tStart = $formatTime($termin['terminTimeStart']);
+                            $tEnd = $formatTime($termin['terminTimeEnd']);
+                            echo "<li>{$startDate} von {$tStart} Uhr bis {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                        } elseif ($hasStartTime) {
+                            $tStart = $formatTime($termin['terminTimeStart']);
+                            echo "<li>{$startDate} ab {$tStart} Uhr - {$termin['terminTitle']}</li>";
+                        } elseif ($hasEndTime) {
+                            $tEnd = $formatTime($termin['terminTimeEnd']);
+                            echo "<li>{$startDate} bis {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                        } else {
+                            echo "<li>{$startDate} - {$termin['terminTitle']}</li>";
+                        }
+                    }
+
+
+                }
+                echo '</ul>';
+                echo '</div>';
+            }
+        } catch (Exception $e) {
+            $error = $e->getMessage();
+            echo "Error: " . $error;
+            //error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
         }
     }
 ?>

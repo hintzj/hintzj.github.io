@@ -354,8 +354,8 @@ INSERT INTO `sponsors` (`sponsorID`, `sponsorName`, `sponsorUrl`, `sponsorLogoFi
 CREATE TABLE `termine` (
   `terminID` int(11) NOT NULL,
   `terminTitle` varchar(255) DEFAULT NULL,
-  `terminDate` date DEFAULT NULL,
-  `terminTime` time DEFAULT NULL,
+  `terminDateStart` date DEFAULT NULL,
+  `terminTimeStart` time DEFAULT NULL,
   `terminType` int(11) DEFAULT NULL,
   `artikelID` int(11) DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
@@ -364,7 +364,7 @@ CREATE TABLE `termine` (
 -- Dumping data for table `termine`
 --
 
-INSERT INTO `termine` (`terminID`, `terminTitle`, `terminDate`, `terminTime`, `terminType`, `artikelID`) VALUES
+INSERT INTO `termine` (`terminID`, `terminTitle`, `terminDateStart`, `terminTimeStart`, `terminType`, `artikelID`) VALUES
 (1, 'Mitgliederversammlung', '2025-03-07', '19:30:00', 0, NULL),
 (2, 'Arbeitseinsatz', '2025-03-22', '09:30:00', 1, NULL),
 (3, 'Saisoneröffnung', '2025-03-30', '10:30:00', 1, NULL),

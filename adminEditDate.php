@@ -17,12 +17,24 @@
 
     if(isset($_POST['submit'])){
         $name = $_POST["title"];
-        $date = $_POST["date"];
-        $time = $_POST["time"];
+        $startDate = $_POST["startDate"];
+        $startTime = $_POST["startTime"];
+        $endDate = $_POST["endDate"];
+        $endTime = $_POST["endTime"];
         $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
         $abteilung = $_POST["abteilung"];
 
-        $result = editDate($dateId, $name, $date, $time, $youthEvent, $abteilung);
+        if ($startTime == "") {
+            $startTime = null;
+        }
+        if ($endDate == "") {
+            $endDate = null;
+        }
+        if ($endTime == "") {
+            $endTime = null;
+        }
+
+        $result = editDate($dateId, $name, $startDate, $startTime, $endDate, $endTime, $youthEvent, $abteilung);
 
         if($result == "success"){
             header("location: adminDate.php");
@@ -70,10 +82,19 @@
                         Title: <input type="text" name="title" placeholder="Titel" required value="<?php echo $terminDetails["terminTitle"]; ?>" />
                         <br>
                         <br>
-                        Datum: <input type="date" name="date" placeholder="TT.MM.JJJJ" required value="<?php echo $terminDetails["terminDate"]; ?>" />
+                        Anfangsdatum: <input type="date" name="startDate" placeholder="TT.MM.JJJJ" required value="<?php echo $terminDetails["terminDateStart"]; ?>" />
                         <br>
                         <br>
-                        Uhrzeit: <input type="time" name="time" placeholder="HH:MM" required value="<?php echo $terminDetails["terminTime"]; ?>" />
+                        Anfangszeit: <input type="time" name="startTime" id="startTime" placeholder="HH:MM" value="<?php echo $terminDetails["terminTimeStart"]; ?>" />
+                        <button type="button" onclick="document.getElementById('startTime').value = ''">Eingabe Löschen</button>
+                        <br>
+                        <br>
+                        Enddatum: <input type="date" name="endDate" id="endDate" placeholder="TT.MM.JJJJ" value="<?php echo $terminDetails["terminDateEnd"]; ?>" />
+                        <button type="button" onclick="document.getElementById('endDate').value = ''">Eingabe Löschen</button>
+                        <br>
+                        <br>
+                        Endzeit: <input type="time" name="endTime" id="endTime" placeholder="HH:MM" value="<?php echo $terminDetails["terminTimeEnd"]; ?>" />
+                        <button type="button" onclick="document.getElementById('endTime').value = ''">Eingabe Löschen</button>
                         <br>
                         <br>
                         Jugendveranstaltung: <input type="checkbox" name="youthEvent" <?php echo $terminDetails["terminType"] ? 'checked' : ''; ?> />

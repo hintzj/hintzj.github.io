@@ -31,29 +31,78 @@
         <div class="text-field1">
             <h4>Kommende Termine</h4>
             <p style="font-family: CreteRoundItalic;">
-                <ul>
                 <?php
-                    //make a request to the termine table of the database and filter for all upcoming events
                     try{
                         $conn = connect("public");
                         if ($conn == false) {
                             throw new Exception("DB Connection failed");
                         }
-                        $sql = "SELECT * FROM termine WHERE terminDate > NOW() AND abteilungID = 0 ORDER BY terminDate ASC";
+                        $sql = "SELECT * FROM termine WHERE terminDateStart > NOW() AND abteilungID = 0 ORDER BY terminDateStart ASC";
                         $result = mysqli_query($conn, $sql);
                         $termine = mysqli_fetch_all($result, MYSQLI_ASSOC);
                         mysqli_free_result($result);
                         mysqli_close($conn);
-                        
-                        //print every event in a list along with the date
-                        foreach ($termine as $termin) {
-                            $date = $termin['terminDate'];
-                            $date = date("d.m.Y", strtotime($date));
-                            if ($termin['terminTime'] != null) {
-                                echo "<li>" . $date . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
-                            } else {
-                                echo "<li>" . $date . " - " . $termin['terminTitle'] . "</li>";
+
+                        if (count($termine) > 0) {
+                            echo '<ul>';
+
+                            //print every event in a list along with the date
+                            foreach ($termine as $termin) {
+                                $startDate = $termin['terminDateStart'];
+                                $startDate = date("d.m.Y", strtotime($startDate));
+                                if ($termin['terminDateEnd'] != null) {
+                                    $endDate = $termin['terminDateEnd'];
+                                    $endDate = date("d.m.Y", strtotime($endDate));
+                                }
+
+                                // helper to format time (if minutes are "00" show only hour)
+                                $formatTime = function($t) {
+                                    $tm = date("H:i", strtotime($t));
+                                    if (substr($tm, 3) === '00') {
+                                        return intval(substr($tm, 0, 2)); // drop leading zero
+                                    }
+                                    return $tm;
+                                };
+
+                                $hasEndDate = !empty($termin['terminDateEnd']);
+                                $hasStartTime = !empty($termin['terminTimeStart']);
+                                $hasEndTime = !empty($termin['terminTimeEnd']);
+
+                                if ($hasEndDate) {
+                                    // start and end date present
+                                    if ($hasStartTime && $hasEndTime) {
+                                        $tStart = $formatTime($termin['terminTimeStart']);
+                                        $tEnd = $formatTime($termin['terminTimeEnd']);
+                                        echo "<li>{$startDate} {$tStart} Uhr bis {$endDate} {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                                    } elseif ($hasStartTime) {
+                                        $tStart = $formatTime($termin['terminTimeStart']);
+                                        echo "<li>{$startDate} ab {$tStart} Uhr bis {$endDate} - {$termin['terminTitle']}</li>";
+                                    } elseif ($hasEndTime) {
+                                        $tEnd = $formatTime($termin['terminTimeEnd']);
+                                        echo "<li>{$startDate} bis {$endDate}, Ende: {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                                    } else {
+                                        echo "<li>{$startDate} bis {$endDate} - {$termin['terminTitle']}</li>";
+                                    }
+                                } else {
+                                    // only start date
+                                    if ($hasStartTime && $hasEndTime) {
+                                        $tStart = $formatTime($termin['terminTimeStart']);
+                                        $tEnd = $formatTime($termin['terminTimeEnd']);
+                                        echo "<li>{$startDate} von {$tStart} Uhr bis {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                                    } elseif ($hasStartTime) {
+                                        $tStart = $formatTime($termin['terminTimeStart']);
+                                        echo "<li>{$startDate} ab {$tStart} Uhr - {$termin['terminTitle']}</li>";
+                                    } elseif ($hasEndTime) {
+                                        $tEnd = $formatTime($termin['terminTimeEnd']);
+                                        echo "<li>{$startDate} bis {$tEnd} Uhr - {$termin['terminTitle']}</li>";
+                                    } else {
+                                        echo "<li>{$startDate} - {$termin['terminTitle']}</li>";
+                                    }
+                                }
+
+
                             }
+                            echo '</ul>';
                         }
                     } catch (Exception $e) {
                         $error = $e->getMessage();
@@ -61,7 +110,6 @@
                         //error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
                     }
                 ?>
-                </ul>
             </p>
         </div>
         <?php include "footer.php"; ?>

@@ -8,16 +8,24 @@
 
     if(isset($_POST['submit'])){
         $name = $_POST["title"];
-        $date = $_POST["date"];
-        $time = $_POST["time"];
+        $date = $_POST["startDate"];
+        $time = $_POST["startTime"];
+        $endDate = $_POST["endDate"];
+        $endTime = $_POST["endTime"];
         $youthEvent = isset($_POST["youthEvent"]) ? 1 : 0;
         $abteilung = $_POST["abteilung"];
 
         if ($time == "") {
             $time = null; // Set default time if not provided
         }
+        if ($endDate == "") {
+            $endDate = null;
+        }
+        if ($endTime == "") {
+            $endTime = null;
+        }
 
-        $result = newDate($name, $date, $time, $youthEvent, $abteilung);
+        $result = newDate($name, $date, $time, $endDate, $endTime, $youthEvent, $abteilung);
 
         if($result == "success"){
             header("location: adminDate.php");
@@ -65,10 +73,16 @@
                         Title: <input type="text" name="title" placeholder="Titel" required />
                         <br>
                         <br>
-                        Datum: <input type="date" name="date" placeholder="TT.MM.JJJJ" required />
+                        Anfangsdatum: <input type="date" name="startDate" placeholder="TT.MM.JJJJ" required />
                         <br>
                         <br>
-                        Uhrzeit: <input type="time" name="time" placeholder="HH:MM" />
+                        Anfangszeit: <input type="time" name="startTime" placeholder="HH:MM" />
+                        <br>
+                        <br>
+                        Enddatum: <input type="date" name="endDate" placeholder="TT.MM.JJJJ" />
+                        <br>
+                        <br>
+                        Endzeit: <input type="time" name="endTime" placeholder="HH:MM" />
                         <br>
                         <br>
                         Jugendveranstaltung: <input type="checkbox" name="youthEvent">
@@ -103,8 +117,10 @@
                     <table class="adminTable">
                         <tr>
                             <th>Titel</th>
-                            <th>Datum</th>
-                            <th>Uhrzeit</th>
+                            <th>Anfangsdatum</th>
+                            <th>Anfangszeit</th>
+                            <th>Enddatum</th>
+                            <th>Enduhrzeit</th>
                             <th>Jugendveranstaltung</th>
                             <th>Abteilung</th>
                             <th>Bearbeiten</th>
@@ -113,10 +129,32 @@
                             $dates = getFutureDates();
                             if($dates){
                                 foreach($dates as $date){
+                                    $title = htmlspecialchars($date['terminTitle']);
+
+                                    if ($date['terminTimeStart'] == null) {
+                                        $startTime = " - ";
+                                    } else {
+                                        $startTime = htmlspecialchars(date('H:i', strtotime($date['terminTimeStart'])));
+                                    }
+                                    if ($date['terminDateEnd'] == null) {
+                                        $endDate = " - ";
+                                    } else {
+                                        $endDate = htmlspecialchars(date('d.m.Y', strtotime($date['terminDateEnd'])));
+                                    }
+                                    if ($date['terminTimeEnd'] == null) {
+                                        $endTime = " - ";
+                                    } else {
+                                        $endTime = htmlspecialchars(date('H:i', strtotime($date['terminTimeEnd'])));
+                                    }
+
+                                    $startDate = htmlspecialchars(date('d.m.Y', strtotime($date['terminDateStart'])));
+
                                     echo "<tr>";
-                                    echo "<td>" . htmlspecialchars($date['terminTitle']) . "</td>";
-                                    echo "<td>" . htmlspecialchars(date('d.m.Y', strtotime($date['terminDate']))) . "</td>";
-                                    echo "<td>" . htmlspecialchars(date('H:i', strtotime($date['terminTime']))) . "</td>";
+                                    echo "<td>" . $title . "</td>";
+                                    echo "<td>" . $startDate . "</td>";
+                                    echo "<td>" . $startTime . "</td>";
+                                    echo "<td>" . $endDate . "</td>";
+                                    echo "<td>" . $endTime . "</td>";
                                     echo "<td>" . ($date['terminType'] ? 'Ja' : 'Nein') . "</td>";
                                     echo "<td>" . htmlspecialchars(getAbteilungNameByID($date['abteilungID'])) . "</td>";
                                     echo "<td><input type='button' style='background-color: royalblue;' onclick=\"location.href='adminEditDate.php?id=" . $date['terminID'] . "';\" value='Bearbeiten' /></td>";
@@ -137,20 +175,46 @@
                     <table class="adminTable">
                         <tr>
                             <th>Titel</th>
-                            <th>Datum</th>
-                            <th>Uhrzeit</th>
+                            <th>Anfangsdatum</th>
+                            <th>Anfangszeit</th>
+                            <th>Enddatum</th>
+                            <th>Enduhrzeit</th>
                             <th>Jugendveranstaltung</th>
+                            <th>Abteilung</th>
                             <th>Bearbeiten</th>
                         </tr>
                         <?php
                             $pastDates = getPastDates();
                             if($pastDates){
                                 foreach($pastDates as $date){
+                                    $title = htmlspecialchars($date['terminTitle']);
+
+                                    if ($date['terminTimeStart'] == null) {
+                                        $startTime = " - ";
+                                    } else {
+                                        $startTime = htmlspecialchars(date('H:i', strtotime($date['terminTimeStart'])));
+                                    }
+                                    if ($date['terminDateEnd'] == null) {
+                                        $endDate = " - ";
+                                    } else {
+                                        $endDate = htmlspecialchars(date('d.m.Y', strtotime($date['terminDateEnd'])));
+                                    }
+                                    if ($date['terminTimeEnd'] == null) {
+                                        $endTime = " - ";
+                                    } else {
+                                        $endTime = htmlspecialchars(date('H:i', strtotime($date['terminTimeEnd'])));
+                                    }
+
+                                    $startDate = htmlspecialchars(date('d.m.Y', strtotime($date['terminDateStart'])));
+
                                     echo "<tr>";
-                                    echo "<td>" . htmlspecialchars($date['terminTitle']) . "</td>";
-                                    echo "<td>" . htmlspecialchars(date('d.m.Y', strtotime($date['terminDate']))) . "</td>";
-                                    echo "<td>" . htmlspecialchars(date('H:i', strtotime($date['terminTime']))) . "</td>";
+                                    echo "<td>" . $title . "</td>";
+                                    echo "<td>" . $startDate . "</td>";
+                                    echo "<td>" . $startTime . "</td>";
+                                    echo "<td>" . $endDate . "</td>";
+                                    echo "<td>" . $endTime . "</td>";
                                     echo "<td>" . ($date['terminType'] ? 'Ja' : 'Nein') . "</td>";
+                                    echo "<td>" . htmlspecialchars(getAbteilungNameByID($date['abteilungID'])) . "</td>";
                                     echo "<td><input type='button' style='background-color: royalblue;' onclick=\"location.href='adminEditDate.php?id=" . $date['terminID'] . "';\" value='Bearbeiten' /></td>";
                                     echo "</tr>";
                                 }

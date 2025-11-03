@@ -157,6 +157,7 @@
     width: 100%;
     border-collapse: collapse;
     margin-top: 2em;
+    font-size: x-small;
 }
 .adminTable th,
 .adminTable td {
