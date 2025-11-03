@@ -141,6 +141,24 @@
                 }
                 echo '</div>';
             }
+
+            $termine = getAbteilungsTermine(3); // 3 is the ID for Fitnesssport
+            if (count($termine) > 0) {
+                echo '<div class="text-field4">';
+                echo '<h4>Demnächst in der Abteilung Fitnesssport</h4>';
+                echo '<ul>';
+                foreach ($termine as $termin) {
+                    $date = $termin['terminDate'];
+                    $date = date("d.m.Y", strtotime($date));
+                    if ($termin['terminTime'] != null) {
+                        echo "<li>" . $date . " ab " . substr($termin['terminTime'], 0, strpos($termin['terminTime'], ":00")) . " Uhr" . " - " . $termin['terminTitle'] . "</li>";
+                    } else {
+                        echo "<li>" . $date . " - " . $termin['terminTitle'] . "</li>";
+                    }
+                }
+                echo '</ul>';
+                echo '</div>';
+            }
         ?>
         <?php include "footer.php"; ?>
     </div>
