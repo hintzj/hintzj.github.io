@@ -1110,7 +1110,7 @@
         if($conn == false){
             return "Error connecting to database";
         }
-        $stmt = $conn->prepare("SELECT abteilungID, abteilungName FROM abteilungen WHERE abteilungsPage IS NOT NULL AND abteilungsPage != ''");
+        $stmt = $conn->prepare("SELECT abteilungID, abteilungName, abteilungsPage FROM abteilungen WHERE abteilungsPage IS NOT NULL AND abteilungsPage != ''");
         $stmt->execute();
         $result = $stmt->get_result();
         $stmt->close();
@@ -1161,7 +1161,7 @@
             mysqli_close($conn);
 
             if (count($termine) > 0) {
-                echo '<div class="text-field3">';
+                echo '<div class="text-field3" id="abteilungsTermine">';
                 echo '<h4>Demnächst in der Abteilung ' . getAbteilungNameByID($abteilungsID) . '</h4>';
                 echo '<ul>';
 
@@ -1229,5 +1229,21 @@
             echo "Error: " . $error;
             //error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
         }
+    }
+
+    function hasAbteilungTermine($abteilungsID) {
+        // Check if there are any upcoming events for the given Abteilung
+        $conn = connect("public", "read");
+        if($conn == false){
+            return false; // Error connecting to database
+        }
+        $stmt = $conn->prepare("SELECT COUNT(*) AS count FROM termine WHERE terminDateStart > NOW() AND abteilungID = ?");
+        $stmt->bind_param("i", $abteilungsID);
+        $stmt->execute();
+        $result = $stmt->get_result();
+        $stmt->close();
+        $row = $result->fetch_assoc();
+        destroyConnection($conn);
+        return $row['count'] > 0; // Returns true if there are upcoming events, false otherwise
     }
 ?>

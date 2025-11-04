@@ -110,6 +110,23 @@
                         //error_logfile($error, debug_backtrace()[0]['file'].":".debug_backtrace()[0]['line']);
                     }
                 ?>
+                
+                <?php
+                    $abteilungen = getAbteilungenWithWebpage();
+                    if ($abteilungen != null) {
+                        echo "<br>";
+                        echo "Suchst du Termine einer bestimmten Abteilung? Schau doch mal hier vorbei:";
+                        echo "<br>";
+                        echo "<br>";
+                        foreach ($abteilungen as $abteilung) {
+                            if (hasAbteilungTermine($abteilung['abteilungID']) === false) {
+                                continue;
+                            }
+                            
+                            echo "<input type='button' style='background-color: royalblue;' onclick=\"location.href='" . $abteilung['abteilungsPage'] . "#abteilungsTermine';\" value='" . htmlspecialchars($abteilung['abteilungName']) . "' />";
+                        }
+                    }
+                ?>
             </p>
         </div>
         <?php include "footer.php"; ?>
