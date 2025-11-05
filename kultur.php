@@ -32,36 +32,33 @@
         <div class="text-field1">
             <h4>Kultur</h4>
             <ul>
-                <p>
-                    Der Kulturausschuss plant und organisiert alles im Bereich Kultur. Dabei werden sowohl traditionelle als auch moderne Ansätze berücksichtigt, um ein breites Spektrum an kulturellen Aktivitäten anzubieten. Derzeit gehören dem Kulturausschuss an:
-                    <ul>
-                        <li>Peter Weber</li>
-                        <li>Peter Horstfeld</li>
-                        <li>Susanne Asel</li>
-                        <li>Carmen Geppert</li>
-                        <li>Volker Altenbach</li>
-                        <li>Sven Stollhofer</li>
-                        <li>Klaus Heiler</li>
-                        <li>Jan Heilmann (Jugendgruppe)</li>
-                        <li>Tina Heiler</li>
-                    </ul>
-                    Gemeinsam arbeiten sie daran, kulturelle Veranstaltungen und Projekte zu realisieren, die sowohl die Vereinsmitglieder als auch die lokale Gemeinschaft ansprechen.
-                </p>
+            <p>
+                Der Kulturausschuss des WSV Lampertheim besteht aus engagierten Mitgliedern, die sich leidenschaftlich für die Organisation und Durchführung der Vereinsveranstaltungen einsetzen.
+            </p>
+            <ul>
+            <li>Nico Stenger (Kulturwart)</li>
+            <li>Patricia Altamore</li>
+            <li>Erika Gabler</li>
+            <li>Andreas Herrmann</li>
+            <li>Mattheo Herrmann</li>
+            <li>Petra Herrmann</li>
+            <li>Peter Horstfeld</li>
+            </ul>
+            <p>
+                Der Kulturausschuss hält das Vereinsleben lebendig - mit pragmischem Einsatz für gut organisierte Veranstaltungen.
+            </p>
             </ul>
         </div>
 
         <div class="text-field2">
             <h4>Unsere Aktivitäten</h4>
             <ul>
-                <p>
-                    Der Kulturausschuss organisiert regelmäßig verschiedene Veranstaltungen und Projekte, um die Vereinsmitglieder und die lokale Gemeinschaft einzubinden. Dazu gehören:
-                    <ul>
-                        <li>Jährliche Feste und Feiern, die Tradition und Moderne verbinden</li>
-                        <li>Unterstützung bei der Durchführung von lokalen Kulturprojekten</li>
-                    </ul>
-                    <br>
-                    Diese Aktivitäten bieten eine Plattform für Austausch, Kreativität und Gemeinschaftsgefühl.
-                </p>
+                <li>Planung und Umsetzung ausgewählter Vereinsfeste</li>
+                <li>Unterstützung bei der jährlichen Durchführung von Kulturprojekten</li>
+
+            <p>
+                Schwerpunkt: unkomplizierte Organisation, gute Stimmung und gemeinschaftliches Miteinander.
+            </p>
             </ul>
         </div>
         <?php

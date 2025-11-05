@@ -145,6 +145,9 @@
                     <b>Bodyforming:</b> Donnerstags 19.30 - 20.30 Uhr
                     <br>
                     <b>Boule:</b> Donnerstags im Winter 14.00 - 16.00 Uhr
+                    <br>
+                    <br>
+                    <input type="button" class="button" value="Kontakt" onclick="window.location.href='/kontakt.php#abteilungsleiter'">
                 </ul>
                 </p>
             </div>
