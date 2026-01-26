@@ -96,9 +96,9 @@
         <div class="text-field4">
             <h4>Bankverbindung</h4>
             <p>
-            <ul>Bank: Volksbank Darmstadt - Südhessen eG</ul>
-            <ul>IBAN: DE54508900000002050102</ul>
-            <ul>BIC: GENODEF1VBD</ul>
+            <ul>Bank: Volksbank Darmstadt Mainz</ul>
+            <ul>IBAN: DE89 5519 0000 0020 5010 11</ul>
+            <ul>BIC: MVBMDE55XXX</ul>
             </p>
         </div>
         <?php include "footer.php"; ?>
