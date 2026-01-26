@@ -14,11 +14,11 @@
     <?php include 'header1.php'; ?>
     <div class="content">
         <?php 
-                $filename = getcwd() . $_SERVER['PHP_SELF'];
-                $filename = basename($filename, ".php");
-                $imageFilename = "documents/pics/introImage/" . $filename . ".png";
-                //echo $filename;
-            ?>
+            $filename = getcwd() . $_SERVER['PHP_SELF'];
+            $filename = basename($filename, ".php");
+            $imageFilename = "documents/pics/introImage/" . $filename . ".png";
+            //echo $filename;
+        ?>
         <div class="greeting" style="background-image: url(<?php echo $imageFilename ?>);" ;>
             <div class="greeting" style="background-color: rgba(255, 255, 255, 0.75); height: 100%;">
                 <div>
@@ -30,10 +30,14 @@
             </div>
         </div>
         <div class="text-field1">
-            
-        </div>
-        <div class="text-field2">
-            
+            <h3>Über uns</h3>
+            <ul>
+                Die Sportbootabteilung des WSVL bietet eine Vielzahl von Aktivitäten und Veranstaltungen für
+                Wassersportbegeisterte jeden Alters. Unser Ziel ist es, eine freundliche und einladende
+                Gemeinschaft zu schaffen, in der sich alle Mitglieder wohlfühlen und ihre Leidenschaft für den
+                Wassersport teilen können.
+            </p>
+            </ul>
         </div>
         <?php
             $news = getAbteilungsNews(17); // 17 is the ID for Sportboot

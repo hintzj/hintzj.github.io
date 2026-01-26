@@ -1246,4 +1246,112 @@
         destroyConnection($conn);
         return $row['count'] > 0; // Returns true if there are upcoming events, false otherwise
     }
+
+    function displayGalleryFormattedToScreen($subdir = "") {
+        $fullPath = "documents/pics/gallery/" . $subdir;
+        if (!is_dir($fullPath)) {
+            echo "Directory does not exist.";
+            return;
+        }
+        //get screen width
+        $screenWidth = "<script>document.write(window.innerWidth);</script>";
+        $numImagesPerRow = 4;
+        if ($screenWidth < 600) {
+            $numImagesPerRow = 1;
+        } elseif ($screenWidth < 900) {
+            $numImagesPerRow = 2;
+        } elseif ($screenWidth < 1200) {
+            $numImagesPerRow = 3;
+        }
+        
+        echo '<table class="galleryTable">';
+        $count = 0;
+        $images = scandir($fullPath);
+        foreach ($images as $image) {
+            if ($image != "." && $image != "..") {
+            if ($count % $numImagesPerRow == 0) {
+                echo '<tr>';
+            }
+
+            echo '<div class="container">';
+            if (is_dir($fullPath . '/' . $image)) {
+                $newSubdir = urlencode($image); // Encode the folder name for the URL
+                // Normalize $subdir to avoid leading/trailing slashes and build encoded dir
+                $subdirClean = trim($subdir, '/');
+                if ($subdirClean === '') {
+                    $newDirEncoded = $newSubdir;
+                } else {
+                    $newDirEncoded = $subdirClean . '/' . $newSubdir;
+                }
+                echo '<a href="bilder.php?dir=' . htmlspecialchars($newDirEncoded) . '">';
+
+                echo '<div class="container">';
+                // Build thumbnail path while avoiding double slashes
+                $imgPath = rtrim($fullPath, '/') . '/' . ltrim($image, '/');
+                $thumbPath = rtrim($imgPath, '/') . '/thumbnail.jpg';
+                echo '<img src="' . htmlspecialchars($thumbPath) . '" alt="Gallery Folder" style="width:100%;">';
+                echo '<div class="centered buttondiv">' . htmlspecialchars($image) . '</div>';
+                echo '</div>';
+                echo '</a>';
+            } else {
+                if ($image == "thumbnail.jpg") {
+                continue; // Skip thumbnail images
+                }
+                $imgPath = rtrim($fullPath, '/') . '/' . ltrim($image, '/');
+                $file_extension = strtolower(pathinfo($imgPath, PATHINFO_EXTENSION));
+                if (in_array($file_extension, ['jpg', 'jpeg', 'png', 'gif'])) {
+                    echo '<img src="' . htmlspecialchars($imgPath) . '" alt="Gallery Image" style="width:100%;">';
+                } else if ($file_extension === 'mp4') {
+                    echo '<video width="100%" controls>';
+                    echo '<source src="' . htmlspecialchars($imgPath) . '" type="video/mp4">';
+                    echo 'Your browser does not support the video tag.';
+                    echo '</video>';
+                } else {
+                    echo '<p>Unsupported file type: ' . htmlspecialchars($image) . '</p>';
+                }
+                
+            }
+            echo '</div>';
+
+            $count++;
+            if ($count % $numImagesPerRow == 0) {
+                echo '</tr>';
+            }
+            }
+        }
+        if ($count % $numImagesPerRow != 0) {
+            echo '</tr>';
+        }
+        echo '</table>';
+    }
+
+    function imageFolderTree($withEditLinks = true) {
+        $baseDir = "documents/pics/gallery/";
+        echo '<ul>Hauptverzeichnis';
+        if ($withEditLinks) {
+            echo ' <a href="adminEditImageFolder.php?folder=">[Bearbeiten]</a>';
+        }
+        function renderFolder($dir, $withEditLinks, $baseDir) {
+            $items = scandir($dir);
+            echo '<ul>';
+            foreach ($items as $item) {
+                if ($item === '.' || $item === '..') {
+                    continue;
+                }
+                $fullPath = rtrim($dir, '/') . '/' . ltrim($item, '/');
+                if (is_dir($fullPath)) {
+                    echo '<li>' . htmlspecialchars($item);
+                    if ($withEditLinks) {
+                        $encodedPath = urlencode(str_replace($baseDir, '', $fullPath));
+                        echo ' <a href="adminEditImageFolder.php?folder=' . htmlspecialchars($encodedPath) . '">[Bearbeiten]</a>';
+                    }
+                    renderFolder($fullPath, $withEditLinks, $baseDir);
+                    echo '</li>';
+                }
+            }
+            echo '</ul>';
+        }
+        renderFolder($baseDir, $withEditLinks, $baseDir);
+        echo '</ul>';
+    }
 ?>

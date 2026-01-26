@@ -49,6 +49,7 @@
                         <li><a href='jugendnews.php'>Jugendnews</a></li>
                     </ul>
                 </li>
+                <!--<li><a href='bilder.php'>Bilder</a></li>-->
                 <li><a href='kontakt.php'>Kontakt</a></li>
                 <li><a href='https://cloud.wsv-lampertheim.de'>Vereinscloud</a></li>
             </ul>

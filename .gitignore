@@ -1,3 +1,10 @@
 config.php
 playground.php
+
 bilder.php
+adminImages.php
+adminEditImageFolder.php
+adminNewImageFolder.php
+adminUpdateImageFolder.php
+documents/pics/gallery/
+design/css/gallery.css
