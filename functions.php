@@ -1267,8 +1267,24 @@
         echo '<table class="galleryTable">';
         $count = 0;
         $images = scandir($fullPath);
+        
+        // Separate folders and files
+        $folders = [];
+        $files = [];
         foreach ($images as $image) {
             if ($image != "." && $image != "..") {
+                if (is_dir($fullPath . '/' . $image)) {
+                    $folders[] = $image;
+                } else {
+                    $files[] = $image;
+                }
+            }
+        }
+        
+        // Merge folders first, then files
+        $sortedImages = array_merge($folders, $files);
+        
+        foreach ($sortedImages as $image) {
             if ($count % $numImagesPerRow == 0) {
                 echo '<tr>';
             }
@@ -1317,7 +1333,7 @@
             if ($count % $numImagesPerRow == 0) {
                 echo '</tr>';
             }
-            }
+            
         }
         if ($count % $numImagesPerRow != 0) {
             echo '</tr>';
