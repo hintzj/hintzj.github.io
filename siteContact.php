@@ -26,7 +26,7 @@
                     <td>
                         <p>
                             <?php
-                                echo "Fragen? Nehmen Sie Kontakt mit <b>" . $firstName . " " . $lastName . "</b> auf, indem sie hier klicken!";
+                                echo "Fragen? Nehmen Sie Kontakt mit <b>" . $firstName . " " . $lastName . "</b> auf, indem sie hier klicken oder schreiben Sie eine E-Mail an <br><b>" . $email . "</b>.";
                             ?>
                         </p>
                     </td>
