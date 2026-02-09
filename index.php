@@ -38,14 +38,6 @@
                     </div>
                 </div>
             </div>
-            <a href="https://link.wsv-lampertheim.de/go/Mitgliederinfo" style="text-decoration: none;">
-            <div class="text-field1">
-                <h4>Mitgliederinfo Online</h4>
-                <ul>
-                    Die neue Mitgliederinfo für das Jahr 2025 ist online und kann unter <a href="https://link.wsv-lampertheim.de/go/Mitgliederinfo">https://link.wsv-lampertheim.de/go/Mitgliederinfo</a> eingesehen werden.
-                </ul>
-            </div>
-            </a>
             <div class="text-field1">
                 <h4>Unsere Abteilungen</h4>
                 <p>
