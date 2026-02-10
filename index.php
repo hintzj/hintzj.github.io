@@ -38,6 +38,36 @@
                     </div>
                 </div>
             </div>
+            <div class="text-field1" style="background-color:rgba(91, 190, 255, 0.74);">
+                <h4>Mitgliederversammlung 2026</h4>
+                <ul>
+                <p>
+                    Zur Mitgliederversammlung am Freitag, den 6. März 2026 um 19:30 Uhr laden wir euch recht herzlich ein. Sie findet in unserem Saal, Albrecht-Dürer-Strasse 46 statt. 
+                    <br>
+                    Wir hoffen auf euer zahlreiches Erscheinen. 
+                    <br><br>
+                    Tagesordnungspunkte:
+                    <ul>
+                        <li>TOP 1: Begrüßung</li>
+                        <li>TOP 2: Feststellung der ordnungsgemäßen Einberufung und Beschlussfähigkeit</li>
+                        <li>TOP 3: Genehmigung der Tagesordnung</li>
+                        <li>TOP 4: Geschäftsbericht</li>
+                        <li>TOP 5: Kassenbericht und Bericht der Kassenprüfer</li>
+                        <li>TOP 6: Sportbericht und Bericht aus den Abteilungen</li>
+                        <li>TOP 7: Entlastung und Ergänzungswahl des Vorstandes</li>
+                        <ul style="list-style-type: none;">
+                            <li>(1. Vorsitzender, Kassenwartin, Sportwart, Mitgliederverwaltung, Getränkewart, Pressewarte, Kassenprüfer/Ergänzung)</li>
+                        </ul>
+                        <li>TOP 8: Haushaltsplan</li>
+                        <li>TOP 9: Veranstaltungen</li>
+                        <li>TOP 10: Anträge</li>
+                        <li>TOP 11: Verschiedenes</li>
+                    </ul>
+                    <br>
+                    Anträge zur Mitgliederversammlung können bis zum 27. Februar beim Vorstand eingereicht werden.
+                </p>
+                </ul>
+                </div>
             <div class="text-field1">
                 <h4>Unsere Abteilungen</h4>
                 <p>

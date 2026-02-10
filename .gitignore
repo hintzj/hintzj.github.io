@@ -8,3 +8,5 @@ adminNewImageFolder.php
 adminUpdateImageFolder.php
 documents/pics/gallery/
 design/css/gallery.css
+
+logs/db-log.txt
