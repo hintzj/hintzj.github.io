@@ -66,7 +66,7 @@
             <h4>Gebühren:</h4>
             <ul>
             Wir sind Mitglied bei "Freundschaft auf dem Wasser", für Gäste die ebenfalls Mitglied bei "Freundschaft auf
-            dem Wasser" sind, sind 3 Nächte frei, es fällt lediglich eine Pauschale von 3€ pro Nacht an.
+            dem Wasser" sind, sind 2 Nächte frei, es fällt lediglich eine Pauschale von 3€ pro Nacht an.
             Alle anderen Gäste zahlen pro Nacht 2€ je angefangenen Meter Bootslänge inkl. Strom/Wasser/Müll.
             </ul>
 
