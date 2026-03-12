@@ -1,0 +1,23 @@
+.container {
+  position: relative;
+  text-align: center;
+  color: white;
+}
+
+.centered {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.buttondiv {
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  padding: 15px 20px;
+  border-radius: 5px;
+  font-size: 20px;
+}
+
+.buttondiv:hover {
+  background-color: rgba(0, 0, 0, 0.7); /* Darker on hover */
+}
