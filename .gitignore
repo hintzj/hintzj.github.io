@@ -1,4 +1,3 @@
 config.php
 playground.php
-
-logs/db-log.txt
+logs\db-log.txt

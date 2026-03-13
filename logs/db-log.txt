@@ -36,3 +36,13 @@
 
 2026-02-10 12:23:13 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\hintzj.github.io\header1.php:17
 
+2026-03-13 16:40:34 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\hintzj.github.io\header1.php:17
+
+2026-03-13 16:40:47 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\hintzj.github.io\header1.php:17
+
+2026-03-13 16:40:53 | MySQL server has gone away | C:\xampp\htdocs\hintzj.github.io\header1.php:17
+
+2026-03-13 17:31:36 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\hintzj.github.io\header1.php:17
+
+2026-03-13 17:31:44 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\hintzj.github.io\header1.php:17
+
