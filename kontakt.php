@@ -52,7 +52,7 @@
                     <tr>
                         <th>Abteilung</th>
                         <th>Name</th>
-                        <th>E-Mail</th>
+                        <th>Kontakt</th>
                     </tr>
                     <?php
                         $contactPersons = getAllAnsprechpartner();

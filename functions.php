@@ -534,7 +534,7 @@
         if($conn == false){
             return "Error connecting to database";
         }
-        $stmt = $conn->prepare("SELECT bildURL, Vorname, Nachname, email FROM personen AS p INNER JOIN contactperson AS c ON p.personID = c.personID WHERE site = ?");
+        $stmt = $conn->prepare("SELECT bildURL, Vorname, Nachname, email, telefonnummer, preferedWayOfContact FROM personen AS p INNER JOIN contactperson AS c ON p.personID = c.personID WHERE site = ?");
         $stmt->bind_param("s", $site);
         $stmt->execute();
         $result = $stmt->get_result();
@@ -547,7 +547,7 @@
             if ($result['bildURL'] == "") {
                 $result['bildURL'] = "default.png";
             }
-            return [$result['bildURL'],  $result['Vorname'], $result['Nachname'], $result['email']];
+            return [$result['bildURL'],  $result['Vorname'], $result['Nachname'], $result['email'], $result['telefonnummer'], $result['preferedWayOfContact']];
         }
     }
 
