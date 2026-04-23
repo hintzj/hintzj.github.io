@@ -39,6 +39,25 @@
                 </div>
             </div>
             <div class="text-field1">
+                <h4>Sponsoren gesucht!</h4>
+                <table style="width: 100%;">
+                    <tr>
+                        <td>
+                            <p>
+                                Unser Athlet und WSVLer der ersten Stunde Marco Brechenser ist Teil des Quadrathlon Nationalteams.
+                                Für die internationalen Wettkämpfe sucht er noch finanzielle Unterstützung und bietet auf seinem Boot sowie dem Fahrrad eine attraktive Werbefläche, um ihr Unternehmen auf internationaler Bühne zu präsentieren.
+                                Bei Interesse gerne unter <a href="mailto:marco.brechenser@web.de">marco.brechenser@web.de</a> melden.
+                            </p>
+                        </td>
+                        <td>
+                            <img src="documents\pics\MarcoQuadrathlon.jpeg" alt="Marco Brechenser" style="width: 100%; height: auto;">
+                        </td>
+                    </tr>
+                </table>
+                
+            </div>
+
+            <div class="text-field1">
                 <h4>Unsere Abteilungen</h4>
                 <p>
                     <?php
