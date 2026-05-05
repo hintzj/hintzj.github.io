@@ -38,8 +38,8 @@
                     Ausgeliehen werden können Zweier/Dreiercanadier max. 8 Stück und/oder Kajaks (17 Einer und 6 Zweier) max. 35 Bootsplätze und 16 Kanupolo Boote mit sämtlichem Zubehör (Paddel, Spritzdecken, Schwimmwesten etc.) sowie ein Transportanhänger. Achtung: Der Hänger ist ohne Boote 3,35 m hoch.
                 </ul>
                 <ul>
-                    <li>Das Nutzungsentgelt beträgt für Schulen: 3,–€ pro Tag und Bootsplatz, zusätzlich 2,–€ bei Benutzung des Vereinsgeländes, plus 5,-€ bei Übernachtung.</li>
-                    <li>Das Nutzungsentgelt beträgt für Vereine: 5,–€ pro Tag und Bootsplatz, zusätzlich 2,–€ bei Benutzung des Vereinsgeländes, plus 5,-€ bei Übernachtung.</li>
+                    <li>Das Nutzungsentgelt beträgt für Schulen: 5,–€ pro Tag und Bootsplatz, zusätzlich 2,–€ bei Benutzung des Vereinsgeländes, plus 5,-€ bei Übernachtung.</li>
+                    <li>Das Nutzungsentgelt beträgt für Vereine: 10,–€ pro Tag und Bootsplatz, zusätzlich 2,–€ bei Benutzung des Vereinsgeländes, plus 5,-€ bei Übernachtung.</li>
                     <li>Hänger: 1 Tag 25 €, jeder weiterer Tag 5 €.</li>
                 </ul>
 
