@@ -46,3 +46,5 @@
 
 2026-03-13 17:31:44 | Access denied for user 'publicRUser'@'localhost' (using password: YES) | C:\xampp\htdocs\hintzj.github.io\header1.php:17
 
+2026-07-01 12:38:46 | No connection could be made because the target machine actively refused it | C:\xampp\htdocs\hintzj.github.io\header1.php:17
+
