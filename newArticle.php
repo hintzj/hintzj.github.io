@@ -73,7 +73,7 @@
                         <table class="adminTable">
                             <tr>
                                 <td><label>Titel: </label></td>
-                                <td><input type="text" placeholder="Titel des Artikels" name="title" id="title" required></td>
+                                <td><input type="text" placeholder="Titel des Artikels" name="title" id="title" required maxlength="100"></td>
                             </tr>
                             <tr>
                                 <td><label>Zusammenfassung: </label></td>
