@@ -1,5 +1,7 @@
 <?php
     require 'functions.php';
+    $article = null;
+    $text = '';
 ?>
 
 <!DOCTYPE HTML>
@@ -20,6 +22,7 @@
 
         if ($article == NULL) {
             header("Location: 404.php");
+            exit;
         }
     } catch (Exception $e) {
         $error = $e->getMessage();
@@ -29,21 +32,30 @@
 ?>
 <head>
     <?php include 'defaultHead.php'; ?>
-    <title><?php echo $article['title']; ?>- WSVL</title>
+    <title><?php echo htmlspecialchars($article['title'] ?? ''); ?>- WSVL</title>
 </head>
 
 <body>
     <?php include 'header1.php'; ?>
     <div class="content">
         <div class="text-field1">
-            <h4><?php echo $article['title']; ?></h4>
+            <h4><?php echo htmlspecialchars($article['title'] ?? ''); ?></h4>
             <p>
                 <ul>
                     <?php
                         // Print the article along with all new lines
-                        $text = nl2br($article['text']);
-                        echo "<p>" . $text . "</p>";
+                        $text = $article['text'] ?? '';
                     ?>
+
+                    <div id="markdown-content" class="markdown-content">Loading markdown...</div>
+
+                    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+                    <script>
+                        const markdownContent = <?php echo json_encode($text, JSON_HEX_TAG | JSON_HEX_APOS | JSON_HEX_AMP | JSON_HEX_QUOT); ?>;
+                        document.getElementById('markdown-content').innerHTML = marked.parse(markdownContent);
+                    </script>
+
+
                     <br>
                     <input type="button" class="button" value="Zurück" onclick="history.back()">
                 </ul>

@@ -410,7 +410,7 @@
     }
 
     function editArticle($id, $date, $title, $summary, $text, $isJugendEvent, $abteilungID = 0){
-        if (checkInputForSQLInjection($id) == false || checkInputForSQLInjection($date) == false || checkInputForSQLInjection($title) == false || checkInputForSQLInjection($summary) == false || checkInputForSQLInjection($text) == false || !is_numeric($isJugendEvent) || !is_numeric($abteilungID)) {
+        if (!is_numeric($isJugendEvent) || !is_numeric($abteilungID)) {
             return "Invalid input";
         }
         $conn = connect("public", "write");
