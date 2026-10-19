@@ -114,13 +114,19 @@
                 <?php
                     $abteilungen = getAbteilungenWithWebpage();
                     if ($abteilungen != null) {
-                        echo "<br>";
-                        echo "Suchst du Termine einer bestimmten Abteilung? Schau doch mal hier vorbei:";
-                        echo "<br>";
-                        echo "<br>";
+                        $header = false;                    
+                        
                         foreach ($abteilungen as $abteilung) {
                             if (hasAbteilungTermine($abteilung['abteilungID']) === false) {
                                 continue;
+                            }
+
+                            if ($header === false) {
+                                echo "<br>";
+                                echo "Suchst du Termine einer bestimmten Abteilung? Schau doch mal hier vorbei:";
+                                echo "<br>";
+                                echo "<br>";
+                                $header = true;
                             }
                             
                             echo "<input type='button' style='background-color: royalblue;' onclick=\"location.href='" . $abteilung['abteilungsPage'] . "#abteilungsTermine';\" value='" . htmlspecialchars($abteilung['abteilungName']) . "' />";
