@@ -39,6 +39,29 @@
                 </div>
             </div>
             <div class="text-field1">
+                <h4>Krombacher Spendenaktion</h4>
+                <p>
+                    <ul>
+                        <table style="width: 100%; text-align: center;">
+                            <tr>
+                                <td>
+                                    Wir nehmen an der Krombacher Spendenaktion teil. Wenn du uns unterstützen möchtest, kannst du
+                                    hier
+                                    <a href="https://www.krombacher.de/nachhaltigkeit/gesellschaft/spendenaktion/2027/abstimmungsphase?club=wassersportverein-lampertheim-1929-ev" target="_blank">klicken</a> und
+                                    für uns abstimmen.
+                                </td>
+                                <td>
+                                    <img src="https://www.krombacher.de/Krombacher-Reloaded/Nachhaltigkeit/spendenaktion/2027/190374/image-thumb__190374__stage-teaser/16564_KNH_Spendenaktion_02_Votingphase_LP%201@2x.1bffcc1f.png" alt="Logo der Krombacher Spendenaktion"
+                                        style="width: 50%; margin: inherit;">
+                                </td>
+                            </tr>
+                        </table>
+                        
+                    </ul>
+                </p>
+            </div>
+
+            <div class="text-field1">
                 <h4>Unsere Abteilungen</h4>
                 <p>
                     <?php
