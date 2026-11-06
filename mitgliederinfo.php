@@ -83,7 +83,7 @@
                 var pdfViewerSrc = pdfViewer.getAttribute('data');
 
                 <?php
-                    $dir = "documents\mitgliedsinfos";
+                    $dir = "documents/mitgliedsinfos";
                     $files = scandir($dir);
                     usort($files, function ($a, $b) {
                         preg_match('/^mitgliederinfo_(\d{4})(?:_(\d{2}))?\.pdf$/i', $a, $dateA);
