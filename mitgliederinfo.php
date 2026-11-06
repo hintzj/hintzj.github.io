@@ -48,9 +48,6 @@
                 });
                 echo !empty($files) ? $dir . "/" . $files[0] : "";
             ?>" type="application/pdf" id="pdfViewer" width="80%" height="750px" style="display: block; margin: auto;">
-                <script>
-                    hideButtons();
-                </script>
                 <p>
                     Es sieht so aus, als ob dein Browser keine PDFs anzeigen kann. Kein Problem! Du kannst die Mitgliederinfos hier herunterladen.
                 
@@ -138,19 +135,19 @@
                         pdfViewer.setAttribute('data', newPdf);
                         console.log(newPdf);
                     }
-
-                function hideButtons() {
-                    var pdfButtons = document.getElementById('pdfButton').style.display = "none";
-                }
                 }
 
-                
             </script>
             <br>
-            <div style="text-align: center;">
-                <button onclick="lastPdf()" id="pdfButton" style="display: inline"><i class="fa fa-arrow-left" aria-hidden="true"></i> Vorheriges</button>
-                <button onclick="nextPdf()" id="pdfButton" style="display: inline">Nächstes <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
+            <div id="pdfNavigation" style="text-align: center; display: none;">
+                <button onclick="lastPdf()" style="display: inline"><i class="fa fa-arrow-left" aria-hidden="true"></i> Vorheriges</button>
+                <button onclick="nextPdf()" style="display: inline">Nächstes <i class="fa fa-arrow-right" aria-hidden="true"></i></button>
             </div>
+            <script>
+                if (pdfViewer.getAttribute('data') && navigator.pdfViewerEnabled !== false) {
+                    document.getElementById('pdfNavigation').style.display = 'block';
+                }
+            </script>
 
         </div>
         <?php include "footer.php"; ?>
