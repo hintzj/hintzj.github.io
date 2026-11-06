@@ -39,6 +39,7 @@
                         <li><a href='kindeswohl.php'>Kindeswohl</a></li>
                         <li><a href='sponsors.php'>Sponsoren</a></li>
                         <li><a href='foerderverein.php'>Förderverein</a></li>
+                        <li><a href='mitgliederinfo.php'>Mitgliederinfo</a></li>
                         <li><a href='links.php'>Links</a></li>
                     </ul>
                 </li>
